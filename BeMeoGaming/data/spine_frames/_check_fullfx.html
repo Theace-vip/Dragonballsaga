@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Check Full_FX frames</title>
+<style>
+body{background:#1e2530;color:#eee;font-family:Segoe UI,sans-serif;margin:16px}
+h2{font-size:16px;border-bottom:1px solid #444;padding-bottom:4px}
+.row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.cell{text-align:center}
+.cell img{width:120px;height:120px;object-fit:contain;background:
+ repeating-conic-gradient(#333 0% 25%, #3d3d3d 0% 50%) 50%/16px 16px;
+ border:1px solid #555;border-radius:4px}
+.cell div{font-size:11px;color:#9ab}
+#meta{font-size:12px;color:#8fc;white-space:pre-wrap;background:#111;padding:8px;border-radius:6px}
+</style></head><body>
+<h3 id="mt">loading meta.json...</h3>
+<div id="out"></div>
+<script>
+const anims=["Combo1","Combo2","Combo3","Combo5","Skill2_3","Skill5_1","Skill5_3_behind","Skill5_3_front","ZSkill8","ZSkill9","ZSkill10","ZSkill12"];
+const out=document.getElementById('out');
+fetch('Full_FX/meta.json').then(r=>r.json()).then(m=>{
+  document.getElementById('mt').textContent='meta.json: '+JSON.stringify(m).slice(0,1500);
+}).catch(e=>{document.getElementById('mt').textContent='meta.json: '+e;});
+anims.forEach(a=>{
+  const h=document.createElement('h2');h.textContent='Full_FX / '+a;out.appendChild(h);
+  const row=document.createElement('div');row.className='row';out.appendChild(row);
+  for(let i=0;i<18;i++){
+    const n='f'+String(i).padStart(3,'0')+'.png';
+    const c=document.createElement('div');c.className='cell';
+    const im=new Image();im.src='Full_FX/'+a+'/'+n;
+    c.appendChild(im);const d=document.createElement('div');d.textContent=i;c.appendChild(d);
+    row.appendChild(c);
+  }
+});
+</script></body></html>

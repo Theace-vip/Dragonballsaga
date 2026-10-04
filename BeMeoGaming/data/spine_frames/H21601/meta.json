@@ -1,0 +1,30 @@
+{
+ "set": "H21601",
+ "ver": "4.2",
+ "exportedAt": "2026-10-04T14:02:39.819Z",
+ "fps": 12,
+ "viewport": {
+  "w": 704,
+  "h": 935
+ },
+ "source": "http://localhost:5750 (spine_export_remote/H21601)",
+ "anims": [
+  {
+   "anim": "walk",
+   "dur": 0.6667,
+   "count": 3,
+   "times": [
+    0,
+    0.0833,
+    0.1667
+   ],
+   "cam": {
+    "camX": 2.89,
+    "camY": 244.32,
+    "camH": 1087.96,
+    "w": 704,
+    "h": 935
+   }
+  }
+ ]
+}

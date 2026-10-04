@@ -1,0 +1,22 @@
+# Sua tu paneladmin 2026-09-14 07:52:22
+server.local=false
+server.test=false
+server.daoautoupdater=false
+server.sv=1
+server.name=hondaodragon
+server.port=14445
+server.sv1=hondaodragon:127.0.0.1:14445
+server.waitlogin=1
+server.maxperip=1
+server.maxplayer=10000
+server.expserver=10
+server.debug=true
+database.driver=com.mysql.cj.jdbc.Driver
+database.host=127.0.0.1
+database.port=3306
+database.name=hondaodragon
+database.user=root
+database.pass=
+database.min=1
+database.max=2
+database.lifetime=120000

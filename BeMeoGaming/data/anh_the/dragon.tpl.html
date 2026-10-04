@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Preview - Hao Quang Rong</title>
+<style>
+  body { background:#111; color:#eee; font-family:monospace; margin:20px; }
+  .row { display:flex; gap:6px; flex-wrap:wrap; align-items:flex-start; }
+  .cell { text-align:center; font-size:11px; color:#aaa; }
+  .cell img { background: repeating-conic-gradient(#222 0% 25%, #2b2b2b 0% 50%) 0 0/24px 24px; border:1px solid #444; }
+  h2 { color:#ffd54a; }
+  #wrap { position:relative; width:360px; height:400px; border:1px solid #555;
+    background: repeating-conic-gradient(#1a1a1a 0% 25%, #222 0% 50%) 0 0/32px 32px; }
+  #anim { position:absolute; inset:0; }
+  #player { position:absolute; left:165px; top:250px; width:30px; height:120px; background:#2a6; opacity:.55; }
+  #lbl { position:absolute; left:4px; top:4px; color:#6f6; font-size:11px; }
+</style>
+</head>
+<body>
+<h2>Hao quang rong - 24 frame, vong quanh cot (xanh la = vi tri player) - 10fps</h2>
+<div id="wrap"><div id="player"></div><canvas id="anim" width="360" height="400"></canvas><span id="lbl">f0</span></div>
+<h2>Tung frame</h2>
+<div class="row" id="frames"></div>
+<script>
+const data = [
+__DATA__
+];
+const wrap = document.getElementById('frames');
+data.slice(0, 24).forEach((src, i) => {
+  const d = document.createElement('div');
+  d.className = 'cell';
+  const im = document.createElement('img');
+  im.width = 90; im.height = 100;
+  im.src = src;
+  d.appendChild(im);
+  d.appendChild(document.createTextNode('#' + i));
+  wrap.appendChild(d);
+});
+const icon = document.createElement('img');
+icon.width = 42; icon.height = 48; icon.src = data[24];
+wrap.appendChild(icon);
+const cv = document.getElementById('anim'), ctx = cv.getContext('2d');
+const imgs = data.slice(0, 24).map(src => { const im = new Image(); im.src = src; return im; });
+let cur = 0;
+setInterval(() => {
+  ctx.clearRect(0, 0, 360, 400);
+  if (imgs[cur].complete) ctx.drawImage(imgs[cur], 0, 0);
+  document.getElementById('lbl').textContent = 'f' + cur;
+  cur = (cur + 1) % imgs.length;
+}, 1000 / 10);
+</script>
+</body>
+</html>
