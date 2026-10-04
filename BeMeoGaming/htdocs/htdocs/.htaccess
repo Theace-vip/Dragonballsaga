@@ -1,0 +1,78 @@
+RewriteEngine On
+RewriteBase /
+
+# Cấu hình ErrorDocument
+ErrorDocument 404 /error.php
+ErrorDocument 402 /error.php
+ErrorDocument 403 /error.php
+ErrorDocument 500 /error.php
+
+# Chuyển hướng các URL theo yêu cầu
+RewriteRule ^home$ /DangDZ/vn/index.php [L]
+RewriteRule ^forum$ /Pages/bai-viet.php [L]
+RewriteRule ^post$ /Pages/dang-bai.php [L]
+RewriteRule ^admin/(.*)$ /AdminPanel/index.php?request=$1 [QSA,L]
+RewriteRule ^admin /AdminPanel/index.php?request=$1 [QSA,L]
+
+
+# Chuyển hướng /news/* tới /DangDz/vn/news/*
+RewriteRule ^news/(.*)$ /DangDZ/vn/news/$1 [L]
+
+RewriteRule ^vong-quay$ /Pages/Minigame/vongquay1.php [L]
+RewriteRule ^nap-the$ /Pages/nap.php [L]
+RewriteRule ^info$ /Pages/info.php [L]
+RewriteRule ^gold$ /Pages/doi-ngoc-xanh.php [L]
+RewriteRule ^changepass$ /Pages/doi-mat-khau.php [L]
+RewriteRule ^history$ /Pages/history.php [L]
+RewriteRule ^update$ /Pages/cap-nhat-thong-tin.php [L]
+RewriteRule ^banking$ /Pages/nap-mbbank.php [L]
+RewriteRule ^points$ /Pages/tich-luy.php [L]
+RewriteRule ^security$ /Pages/pass2.php [L]
+RewriteRule ^dang-nhap$ /Pages/login.php [L]
+RewriteRule ^dang-ky$ /Pages/reg.php [L]
+RewriteRule ^dang-xuat$ /Pages/logout.php [L]
+RewriteRule ^coin$ /Pages/doi-tien.php [L]
+
+RewriteRule ^tai-game$ /downloads/index.php [L]
+
+RewriteRule ^power$ /Pages/rank/bang-xep-hang.php [L]
+RewriteRule ^donate$ /Pages/rank/top-nap.php [L]
+
+RewriteRule ^API/vongquay$ /API/vongquay123.php [L]
+RewriteRule ^API/NapUser$ /API/nap.php [L]
+RewriteRule ^API/DoNap$ /API/donap.php [L]
+RewriteRule ^API/GuiNap$ /API/guinap.php [L]
+RewriteRule ^API/GoiNap$ /API/goinap.php [L]
+RewriteRule ^API/CachNap$ /API/cachnap.php [L]
+RewriteRule ^post-card$ /Request/ajax/card.php [L]
+RewriteRule ^mbbank/cron$ /Request/banking/mbbank [L]
+RewriteRule ^mbbank/login$ /Request/banking/login [L]
+RewriteRule ^mbbank/api$ /Request/banking/api [L]
+RewriteRule ^Request/bank$ /Request/cauhinh/api-nap.php [L]
+RewriteRule ^Request/changepass$ /Request/cauhinh/api-changepass.php [L]
+RewriteRule ^Request/info$ /Request/cauhinh/api-thongtin.php [L]
+RewriteRule ^Request/security$ /Request/cauhinh/delete_pass2.php [L]
+RewriteRule ^Request/post$ /Request/cauhinh/post [L]
+RewriteRule ^request/thong-tin$ /request/cauhinh/api-thongtin [L]
+
+# Tắt truy cập vào thư mục
+Options -Indexes
+
+# Thêm đuôi .php vào các URL nếu tên file không kết thúc bằng .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /error.php [L]
+
+# Bảo vệ tệp .htaccess
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+# Thêm header Cache-Control cho các tệp tĩnh
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|css|js)$">
+    Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+
+# Thêm MIME type cho file .ipa
+AddType application/octet-stream .ipa

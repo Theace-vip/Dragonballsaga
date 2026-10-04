@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UPDATE CẬP NHẬT — Công bố sự kiện / server</title>
+  <meta name="description" content="Thông báo UPDATE CẬP NHẬT: Sét Kích Hoạt, VIP, quà phúc lợi, Trung Thu, Chuyển Sinh, Tu Tiên, Shop, Map, Coin theo VIP, Ký Danh, Thẻ Chuyển Sinh 100%." />
+  <meta name="theme-color" content="#0b1220" />
+  <style>
+    /* ====== Design System ====== */
+    :root{
+      --bg:#0b1220;           /* page background */
+      --bg2:#0e162b;          /* secondary background */
+      --grad1:#1e3a8a;        /* blue */
+      --grad2:#06b6d4;        /* cyan */
+      --grad3:#22c55e;        /* green accent */
+      --text:#e5eef7;         /* primary text */
+      --muted:#9fb2c8;        /* secondary text */
+      --card:#0e1424;         /* card bg */
+      --card-border:#1b2844;  /* card border */
+      --chip:#101a2f;         /* chip bg */
+      --warn:#f59e0b;         /* orange */
+      --ok:#22c55e;           /* success green */
+      --err:#ef4444;          /* red */
+      --shadow: 0 8px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    /* ====== Reset & Base ====== */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height:1.6; background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(34,197,94,.14), transparent 60%),
+        radial-gradient(900px 500px at 110% 0%, rgba(6,182,212,.16), transparent 60%),
+        linear-gradient(180deg, #0b1220, #0b1220 50%, #0f1931 100%);
+      color:var(--text);
+    }
+    a{color:#7dd3fc; text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%; display:block}
+
+    /* ====== Layout ====== */
+    .container{max-width:1100px; margin:0 auto; padding:28px}
+    .header{display:grid; grid-template-columns: auto 1fr auto; gap:16px; align-items:center; margin-top:10px}
+    .logo{
+      width:62px; height:62px; border-radius:16px;
+      background: conic-gradient(from 220deg, var(--grad1), var(--grad2));
+      display:grid; place-items:center; box-shadow:var(--shadow);
+    }
+    .logo svg{filter:drop-shadow(0 2px 4px rgba(0,0,0,.35))}
+
+    .title h1{margin:0; font-size:clamp(22px, 2vw + 14px, 40px); letter-spacing:.2px}
+    .title p{margin:6px 0 0; color:var(--muted)}
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; font-weight:600;
+      background:linear-gradient(90deg, rgba(30,58,138,.35), rgba(6,182,212,.25)); border:1px solid var(--card-border);
+    }
+
+    .hero{margin:24px 0 8px; padding:16px; border-radius:var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 60%),
+        linear-gradient(135deg, rgba(30,58,138,.35), rgba(6,182,212,.18));
+      border:1px solid var(--card-border);
+      box-shadow:var(--shadow);
+    }
+
+    .grid{display:grid; gap:18px; grid-template-columns: repeat(12, 1fr)}
+    .col-12{grid-column: span 12}
+    .col-6{grid-column: span 6}
+    @media (max-width: 900px){ .col-6{grid-column: span 12} }
+
+    .card{background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .card h2{margin:0 0 12px; font-size:clamp(18px, 1.1vw + 14px, 26px)}
+    .card p{margin:0 0 8px}
+    .card ul{margin:8px 0 0 20px}
+
+    .chip{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; background:var(--chip); border:1px solid var(--card-border); font-size:13px; color:var(--muted)}
+
+    .section-title{
+      display:flex; justify-content:space-between; align-items:center; gap:12px; margin:26px 0 12px
+    }
+
+    .kicker{font-size:13px; text-transform:uppercase; letter-spacing:.14em; color:var(--muted)}
+
+    .footer{margin:26px 0 40px; text-align:center; color:var(--muted)}
+
+    .list-check{list-style:none; padding-left:0}
+    .list-check li{position:relative; padding-left:28px; margin:10px 0}
+    .list-check li::before{
+      content:""; position:absolute; left:0; top:7px; width:18px; height:18px; border-radius:6px;
+      background: conic-gradient(from 180deg, var(--grad2), var(--grad1));
+      box-shadow:0 0 0 2px rgba(255,255,255,.06);
+      mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M9 16.17l-3.5-3.5-1.42 1.41L9 19 20.92 7.08l-1.41-1.41z"/></svg>') center/14px 14px no-repeat;
+    }
+
+    .callout{
+      border-left:4px solid var(--grad2); padding:12px 14px; background:linear-gradient(90deg, rgba(6,182,212,.15), rgba(30,58,138,.08)); border-radius:10px;
+    }
+
+    .pill{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(34,197,94,.18); border:1px solid rgba(34,197,94,.35); font-weight:600}
+    .pill.warn{background:rgba(245,158,11,.16); border-color:rgba(245,158,11,.35)}
+
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); margin:16px 0}
+
+    /* Print friendly */
+    @media print{
+      body{background:#fff; color:#000}
+      .card, .hero{box-shadow:none; border:1px solid #ddd}
+      .logo{box-shadow:none}
+      a{color:#000}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo" aria-hidden="true">
+        <!-- Simple lightning icon -->
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M13 3L4 14h6l-1 7 9-11h-6l1-7z" opacity="0.96"/>
+        </svg>
+      </div>
+      <div class="title">
+        <div class="badge">⚡ UPDATE CẬP NHẬT</div>
+        <h1>Bản cập nhật sự kiện & cân bằng hệ thống</h1>
+        <p>Ngày phát hành: <strong>09/10/2025</strong> • Máy chủ ổn định — nội dung mới, phần thưởng hấp dẫn.</p>
+      </div>
+      <div>
+        <span class="chip">Phiên bản: <strong>&nbsp;v1.0</strong></span>
+      </div>
+    </header>
+
+    <!-- Hero / Summary -->
+    <section class="hero">
+      <div class="grid">
+        <div class="col-12">
+          <p class="kicker">Tóm tắt nhanh</p>
+          <ul class="list-check">
+            <li>Tân thủ kích hoạt <strong>VIP 1</strong>, vào map <strong>Sét Kích Hoạt</strong> tại Đảo Kame rơi <strong>100% SKH</strong>.</li>
+            <li>Thay đổi toàn bộ quà <strong>Online</strong>, <strong>Nạp Ngày</strong>, <strong>Ký Danh</strong>, <strong>Online Phút</strong>.</li>
+            <li>Tăng tỉ lệ rơi vật phẩm <strong>Trung Thu</strong>, <strong>Thỏ Đại Ca</strong> rơi <strong>Ngọn Lửa</strong> cực nhiều.</li>
+            <li><strong>Chuyển Sinh</strong>: 120.000 coin/lần, <strong>50%</strong> tỉ lệ — thêm <em>Thẻ Chuyển Sinh Trực Tiếp 100%</em>.</li>
+            <li><strong>Đá Cực Đạo</strong>: +<strong>35%</strong> cho Độ Tu Tiên; up Tu Tiên nhận thêm <strong>Linh Khí</strong>.</li>
+            <li>Map Bí Kíp yêu cầu <strong>VIP 4+</strong>, có thể đổi <strong>Cải Trang 1.000.000%</strong>.</li>
+            <li>Tăng <strong>coin/quái theo VIP</strong>: mỗi VIP +1 coin.</li>
+            <li>Ký Danh: <strong>10 Hộp SKH PRO CỰC VIP</strong>/ngày.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="section">
+      <div class="grid">
+        <!-- UP SÉT KÍCH HOẠT -->
+        <article class="card col-6">
+          <h2>🔥 UP Sét Kích Hoạt</h2>
+          <ul>
+            <li><strong>Tân thủ</strong> tự động kích hoạt <strong>VIP 1</strong> khi đăng nhập.</li>
+            <li>Vào <strong>Map Sét Kích Hoạt</strong> tại <strong>Đảo Kame</strong> để up — <strong>100% rơi SKH</strong>.</li>
+          </ul>
+        </article>
+
+        <!-- PHÚC LỢI -->
+        <article class="card col-6">
+          <h2>🎁 Quà phúc lợi</h2>
+          <p>Đã làm mới các gói thưởng:</p>
+          <ul>
+            <li>Quà <strong>Online</strong>, <strong>Nạp Ngày</strong>, <strong>Ký Danh</strong>, <strong>Online Phút</strong>.</li>
+            <li>Giá trị hơn, nhiều vật phẩm hiếm, cân bằng tiến độ người chơi.</li>
+          </ul>
+        </article>
+
+        <!-- TRUNG THU -->
+        <article class="card col-6">
+          <h2>🐰 Sự kiện Trung Thu</h2>
+          <ul>
+            <li><strong>Tăng tỉ lệ</strong> rơi <em>Vật Phẩm SK Trung Thu</em>.</li>
+            <li><strong>Thỏ Đại Ca</strong> nay rơi <strong>Ngọn Lửa</strong> cực nhiều.</li>
+          </ul>
+        </article>
+
+        <!-- CHUYỂN SINH -->
+        <article class="card col-6">
+          <h2>🧬 Chuyển Sinh</h2>
+          <ul>
+            <li>Mặc định <strong>120.000 coin</strong> / lần.</li>
+            <li><strong>50%</strong> tỉ lệ thành công.</li>
+            <li>
+              <span class="pill">Vật phẩm mới</span> <strong>Thẻ Chuyển Sinh Trực Tiếp</strong>:
+              <br/>Sử dụng là <strong>100% thành công</strong> và nhận <strong>tất cả chỉ số</strong>.
+            </li>
+          </ul>
+        </article>
+
+        <!-- TU TIÊN & ĐÁ CỰC ĐẠO -->
+        <article class="card col-6">
+          <h2>💎 Tu luyện & Đá Cực Đạo</h2>
+          <ul>
+            <li>Thêm <strong>Đá Cực Đạo</strong> — hỗ trợ <strong>Độ Tu Tiên +35%</strong>.</li>
+            <li>Up <strong>Tu Tiên</strong> nay có thêm thưởng <strong>Linh Khí</strong>.</li>
+          </ul>
+        </article>
+
+        <!-- SHOP & MAP -->
+        <article class="card col-6">
+          <h2>🏪 Shop & Map</h2>
+          <ul>
+            <li><strong>Xóa</strong> một số shop CBI cũ, <strong>update danh mục</strong> mới.</li>
+            <li>Map <strong>Bí Kíp</strong> yêu cầu <strong>VIP 4+</strong> mới được vào.</li>
+            <li>Kiếm <strong>Bí Kíp</strong> để <strong>đổi Cải Trang 1.000.000%</strong>.</li>
+          </ul>
+        </article>
+
+        <!-- COIN & VIP -->
+        <article class="card col-6">
+          <h2>💰 Coin & VIP</h2>
+          <ul>
+            <li>Tăng coin khi up quái: <strong>mỗi VIP +1 coin</strong> / quái.</li>
+            <li><strong>Ký Danh 30 Ngày VIP</strong>: nhận <strong>10 Hộp SKH PRO CỰC VIP</strong> / ngày.</li>
+          </ul>
+        </article>
+
+        <!-- CALL OUT / TEASER -->
+        <article class="card col-6">
+          <h2>✨ Còn nữa…</h2>
+          <div class="callout">
+            <p>Chúng mình đang hoàn thiện các hoạt động mới: <strong>Đua Top</strong>, <strong>Săn Boss Cực Hạn</strong>, <strong>Đập Trứng VIP</strong>, cùng nhiều cân bằng chỉ số và nhiệm vụ hàng ngày. Hãy theo dõi trang chủ / fanpage để nhận thông báo sớm nhất!</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Footer / Notes -->
+    <footer class="footer">
+      <p>📌 Mọi thay đổi nhằm đem lại trải nghiệm công bằng và thú vị hơn cho người chơi. Nếu bạn phát hiện bug, vui lòng báo ngay cho Admin/GM để được hỗ trợ sớm nhất.</p>
+      <p>© 2025 — Server Game. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+[16-Apr-2024 04:19:55 Asia/Ho_Chi_Minh] PHP Fatal error:  Cannot redeclare has_mkc2() (previously declared in /home/nrobluef/public_html/core/apipass2.php:6) in /home/nrobluef/public_html/core/config.php on line 62
+[16-Apr-2024 04:20:14 Asia/Ho_Chi_Minh] PHP Fatal error:  Cannot redeclare has_mkc2() (previously declared in /home/nrobluef/public_html/core/apipass2.php:6) in /home/nrobluef/public_html/core/config.php on line 62

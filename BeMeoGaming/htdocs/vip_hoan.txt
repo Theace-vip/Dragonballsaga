@@ -1,0 +1,112 @@
+[2025-08-04 02:45:13]
+Player: theacee (ID: 17)
+Nâng VIP : VIP 8 -Hoàn-> VIP 6
+Hoàn lại: 540 k VND
+Số dư VND trước khi hoàn: 378944
+Số dư VND sau khi hoàn: 918944
+
+[2025-08-06 22:40:24]
+Player: jack5tr (ID: 20)
+Nâng VIP : VIP 13 -Hoàn-> VIP 10
+Hoàn lại: 6 Tr VND
+Số dư VND trước khi hoàn: 21510788
+Số dư VND sau khi hoàn: 27510788
+
+[2025-08-14 22:36:15]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 2 -Hoàn-> VIP 1
+Hoàn lại: 20 k VND
+Số dư VND trước khi hoàn: 19875000
+Số dư VND sau khi hoàn: 19895000
+
+[2025-08-14 22:36:23]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 3 -Hoàn-> VIP 2
+Hoàn lại: 30 k VND
+Số dư VND trước khi hoàn: 19805000
+Số dư VND sau khi hoàn: 19835000
+
+[2025-08-14 22:36:45]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 4 -Hoàn-> VIP 3
+Hoàn lại: 36 k VND
+Số dư VND trước khi hoàn: 19585000
+Số dư VND sau khi hoàn: 19621000
+
+[2025-08-14 22:36:51]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 5 -Hoàn-> VIP 4
+Hoàn lại: 100 k VND
+Số dư VND trước khi hoàn: 19021000
+Số dư VND sau khi hoàn: 19121000
+
+[2025-08-14 22:36:57]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 6 -Hoàn-> VIP 5
+Hoàn lại: 240 k VND
+Số dư VND trước khi hoàn: 17771000
+Số dư VND sau khi hoàn: 18011000
+
+[2025-08-14 22:37:03]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 7 -Hoàn-> VIP 6
+Hoàn lại: 540 k VND
+Số dư VND trước khi hoàn: 14761000
+Số dư VND sau khi hoàn: 15301000
+
+[2025-08-14 22:37:03]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 7 -Hoàn-> VIP 2
+Hoàn lại: 540 k VND
+Số dư VND trước khi hoàn: 14761000
+Số dư VND sau khi hoàn: 15301000
+
+[2025-08-14 22:37:08]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 8 -Hoàn-> VIP 7
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 10351000
+Số dư VND sau khi hoàn: 11651000
+
+[2025-08-14 22:40:35]
+Player: kaidosama (ID: 1202)
+Nâng VIP : VIP 13 -Hoàn-> VIP 8
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 950500000
+Số dư VND sau khi hoàn: 952480000
+
+[2025-08-15 03:04:30]
+Player: jack97 (ID: 1131)
+Nâng VIP : VIP 13 -Hoàn-> VIP 8
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 970450000
+Số dư VND sau khi hoàn: 972430000
+
+[2025-08-15 03:13:33]
+Player: gamkami (ID: 1134)
+Nâng VIP : VIP 13 -Hoàn-> VIP 8
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 970500000
+Số dư VND sau khi hoàn: 972480000
+
+[2025-08-26 22:13:11]
+Player: tchill (ID: 1532)
+Nâng VIP : VIP 2 -Hoàn-> VIP 1
+Hoàn lại: 20 k VND
+Số dư VND trước khi hoàn: 84999
+Số dư VND sau khi hoàn: 104999
+
+[2025-08-26 22:13:22]
+Player: tchill (ID: 1532)
+Nâng VIP : VIP 3 -Hoàn-> VIP 2
+Hoàn lại: 30 k VND
+Số dư VND trước khi hoàn: 14999
+Số dư VND sau khi hoàn: 44999
+
+[2025-08-27 18:34:29]
+Player: kusiuto (ID: 1572)
+Nâng VIP : VIP 2 -Hoàn-> VIP 1
+Hoàn lại: 20 k VND
+Số dư VND trước khi hoàn: 24999
+Số dư VND sau khi hoàn: 44999
+

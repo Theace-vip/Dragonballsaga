@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  langla:
+    image: langla
+    build:
+      context: .
+      dockerfile: ./Dockerfile

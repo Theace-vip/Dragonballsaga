@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hướng Dẫn Tân Thủ - Hòn Đảo Dragon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      line-height: 1.6;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    header {
+      text-align: center;
+      padding: 24px 8px 16px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: #facc15;
+      text-transform: uppercase;
+    }
+    header p {
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+    .pill {
+      display: inline-block;
+      background: #111827;
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+      border: 1px solid #1f2937;
+    }
+    .btn-row {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      background: #22c55e;
+      color: #022c22;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+      box-shadow: 0 6px 18px rgba(34, 197, 94, 0.35);
+    }
+    .btn.secondary {
+      background: #38bdf8;
+      color: #0b1120;
+      box-shadow: 0 6px 18px rgba(56, 189, 248, 0.35);
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      text-decoration: none;
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: #f97316;
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      color: #a5b4fc;
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+    .card ul {
+      margin-left: 18px;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+    .card ul li {
+      margin-bottom: 3px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #111827;
+      color: #f9fafb;
+      margin-right: 6px;
+      margin-bottom: 4px;
+      border: 1px solid #1f2937;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      margin: 18px 0 8px;
+      color: #7dd3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+    .highlight {
+      color: #facc15;
+      font-weight: 600;
+    }
+    .warning {
+      border-left: 4px solid #f97316;
+      padding-left: 10px;
+      margin-top: 6px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      padding: 18px 4px 8px;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .card {
+        padding: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="pill">Hướng dẫn tân thủ</div>
+      <h1>Hòn Đảo Dragon</h1>
+      <p>Đọc 1 lần – Vào game chiến luôn trên PC &amp; Mobile.</p>
+
+      <div class="btn-row">
+        <a class="btn" href="https://hondaodragon.online/" target="_blank"
+          >🚀 Vào Website Tải Game</a
+        >
+        <a
+          class="btn secondary"
+          href="https://zalo.me/0836935740"
+          target="_blank"
+          >💬 Liên hệ Zalo Admin</a
+        >
+      </div>
+      <p class="note">Link tải cụ thể xem trên website chính thức.</p>
+    </header>
+
+    <!-- BƯỚC 1 -->
+    <h2 class="section-title">Bước 1 – Tải Game &amp; Đăng Ký</h2>
+    <div class="card">
+      <h2>Chọn đúng bản game</h2>
+      <ul>
+        <li><span class="highlight">APK Android:</span> SamSung, Oppo, Redmi…</li>
+        <li><span class="highlight">PC:</span> Máy tính Windows.</li>
+        <li><span class="highlight">iOS:</span> iPhone 6–16 (qua web hoặc TestFlight nếu có).</li>
+      </ul>
+      <p>Sau khi tải xong, cài đặt game bình thường như các app khác.</p>
+
+      <h3>Đăng ký tài khoản</h3>
+      <ul>
+        <li>Vào website <strong>hondaodragon.online</strong>.</li>
+        <li>Đăng ký tài khoản game (user + mật khẩu).</li>
+        <li>Tài khoản này dùng để đăng nhập cả PC lẫn Mobile.</li>
+      </ul>
+    </div>
+
+    <!-- BƯỚC 2 -->
+    <h2 class="section-title">Bước 2 – Vào Game Lần Đầu</h2>
+    <div class="card">
+      <h2>Cài xong &amp; đăng nhập</h2>
+      <ul>
+        <li>Mở game &gt; chờ tải dữ liệu 1–100%.</li>
+        <li>Đăng nhập tài khoản đã tạo trên website.</li>
+        <li>Nếu lần đầu bị lỗi, hãy <strong>thoát hẳn app</strong> rồi mở lại.</li>
+      </ul>
+
+      <h3>Tạo nhân vật &amp; vào chiến</h3>
+      <ul>
+        <li>Đặt tên nhân vật.</li>
+        <li>Chọn hành tinh / class.</li>
+        <li>Nhấn <strong>Bắt đầu</strong> là vào game chiến thôi 😁.</li>
+      </ul>
+    </div>
+
+    <!-- BƯỚC 3: GIFCODE -->
+    <h2 class="section-title">Bước 3 – Nhập Giftcode Tân Thủ</h2>
+    <div class="card">
+      <p>Vào mục <strong>Nhập Gifcode</strong> trong game để nhận quà free.</p>
+      <p>Một số gifcode tân thủ (xem thêm trên website):</p>
+      <ul>
+        <li>7vienngocrong</li>
+        <li>hondaodragon</li>
+        <li>hondaodragon1 → hondaodragon8</li>
+      </ul>
+      <p class="note">Mỗi code thường chỉ dùng được 1 lần trên 1 tài khoản.</p>
+    </div>
+
+    <!-- CHỨC NĂNG CHÍNH -->
+    <h2 class="section-title">Các chức năng quan trọng trong game</h2>
+
+    <div class="card">
+      <h2>Đổi Thỏi Vàng &amp; Lượng Bạc</h2>
+      <ul>
+        <li>Đổi <strong>20k Cash</strong> = <strong>20k Thỏi Vàng</strong>.</li>
+        <li>Có thể săn boss / cày quái để kiếm thỏi vàng thay vì nạp.</li>
+        <li>Lượng bạc rơi từ quái:
+          <ul>
+            <li>1–50 thỏi/quái tùy map.</li>
+          </ul>
+        </li>
+        <li>Dùng bạc để:
+          <ul>
+            <li>Mua đồ free ở NPC Nông Dân.</li>
+            <li>Đập đồ, ép đồ, nhận 100 ngọc xanh / 1 thỏi bạc,…</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Nhận Đệ Tử Free &amp; Đệ VIP</h2>
+      <ul>
+        <li>Free đệ Mabu cực VIP trong game.</li>
+        <li>Săn Broly để kiếm đệ Broly VIP.</li>
+        <li>Mở thành viên 20k ủng hộ: nhận thêm đệ Gohan đẹp VIP.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Thẻ VIP</h2>
+      <span class="tag">Tăng dame</span>
+      <span class="tag">Tăng TNSM</span>
+      <span class="tag">Tăng fam</span>
+      <p>Thẻ VIP cho:</p>
+      <ul>
+        <li>Tăng sức đánh, giới hạn đục lỗ.</li>
+        <li>Tăng TNSM, tỷ lệ &amp; số lượng fam – vật phẩm rơi.</li>
+        <li>Có chức năng <strong>hoàn Cash khi mua VIP cao hơn</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>NPC Nông Dân</h2>
+      <ul>
+        <li>Dẫn tới <strong>map câu cá</strong>.</li>
+        <li>Shop bán đồ bằng <strong>lượng bạc</strong>.</li>
+        <li>Đây là chỗ cho dân cày kiếm đồ free khá ngon.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Nhiệm vụ game</h2>
+      <ul>
+        <li>Mỗi nhiệm vụ hoàn thành: +1.000.000 sức đánh, +500k HP &amp; KI gốc.</li>
+        <li>Nhiệm vụ khó có thể qua <strong>Quy Lão Kame</strong> để nhờ hỗ trợ next.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>UP Tiềm Năng &amp; Sức Mạnh</h2>
+      <ul>
+        <li>Nhập code nhận set 8888% TNSM để up nhanh.</li>
+        <li>Đến map <strong>Ngũ Hành Sơn</strong> gặp NPC Hatsu để up.</li>
+        <li>Quái HP càng cao – up càng nhanh (nên chọn map hợp lực).</li>
+        <li>Có hệ thống cộng chỉ số nhanh, Max 120M HP/KI gốc.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Mở giới hạn sức mạnh</h2>
+      <ul>
+        <li>Cần <strong>10M điểm fam</strong> để mở từng mốc.</li>
+        <li>Fam quái toàn map, tốc độ tùy vào VIP ingame.</li>
+        <li>Tổng cộng khoảng 110 lần mở để max toàn bộ chỉ số.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>NPC Bà Hạt Mít &amp; Nâng cấp Đồ</h2>
+      <p>Bà Hạt Mít (vách núi / gần Kame) gom nhiều chức năng:</p>
+      <ul>
+        <li>Mua <strong>bùa tháng</strong> (ấn hình bùa để kiểm tra).</li>
+        <li><strong>Pha lê hóa</strong>: đục lỗ trang bị (quần, áo, găng, giày, rada…).</li>
+        <li><strong>Ép sao</strong>: ép sao pha lê, ngọc rồng vào trang bị đã có lỗ.</li>
+        <li><strong>Gỡ sao pha lê</strong>: cần đá đặc biệt, giữ nguyên chỉ số nhưng không hoàn đá.</li>
+        <li><strong>Chức năng bông tai</strong>: up bông tai từ cùi → VIP, chỉ số random 1–1000%.</li>
+      </ul>
+
+      <h3>Các loại đá nâng cấp</h3>
+      <ul>
+        <li>Đá Thành Anh – nâng găng.</li>
+        <li>Đá Ruby – nâng quần.</li>
+        <li>Đá Saphia – nâng giày.</li>
+        <li>Đá Lục Bảo – nâng rada.</li>
+        <li>Đá Titan – nâng áo.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Phúc lợi game</h2>
+      <ul>
+        <li><strong>Online</strong> đủ phút mỗi ngày nhận quà ngon.</li>
+        <li><strong>Ký danh</strong> (điểm danh) – mỗi ngày 1 phần quà VIP.</li>
+        <li><strong>Nạp ngày / tích nạp / tiêu Cash</strong> – nhiều mốc thưởng hấp dẫn.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Vòng quay Tầm Bảo</h2>
+      <ul>
+        <li>Key quay kiếm từ: online ngày, săn boss, event, up quái,…</li>
+        <li>Đồ quay ra rất giá trị, có tỷ lệ vĩnh viễn cao.</li>
+        <li>Quay không giới hạn – càng quay càng vui.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Shop &amp; NPC Kaiosin</h2>
+      <ul>
+        <li>Shop trong game: mua item cần thiết, có cả đồ free.</li>
+        <li>NPC Kaiosin: dịch chuyển nhanh tới các map xa, bớt phải chạy bộ.</li>
+      </ul>
+    </div>
+
+    <!-- TU TIÊN + CHUYỂN SINH -->
+    <div class="card">
+      <h2>Tu Tiên – Chuyển Sinh – Thiên Đạo – Địa Đạo</h2>
+      <h3>Chuyển sinh</h3>
+      <ul>
+        <li>Sau khi chuyển sinh: tăng thêm chỉ số gốc cho cả sp + pet.</li>
+      </ul>
+
+      <h3>Thiên Đạo</h3>
+      <ul>
+        <li>Mỗi cấp Thiên Đạo: tăng dame + HP/KI, kèm nội tại hỗ trợ mạnh.</li>
+        <li>Kiếm <strong>Pháp Tắc</strong> từ up quái; đủ ngưỡng sẽ tự tăng cấp.</li>
+        <li>Tiêu mỗi <strong>10k Cash</strong> tăng 1 cấp Thiên Đạo.</li>
+      </ul>
+
+      <h3>Địa Đạo</h3>
+      <ul>
+        <li>Mỗi cấp Địa Đạo: +1.000.000 sức đánh thường.</li>
+        <li>Tăng hiệu ứng chiêu thức.</li>
+        <li>Kiếm từ up quái + săn boss; đủ ngưỡng Luân Hồi sẽ tự tăng cấp.</li>
+        <li>Tiêu mỗi <strong>5k Cash</strong> nhận thêm 1 cấp Địa Đạo.</li>
+      </ul>
+
+      <h3>Tu Tiên &amp; Thọ Nguyên</h3>
+      <ul>
+        <li>Mỗi tài khoản mới: tặng sẵn <strong>3 ngày Thọ Nguyên</strong>.</li>
+        <li>1 giây ngoài đời = 5 giây trong game.</li>
+        <li>Hết Thọ Nguyên → chức năng Tu Tiên thành phế vật (phải lo bù lại).</li>
+        <li>Cần tẩy luyện thiên phú để lên linh căn (thiên phú càng cao tu càng nhanh).</li>
+        <li>Đến map Dị Giới để tu luyện &amp; nhận <strong>Linh Khí</strong>.</li>
+        <li>Đủ <strong>50M linh khí</strong> có thể độ kiếp:
+          <ul>
+            <li>Độ kiếp thành công: +3 ngày Thọ Nguyên.</li>
+            <li>Thất bại, hết Thọ Nguyên chưa qua được → reset về phế vật.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Ngọc Rồng, Rương Thần Bí &amp; Rada Dò Boss</h2>
+      <h3>Ghép Ngọc Rồng</h3>
+      <ul>
+        <li>Tìm đủ 7 loại Ngọc Rồng.</li>
+        <li>Ghép 7 viên 7 sao = 1 viên 6 sao.</li>
+        <li>Có thể ước đồ VIP khi đủ bộ.</li>
+        <li>Có ghép bộ Ngọc Rồng siêu cấp – đồ cực khủng.</li>
+      </ul>
+
+      <h3>Rương Thần Bí</h3>
+      <ul>
+        <li>Up quái có tỷ lệ rơi rương 1 sao.</li>
+        <li>Thu thập 7 rương 1 sao ghép lên 2 sao,…</li>
+        <li>Rương càng cao chỉ số càng cao; rương siêu cấp có chỉ số tới hàng tỷ %.</li>
+      </ul>
+
+      <h3>Rada Dò Boss</h3>
+      <ul>
+        <li>Dùng để soi boss &amp; dịch chuyển thẳng tới boss.</li>
+        <li>Boss auto hồi sinh 1s – farm cực đã.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Sổ Sứ Mệnh &amp; Leo Tháp Bí Cảnh</h2>
+      <ul>
+        <li><strong>Điểm Free</strong>: kiếm bằng cách up quái, săn boss.</li>
+        <li><strong>Điểm VIP</strong>: tiêu tiền / mua gói điểm.</li>
+        <li>Nhiều event, hoạt động đua top đi kèm.</li>
+        <li>Leo Tháp Bí Cảnh: thử sức với boss tháp để nhận quà xịn.</li>
+      </ul>
+    </div>
+
+    <!-- LƯU Ý -->
+    <div class="card warning">
+      <h2>Lưu ý an toàn</h2>
+      <ul>
+        <li>Admin <strong>không bao giờ</strong> inbox xin / vay tiền riêng.</li>
+        <li>Mọi hình thức nạp ủng hộ đều qua website:
+          <strong>hondaodragon.online</strong>.
+        </li>
+        <li>Cẩn thận lừa đảo giả danh admin.</li>
+      </ul>
+      <p class="note">
+        Zalo admin chính thức: <strong>0836935740</strong>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Dịch vụ khác của admin</h2>
+      <p>Admin có nhận bán source một số game:</p>
+      <ul>
+        <li>Game NRO dame ảo.</li>
+        <li>Một số game Pokémon, Naruto,…</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>© Hòn Đảo Dragon – Hướng dẫn tân thủ. Chúc bạn chơi game vui vẻ! 🐲</p>
+    </footer>
+  </div>
+</body>
+</html>
