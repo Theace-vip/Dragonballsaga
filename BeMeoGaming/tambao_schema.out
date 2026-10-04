@@ -1,0 +1,48 @@
+==== tambao_items
+CREATE TABLE `tambao_items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key_item_id` int(11) NOT NULL DEFAULT 1778 COMMENT 'item_template.id của chìa quay',
+  `item_id` int(11) NOT NULL COMMENT 'item_template.id của phần thưởng',
+  `quantity` int(11) NOT NULL DEFAULT 1 COMMENT 'số lượng trao cho người chơi',
+  `item_options` varchar(255) NOT NULL DEFAULT '' COMMENT 'option compact, ví dụ 30-1,77-50',
+  `tile_trung_thuong` int(11) NOT NULL DEFAULT 0 COMMENT 'tỉ lệ trúng theo %',
+  `des` varchar(255) DEFAULT NULL COMMENT 'ghi chú cho admin',
+  `start_at` datetime DEFAULT NULL,
+  `end_at` datetime DEFAULT NULL,
+  `enabled` tinyint(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `idx_key_item` (`key_item_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+id=20 | key_item_id=1778 | item_id=76 | quantity=1 | item_options= | tile_trung_thuong=25 | des=Vàng - số lượng random 1tr-20tr | start_at=null | end_at=null | enabled=1 | 
+id=21 | key_item_id=1778 | item_id=220 | quantity=1 | item_options= | tile_trung_thuong=8 | des=Đá lục bảo | start_at=null | end_at=null | enabled=1 | 
+id=22 | key_item_id=1778 | item_id=221 | quantity=1 | item_options= | tile_trung_thuong=8 | des=Đá Saphia | start_at=null | end_at=null | enabled=1 | 
+id=23 | key_item_id=1778 | item_id=222 | quantity=1 | item_options= | tile_trung_thuong=8 | des=Đá Ruby | start_at=null | end_at=null | enabled=1 | 
+id=24 | key_item_id=1778 | item_id=223 | quantity=1 | item_options= | tile_trung_thuong=8 | des=Đá Titan | start_at=null | end_at=null | enabled=1 | 
+id=25 | key_item_id=1778 | item_id=224 | quantity=1 | item_options= | tile_trung_thuong=8 | des=Đá thạch anh tím | start_at=null | end_at=null | enabled=1 | 
+id=26 | key_item_id=1778 | item_id=381 | quantity=1 | item_options= | tile_trung_thuong=6 | des=Cuồng nộ 10 phút | start_at=null | end_at=null | enabled=1 | 
+id=27 | key_item_id=1778 | item_id=382 | quantity=1 | item_options= | tile_trung_thuong=6 | des=Bổ huyết 10 phút | start_at=null | end_at=null | enabled=1 | 
+id=28 | key_item_id=1778 | item_id=383 | quantity=1 | item_options= | tile_trung_thuong=6 | des=Bổ khí 10 phút | start_at=null | end_at=null | enabled=1 | 
+id=29 | key_item_id=1778 | item_id=384 | quantity=1 | item_options= | tile_trung_thuong=6 | des=Giáp Xên bọ hung 10 phút | start_at=null | end_at=null | enabled=1 | 
+id=30 | key_item_id=1778 | item_id=385 | quantity=1 | item_options= | tile_trung_thuong=6 | des=Ẩn danh 10 phút | start_at=null | end_at=null | enabled=1 | 
+id=31 | key_item_id=1778 | item_id=457 | quantity=1 | item_options= | tile_trung_thuong=3 | des=Thỏi vàng | start_at=null | end_at=null | enabled=1 | 
+id=32 | key_item_id=1778 | item_id=820 | quantity=1 | item_options= | tile_trung_thuong=1 | des=Vé quay ngọc đen | start_at=null | end_at=null | enabled=1 | 
+id=33 | key_item_id=1778 | item_id=821 | quantity=1 | item_options= | tile_trung_thuong=1 | des=Vé quay ngọc vàng | start_at=null | end_at=null | enabled=1 | 
+id=34 | key_item_id=1779 | item_id=1432 | quantity=1 | item_options= | tile_trung_thuong=20 | des=Thỏi vàng Khóa | start_at=null | end_at=null | enabled=1 | 
+id=35 | key_item_id=1779 | item_id=821 | quantity=1 | item_options= | tile_trung_thuong=10 | des=Vé quay ngọc vàng | start_at=null | end_at=null | enabled=1 | 
+id=36 | key_item_id=1779 | item_id=220 | quantity=2 | item_options= | tile_trung_thuong=10 | des=Đá lục bảo x2 | start_at=null | end_at=null | enabled=1 | 
+id=37 | key_item_id=1779 | item_id=222 | quantity=2 | item_options= | tile_trung_thuong=10 | des=Đá Ruby x2 | start_at=null | end_at=null | enabled=1 | 
+id=38 | key_item_id=1779 | item_id=224 | quantity=2 | item_options= | tile_trung_thuong=10 | des=Đá thạch anh tím x2 | start_at=null | end_at=null | enabled=1 | 
+==== moc_vong_quay
+CREATE TABLE `moc_vong_quay` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_id` int(11) NOT NULL COMMENT 'item_template.id của phần thưởng',
+  `quantity` int(11) NOT NULL DEFAULT 1,
+  `max_value` int(11) NOT NULL DEFAULT 0 COMMENT 'số điểm quay cần có',
+  `item_options` varchar(255) NOT NULL DEFAULT '[]' COMMENT 'JSON option, ví dụ [{"id":30,"param":1}]',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+id=1 | item_id=457 | quantity=5 | max_value=10 | item_options=[] | 
+id=2 | item_id=821 | quantity=1 | max_value=30 | item_options=[] | 
+id=3 | item_id=1432 | quantity=1 | max_value=50 | item_options=[] | 
+id=4 | item_id=220 | quantity=3 | max_value=100 | item_options=[{"id":30,"param":1},{"id":77,"param":50}] | 
+id=5 | item_id=381 | quantity=5 | max_value=200 | item_options=[] | 

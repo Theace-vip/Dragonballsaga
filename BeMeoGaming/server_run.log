@@ -1,0 +1,55 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mSuccessfully loaded clan (15), clan next id: 16
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2140)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (545)
+[0m[0;32mSuccessfully loaded flag bag (193)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1914)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (1)
+[0m[0;32mLoad phuc_loi thành công (4)[0m[0;32mLoad phuc_loi_tab thành công (13)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (111)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (20)
+[0m[0;32mSuccessfully loaded SK top (20)
+[0m[0;32mSuccessfully loaded NHS top (20)
+[0m[0;32mSuccessfully loaded phòng t?p top (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (76)
+[0m[0;32mSuccessfully loaded leo top Sm (78)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0mAUTOGIFTTOP [14]
+Thread Update Auto Gift Item Top Running.........
+[0;35mTotal database loading time: 4816 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0mException in thread "Active line" java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1660)
+	at server.ServerManager.lambda$activeCommandLine$4(ServerManager.java:209)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

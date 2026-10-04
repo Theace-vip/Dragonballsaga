@@ -1,0 +1,24 @@
+item_template min=0 max=1914 count=1915
+id | int(11)
+TYPE | int(11)
+gender | smallint(6)
+NAME | varchar(255)
+description | varchar(255)
+level | int(11)
+icon_id | int(11)
+part | int(11)
+is_up_to_up | tinyint(1)
+power_require | int(11)
+gold | int(11)
+gem | int(11)
+head | int(11)
+body | int(11)
+leg | int(11)
+is_up_to_up_over_99 | tinyint(1)
+can_trade | tinyint(1)
+comment | varchar(200)
+ruby | int(11)
+chest? 1412 type=27 gender=3 name=Rương Thần Bí 2Sao icon=15113 part=-1 desc=Phần quà Rương Phẩm Cao Rất giá trị
+chest? 1413 type=27 gender=3 name=Rương Thần Bí 1Sao icon=15113 part=-1 desc=Phần quà Rương Phẩm Cao Rất giá trị
+chest? 1735 type=27 gender=3 name=Hộp Nguyên Thủy (đệ tử) icon=21347 part=0 desc=Mở nhận ngẫu nhiên 1 Đồ SKH  Nguyên Thủy mặc 3 hành tinh (cho đệ tử)
+chest? 1914 type=27 gender=3 name=Ruong Trung Thu icon=11717 part=0 desc=Su kien Trung Thu - Mo ruong nhan qua su kien, ty le re cai trang 5%

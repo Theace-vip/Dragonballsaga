@@ -1,0 +1,84 @@
+[2025-07-23 19:42:56]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 2 -Hoàn-> VIP 1
+Hoàn lại: 20 k VND
+Số dư VND trước khi hoàn: 499875000
+Số dư VND sau khi hoàn: 499895000
+
+[2025-07-23 19:43:00]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 3 -Hoàn-> VIP 2
+Hoàn lại: 30 k VND
+Số dư VND trước khi hoàn: 499805000
+Số dư VND sau khi hoàn: 499835000
+
+[2025-07-23 19:43:06]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 4 -Hoàn-> VIP 3
+Hoàn lại: 36 k VND
+Số dư VND trước khi hoàn: 499585000
+Số dư VND sau khi hoàn: 499621000
+
+[2025-07-23 19:43:12]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 5 -Hoàn-> VIP 4
+Hoàn lại: 100 k VND
+Số dư VND trước khi hoàn: 499021000
+Số dư VND sau khi hoàn: 499121000
+
+[2025-07-23 19:43:19]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 6 -Hoàn-> VIP 5
+Hoàn lại: 240 k VND
+Số dư VND trước khi hoàn: 497771000
+Số dư VND sau khi hoàn: 498011000
+
+[2025-07-23 19:43:29]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 7 -Hoàn-> VIP 6
+Hoàn lại: 540 k VND
+Số dư VND trước khi hoàn: 494761000
+Số dư VND sau khi hoàn: 495301000
+
+[2025-07-23 19:43:29]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 7 -Hoàn-> VIP 2
+Hoàn lại: 540 k VND
+Số dư VND trước khi hoàn: 494761000
+Số dư VND sau khi hoàn: 495301000
+
+[2025-07-23 19:43:35]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 8 -Hoàn-> VIP 7
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 490351000
+Số dư VND sau khi hoàn: 491651000
+
+[2025-07-23 19:43:41]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 9 -Hoàn-> VIP 8
+Hoàn lại: 1 Tr VND
+Số dư VND trước khi hoàn: 481651000
+Số dư VND sau khi hoàn: 483631000
+
+[2025-07-23 19:44:42]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 10 -Hoàn-> VIP 9
+Hoàn lại: 4 Tr VND
+Số dư VND trước khi hoàn: 468631000
+Số dư VND sau khi hoàn: 472631000
+
+[2025-07-23 19:44:51]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 11 -Hoàn-> VIP 10
+Hoàn lại: 6 Tr VND
+Số dư VND trước khi hoàn: 447631000
+Số dư VND sau khi hoàn: 453631000
+
+[2025-07-23 19:45:04]
+Player: 111 (ID: 520)
+Nâng VIP : VIP 13 -Hoàn-> VIP 11
+Hoàn lại: 10 Tr VND
+Số dư VND trước khi hoàn: 404131000
+Số dư VND sau khi hoàn: 414131000
+

@@ -1,0 +1,123 @@
+package npc.npc_manifest;
+
+/**
+ *
+ *
+ */
+import clan.Clan;
+import clan.ClanMember;
+import consts.ConstNpc;
+import item.Item;
+import models.DestronGas.DestronGas;
+import models.DestronGas.DestronGasService;
+import npc.Npc;
+import static npc.NpcFactory.PLAYERID_OBJECT;
+import player.Player;
+import services.InventoryService;
+import services.NpcService;
+import services.Service;
+import services.func.Input;
+import utils.TimeUtil;
+
+public class MrPoPo extends Npc {
+
+    public MrPoPo(int mapId, int status, int cx, int cy, int tempId, int avartar) {
+        super(mapId, status, cx, cy, tempId, avartar);
+    }
+
+    @Override
+    public void openBaseMenu(Player player) {
+        if (canOpenNpc(player)) {
+            if (this.mapId == 0) {
+                if (player.clan != null) {
+                    this.createOtherMenu(player, ConstNpc.BASE_MENU,
+                           "|7|Thượng Đế vừa phát hiện ra 1 loại khí đang âm thầm\n\n"
+                            + "|4|hủy diệt mọi mầm sống trên Trái Đất,\n"
+                            + "nó được gọi là Destron Gas.\n"
+                            + "Ta sẽ đưa các cậu đến nơi ấy, các cậu đã sẵn sàng chưa?\n\n"
+                            + "|7|Tiêu Diệt Toàn Bộ Quai Trong Khí Gas - Nhận Ramdom Zenni\n"
+                            + "|4|Nhận Rương: SKH Đệ Tử 20k% ST Kame-Masenco-atomic\n"
+                            + "Tiêu Diệt Boss Cuối Nhận Cải Trang Max 100k% SD ,Có Tỉ Lệ VV\n\n"
+                            + "|7|Cần 99.999 Cỏ 4 Lá Để Vào",
+                            "Hướng Dẫn", "Top 100\nBang hội", "Thành tích\nBang", "OK", "Từ chối");
+                } else {
+                    this.createOtherMenu(player, ConstNpc.BASE_MENU,
+                            "|7|Thượng Đế vừa phát hiện ra 1 loại khí đang âm thầm\n\n"
+                            + "|4|hủy diệt mọi mầm sống trên Trái Đất,\n"
+                            + "nó được gọi là Destron Gas.\n"
+                            + "Ta sẽ đưa các cậu đến nơi ấy, các cậu đã sẵn sàng chưa?\n\n"
+                            + "|7|Tiêu Diệt Toàn Bộ Quai Trong Khí Gas - Nhận Ramdom Zenni\n"
+                            + "|4|Nhận Rương: SKH Đệ Tử 20k% ST Kame-Masenco-atomic\n"
+                            + "Tiêu Diệt Boss Cuối Nhận Cải Trang Max 100k% SD ,Có Tỉ Lệ VV\n\n"
+                            + "|7|Cần 99.999 Cỏ 4 Lá Để Vào",
+                            "Hướng Dẫn", "Top 100\nBang hội", "Thành tích\nBang", "OK", "Từ chối");
+                }
+            }
+        }
+    }
+
+    @Override
+    public void confirmMenu(Player player, int select) {
+        if (canOpenNpc(player)) {
+            if (this.mapId == 0) {
+                if (player.iDMark.isBaseMenu()) {
+                    switch (select) {
+                        case 0 ->
+                            NpcService.gI().createTutorial(player, tempId, this.avartar, ConstNpc.HUONG_DAN_KHI_GAS_HUY_DIET);
+                        case 1 -> {
+                        }
+                        case 2 -> {
+                        }
+                        case 3 -> {
+                            Clan clan = player.clan;
+                            if (clan != null) {
+                                ClanMember cm = clan.getClanMember((int) player.id);
+                                if (cm != null) {
+                                    if (player.clanMember.getNumDateFromJoinTimeToToday() < 2) {
+                                        NpcService.gI().createTutorial(player, tempId, this.avartar,
+                                                "Gia nhập bang hội trên 2 ngày mới được tham gia");
+                                        return;
+                                    }
+                                    if (player.clan.KhiGasHuyDiet != null) {
+                                        createOtherMenu(player, 2,
+                                                "Bang hội của cậu đang tham gia Destron Gas cấp độ " + player.clan.KhiGasHuyDiet.level + "\n"
+                                                + "cậu có muốn đi cùng họ không ? ("
+                                                + TimeUtil.convertTimeNow(player.clan.KhiGasHuyDiet.getLastTimeOpen())
+                                                + " trước)", "Đồng ý", "Từ chối");
+                                        return;
+                                    }
+                                    if (!clan.isLeader(player)) {
+                                        NpcService.gI().createTutorial(player, tempId, this.avartar, "Chức năng chỉ dành cho bang chủ");
+                                        return;
+                                    }
+                                    if (clan.members.size() < DestronGas.N_PLAYER_CLAN) {
+                                        NpcService.gI().createTutorial(player, tempId, this.avartar,
+                                                "Bang hội phải có ít nhất 5 thành viên mới có thể tham gia");
+                                        return;
+                                    }
+                                    Item ve = InventoryService.gI().findItem(player.inventory.itemsBag, 1150);
+                                    if (ve == null || ve.quantity < 99999) {
+                                        Service.gI().sendThongBao(player,
+                                                "Cần 99.999  Cỏ 4 lá để mở cổng Destron Gas!");
+                                        return;
+                                    }
+                                    InventoryService.gI().subQuantityItemsBag(player, ve, 1150);
+                                    InventoryService.gI().sendItemBag(player);
+                                    Input.gI().createFormChooseLevelKGHD(player);
+                                }
+                            }
+                        }
+                    }
+                } else if (player.iDMark.getIndexMenu() == 2) {
+                    if (select == 0) {
+                        if (player.clan.KhiGasHuyDiet == null) {
+                            DestronGasService.gI().openKhiGasHuyDiet(player, Byte.parseByte(String.valueOf(PLAYERID_OBJECT.get(player.id))));
+                        } else {
+                            DestronGasService.gI().openKhiGasHuyDiet(player, (byte) 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

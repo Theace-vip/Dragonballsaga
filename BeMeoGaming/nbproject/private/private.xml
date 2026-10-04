@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/services/PhucLoiService.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/item/Item.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/map/Zone.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/server/Controller.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/network/Network.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/jdbc/daos/NDVSqlFetcher.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/network/MessageSendCollect.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/player/Pet.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/services/func/ChangeMapService.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/network/Collector.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/server/Command.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/network/logic/Cmd_message.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/services/Service.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/data/DataGame.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/data/config/config.properties</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/player/PhucLoi.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/player/Player.java</file>
+            <file>file:/C:/Users/Administrator/Downloads/Dragonballsaga/BeMeoGaming/src/network/Message.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,13 @@
+{
+  "name": "frame-export",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Xuat frame PNG tu spine viewer (localhost:5750) -> data/spine_frames cho BeMeoGaming",
+  "main": "export.js",
+  "scripts": {
+    "export": "node export.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

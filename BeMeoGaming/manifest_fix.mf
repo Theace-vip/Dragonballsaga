@@ -1,0 +1,4 @@
+Manifest-Version: 1.0 
+Class-Path: lib/HikariCP-6.0.0.jar lib/commons-lang3-3.17.0.jar lib/gson-2.10.1.jar lib/json-simple-1.1.1.jar lib/lombok.jar lib/mysql-connector-j-9.1.0.jar lib/slf4j-api-2.1.0-alpha1.jar lib/jol-core-0.17.jar 
+Main-Class: server.ServerManager 
+

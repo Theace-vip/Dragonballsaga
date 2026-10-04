@@ -1,0 +1,8 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Thread Update Auto Gift Item Top Running.........
+Exception in thread "Active line" java.util.NoSuchElementException: No line found
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1660)
+	at server.ServerManager.lambda$activeCommandLine$4(ServerManager.java:207)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

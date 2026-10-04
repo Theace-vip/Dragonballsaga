@@ -1,0 +1,12 @@
+-- napthe
+id | int(11) | def=null
+user_nap | varchar(100) | def=null
+telco | varchar(255) | def=null
+serial | varchar(255) | def=null
+code | varchar(255) | def=null
+amount | int(11) | def=null
+status | int(11) | def=null
+request_id | varchar(255) | def=null
+created_at | timestamp | def=current_timestamp()
+-- history_bank
+ERR Table 'hondaodragon.history_bank' doesn't exist

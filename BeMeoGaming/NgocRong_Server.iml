@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib/commons-lang3-3.17.0" level="project" />
+    <orderEntry type="library" name="lib/gson-2.10.1" level="project" />
+    <orderEntry type="library" name="lib/HikariCP-6.0.0" level="project" />
+    <orderEntry type="library" name="lib/json-simple-1.1.1" level="project" />
+    <orderEntry type="library" name="lib/lombok" level="project" />
+    <orderEntry type="library" name="lib/mysql-connector-j-9.1.0" level="project" />
+    <orderEntry type="library" name="lib/slf4j-api-2.1.0-alpha1" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+  </component>
+</module>
