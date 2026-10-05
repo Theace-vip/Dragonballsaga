@@ -16,28 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `worldboss_reward_log`
+-- Table structure for table `shop`
 --
 
-DROP TABLE IF EXISTS `worldboss_reward_log`;
+DROP TABLE IF EXISTS `shop`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `worldboss_reward_log` (
-  `season_id` varchar(32) NOT NULL,
-  `rewarded_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `top_json` text DEFAULT NULL,
-  PRIMARY KEY (`season_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `shop` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `npc_id` int(11) NOT NULL,
+  `tag_name` varchar(50) DEFAULT NULL,
+  `type_shop` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  KEY `npc_id` (`npc_id`) USING BTREE,
+  CONSTRAINT `shop_ibfk_1` FOREIGN KEY (`npc_id`) REFERENCES `npc_template` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=251 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `worldboss_reward_log`
+-- Dumping data for table `shop`
 --
 
-LOCK TABLES `worldboss_reward_log` WRITE;
-/*!40000 ALTER TABLE `worldboss_reward_log` DISABLE KEYS */;
-INSERT INTO `worldboss_reward_log` VALUES ('20260924_2200','2026-09-24 15:12:27','[{\"name\":\"bomthue\",\"rank\":1,\"id\":91,\"dame\":9000000000000000000},{\"name\":\"brojp\",\"rank\":2,\"id\":88,\"dame\":9000000000000000000},{\"name\":\"atula\",\"rank\":3,\"id\":98,\"dame\":9000000000000000000},{\"name\":\"kandz\",\"rank\":4,\"id\":90,\"dame\":9000000000000000000}]'),('20260925_1253','2026-09-25 05:54:39','[{\"name\":\"admin\",\"rank\":1,\"id\":1,\"dame\":2.852577792349306E24}]');
-/*!40000 ALTER TABLE `worldboss_reward_log` ENABLE KEYS */;
+LOCK TABLES `shop` WRITE;
+/*!40000 ALTER TABLE `shop` DISABLE KEYS */;
+INSERT INTO `shop` VALUES (1,7,'BUNMA',3),(2,8,'DENDE',3),(3,9,'APPULE',3),(4,16,'URON',0),(5,39,'SANTA_HEAD',0),(6,21,'BUA_1H',0),(7,21,'BUA_8H',0),(8,21,'BUA_1M',0),(9,39,'SANTA',0),(10,37,'BUNMA_FUTURE',0),(11,55,'BILL',0),(12,39,'SANTA_PHUKIEN',0),(22,39,'SANTA_MO_RONG_HANH_TRANG',0),(23,39,'SANTA_HAN_SU_DUNG',0),(24,39,'SANTA_DANH_HIEU',0),(25,39,'CUAHANG',3),(26,48,'NGOKHONGSHOP',3),(27,89,'CUAHANGHOTONG',3),(28,92,'SUKIEN',3),(29,92,'Trungthu',3),(30,95,'FREE',3),(31,95,'NAP',3),(32,95,'CAN_CAU',3),(33,95,'DOI_CA',3),(34,95,'FREE2',3),(35,95,'VIP',3);
+/*!40000 ALTER TABLE `shop` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 13:16:48
+-- Dump completed on 2026-10-05 13:16:45

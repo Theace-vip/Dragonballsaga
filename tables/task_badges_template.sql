@@ -16,28 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `worldboss_reward_log`
+-- Table structure for table `task_badges_template`
 --
 
-DROP TABLE IF EXISTS `worldboss_reward_log`;
+DROP TABLE IF EXISTS `task_badges_template`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `worldboss_reward_log` (
-  `season_id` varchar(32) NOT NULL,
-  `rewarded_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `top_json` text DEFAULT NULL,
-  PRIMARY KEY (`season_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `task_badges_template` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `maxCount` int(11) NOT NULL DEFAULT 0,
+  `idBadgesReward` int(11) NOT NULL DEFAULT -1,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `worldboss_reward_log`
+-- Dumping data for table `task_badges_template`
 --
 
-LOCK TABLES `worldboss_reward_log` WRITE;
-/*!40000 ALTER TABLE `worldboss_reward_log` DISABLE KEYS */;
-INSERT INTO `worldboss_reward_log` VALUES ('20260924_2200','2026-09-24 15:12:27','[{\"name\":\"bomthue\",\"rank\":1,\"id\":91,\"dame\":9000000000000000000},{\"name\":\"brojp\",\"rank\":2,\"id\":88,\"dame\":9000000000000000000},{\"name\":\"atula\",\"rank\":3,\"id\":98,\"dame\":9000000000000000000},{\"name\":\"kandz\",\"rank\":4,\"id\":90,\"dame\":9000000000000000000}]'),('20260925_1253','2026-09-25 05:54:39','[{\"name\":\"admin\",\"rank\":1,\"id\":1,\"dame\":2.852577792349306E24}]');
-/*!40000 ALTER TABLE `worldboss_reward_log` ENABLE KEYS */;
+LOCK TABLES `task_badges_template` WRITE;
+/*!40000 ALTER TABLE `task_badges_template` DISABLE KEYS */;
+INSERT INTO `task_badges_template` VALUES (1,'Nạp Tích luỹ 1 Triệu Trong Ngày',1000000,218),(2,'Ước Rồng Thần 1 Sao X10 Lần',10,219),(3,'Hạ Gục Cumber, Black Goku, Cooler, Xên ( 30 Lần )',30,220),(4,'Đập 3 Trang Bị +7 Trong Ngày',3,221),(5,'Top 1 Đại Hội Võ Đài Siêu Hạng',1,222),(6,'Hoàn Thành 10 Nhiệm Vụ Siêu Khó Tại Bò Mộng',10,223),(7,'Đánh Bại, Hoặc Cho Xương Sói 20 Lần',20,-1),(8,'Hoàn Thành Nhiệm Vụ 5 Lần Cho Xinbato Nước',5,-1),(9,'Nhặt Đồ Trong Ngày 500 Lần',500,224),(10,'Tiêu diệt 30 Boss Ăn Trộm',30,225),(11,'Tiêu Diệt 30 Boss Ở Dơ',30,-1);
+/*!40000 ALTER TABLE `task_badges_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 13:16:48
+-- Dump completed on 2026-10-05 13:16:46

@@ -16,28 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `worldboss_reward_log`
+-- Table structure for table `notify`
 --
 
-DROP TABLE IF EXISTS `worldboss_reward_log`;
+DROP TABLE IF EXISTS `notify`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `worldboss_reward_log` (
-  `season_id` varchar(32) NOT NULL,
-  `rewarded_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `top_json` text DEFAULT NULL,
-  PRIMARY KEY (`season_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `notify` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `worldboss_reward_log`
+-- Dumping data for table `notify`
 --
 
-LOCK TABLES `worldboss_reward_log` WRITE;
-/*!40000 ALTER TABLE `worldboss_reward_log` DISABLE KEYS */;
-INSERT INTO `worldboss_reward_log` VALUES ('20260924_2200','2026-09-24 15:12:27','[{\"name\":\"bomthue\",\"rank\":1,\"id\":91,\"dame\":9000000000000000000},{\"name\":\"brojp\",\"rank\":2,\"id\":88,\"dame\":9000000000000000000},{\"name\":\"atula\",\"rank\":3,\"id\":98,\"dame\":9000000000000000000},{\"name\":\"kandz\",\"rank\":4,\"id\":90,\"dame\":9000000000000000000}]'),('20260925_1253','2026-09-25 05:54:39','[{\"name\":\"admin\",\"rank\":1,\"id\":1,\"dame\":2.852577792349306E24}]');
-/*!40000 ALTER TABLE `worldboss_reward_log` ENABLE KEYS */;
+LOCK TABLES `notify` WRITE;
+/*!40000 ALTER TABLE `notify` DISABLE KEYS */;
+INSERT INTO `notify` VALUES (1,'Hỗ trợ nhiệm vụ','1) Hỗ trợ nhiệm vụ TĐST:\nNgày thứ 2-3-4 trong tuần từ 5h\nđến 7h và từ 17h đến hết 19h,\nchỉ những cư dân đang làm nhiệm\nvụ này mới vào được map có boss,\nnày xuất hiện.\n(Núi khỉ đen, hang khỉ đen, núi khỉ\nđỏ).\n\n2) Hỗ trợ nhiệm vụ Xên Bọ Hung:\nNgày thứ 2-3-4 trong tuần, từ 2 giờ\nsáng đén hết 4 giờ sáng và từ 2 giờ\nchiều đến hết 4 giờ chiều, chỉ\nnhững cư dân đang làm nhiệm vụ\nnày mới vào được map có boss này\nxuất hiện.\n(Thị trấn Ginder, Võ đài Xên bọ\nhung).');
+/*!40000 ALTER TABLE `notify` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 13:16:48
+-- Dump completed on 2026-10-05 13:16:39

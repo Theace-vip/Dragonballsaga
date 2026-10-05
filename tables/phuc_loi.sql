@@ -16,28 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `worldboss_reward_log`
+-- Table structure for table `phuc_loi`
 --
 
-DROP TABLE IF EXISTS `worldboss_reward_log`;
+DROP TABLE IF EXISTS `phuc_loi`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `worldboss_reward_log` (
-  `season_id` varchar(32) NOT NULL,
-  `rewarded_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `top_json` text DEFAULT NULL,
-  PRIMARY KEY (`season_id`)
+CREATE TABLE `phuc_loi` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `max_tab` int(11) NOT NULL DEFAULT 0,
+  `id_tab` int(11) NOT NULL DEFAULT 0,
+  `info_phucloi` text DEFAULT NULL,
+  `action` int(11) NOT NULL DEFAULT 0,
+  `tich_luy` varchar(255) DEFAULT NULL,
+  `currency_item` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `worldboss_reward_log`
+-- Dumping data for table `phuc_loi`
 --
 
-LOCK TABLES `worldboss_reward_log` WRITE;
-/*!40000 ALTER TABLE `worldboss_reward_log` DISABLE KEYS */;
-INSERT INTO `worldboss_reward_log` VALUES ('20260924_2200','2026-09-24 15:12:27','[{\"name\":\"bomthue\",\"rank\":1,\"id\":91,\"dame\":9000000000000000000},{\"name\":\"brojp\",\"rank\":2,\"id\":88,\"dame\":9000000000000000000},{\"name\":\"atula\",\"rank\":3,\"id\":98,\"dame\":9000000000000000000},{\"name\":\"kandz\",\"rank\":4,\"id\":90,\"dame\":9000000000000000000}]'),('20260925_1253','2026-09-25 05:54:39','[{\"name\":\"admin\",\"rank\":1,\"id\":1,\"dame\":2.852577792349306E24}]');
-/*!40000 ALTER TABLE `worldboss_reward_log` ENABLE KEYS */;
+LOCK TABLES `phuc_loi` WRITE;
+/*!40000 ALTER TABLE `phuc_loi` DISABLE KEYS */;
+INSERT INTO `phuc_loi` VALUES (0,'Quà Online',2,0,'Online đủ số phút là nhận được quà',1,'phút',0),(1,'Điểm danh tuần',7,1,'Điểm danh đúng ngày trong tuần',2,'ngày',0),(2,'Tích nạp',1,2,'Nạp đủ mốc là nhận được quà',1,'đã nạp',0),(3,'Quà Coin',2,3,'Dùng Coin để đổi quà',1,'Coin',0),(4,'Shop lượng bạc',1,4,'Dùng Coin mua Lượng Bạc',1,'Lượng Bạc',1271),(5,'Shop lượng vàng',1,5,'Dùng Coin mua Lượng Vàng',1,'Lượng Vàng',1270),(6,'Shop thỏi vàng',1,6,'Dùng Coin mua Thỏi Vàng',1,'Thỏi Vàng',457),(7,'Shop ngọc xanh',1,7,'Dùng Coin mua Ngọc Xanh',1,'Ngọc Xanh',-1),(8,'Shop Cỏ 4 lá',1,8,'Dùng Coin mua Cỏ 4 Lá',1,'Cỏ 4 Lá',1150);
+/*!40000 ALTER TABLE `phuc_loi` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 13:16:48
+-- Dump completed on 2026-10-05 13:16:42
