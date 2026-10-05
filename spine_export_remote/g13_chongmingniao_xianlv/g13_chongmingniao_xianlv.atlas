@@ -1,0 +1,279 @@
+
+g13_chongmingniao_xianlv.png
+size: 1024,748
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cmn
+  rotate: false
+  xy: 137, 524
+  size: 98, 77
+  orig: 98, 77
+  offset: 0, 0
+  index: -1
+cmn1
+  rotate: false
+  xy: 932, 42
+  size: 89, 82
+  orig: 89, 82
+  offset: 0, 0
+  index: -1
+cmn10
+  rotate: false
+  xy: 647, 181
+  size: 197, 158
+  orig: 197, 158
+  offset: 0, 0
+  index: -1
+cmn11
+  rotate: false
+  xy: 703, 362
+  size: 43, 79
+  orig: 44, 80
+  offset: 0, 1
+  index: -1
+cmn12
+  rotate: true
+  xy: 839, 165
+  size: 149, 183
+  orig: 157, 190
+  offset: 3, 3
+  index: -1
+cmn13
+  rotate: false
+  xy: 962, 699
+  size: 47, 47
+  orig: 47, 47
+  offset: 0, 0
+  index: -1
+cmn14
+  rotate: 270
+  xy: 270, 25
+  size: 166, 189
+  orig: 166, 189
+  offset: 0, 0
+  index: -1
+cmn15
+  rotate: true
+  xy: 237, 554
+  size: 47, 167
+  orig: 47, 171
+  offset: 0, 4
+  index: -1
+cmn16
+  rotate: false
+  xy: 558, 710
+  size: 78, 35
+  orig: 78, 35
+  offset: 0, 0
+  index: -1
+cmn17
+  rotate: false
+  xy: 619, 548
+  size: 67, 82
+  orig: 67, 82
+  offset: 0, 0
+  index: -1
+cmn18
+  rotate: false
+  xy: 272, 112
+  size: 92, 102
+  orig: 92, 102
+  offset: 0, 0
+  index: -1
+cmn19
+  rotate: false
+  xy: 992, 530
+  size: 30, 101
+  orig: 30, 102
+  offset: 0, 1
+  index: -1
+cmn2
+  rotate: true
+  xy: 2, 267
+  size: 176, 220
+  orig: 176, 225
+  offset: 0, 3
+  index: -1
+cmn20
+  rotate: 270
+  xy: 217, 163
+  size: 130, 240
+  orig: 130, 242
+  offset: 0, 2
+  index: -1
+cmn21
+  rotate: false
+  xy: 29, 44
+  size: 188, 236
+  orig: 188, 236
+  offset: 0, 0
+  index: -1
+cmn22
+  rotate: 180
+  xy: 59, 45
+  size: 229, 264
+  orig: 229, 264
+  offset: 0, 0
+  index: -1
+cmn23
+  rotate: false
+  xy: 2, 92
+  size: 86, 158
+  orig: 87, 158
+  offset: 0, 0
+  index: -1
+cmn24
+  rotate: 180
+  xy: 2, 426
+  size: 370, 175
+  orig: 372, 177
+  offset: 1, 2
+  index: -1
+cmn25
+  rotate: false
+  xy: 210, 205
+  size: 283, 183
+  orig: 285, 186
+  offset: 2, 2
+  index: -1
+cmn26
+  rotate: false
+  xy: 692, 64
+  size: 147, 116
+  orig: 147, 116
+  offset: 0, 0
+  index: -1
+cmn27
+  rotate: true
+  xy: 445, 74
+  size: 150, 250
+  orig: 153, 255
+  offset: 3, 4
+  index: -1
+cmn28
+  rotate: 270
+  xy: 675, 3
+  size: 157, 185
+  orig: 157, 185
+  offset: 0, 0
+  index: -1
+cmn29
+  rotate: true
+  xy: 488, 8
+  size: 86, 202
+  orig: 86, 202
+  offset: 0, 0
+  index: -1
+cmn3
+  rotate: false
+  xy: 74, 535
+  size: 39, 65
+  orig: 39, 65
+  offset: 0, 0
+  index: -1
+cmn30
+  rotate: false
+  xy: 849, 59
+  size: 122, 152
+  orig: 122, 152
+  offset: 0, 0
+  index: -1
+cmn31
+  rotate: false
+  xy: 220, 343
+  size: 77, 84
+  orig: 77, 84
+  offset: 0, 0
+  index: -1
+cmn32
+  rotate: false
+  xy: 462, 113
+  size: 198, 200
+  orig: 198, 200
+  offset: 0, 0
+  index: -1
+cmn33
+  rotate: false
+  xy: 558, 558
+  size: 439, 188
+  orig: 440, 190
+  offset: 0, 0
+  index: -1
+cmn34
+  rotate: 180
+  xy: 345, 389
+  size: 290, 241
+  orig: 295, 247
+  offset: 2, 3
+  index: -1
+cmn4
+  rotate: false
+  xy: 620, 28
+  size: 146, 70
+  orig: 146, 70
+  offset: 0, 0
+  index: -1
+cmn5
+  rotate: false
+  xy: 2, 420
+  size: 59, 116
+  orig: 59, 116
+  offset: 0, 0
+  index: -1
+cmn6
+  rotate: false
+  xy: 760, 359
+  size: 53, 76
+  orig: 53, 77
+  offset: 0, 0
+  index: -1
+cmn7
+  rotate: false
+  xy: 964, 647
+  size: 46, 51
+  orig: 46, 51
+  offset: 0, 0
+  index: -1
+cmn8
+  rotate: false
+  xy: 167, 210
+  size: 41, 73
+  orig: 41, 75
+  offset: 0, 0
+  index: -1
+cmn9
+  rotate: false
+  xy: 488, 237
+  size: 96, 68
+  orig: 96, 68
+  offset: 0, 0
+  index: -1
+jian
+  rotate: false
+  xy: 2, 602
+  size: 554, 143
+  orig: 568, 149
+  offset: 7, 6
+  index: -1
+q
+  rotate: false
+  xy: 818, 304
+  size: 204, 134
+  orig: 204, 134
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: false
+  xy: 591, 425
+  size: 431, 110
+  orig: 431, 110
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: 180
+  xy: 443, 307
+  size: 311, 151
+  orig: 395, 181
+  offset: 29, 30
+  index: -1

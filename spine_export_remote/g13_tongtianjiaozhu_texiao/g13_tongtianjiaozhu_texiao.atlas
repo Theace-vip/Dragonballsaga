@@ -1,0 +1,251 @@
+
+g13_tongtianjiaozhu_texiao.png
+size: 704,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0_000
+  rotate: true
+  xy: 595, 3
+  size: 92, 65
+  orig: 128, 128
+  offset: 36, 32
+  index: -1
+0_001
+  rotate: true
+  xy: 592, 235
+  size: 107, 84
+  orig: 128, 128
+  offset: 17, 24
+  index: -1
+0_002
+  rotate: true
+  xy: 592, 344
+  size: 103, 90
+  orig: 128, 128
+  offset: 6, 18
+  index: -1
+0_003
+  rotate: false
+  xy: 302, 629
+  size: 95, 16
+  orig: 128, 128
+  offset: 0, 56
+  index: -1
+baiguang1
+  rotate: false
+  xy: 642, 953
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+c_00
+  rotate: false
+  xy: 284, 374
+  size: 12, 43
+  orig: 128, 128
+  offset: 55, 5
+  index: -1
+c_01
+  rotate: false
+  xy: 649, 178
+  size: 28, 55
+  orig: 128, 128
+  offset: 48, 15
+  index: -1
+c_02
+  rotate: false
+  xy: 515, 686
+  size: 39, 63
+  orig: 128, 128
+  offset: 41, 29
+  index: -1
+c_03
+  rotate: false
+  xy: 642, 906
+  size: 38, 45
+  orig: 128, 128
+  offset: 42, 43
+  index: -1
+c_04
+  rotate: false
+  xy: 515, 652
+  size: 36, 32
+  orig: 128, 128
+  offset: 43, 50
+  index: -1
+c_05
+  rotate: false
+  xy: 399, 619
+  size: 29, 26
+  orig: 128, 128
+  offset: 43, 53
+  index: -1
+dl
+  rotate: true
+  xy: 302, 742
+  size: 271, 92
+  orig: 272, 104
+  offset: 1, 0
+  index: -1
+dl1
+  rotate: true
+  xy: 396, 742
+  size: 271, 92
+  orig: 272, 104
+  offset: 1, 0
+  index: -1
+dl2
+  rotate: true
+  xy: 595, 97
+  size: 136, 52
+  orig: 136, 52
+  offset: 0, 0
+  index: -1
+effect_xx_02
+  rotate: false
+  xy: 640, 475
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+fx_radial
+  rotate: false
+  xy: 299, 455
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+gx
+  rotate: false
+  xy: 642, 820
+  size: 18, 84
+  orig: 19, 88
+  offset: 1, 0
+  index: -1
+h_tw1
+  rotate: true
+  xy: 640, 541
+  size: 128, 33
+  orig: 128, 33
+  offset: 0, 0
+  index: -1
+h_yw_01
+  rotate: true
+  xy: 561, 668
+  size: 144, 74
+  orig: 228, 104
+  offset: 42, 19
+  index: -1
+h_yw_02
+  rotate: true
+  xy: 561, 814
+  size: 199, 79
+  orig: 228, 104
+  offset: 14, 11
+  index: -1
+h_yw_03
+  rotate: false
+  xy: 302, 647
+  size: 211, 93
+  orig: 228, 104
+  offset: 9, 5
+  index: -1
+h_yw_04
+  rotate: true
+  xy: 427, 0
+  size: 224, 92
+  orig: 228, 104
+  offset: 2, 4
+  index: -1
+h_yw_05
+  rotate: true
+  xy: 461, 449
+  size: 196, 100
+  orig: 228, 104
+  offset: 10, 2
+  index: -1
+j
+  rotate: false
+  xy: 490, 751
+  size: 69, 262
+  orig: 69, 262
+  offset: 0, 0
+  index: -1
+j1
+  rotate: false
+  xy: 521, 185
+  size: 69, 262
+  orig: 69, 262
+  offset: 0, 0
+  index: -1
+j2
+  rotate: false
+  xy: 637, 671
+  size: 44, 141
+  orig: 44, 141
+  offset: 0, 0
+  index: -1
+xkq_02
+  rotate: false
+  xy: 0, 816
+  size: 300, 197
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+xkq_03
+  rotate: false
+  xy: 0, 617
+  size: 300, 197
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+xkq_04
+  rotate: false
+  xy: 0, 419
+  size: 297, 196
+  orig: 300, 200
+  offset: 3, 1
+  index: -1
+xkq_05
+  rotate: false
+  xy: 0, 226
+  size: 282, 191
+  orig: 300, 200
+  offset: 14, 4
+  index: -1
+xkq_06
+  rotate: false
+  xy: 0, 47
+  size: 252, 177
+  orig: 300, 200
+  offset: 26, 17
+  index: -1
+xkq_07
+  rotate: true
+  xy: 254, 1
+  size: 223, 171
+  orig: 300, 200
+  offset: 38, 19
+  index: -1
+xkq_08
+  rotate: true
+  xy: 299, 226
+  size: 210, 162
+  orig: 300, 200
+  offset: 50, 26
+  index: -1
+xkq_09
+  rotate: true
+  xy: 563, 449
+  size: 186, 75
+  orig: 300, 200
+  offset: 58, 110
+  index: -1
+xkq_10
+  rotate: true
+  xy: 521, 3
+  size: 180, 72
+  orig: 300, 200
+  offset: 63, 113
+  index: -1

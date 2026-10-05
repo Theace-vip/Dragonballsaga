@@ -1,0 +1,223 @@
+
+g13_qiongqi_boss.png
+size: 492,936
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+nianye
+  rotate: true
+  xy: 383, 615
+  size: 229, 59
+  orig: 229, 59
+  offset: 0, 0
+  index: -1
+nianye2
+  rotate: false
+  xy: 0, 117
+  size: 170, 79
+  orig: 210, 96
+  offset: 27, 17
+  index: -1
+qiongqi
+  rotate: true
+  xy: 431, 390
+  size: 94, 58
+  orig: 94, 58
+  offset: 0, 0
+  index: -1
+qiongqi1
+  rotate: false
+  xy: 212, 594
+  size: 67, 52
+  orig: 67, 52
+  offset: 0, 0
+  index: -1
+qiongqi10
+  rotate: false
+  xy: 445, 484
+  size: 43, 56
+  orig: 43, 56
+  offset: 0, 0
+  index: -1
+qiongqi11
+  rotate: true
+  xy: 408, 20
+  size: 79, 81
+  orig: 79, 81
+  offset: 0, 0
+  index: -1
+qiongqi12
+  rotate: false
+  xy: 380, 230
+  size: 97, 98
+  orig: 97, 98
+  offset: 0, 0
+  index: -1
+qiongqi13
+  rotate: false
+  xy: 414, 183
+  size: 73, 76
+  orig: 73, 77
+  offset: 0, 0
+  index: -1
+qiongqi14
+  rotate: false
+  xy: 0, 533
+  size: 380, 403
+  orig: 382, 403
+  offset: 1, 0
+  index: -1
+qiongqi15
+  rotate: false
+  xy: 236, 5
+  size: 65, 45
+  orig: 65, 47
+  offset: 0, 1
+  index: -1
+qiongqi16
+  rotate: true
+  xy: 0, 15
+  size: 111, 91
+  orig: 111, 91
+  offset: 0, 0
+  index: -1
+qiongqi17
+  rotate: true
+  xy: 190, 180
+  size: 106, 220
+  orig: 106, 220
+  offset: 0, 0
+  index: -1
+qiongqi18
+  rotate: false
+  xy: 90, 872
+  size: 47, 63
+  orig: 47, 63
+  offset: 0, 0
+  index: -1
+qiongqi1v9
+  rotate: false
+  xy: 0, 815
+  size: 89, 121
+  orig: 89, 121
+  offset: 0, 0
+  index: -1
+qiongqi2
+  rotate: false
+  xy: 0, 718
+  size: 26, 34
+  orig: 26, 34
+  offset: 0, 0
+  index: -1
+qiongqi20
+  rotate: 180
+  xy: 281, 493
+  size: 166, 229
+  orig: 166, 229
+  offset: 0, 0
+  index: -1
+qiongqi21
+  rotate: 180
+  xy: 0, 197
+  size: 435, 261
+  orig: 437, 263
+  offset: 2, 0
+  index: -1
+qiongqi22
+  rotate: 270
+  xy: 266, 24
+  size: 95, 153
+  orig: 95, 153
+  offset: 0, 0
+  index: -1
+qiongqi23
+  rotate: false
+  xy: 0, 471
+  size: 47, 63
+  orig: 47, 63
+  offset: 0, 0
+  index: -1
+qiongqi24
+  rotate: 180
+  xy: 349, 862
+  size: 106, 75
+  orig: 108, 76
+  offset: 1, 1
+  index: -1
+qiongqi25
+  rotate: 270
+  xy: 90, 77
+  size: 72, 160
+  orig: 72, 160
+  offset: 0, 0
+  index: -1
+qiongqi26
+  rotate: 180
+  xy: 378, 88
+  size: 88, 94
+  orig: 90, 98
+  offset: 1, 2
+  index: -1
+qiongqi27
+  rotate: true
+  xy: 0, 378
+  size: 216, 387
+  orig: 219, 387
+  offset: 1, 0
+  index: -1
+qiongqi28
+  rotate: false
+  xy: 0, 749
+  size: 61, 73
+  orig: 63, 76
+  offset: 0, 3
+  index: -1
+qiongqi3
+  rotate: false
+  xy: 419, 326
+  size: 66, 52
+  orig: 66, 52
+  offset: 0, 0
+  index: -1
+qiongqi4
+  rotate: false
+  xy: 247, 105
+  size: 140, 108
+  orig: 140, 108
+  offset: 0, 0
+  index: -1
+qiongqi5
+  rotate: false
+  xy: 327, 723
+  size: 50, 33
+  orig: 50, 33
+  offset: 0, 0
+  index: -1
+qiongqi6
+  rotate: false
+  xy: 372, 829
+  size: 101, 34
+  orig: 101, 34
+  offset: 0, 0
+  index: -1
+qiongqi7
+  rotate: false
+  xy: 420, 580
+  size: 68, 54
+  orig: 69, 55
+  offset: 0, 0
+  index: -1
+qiongqi8
+  rotate: 180
+  xy: 128, 1
+  size: 136, 86
+  orig: 136, 88
+  offset: 0, 0
+  index: -1
+qiongqi9
+  rotate: false
+  xy: 84, 5
+  size: 52, 36
+  orig: 52, 36
+  offset: 0, 0
+  index: -1

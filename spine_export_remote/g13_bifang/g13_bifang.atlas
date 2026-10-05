@@ -1,0 +1,146 @@
+
+g13_bifang.png
+size: 1024,472
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: 180
+  xy: 504, 274
+  size: 422, 197
+  orig: 478, 226
+  offset: 39, 29
+  index: -1
+chibang1
+  rotate: true
+  xy: 449, 72
+  size: 220, 236
+  orig: 220, 236
+  offset: 0, 0
+  index: -1
+chibang2
+  rotate: 180
+  xy: 685, 34
+  size: 132, 230
+  orig: 132, 230
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: false
+  xy: 0, 1
+  size: 180, 118
+  orig: 180, 118
+  offset: 0, 0
+  index: -1
+jiao
+  rotate: false
+  xy: 517, 403
+  size: 65, 67
+  orig: 65, 67
+  offset: 0, 0
+  index: -1
+jiaozhi1
+  rotate: false
+  xy: 517, 362
+  size: 40, 39
+  orig: 40, 39
+  offset: 0, 0
+  index: -1
+jiaozhi2
+  rotate: false
+  xy: 830, 421
+  size: 40, 50
+  orig: 40, 50
+  offset: 0, 0
+  index: -1
+jiaozhi3
+  rotate: false
+  xy: 991, 336
+  size: 33, 41
+  orig: 33, 41
+  offset: 0, 0
+  index: -1
+jiaozhi4
+  rotate: false
+  xy: 930, 332
+  size: 37, 37
+  orig: 37, 37
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: false
+  xy: 0, 121
+  size: 238, 215
+  orig: 238, 215
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 207, 43
+  size: 196, 123
+  orig: 196, 123
+  offset: 0, 0
+  index: -1
+shuidi1
+  rotate: false
+  xy: 583, 422
+  size: 29, 49
+  orig: 29, 49
+  offset: 0, 0
+  index: -1
+shuidi2
+  rotate: false
+  xy: 449, 300
+  size: 34, 37
+  orig: 34, 37
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 239, 168
+  size: 208, 169
+  orig: 208, 169
+  offset: 0, 0
+  index: -1
+toufa
+  rotate: false
+  xy: 882, 354
+  size: 128, 116
+  orig: 128, 116
+  offset: 0, 0
+  index: -1
+weiba1
+  rotate: false
+  xy: 807, 111
+  size: 217, 199
+  orig: 217, 199
+  offset: 0, 0
+  index: -1
+weiba2
+  rotate: 180
+  xy: 500, 7
+  size: 157, 79
+  orig: 157, 79
+  offset: 0, 0
+  index: -1
+weiba3
+  rotate: false
+  xy: 410, 3
+  size: 96, 170
+  orig: 96, 170
+  offset: 0, 0
+  index: -1
+wuguan
+  rotate: false
+  xy: 818, 15
+  size: 171, 94
+  orig: 171, 94
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: false
+  xy: 0, 338
+  size: 515, 132
+  orig: 528, 135
+  offset: 6, 2
+  index: -1

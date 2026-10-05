@@ -1,0 +1,432 @@
+itemId,kind,ten_hien_thi,thu_muc,resourceBase,files
+2645,costume,,10003,spine/costume/10003/10003,3
+2644,costume,,10025,spine/costume/10025/10025,3
+0,sharedFx,,Full_FX,spine/costume/fx/Full_FX/Full_FX,3
+2646,costume, Agnilasa,agnilasa_dragon_ball1,spine/costume/krew/agnilasa_dragon_ball1/agnilasa_dragon_ball1,3
+2653,costume, Android 19,android_19.1_skin,spine/costume/krew/android_19.1_skin/android_19.1_skin,3
+2647,costume, Android 13,android13,spine/costume/krew/android13/android13,3
+2648,costume, Android 14,android14,spine/costume/krew/android14/android14,3
+2649,costume, Android 15,android15,spine/costume/krew/android15/android15,3
+2650,costume, Android 16,android16,spine/costume/krew/android16/android16,3
+2651,costume, Android 17,android17,spine/costume/krew/android17/android17,3
+2652,costume, Android 18,android18,spine/costume/krew/android18/android18,3
+2654,costume, Android 20 Dạng 1,android20_1,spine/costume/krew/android20_1/android20_1,3
+2655,costume, Android 20 Dạng 2,android20_2,spine/costume/krew/android20_2/android20_2,3
+2656,costume, Baby Vegeta,baby_vegata,spine/costume/krew/baby_vegata/baby_vegata,3
+2657,costume, Baby Vegeta SSJ2,baby_vegata_ssj2,spine/costume/krew/baby_vegata_ssj2/baby_vegata_ssj2,3
+2658,costume, Beerus,beerus,spine/costume/krew/beerus/beerus,3
+2659,costume, Goku Black Xanh Lam,black_blue,spine/costume/krew/black_blue/black_blue,3
+2660,costume, Goku Black Broly,black_broly,spine/costume/krew/black_broly/black_broly,3
+2661,costume, Goku Black Frieza,black_frieza,spine/costume/krew/black_frieza/black_frieza,3
+2662,costume, Goku Black Tím,black_tim,spine/costume/krew/black_tim/black_tim,3
+2663,costume, Goku Black Trắng,black_white,spine/costume/krew/black_white/black_white,3
+2664,costume, Chiến Binh Blue,blue,spine/costume/krew/blue/blue,3
+2665,costume, Đầu Xanh,bluehead,spine/costume/krew/bluehead/bluehead,3
+2666,costume, Bô Lão,bo_lao,spine/costume/krew/bo_lao/bo_lao,3
+2667,costume, Broly,broly,spine/costume/krew/broly/broly,3
+2668,costume, Broly Đầu Vàng,broly_dau_vang,spine/costume/krew/broly_dau_vang/broly_dau_vang,3
+2669,costume, Broly Dạng 2,broly_form_2,spine/costume/krew/broly_form_2/broly_form_2,3
+2670,costume, Broly Hủy Diệt,broly_huydiet,spine/costume/krew/broly_huydiet/broly_huydiet,3
+2671,costume, Broly Hủy Diệt 2,broly_huydiet_2,spine/costume/krew/broly_huydiet_2/broly_huydiet_2,3
+2672,costume, Broly SSJ2,broly_ssj2,spine/costume/krew/broly_ssj2/broly_ssj2,3
+2674,costume, Broly Tóc Đen,broly_toc_den,spine/costume/krew/broly_toc_den/broly_toc_den,3
+2675,costume, Broly Tóc Đỏ,broly_toc_do,spine/costume/krew/broly_toc_do/broly_toc_do,3
+2673,costume, Broly Tóc Bạc,broly_tocbac,spine/costume/krew/broly_tocbac/broly_tocbac,3
+2676,costume, Broly Tóc Xanh Lá,broly_tocxanhla,spine/costume/krew/broly_tocxanhla/broly_tocxanhla,3
+2684,costume, Bư Mập,bu_map,spine/costume/krew/bu_map/bu_map,3
+2677,costume, Bulma Bãi Biển,bulma_baibien,spine/costume/krew/bulma_baibien/bulma_baibien,3
+2678,costume, Bulma Halloween,bulma_halloween,spine/costume/krew/bulma_halloween/bulma_halloween,3
+2679,costume, Bulma Halloween 2,bulma_halloween2,spine/costume/krew/bulma_halloween2/bulma_halloween2,3
+2680,costume, Bulma Kimono,bulma_kimono,spine/costume/krew/bulma_kimono/bulma_kimono,3
+2681,costume, Bulma Nhật Bình,bulma_nhatbinh,spine/costume/krew/bulma_nhatbinh/bulma_nhatbinh,3
+2682,costume, Bulma Noel,bulma_noel,spine/costume/krew/bulma_noel/bulma_noel,3
+2683,costume, Bulma Thỏ,bulma_rabbit,spine/costume/krew/bulma_rabbit/bulma_rabbit,3
+2685,costume, Buuhan,buuhan,spine/costume/krew/buuhan/buuhan,3
+2686,costume, Đội Trưởng Ginyu,captain_ginyu,spine/costume/krew/captain_ginyu/captain_ginyu,3
+2687,costume, Cell Bọ Hung,cell_bohung,spine/costume/krew/cell_bohung/cell_bohung,3
+2689,costume, Cell Bọ Hung 3,cell_bohung_3,spine/costume/krew/cell_bohung_3/cell_bohung_3,3
+2688,costume, Cell Bọ Hung 2,cell_bohung2,spine/costume/krew/cell_bohung2/cell_bohung2,3
+2690,costume, Cell Đỏ,cell_do,spine/costume/krew/cell_do/cell_do,3
+2691,costume, Cell Đỏ 2,cell_do2,spine/costume/krew/cell_do2/cell_do2,3
+2692,costume, Cell Trắng,cell_trang,spine/costume/krew/cell_trang/cell_trang,3
+2693,costume, Cui,cui,spine/costume/krew/cui/cui,3
+2694,costume, Cumber,cumber,spine/costume/krew/cumber/cumber,3
+2695,costume, Cumber Tóc Trắng,cumber_toc_trang,spine/costume/krew/cumber_toc_trang/cumber_toc_trang,3
+2696,costume, Cumber Tóc Vàng,cumber_tocvang,spine/costume/krew/cumber_tocvang/cumber_tocvang,3
+2697,costume, Dabura,dabura,spine/costume/krew/dabura/dabura,3
+2698,costume, Dodoria,dodoria,spine/costume/krew/dodoria/dodoria,3
+2699,costume, Dokkan,dokkan,spine/costume/krew/dokkan/dokkan,3
+2700,costume, Dyspo,dyspo,spine/costume/krew/dyspo/dyspo,3
+2701,costume, Fide,fide,spine/costume/krew/fide/fide,3
+2702,costume, Frieza,fieza,spine/costume/krew/fieza/fieza,3
+2703,costume, Frieza Dạng 3,fieza3rdform,spine/costume/krew/fieza3rdform/fieza3rdform,3
+2704,costume, Chiến Binh Lửa,fire1,spine/costume/krew/fire1/fire1,3
+2705,costume, Fu,fu,spine/costume/krew/fu/fu,3
+2706,costume, Gamma 1,gamma1,spine/costume/krew/gamma1/gamma1,3
+2707,costume, Gamma 2,gamma2,spine/costume/krew/gamma2/gamma2,3
+2708,costume, Gogeta,gogeta,spine/costume/krew/gogeta/gogeta,3
+2709,costume, Gogeta Broly,gogeta_broly,spine/costume/krew/gogeta_broly/gogeta_broly,3
+2710,costume, Gogeta Đỏ,gogeta_red,spine/costume/krew/gogeta_red/gogeta_red,3
+2711,costume, Gogeta SSJ5 Tóc Tím,gogeta_ssj5_toctim,spine/costume/krew/gogeta_ssj5_toctim/gogeta_ssj5_toctim,3
+2712,costume, Gogeta Tóc Vàng,gogeta_toc_vang,spine/costume/krew/gogeta_toc_vang/gogeta_toc_vang,3
+2713,costume, Gogeta Tóc Xanh,gogeta_toc_xanh,spine/costume/krew/gogeta_toc_xanh/gogeta_toc_xanh,3
+2714,costume, Gohan Đầu Vàng,gohan_dau_vang,spine/costume/krew/gohan_dau_vang/gohan_dau_vang,3
+2715,costume, Gohan Hủy Diệt,gohan_huydiet,spine/costume/krew/gohan_huydiet/gohan_huydiet,3
+2716,costume, Gohan SSJ1,gohan_ssj1,spine/costume/krew/gohan_ssj1/gohan_ssj1,3
+2717,costume, Goku,goku,spine/costume/krew/goku/goku,3
+2718,costume, Goku Black,goku_black,spine/costume/krew/goku_black/goku_black,3
+2719,costume, Goku Đầu Vàng,goku_dau_vang,spine/costume/krew/goku_dau_vang/goku_dau_vang,3
+2720,costume, Goku Hủy Diệt,goku_huydiet,spine/costume/krew/goku_huydiet/goku_huydiet,3
+2721,costume, Goku Rosé 1,goku_rose_1,spine/costume/krew/goku_rose_1/goku_rose_1,3
+2722,costume, Goku Rosé 3,goku_rose_3,spine/costume/krew/goku_rose_3/goku_rose_3,3
+2723,costume, Goku Sơn Tinh,goku_sontinh,spine/costume/krew/goku_sontinh/goku_sontinh,3
+2724,costume, Goku SSJ5,goku_ssj5,spine/costume/krew/goku_ssj5/goku_ssj5,3
+2725,costume, Goku SSJ5 Tóc Đen,goku_ssj5_toc_den,spine/costume/krew/goku_ssj5_toc_den/goku_ssj5_toc_den,3
+2726,costume, Goku SSJ5 Tóc Đỏ,goku_ssj5_toc_do,spine/costume/krew/goku_ssj5_toc_do/goku_ssj5_toc_do,3
+2727,costume, Goku SSJ5 Trắng,goku_ssj5_white,spine/costume/krew/goku_ssj5_white/goku_ssj5_white,3
+2728,costume, Goku Thủy Tinh,goku_thuy_tinh,spine/costume/krew/goku_thuy_tinh/goku_thuy_tinh,3
+2729,costume, Goku Trắng,goku_trang,spine/costume/krew/goku_trang/goku_trang,3
+2730,costume, Golden Frieza,golden_frieza,spine/costume/krew/golden_frieza/golden_frieza,3
+2731,costume, Gomah,gomah,spine/costume/krew/gomah/gomah,3
+2732,costume, Goten,goten,spine/costume/krew/goten/goten,3
+2733,costume, Guldo,guldo,spine/costume/krew/guldo/guldo,3
+2734,costume, Hearts 2,hearts2,spine/costume/krew/hearts2/hearts2,3
+2735,costume, Hit,hit,spine/costume/krew/hit/hit,3
+2736,costume, Jeice,jeice,spine/costume/krew/jeice/jeice,3
+2737,costume, Jiren,jiren,spine/costume/krew/jiren/jiren,3
+2738,costume, Jiren Toàn Lực,jiren_max,spine/costume/krew/jiren_max/jiren_max,3
+2739,costume, Kefla,kefla,spine/costume/krew/kefla/kefla,3
+2740,costume, Kefla Broly,kefla_broly,spine/costume/krew/kefla_broly/kefla_broly,3
+2783,costume, Khỉ Oozaru,khi_oozaru,spine/costume/krew/khi_oozaru/khi_oozaru,3
+2782,costume, Khỉ Trắng,khi_trang,spine/costume/krew/khi_trang/khi_trang,3
+2781,costume, Khỉ Vàng,khi_vang,spine/costume/krew/khi_vang_variant1/khi_vang,3
+2741,costume, Kunshi,kunshi,spine/costume/krew/kunshi/kunshi,3
+2743,costume, Li Shenron,li_shenron,spine/costume/krew/li_shenron/li_shenron,3
+2742,costume, Liquiir,liiquir,spine/costume/krew/liiquir/liiquir,3
+2744,costume, Majin Buu 1,majin_duu_1,spine/costume/krew/majin_duu_1/majin_duu_1,3
+2745,costume, Majin Buu 2,majin_duu_2,spine/costume/krew/majin_duu_2/majin_duu_2,3
+2746,costume, Thỏ Quái Vật,monster_carrot,spine/costume/krew/monster_carrot/monster_carrot,3
+2747,costume, Moro,moro,spine/costume/krew/moro/moro,3
+2750,costume, Người Namek 3,namek3 (chưa export),spine/costume/krew/namek3/namek3,0
+2748,costume, Người Namek,namek,spine/costume/krew/namek/namek,3
+2749,costume, Người Namek 2,namek_2.1,spine/costume/krew/namek_2.1/namek_2.1,3
+2751,costume, Thần Namek,namek_god,spine/costume/krew/namek_god/namek_god,3
+2752,costume, Namek Hủy Diệt,namek_huydiet,spine/costume/krew/namek_huydiet/namek_huydiet,3
+2753,costume, Người Namek Dạng 2,namek_skin2,spine/costume/krew/namek_skin2/namek_skin2,3
+2754,costume, Namek Vàng,namek_vang,spine/costume/krew/namek_vang/namek_vang,3
+2755,costume, Namek Vàng 2,namek_vang_2,spine/costume/krew/namek_vang_2/namek_vang_2,3
+2756,costume, Piccolo Cam,piccolo_oranges_1,spine/costume/krew/piccolo_oranges_1/piccolo_oranges_1,3
+2757,costume, Pui Pui,puipui,spine/costume/krew/puipui/puipui,3
+2758,costume, Recoome,recoome,spine/costume/krew/recoome/recoome,3
+2759,costume, Chiến Binh Tóc Đỏ,redhead,spine/costume/krew/redhead/redhead,3
+2760,costume, Số 4,so_4,spine/costume/krew/so_4/so_4,3
+2761,costume, Sói Xanh,soi_xanh1,spine/costume/krew/soi_xanh1/soi_xanh1,3
+2762,costume, Son Goku Trắng,songoku_trang,spine/costume/krew/songoku_trang/songoku_trang,3
+2763,costume, Super Android 13,superandroid13.1,spine/costume/krew/superandroid13.1/superandroid13.1,3
+2764,costume, Tao Pai Pai,tao_paipai,spine/costume/krew/tao_paipai/tao_paipai,3
+2765,costume, Uub,uub,spine/costume/krew/uub/uub,3
+2766,costume, Uub Dạng 2,uub1,spine/costume/krew/uub1/uub1,3
+2767,costume, Vegeta,vegeta,spine/costume/krew/vegeta/vegeta,3
+2768,costume, Vegeta Bãi Biển,vegeta_baibien,spine/costume/krew/vegeta_baibien/vegeta_baibien,3
+2769,costume, Vegeta Đầu Vàng,vegeta_dau_vang,spine/costume/krew/vegeta_dau_vang/vegeta_dau_vang,3
+2770,costume, Vegeta Hủy Diệt,vegeta_huydiet,spine/costume/krew/vegeta_huydiet/vegeta_huydiet,3
+2771,costume, Vegeta SSJ2,vegeta_ssj2,spine/costume/krew/vegeta_ssj2/vegeta_ssj2,3
+2772,costume, Vegeta Whis,vegeta_whis,spine/costume/krew/vegeta_whis/vegeta_whis,3
+2773,costume, Vegito,vegito,spine/costume/krew/vegito/vegito,3
+2774,costume, Vegito Vô Cực,vegito_vocuc,spine/costume/krew/vegito_vocuc/vegito_vocuc,3
+2775,costume, Vermoud,vermoud,spine/costume/krew/vermoud/vermoud,3
+2776,costume, Whis,whis,spine/costume/krew/whis/whis,3
+2777,costume, Xicor,xicor,spine/costume/krew/xicor/xicor,3
+2778,costume, Yamcha,yamcha,spine/costume/krew/yamcha/yamcha,3
+2779,costume, Zarbon,zarbon,spine/costume/krew/zarbon/zarbon,3
+2780,costume, Zeno,zeno,spine/costume/krew/zeno/zeno,3
+2995,costume, Cải trang SG441 Thủy Nhân Sâm Oa,H21201,spine/costume/sg441/H21201/H21201,3
+2996,costume, Cải trang SG441 Bôn Ba Nhi Bá,H21301,spine/costume/sg441/H21301/H21301,3
+2997,costume, Cải trang SG441 Bôn Ba Nhĩ Bôn,H21302,spine/costume/sg441/H21302/H21302,3
+2998,costume, Cải trang SG441 Binh Tôm,H21401,spine/costume/sg441/H21401/H21401,3
+2999,costume, Cải trang SG441 Tiểu Sa Tăng,H21402,spine/costume/sg441/H21402/H21402,4
+3000,costume, Cải trang SG441 Tiểu Bạch Long Mã,H21403,spine/costume/sg441/H21403/H21403,3
+3001,costume, Cải trang SG441 Linh Cảm Đại Vương,H21501,spine/costume/sg441/H21501/H21501,3
+3002,costume, Cải trang SG441 Ngọc Thố Tinh,H21601,spine/costume/sg441/H21601/H21601,4
+3003,costume, Cải trang SG441 Ngọc Diện Hồ,H21602,spine/costume/sg441/H21602/H21602,3
+3004,costume, Cải trang SG441 Đông Hải Long Vương,H21701,spine/costume/sg441/H21701/H21701,3
+3005,costume, Cải trang SG441 Quyển Liêm Đại Tướng,H21702,spine/costume/sg441/H21702/H21702,3
+3006,costume, Cải trang SG441 Tam Thái Tử,H21703,spine/costume/sg441/H21703/H21703,4
+3007,costume, Cải trang SG441 Hằng Nga,H21704,spine/costume/sg441/H21704/H21704,4
+3008,costume, Cải trang SG441 Thiên Bồng Nguyên Soái,H21705,spine/costume/sg441/H21705/H21705,3
+3009,costume, Cải trang SG441 Hỏa Nhân Sâm Oa,H22201,spine/costume/sg441/H22201/H22201,3
+3010,costume, Cải trang SG441 Mã Diện,H22301,spine/costume/sg441/H22301/H22301,3
+3011,costume, Cải trang SG441 Hữu Lai Hữu Khứ,H22302,spine/costume/sg441/H22302/H22302,3
+3012,costume, Cải trang SG441 Tiểu Đường Tăng,H22401,spine/costume/sg441/H22401/H22401,3
+3013,costume, Cải trang SG441 Tiểu Ngộ Không,H22402,spine/costume/sg441/H22402/H22402,3
+3014,costume, Cải trang SG441 Hao Thiên Khuyển,H22403,spine/costume/sg441/H22403/H22403,3
+3015,costume, Cải trang SG441 Hồng Hài Nhi,H22501,spine/costume/sg441/H22501/H22501,3
+3016,costume, Cải trang SG441 Hổ Lực Đại Tiên,H22601,spine/costume/sg441/H22601/H22601,3
+3017,costume, Cải trang SG441 Khuê Mộc Lang,H22701,spine/costume/sg441/H22701/H22701,4
+3018,costume, Cải trang SG441 Hoàng Mi Lão Tổ,H22702,spine/costume/sg441/H22702/H22702,3
+3019,costume, Cải trang SG441 Na Tra,H22703,spine/costume/sg441/H22703/H22703,3
+3020,costume, Cải trang SG441 Bách Nhãn Ma Quân,H22704,spine/costume/sg441/H22704/H22704,3
+3021,costume, Cải trang SG441 Kim Giác,H22705,spine/costume/sg441/H22705/H22705,3
+3022,costume, Cải trang SG441 Phong Nhân Sâm Oa,H23201,spine/costume/sg441/H23201/H23201,3
+3023,costume, Cải trang SG441 Bạch Vô Thường,H23301,spine/costume/sg441/H23301/H23301,3
+3024,costume, Cải trang SG441 Ngưu Đầu,H23302,spine/costume/sg441/H23302/H23302,3
+3025,costume, Cải trang SG441 Tiểu Bát Giới,H23401,spine/costume/sg441/H23401/H23401,3
+3026,costume, Cải trang SG441 Tiểu Toàn Phong,H23402,spine/costume/sg441/H23402/H23402,3
+3027,costume, Cải trang SG441 Bạch Mao Thử,H23403,spine/costume/sg441/H23403/H23403,3
+3028,costume, Cải trang SG441 Lộc Lực Đại Tiên,H23501,spine/costume/sg441/H23501/H23501,3
+3029,costume, Cải trang SG441 Dương Lực Đại Tiên,H23601,spine/costume/sg441/H23601/H23601,3
+3030,costume, Cải trang SG441 Thanh Sư Tinh,H23602,spine/costume/sg441/H23602/H23602,3
+3031,costume, Cải trang SG441 Kháng Kim Long,H23701,spine/costume/sg441/H23701/H23701,3
+3032,costume, Cải trang SG441 Nữ Nhi Quốc Vương,H23702,spine/costume/sg441/H23702/H23702,3
+3033,costume, Cải trang SG441 Trấn Nguyên Tử,H23703,spine/costume/sg441/H23703/H23703,4
+3034,costume, Cải trang SG441 Thiết Phiến Công Chúa,H23704,spine/costume/sg441/H23704/H23704,3
+3035,costume, Cải trang SG441 Khổng Tước Minh Vương,H23705,spine/costume/sg441/H23705/H23705,4
+3036,costume, Cải trang SG441 Thổ Địa,H24401,spine/costume/sg441/H24401/H24401,3
+3037,costume, Cải trang SG441 Điện Mẫu,H24402,spine/costume/sg441/H24402/H24402,3
+3038,costume, Cải trang SG441 Thuận Phong Nhĩ,H24403,spine/costume/sg441/H24403/H24403,3
+3039,costume, Cải trang SG441 Cự Linh Thần,H24501,spine/costume/sg441/H24501/H24501,3
+3040,costume, Cải trang SG441 Bạch Tượng Tinh,H24502,spine/costume/sg441/H24502/H24502,3
+3041,costume, Cải trang SG441 Kim Tiền Báo,H24601,spine/costume/sg441/H24601/H24601,3
+3042,costume, Cải trang SG441 Lôi Công,H24602,spine/costume/sg441/H24602/H24602,3
+3043,costume, Cải trang SG441 Dương Tiễn,H24701,spine/costume/sg441/H24701/H24701,4
+3044,costume, Cải trang SG441 Tôn Ngộ Không,H24702,spine/costume/sg441/H24702/H24702,4
+3045,costume, Cải trang SG441 Quan Âm,H24703,spine/costume/sg441/H24703/H24703,4
+3046,costume, Cải trang SG441 Đường Tăng,H24704,spine/costume/sg441/H24704/H24704,4
+3047,costume, Cải trang SG441 Kim Sí Đại Bằng,H24705,spine/costume/sg441/H24705/H24705,4
+3048,costume, Cải trang SG441 Hắc Vô Thường,H25301,spine/costume/sg441/H25301/H25301,3
+3049,costume, Cải trang SG441 Thiên Lý Nhãn,H25401,spine/costume/sg441/H25401/H25401,3
+3050,costume, Cải trang SG441 Tướng Cua,H25402,spine/costume/sg441/H25402/H25402,3
+3051,costume, Cải trang SG441 Quy Thừa Tướng,H25403,spine/costume/sg441/H25403/H25403,3
+3052,costume, Cải trang SG441 Ngân Giác,H25501,spine/costume/sg441/H25501/H25501,3
+3053,costume, Cải trang SG441 Hỗn Thế Ma Vương,H25502,spine/costume/sg441/H25502/H25502,3
+3054,costume, Cải trang SG441 Hắc Hùng Tinh,H25601,spine/costume/sg441/H25601/H25601,3
+3055,costume, Cải trang SG441 Tỳ Bà Tinh,H25602,spine/costume/sg441/H25602/H25602,3
+3056,costume, Cải trang SG441 Lý Tịnh,H25701,spine/costume/sg441/H25701/H25701,4
+3057,costume, Cải trang SG441 Nhện Tinh,H25702,spine/costume/sg441/H25702/H25702,4
+3058,costume, Cải trang SG441 Diêm Vương,H25703,spine/costume/sg441/H25703/H25703,3
+3059,costume, Cải trang SG441 Bạch Cốt Tinh,H25704,spine/costume/sg441/H25704/H25704,4
+3060,costume, Cải trang SG441 Lục Nhĩ Mi Hầu,H25705,spine/costume/sg441/H25705/H25705,3
+3061,costume, Cải trang SG441 Địa Tạng Vương,H27701,spine/costume/sg441/H27701/H27701,3
+3062,costume, Cải trang SG441 Địa Tạng Vương S1,H27701S1,spine/costume/sg441/H27701S1/H27701S1,4
+3063,costume, Cải trang SG441 Ngưu Ma Vương,H27703,spine/costume/sg441/H27703/H27703,5
+3064,costume, Cải trang SG441 Tam Thái Tử,H27704,spine/costume/sg441/H27704/H27704,3
+3065,costume, Cải trang SG441 Thanh Khâu Hồ,H27705,spine/costume/sg441/H27705/H27705,3
+3066,costume, Cải trang SG441 Thích Ca Mâu Ni,H27706,spine/costume/sg441/H27706/H27706,3
+3067,costume, Cải trang SG441 H27707,H27707,spine/costume/sg441/H27707/H27707,3
+2784,costume, Cải trang VLT 001,g13_6yuan_nv,spine/costume/vlt/g13_6yuan_nv/g13_6yuan_nv,3
+2785,costume, Cải trang VLT 002,g13_baigufuren_xianlv,spine/costume/vlt/g13_baigufuren_xianlv/g13_baigufuren_xianlv,3
+2786,costume, Cải trang VLT 003,g13_baihu,spine/costume/vlt/g13_baihu/g13_baihu,3
+2787,costume, Cải trang VLT 004,g13_baihu_nan,spine/costume/vlt/g13_baihu_nan/g13_baihu_nan,3
+2788,costume, Cải trang VLT 005,g13_baihu_nv,spine/costume/vlt/g13_baihu_nv/g13_baihu_nv,3
+2789,costume, Cải trang VLT 006,g13_baisuzhen_xianlv,spine/costume/vlt/g13_baisuzhen_xianlv/g13_baisuzhen_xianlv,3
+2790,costume, Cải trang VLT 007,g13_baiyang_nv,spine/costume/vlt/g13_baiyang_nv/g13_baiyang_nv,3
+2791,costume, Cải trang VLT 008,g13_baize,spine/costume/vlt/g13_baize/g13_baize,3
+2792,costume, Cải trang VLT 009,g13_bifang,spine/costume/vlt/g13_bifang/g13_bifang,3
+2793,costume, Cải trang VLT 010,g13_bingfeng_q_nan,spine/costume/vlt/g13_bingfeng_q_nan/g13_bingfeng_q_nan,3
+2794,costume, Cải trang VLT 011,g13_bingfeng_q_nv,spine/costume/vlt/g13_bingfeng_q_nv/g13_bingfeng_q_nv,3
+2795,costume, Cải trang VLT 012,g13_biyiniao,spine/costume/vlt/g13_biyiniao/g13_biyiniao,3
+2796,costume, Cải trang VLT 013,g13_biyuexianzi_xianlv,spine/costume/vlt/g13_biyuexianzi_xianlv/g13_biyuexianzi_xianlv,3
+2797,costume, Cải trang VLT 014,g13_cangjie,spine/costume/vlt/g13_cangjie/g13_cangjie,3
+2798,costume, Cải trang VLT 015,g13_change,spine/costume/vlt/g13_change/g13_change,3
+2799,costume, Cải trang VLT 016,g13_chenghuang,spine/costume/vlt/g13_chenghuang/g13_chenghuang,3
+2800,costume, Cải trang VLT 017,g13_chiyou,spine/costume/vlt/g13_chiyou/g13_chiyou,3
+2801,costume, Cải trang VLT 018,g13_chiyou2,spine/costume/vlt/g13_chiyou2/g13_chiyou2,4
+2802,costume, Cải trang VLT 019,g13_chongmingniao_xianlv,spine/costume/vlt/g13_chongmingniao_xianlv/g13_chongmingniao_xianlv,3
+2803,costume, Cải trang VLT 020,g13_chutian,spine/costume/vlt/g13_chutian/g13_chutian,3
+2804,costume, Cải trang VLT 021,g13_dijiang,spine/costume/vlt/g13_dijiang/g13_dijiang,3
+2805,costume, Cải trang VLT 022,g13_dijun,spine/costume/vlt/g13_dijun/g13_dijun,3
+2806,costume, Cải trang VLT 023,g13_dijun2,spine/costume/vlt/g13_dijun2/g13_dijun2,3
+2807,costume, Cải trang VLT 024,g13_donghuangtaiyi,spine/costume/vlt/g13_donghuangtaiyi/g13_donghuangtaiyi,3
+2808,costume, Cải trang VLT 025,g13_donghuangtaiyi2,spine/costume/vlt/g13_donghuangtaiyi2/g13_donghuangtaiyi2,3
+2809,costume, Cải trang VLT 026,g13_duanwu_nv,spine/costume/vlt/g13_duanwu_nv/g13_duanwu_nv,3
+2810,costume, Cải trang VLT 027,g13_ershu,spine/costume/vlt/g13_ershu/g13_ershu,3
+2811,costume, Cải trang VLT 028,g13_feixingguanggao,spine/costume/vlt/g13_feixingguanggao/g13_feixingguanggao,3
+2812,costume, Cải trang VLT 029,g13_fuxi,spine/costume/vlt/g13_fuxi/g13_fuxi,3
+2813,costume, Cải trang VLT 030,g13_fuxi2,spine/costume/vlt/g13_fuxi2/g13_fuxi2,3
+2814,costume, Cải trang VLT 031,g13_gonggong,spine/costume/vlt/g13_gonggong/g13_gonggong,3
+2815,costume, Cải trang VLT 032,g13_guai_fuzhu,spine/costume/vlt/g13_guai_fuzhu/g13_guai_fuzhu,3
+2816,costume, Cải trang VLT 033,g13_guai_hundun,spine/costume/vlt/g13_guai_hundun/g13_guai_hundun,3
+2817,costume, Cải trang VLT 034,g13_guai_qitiandasheng,spine/costume/vlt/g13_guai_qitiandasheng/g13_guai_qitiandasheng,3
+2818,costume, Cải trang VLT 035,g13_guai_taowu,spine/costume/vlt/g13_guai_taowu/g13_guai_taowu,3
+2819,costume, Cải trang VLT 036,g13_guai_zheng,spine/costume/vlt/g13_guai_zheng/g13_guai_zheng,3
+2820,costume, Cải trang VLT 037,g13_hanba,spine/costume/vlt/g13_hanba/g13_hanba,3
+2821,costume, Cải trang VLT 038,g13_hongjun,spine/costume/vlt/g13_hongjun/g13_hongjun,3
+2822,costume, Cải trang VLT 039,g13_hongjun2,spine/costume/vlt/g13_hongjun2/g13_hongjun2,3
+2823,costume, Cải trang VLT 040,g13_houtu,spine/costume/vlt/g13_houtu/g13_houtu,3
+2824,costume, Cải trang VLT 041,g13_houtu2,spine/costume/vlt/g13_houtu2/g13_houtu2,3
+2825,costume, Cải trang VLT 042,g13_houyi2,spine/costume/vlt/g13_houyi2/g13_houyi2,3
+2826,costume, Cải trang VLT 043,g13_huangdi,spine/costume/vlt/g13_huangdi/g13_huangdi,3
+2827,costume, Cải trang VLT 044,g13_huangdi2,spine/costume/vlt/g13_huangdi2/g13_huangdi2,3
+2828,costume, Cải trang VLT 045,g13_huangjinjia_nan,spine/costume/vlt/g13_huangjinjia_nan/g13_huangjinjia_nan,3
+2829,costume, Cải trang VLT 046,g13_hundun,spine/costume/vlt/g13_hundun/g13_hundun,3
+2830,costume, Cải trang VLT 047,g13_huntunshizhuang_nan,spine/costume/vlt/g13_huntunshizhuang_nan/g13_huntunshizhuang_nan,3
+2831,costume, Cải trang VLT 048,g13_huntunshizhuang_nv,spine/costume/vlt/g13_huntunshizhuang_nv/g13_huntunshizhuang_nv,3
+2832,costume, Cải trang VLT 049,g13_jingwei,spine/costume/vlt/g13_jingwei/g13_jingwei,3
+2833,costume, Cải trang VLT 050,g13_jiuweihu,spine/costume/vlt/g13_jiuweihu/g13_jiuweihu,3
+2834,costume, Cải trang VLT 051,g13_jiuweihu_xianlv,spine/costume/vlt/g13_jiuweihu_xianlv/g13_jiuweihu_xianlv,3
+2835,costume, Cải trang VLT 052,g13_juitianxuannv,spine/costume/vlt/g13_juitianxuannv/g13_juitianxuannv,3
+2836,costume, Cải trang VLT 053,g13_juitianxuannv2,spine/costume/vlt/g13_juitianxuannv2/g13_juitianxuannv2,3
+2837,costume, Cải trang VLT 054,g13_jumang,spine/costume/vlt/g13_jumang/g13_jumang,3
+2838,costume, Cải trang VLT 055,g13_kuiniu,spine/costume/vlt/g13_kuiniu/g13_kuiniu,3
+2839,costume, Cải trang VLT 056,g13_kun,spine/costume/vlt/g13_kun/g13_kun,3
+2840,costume, Cải trang VLT 057,g13_liangqingqianquan_nan,spine/costume/vlt/g13_liangqingqianquan_nan/g13_liangqingqianquan_nan,3
+2841,costume, Cải trang VLT 058,g13_liangqingqianquan_nv,spine/costume/vlt/g13_liangqingqianquan_nv/g13_liangqingqianquan_nv,3
+2842,costume, Cải trang VLT 059,g13_long_nan,spine/costume/vlt/g13_long_nan/g13_long_nan,3
+2843,costume, Cải trang VLT 060,g13_long_nv,spine/costume/vlt/g13_long_nv/g13_long_nv,3
+2844,costume, Cải trang VLT 061,g13_luoshen,spine/costume/vlt/g13_luoshen/g13_luoshen,3
+2845,costume, Cải trang VLT 062,g13_luozu,spine/costume/vlt/g13_luozu/g13_luozu,3
+2846,costume, Cải trang VLT 063,g13_luwu,spine/costume/vlt/g13_luwu/g13_luwu,3
+2847,costume, Cải trang VLT 064,g13_ma_nan,spine/costume/vlt/g13_ma_nan/g13_ma_nan,3
+2848,costume, Cải trang VLT 065,g13_ma_nv,spine/costume/vlt/g13_ma_nv/g13_ma_nv,3
+2849,costume, Cải trang VLT 066,g13_mingren,spine/costume/vlt/g13_mingren/g13_mingren,3
+2850,costume, Cải trang VLT 067,g13_mingzhongzhuding_nan,spine/costume/vlt/g13_mingzhongzhuding_nan/g13_mingzhongzhuding_nan,3
+2851,costume, Cải trang VLT 068,g13_mingzhongzhuding_nv,spine/costume/vlt/g13_mingzhongzhuding_nv/g13_mingzhongzhuding_nv,3
+2852,costume, Cải trang VLT 069,g13_nezha,spine/costume/vlt/g13_nezha/g13_nezha,3
+2853,costume, Cải trang VLT 070,g13_nezha_2,spine/costume/vlt/g13_nezha_2/g13_nezha_2,3
+2854,costume, Cải trang VLT 071,g13_niu_nv,spine/costume/vlt/g13_niu_nv/g13_niu_nv,3
+2855,costume, Cải trang VLT 072,g13_nvchou,spine/costume/vlt/g13_nvchou/g13_nvchou,3
+2856,costume, Cải trang VLT 073,g13_nvwa,spine/costume/vlt/g13_nvwa/g13_nvwa,3
+2857,costume, Cải trang VLT 074,g13_nvwa2,spine/costume/vlt/g13_nvwa2/g13_nvwa2,3
+2858,costume, Cải trang VLT 075,g13_nvwa3,spine/costume/vlt/g13_nvwa3/g13_nvwa3,3
+2859,costume, Cải trang VLT 076,g13_pangu,spine/costume/vlt/g13_pangu/g13_pangu,3
+2860,costume, Cải trang VLT 077,g13_pangu2,spine/costume/vlt/g13_pangu2/g13_pangu2,3
+2861,costume, Cải trang VLT 078,g13_pixiu,spine/costume/vlt/g13_pixiu/g13_pixiu,3
+2862,costume, Cải trang VLT 079,g13_pixiu_chengnian,spine/costume/vlt/g13_pixiu_chengnian/g13_pixiu_chengnian,3
+2863,costume, Cải trang VLT 080,g13_pixiu_qinnian,spine/costume/vlt/g13_pixiu_qinnian/g13_pixiu_qinnian,3
+2864,costume, Cải trang VLT 081,g13_pixiu_younian,spine/costume/vlt/g13_pixiu_younian/g13_pixiu_younian,3
+2865,costume, Cải trang VLT 082,g13_qinghuaci_nan,spine/costume/vlt/g13_qinghuaci_nan/g13_qinghuaci_nan,3
+2866,costume, Cải trang VLT 083,g13_qinghuaci_nv,spine/costume/vlt/g13_qinghuaci_nv/g13_qinghuaci_nv,3
+2867,costume, Cải trang VLT 084,g13_qinglong,spine/costume/vlt/g13_qinglong/g13_qinglong,3
+2868,costume, Cải trang VLT 085,g13_qinglong_nan,spine/costume/vlt/g13_qinglong_nan/g13_qinglong_nan,3
+2869,costume, Cải trang VLT 086,g13_qinglong_nv,spine/costume/vlt/g13_qinglong_nv/g13_qinglong_nv,3
+2870,costume, Cải trang VLT 087,g13_qinluan,spine/costume/vlt/g13_qinluan/g13_qinluan,3
+2871,costume, Cải trang VLT 088,g13_qiongqi,spine/costume/vlt/g13_qiongqi/g13_qiongqi,3
+2872,costume, Cải trang VLT 089,g13_qiongqi_boss,spine/costume/vlt/g13_qiongqi_boss/g13_qiongqi_boss,3
+2873,costume, Cải trang VLT 090,g13_qiongqi_nan,spine/costume/vlt/g13_qiongqi_nan/g13_qiongqi_nan,3
+2874,costume, Cải trang VLT 091,g13_qiongqi_nv,spine/costume/vlt/g13_qiongqi_nv/g13_qiongqi_nv,3
+2875,costume, Cải trang VLT 092,g13_qitiandasheng,spine/costume/vlt/g13_qitiandasheng/g13_qitiandasheng,3
+2876,costume, Cải trang VLT 093,g13_shanhailingtian,spine/costume/vlt/g13_shanhailingtian/g13_shanhailingtian,3
+2877,costume, Cải trang VLT 094,g13_shengqiling,spine/costume/vlt/g13_shengqiling/g13_shengqiling,3
+2993,costume, Cải trang Thánh Dạ Kỳ Duyên Nam,g13_shengyeqiyuan_nan,spine/costume/vlt/g13_shengyeqiyuan_nan/g13_shengyeqiyuan_nan,3
+2994,costume, Cải trang Thánh Dạ Kỳ Duyên Nữ,g13_shengyeqiyuan_nv,spine/costume/vlt/g13_shengyeqiyuan_nv/g13_shengyeqiyuan_nv,3
+2878,costume, Cải trang VLT 095,g13_shenian_nan_0,spine/costume/vlt/g13_shenian_nan_0/g13_shenian_nan_0,3
+2879,costume, Cải trang VLT 096,g13_shenian_nv_0,spine/costume/vlt/g13_shenian_nv_0/g13_shenian_nv_0,3
+2880,costume, Cải trang VLT 097,g13_shi,spine/costume/vlt/g13_shi/g13_shi,3
+2881,costume, Cải trang VLT 098,g13_shi2,spine/costume/vlt/g13_shi2/g13_shi2,3
+2882,costume, Cải trang VLT 099,g13_shilaimu_anyexueji,spine/costume/vlt/g13_shilaimu_anyexueji/g13_shilaimu_anyexueji,3
+2883,costume, Cải trang VLT 100,g13_shilaimu_xiumuluqiya,spine/costume/vlt/g13_shilaimu_xiumuluqiya/g13_shilaimu_xiumuluqiya,3
+2884,costume, Cải trang VLT 101,g13_shilaimu_xixuebojuenan,spine/costume/vlt/g13_shilaimu_xixuebojuenan/g13_shilaimu_xixuebojuenan,3
+2885,costume, Cải trang VLT 102,g13_shilaimu_zhanshinan_1,spine/costume/vlt/g13_shilaimu_zhanshinan_1/g13_shilaimu_zhanshinan_1,3
+2886,costume, Cải trang VLT 103,g13_shizi_nan,spine/costume/vlt/g13_shizi_nan/g13_shizi_nan,3
+2887,costume, Cải trang VLT 104,g13_shuhu,spine/costume/vlt/g13_shuhu/g13_shuhu,3
+2888,costume, Cải trang VLT 105,g13_shuiping_nv,spine/costume/vlt/g13_shuiping_nv/g13_shuiping_nv,3
+2889,costume, Cải trang VLT 106,g13_snake_nv,spine/costume/vlt/g13_snake_nv/g13_snake_nv,3
+2890,costume, Cải trang VLT 107,g13_sunv,spine/costume/vlt/g13_sunv/g13_sunv,3
+2891,costume, Cải trang VLT 108,g13_taiqingzhenren,spine/costume/vlt/g13_taiqingzhenren/g13_taiqingzhenren,3
+2892,costume, Cải trang VLT 109,g13_taiqingzhenren2,spine/costume/vlt/g13_taiqingzhenren2/g13_taiqingzhenren2,3
+2893,costume, Cải trang VLT 110,g13_taiqingzhenren3,spine/costume/vlt/g13_taiqingzhenren3/g13_taiqingzhenren3,3
+2894,costume, Cải trang VLT 111,g13_taotie,spine/costume/vlt/g13_taotie/g13_taotie,3
+2895,costume, Cải trang VLT 112,g13_taotie_boss,spine/costume/vlt/g13_taotie_boss/g13_taotie_boss,3
+2896,costume, Cải trang VLT 113,g13_taotie_nan,spine/costume/vlt/g13_taotie_nan/g13_taotie_nan,3
+2897,costume, Cải trang VLT 114,g13_taotie_nv,spine/costume/vlt/g13_taotie_nv/g13_taotie_nv,3
+2898,costume, Cải trang VLT 115,g13_taowu,spine/costume/vlt/g13_taowu/g13_taowu,3
+2899,costume, Cải trang VLT 116,g13_taowu_nan,spine/costume/vlt/g13_taowu_nan/g13_taowu_nan,3
+2900,costume, Cải trang VLT 117,g13_taowu_nv,spine/costume/vlt/g13_taowu_nv/g13_taowu_nv,3
+2901,costume, Cải trang VLT 118,g13_tengshe,spine/costume/vlt/g13_tengshe/g13_tengshe,3
+2902,costume, Cải trang VLT 119,g13_tiangou,spine/costume/vlt/g13_tiangou/g13_tiangou,3
+2903,costume, Cải trang VLT 120,g13_tianping_nan,spine/costume/vlt/g13_tianping_nan/g13_tianping_nan,3
+2904,costume, Cải trang VLT 121,g13_tongtianjiaozhu,spine/costume/vlt/g13_tongtianjiaozhu/g13_tongtianjiaozhu,3
+2905,costume, Cải trang VLT 122,g13_tongtianjiaozhu2,spine/costume/vlt/g13_tongtianjiaozhu2/g13_tongtianjiaozhu2,3
+2906,costume, Cải trang VLT 123,g13_tongtianjiaozhu3,spine/costume/vlt/g13_tongtianjiaozhu3/g13_tongtianjiaozhu3,3
+2907,costume, Cải trang VLT 124,g13_tongtianjiaozhu4,spine/costume/vlt/g13_tongtianjiaozhu4/g13_tongtianjiaozhu4,3
+2908,costume, Cải trang VLT 125,g13_xia_nan,spine/costume/vlt/g13_xia_nan/g13_xia_nan,3
+2909,costume, Cải trang VLT 126,g13_xia_nv,spine/costume/vlt/g13_xia_nv/g13_xia_nv,3
+2910,costume, Cải trang VLT 127,g13_xiangliu,spine/costume/vlt/g13_xiangliu/g13_xiangliu,3
+2911,costume, Cải trang VLT 128,g13_xihe,spine/costume/vlt/g13_xihe/g13_xihe,3
+2912,costume, Cải trang VLT 129,g13_xingkong_nan,spine/costume/vlt/g13_xingkong_nan/g13_xingkong_nan,3
+2913,costume, Cải trang VLT 130,g13_xingkong_nv,spine/costume/vlt/g13_xingkong_nv/g13_xingkong_nv,3
+2914,costume, Cải trang VLT 131,g13_xinnianpifu_nan,spine/costume/vlt/g13_xinnianpifu_nan/g13_xinnianpifu_nan,3
+2915,costume, Cải trang VLT 132,g13_xinnianpifu_nv,spine/costume/vlt/g13_xinnianpifu_nv/g13_xinnianpifu_nv,3
+2916,costume, Cải trang VLT 133,g13_xiwangmu,spine/costume/vlt/g13_xiwangmu/g13_xiwangmu,3
+2917,costume, Cải trang VLT 134,g13_xuangui,spine/costume/vlt/g13_xuangui/g13_xuangui,3
+2918,costume, Cải trang VLT 135,g13_xuanwu,spine/costume/vlt/g13_xuanwu/g13_xuanwu,3
+2919,costume, Cải trang VLT 136,g13_xuanwu_nan,spine/costume/vlt/g13_xuanwu_nan/g13_xuanwu_nan,3
+2920,costume, Cải trang VLT 137,g13_xuanwu_nv,spine/costume/vlt/g13_xuanwu_nv/g13_xuanwu_nv,3
+2921,costume, Cải trang VLT 138,g13_xueyuan,spine/costume/vlt/g13_xueyuan/g13_xueyuan,3
+2922,costume, Cải trang VLT 139,g13_yangjian,spine/costume/vlt/g13_yangjian/g13_yangjian,3
+2923,costume, Cải trang VLT 140,g13_yangjian2,spine/costume/vlt/g13_yangjian2/g13_yangjian2,3
+2924,costume, Cải trang VLT 141,g13_yaochixianhe,spine/costume/vlt/g13_yaochixianhe/g13_yaochixianhe,3
+2925,costume, Cải trang VLT 142,g13_yinglong,spine/costume/vlt/g13_yinglong/g13_yinglong,3
+2926,costume, Cải trang VLT 143,g13_yougu_nan,spine/costume/vlt/g13_yougu_nan/g13_yougu_nan,3
+2927,costume, Cải trang VLT 144,g13_yougu_nv,spine/costume/vlt/g13_yougu_nv/g13_yougu_nv,3
+2928,costume, Cải trang VLT 145,g13_yuanshitianzun,spine/costume/vlt/g13_yuanshitianzun/g13_yuanshitianzun,3
+2929,costume, Cải trang VLT 146,g13_yuanshitianzun2,spine/costume/vlt/g13_yuanshitianzun2/g13_yuanshitianzun2,3
+2930,costume, Cải trang VLT 147,g13_yuelao,spine/costume/vlt/g13_yuelao/g13_yuelao,3
+2931,costume, Cải trang VLT 148,g13_yushi,spine/costume/vlt/g13_yushi/g13_yushi,3
+2932,costume, Cải trang VLT 149,g13_zaochi,spine/costume/vlt/g13_zaochi/g13_zaochi,3
+2933,costume, Cải trang VLT 150,g13_zhaolinger_xianlv,spine/costume/vlt/g13_zhaolinger_xianlv/g13_zhaolinger_xianlv,3
+2934,costume, Cải trang VLT 151,g13_zheng,spine/costume/vlt/g13_zheng/g13_zheng,3
+2935,costume, Cải trang VLT 152,g13_zhu_nan,spine/costume/vlt/g13_zhu_nan/g13_zhu_nan,3
+2936,costume, Cải trang VLT 153,g13_zhu_nv,spine/costume/vlt/g13_zhu_nv/g13_zhu_nv,3
+2937,costume, Cải trang VLT 154,g13_zhuangyuanxiaotou,spine/costume/vlt/g13_zhuangyuanxiaotou/g13_zhuangyuanxiaotou,3
+2938,costume, Cải trang VLT 155,g13_zhuganglie,spine/costume/vlt/g13_zhuganglie/g13_zhuganglie,3
+2939,costume, Cải trang VLT 156,g13_zhujiuyin,spine/costume/vlt/g13_zhujiuyin/g13_zhujiuyin,3
+2940,costume, Cải trang VLT 157,g13_zhujiuyin2,spine/costume/vlt/g13_zhujiuyin2/g13_zhujiuyin2,3
+2941,costume, Cải trang VLT 158,g13_zhulong_xianlv,spine/costume/vlt/g13_zhulong_xianlv/g13_zhulong_xianlv,3
+2942,costume, Cải trang VLT 159,g13_zhuque,spine/costume/vlt/g13_zhuque/g13_zhuque,3
+2943,costume, Cải trang VLT 160,g13_zhuque_nan,spine/costume/vlt/g13_zhuque_nan/g13_zhuque_nan,3
+2944,costume, Cải trang VLT 161,g13_zhuque_nv,spine/costume/vlt/g13_zhuque_nv/g13_zhuque_nv,3
+2945,costume, Cải trang VLT 162,g13_ziyixianzi_xianlv,spine/costume/vlt/g13_ziyixianzi_xianlv/g13_ziyixianzi_xianlv,3
+2946,costume, Cải trang VLT 163,g9_zhubajie_4jie,spine/costume/vlt/g9_zhubajie_4jie/g9_zhubajie_4jie,3
+2786,skill, Cải trang VLT 003,g13_baihu_texiao,spine/costume/vlt_skill/g13_baihu_texiao/g13_baihu_texiao,3
+2791,skill, Cải trang VLT 008,g13_baizhe_texiao,spine/costume/vlt_skill/g13_baizhe_texiao/g13_baizhe_texiao,3
+2792,skill, Cải trang VLT 009,g13_bifang_texiao,spine/costume/vlt_skill/g13_bifang_texiao/g13_bifang_texiao,3
+2795,skill, Cải trang VLT 012,g13_biyiniao_texiao,spine/costume/vlt_skill/g13_biyiniao_texiao/g13_biyiniao_texiao,3
+2797,skill, Cải trang VLT 014,g13_cangjie_texiao,spine/costume/vlt_skill/g13_cangjie_texiao/g13_cangjie_texiao,3
+2798,skill, Cải trang VLT 015,g13_change_texiao,spine/costume/vlt_skill/g13_change_texiao/g13_change_texiao,3
+2800,skill, Cải trang VLT 017,g13_chiyou_texiao,spine/costume/vlt_skill/g13_chiyou_texiao/g13_chiyou_texiao,3
+2804,skill, Cải trang VLT 021,g13_dijiang_texiao,spine/costume/vlt_skill/g13_dijiang_texiao/g13_dijiang_texiao,3
+2805,skill, Cải trang VLT 022,g13_dijun_texiao,spine/costume/vlt_skill/g13_dijun_texiao/g13_dijun_texiao,3
+2813,skill, Cải trang VLT 030,g13_fuxi_texiao,spine/costume/vlt_skill/g13_fuxi_texiao/g13_fuxi_texiao,3
+2814,skill, Cải trang VLT 031,g13_gonggong_texiao,spine/costume/vlt_skill/g13_gonggong_texiao/g13_gonggong_texiao,3
+2816,skill, Cải trang VLT 033,g13_guai_hundun_texiao,spine/costume/vlt_skill/g13_guai_hundun_texiao/g13_guai_hundun_texiao,3
+2819,skill, Cải trang VLT 036,g13_guai_zheng_texiao,spine/costume/vlt_skill/g13_guai_zheng_texiao/g13_guai_zheng_texiao,3
+2821,skill, Cải trang VLT 038,g13_hongjun_texiao,spine/costume/vlt_skill/g13_hongjun_texiao/g13_hongjun_texiao,3
+2823,skill, Cải trang VLT 040,g13_houtu_texiao,spine/costume/vlt_skill/g13_houtu_texiao/g13_houtu_texiao,3
+2826,skill, Cải trang VLT 043,g13_huangdi_texiao,spine/costume/vlt_skill/g13_huangdi_texiao/g13_huangdi_texiao,3
+2832,skill, Cải trang VLT 049,g13_jiuweihu_texiao,spine/costume/vlt_skill/g13_jiuweihu_texiao/g13_jiuweihu_texiao,3
+2837,skill, Cải trang VLT 054,g13_jumang_texiao,spine/costume/vlt_skill/g13_jumang_texiao/g13_jumang_texiao,3
+2838,skill, Cải trang VLT 055,g13_kuiniu_texiao,spine/costume/vlt_skill/g13_kuiniu_texiao/g13_kuiniu_texiao,3
+2839,skill, Cải trang VLT 056,g13_kun_texiao,spine/costume/vlt_skill/g13_kun_texiao/g13_kun_texiao,3
+2791,skill, Cải trang VLT 008,g13_longjuanjufeng_texiao,spine/costume/vlt_skill/g13_longjuanjufeng_texiao/g13_longjuanjufeng_texiao,3
+2844,skill, Cải trang VLT 061,g13_luoshen_texiao,spine/costume/vlt_skill/g13_luoshen_texiao/g13_luoshen_texiao,3
+2845,skill, Cải trang VLT 062,g13_luozu_texiao,spine/costume/vlt_skill/g13_luozu_texiao/g13_luozu_texiao,3
+2846,skill, Cải trang VLT 063,g13_luwu_texiao,spine/costume/vlt_skill/g13_luwu_texiao/g13_luwu_texiao,3
+2855,skill, Cải trang VLT 072,g13_nvchou_texiao,spine/costume/vlt_skill/g13_nvchou_texiao/g13_nvchou_texiao,3
+2857,skill, Cải trang VLT 074,g13_nvwa_texiao,spine/costume/vlt_skill/g13_nvwa_texiao/g13_nvwa_texiao,3
+2857,skill, Cải trang VLT 074,g13_nvwashenhun_texiao,spine/costume/vlt_skill/g13_nvwashenhun_texiao/g13_nvwashenhun_texiao,3
+2859,skill, Cải trang VLT 076,g13_pangu_texiao,spine/costume/vlt_skill/g13_pangu_texiao/g13_pangu_texiao,3
+2867,skill, Cải trang VLT 084,g13_qinglong_texiao,spine/costume/vlt_skill/g13_qinglong_texiao/g13_qinglong_texiao,3
+2870,skill, Cải trang VLT 087,g13_qinluan_texiao,spine/costume/vlt_skill/g13_qinluan_texiao/g13_qinluan_texiao,3
+2871,skill, Cải trang VLT 088,g13_qiongqi_texiao,spine/costume/vlt_skill/g13_qiongqi_texiao/g13_qiongqi_texiao,3
+2817,skill, Cải trang VLT 034,g13_qitiandasheng_texiao,spine/costume/vlt_skill/g13_qitiandasheng_texiao/g13_qitiandasheng_texiao,3
+2799,skill, Cải trang VLT 016,g13_shenghuang_texiao,spine/costume/vlt_skill/g13_shenghuang_texiao/g13_shenghuang_texiao,3
+2877,skill, Cải trang VLT 094,g13_shengqiling_texiao,spine/costume/vlt_skill/g13_shengqiling_texiao/g13_shengqiling_texiao,3
+2890,skill, Cải trang VLT 107,g13_sunv_texiao,spine/costume/vlt_skill/g13_sunv_texiao/g13_sunv_texiao,3
+2891,skill, Cải trang VLT 108,g13_taiqingzhenren_texiao,spine/costume/vlt_skill/g13_taiqingzhenren_texiao/g13_taiqingzhenren_texiao,3
+2894,skill, Cải trang VLT 111,g13_taotie_texiao,spine/costume/vlt_skill/g13_taotie_texiao/g13_taotie_texiao,3
+2901,skill, Cải trang VLT 118,g13_tengshe_texiao,spine/costume/vlt_skill/g13_tengshe_texiao/g13_tengshe_texiao,3
+2829,skill, Cải trang VLT 046,g13_tiangou_texiao,spine/costume/vlt_skill/g13_tiangou_texiao/g13_tiangou_texiao,3
+2905,skill, Cải trang VLT 122,g13_tongtianjiaozhu_texiao,spine/costume/vlt_skill/g13_tongtianjiaozhu_texiao/g13_tongtianjiaozhu_texiao,3
+2910,skill, Cải trang VLT 127,g13_xianglui2_texiao,spine/costume/vlt_skill/g13_xianglui2_texiao/g13_xianglui2_texiao,3
+2861,skill, Cải trang VLT 078,g13_xihe_texiao,spine/costume/vlt_skill/g13_xihe_texiao/g13_xihe_texiao,3
+2916,skill, Cải trang VLT 133,g13_xiwangmu_texiao,spine/costume/vlt_skill/g13_xiwangmu_texiao/g13_xiwangmu_texiao,3
+2917,skill, Cải trang VLT 134,g13_xuangui_texiao,spine/costume/vlt_skill/g13_xuangui_texiao/g13_xuangui_texiao,3
+2918,skill, Cải trang VLT 135,g13_xuanwu_texiao,spine/costume/vlt_skill/g13_xuanwu_texiao/g13_xuanwu_texiao,3
+2918,skill, Cải trang VLT 135,g13_xueyuan_texiao,spine/costume/vlt_skill/g13_xueyuan_texiao/g13_xueyuan_texiao,3
+2925,skill, Cải trang VLT 142,g13_yinglong_texiao,spine/costume/vlt_skill/g13_yinglong_texiao/g13_yinglong_texiao,3
+2928,skill, Cải trang VLT 145,g13_yuanshitianzun_texiao,spine/costume/vlt_skill/g13_yuanshitianzun_texiao/g13_yuanshitianzun_texiao,3
+2931,skill, Cải trang VLT 148,g13_yushi_texiao,spine/costume/vlt_skill/g13_yushi_texiao/g13_yushi_texiao,3
+2804,skill, Cải trang VLT 021,g13_zhuganglie_texiao,spine/costume/vlt_skill/g13_zhuganglie_texiao/g13_zhuganglie_texiao,3
+2939,skill, Cải trang VLT 156,g13_zhujiuyin_texiao,spine/costume/vlt_skill/g13_zhujiuyin_texiao/g13_zhujiuyin_texiao,3
+2942,skill, Cải trang VLT 159,g13_zhuque_texiao,spine/costume/vlt_skill/g13_zhuque_texiao/g13_zhuque_texiao,3

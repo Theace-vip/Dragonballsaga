@@ -1,0 +1,272 @@
+
+g13_dijiang_texiao.png
+size: 2036,604
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+00
+  rotate: false
+  xy: 321, 11
+  size: 79, 68
+  orig: 170, 256
+  offset: 9, 28
+  index: -1
+000_00
+  rotate: false
+  xy: 682, 18
+  size: 66, 84
+  orig: 191, 205
+  offset: 119, 54
+  index: -1
+000_01
+  rotate: true
+  xy: 133, 90
+  size: 95, 147
+  orig: 191, 205
+  offset: 88, 8
+  index: -1
+000_02
+  rotate: true
+  xy: 1111, 95
+  size: 115, 155
+  orig: 191, 205
+  offset: 66, 7
+  index: -1
+000_03
+  rotate: true
+  xy: 1759, 118
+  size: 135, 181
+  orig: 191, 205
+  offset: 52, 6
+  index: -1
+000_04
+  rotate: false
+  xy: 1451, 239
+  size: 171, 180
+  orig: 191, 205
+  offset: 13, 2
+  index: -1
+000_05
+  rotate: false
+  xy: 1451, 421
+  size: 178, 180
+  orig: 191, 205
+  offset: 9, 7
+  index: -1
+000_06
+  rotate: false
+  xy: 1285, 267
+  size: 164, 198
+  orig: 191, 205
+  offset: 15, 5
+  index: -1
+000_07
+  rotate: true
+  xy: 1631, 422
+  size: 142, 191
+  orig: 191, 205
+  offset: 27, 3
+  index: -1
+000_08
+  rotate: true
+  xy: 1285, 118
+  size: 147, 161
+  orig: 191, 205
+  offset: 21, 8
+  index: -1
+000_09
+  rotate: true
+  xy: 1614, 82
+  size: 122, 134
+  orig: 191, 205
+  offset: 15, 16
+  index: -1
+001
+  rotate: false
+  xy: 1942, 41
+  size: 90, 137
+  orig: 170, 256
+  offset: 8, 28
+  index: -1
+002
+  rotate: false
+  xy: 1268, 28
+  size: 140, 88
+  orig: 170, 256
+  offset: 7, 28
+  index: -1
+0_00_000
+  rotate: true
+  xy: 1750, 17
+  size: 99, 118
+  orig: 170, 256
+  offset: 0, 2
+  index: -1
+0_00_001
+  rotate: true
+  xy: 616, 104
+  size: 118, 186
+  orig: 170, 256
+  offset: 0, 2
+  index: -1
+0_00_002
+  rotate: false
+  xy: 1759, 255
+  size: 159, 164
+  orig: 170, 256
+  offset: 1, 4
+  index: -1
+0_00_003
+  rotate: false
+  xy: 1448, 107
+  size: 164, 130
+  orig: 170, 256
+  offset: 6, 0
+  index: -1
+0_00_004
+  rotate: true
+  xy: 1942, 180
+  size: 152, 84
+  orig: 170, 256
+  offset: 14, 4
+  index: -1
+0_00_005
+  rotate: false
+  xy: 2, 3
+  size: 116, 64
+  orig: 170, 256
+  offset: 52, 4
+  index: -1
+bz_000
+  rotate: true
+  xy: 1410, 2
+  size: 103, 105
+  orig: 175, 171
+  offset: 51, 3
+  index: -1
+bz_001
+  rotate: true
+  xy: 2, 69
+  size: 116, 129
+  orig: 175, 171
+  offset: 35, 2
+  index: -1
+bz_002
+  rotate: true
+  xy: 961, 86
+  size: 124, 148
+  orig: 175, 171
+  offset: 17, 1
+  index: -1
+bz_003
+  rotate: true
+  xy: 804, 91
+  size: 119, 155
+  orig: 175, 171
+  offset: 11, 0
+  index: -1
+bz_004
+  rotate: true
+  xy: 311, 81
+  size: 106, 155
+  orig: 175, 171
+  offset: 5, 6
+  index: -1
+bz_005
+  rotate: false
+  xy: 750, 51
+  size: 51, 51
+  orig: 175, 171
+  offset: 7, 112
+  index: -1
+dg_01
+  rotate: false
+  xy: 311, 189
+  size: 303, 412
+  orig: 375, 414
+  offset: 72, 0
+  index: -1
+dg_02
+  rotate: false
+  xy: 2, 187
+  size: 307, 414
+  orig: 375, 414
+  offset: 0, 0
+  index: -1
+dg_03
+  rotate: false
+  xy: 616, 224
+  size: 299, 377
+  orig: 375, 414
+  offset: 4, 0
+  index: -1
+dg_04
+  rotate: true
+  xy: 1068, 212
+  size: 253, 215
+  orig: 375, 414
+  offset: 4, 4
+  index: -1
+dimian
+  rotate: true
+  xy: 917, 212
+  size: 389, 149
+  orig: 389, 149
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 483, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+h_ld_01
+  rotate: false
+  xy: 402, 4
+  size: 79, 62
+  orig: 161, 296
+  offset: 68, 221
+  index: -1
+h_ld_02
+  rotate: true
+  xy: 133, 18
+  size: 61, 186
+  orig: 161, 296
+  offset: 86, 96
+  index: -1
+h_ld_03
+  rotate: false
+  xy: 1920, 334
+  size: 95, 267
+  orig: 161, 296
+  offset: 52, 15
+  index: -1
+h_ld_04
+  rotate: true
+  xy: 1068, 468
+  size: 132, 270
+  orig: 161, 296
+  offset: 15, 13
+  index: -1
+h_ld_05
+  rotate: false
+  xy: 1624, 206
+  size: 133, 213
+  orig: 161, 296
+  offset: 14, 13
+  index: -1
+h_ld_06
+  rotate: true
+  xy: 468, 68
+  size: 119, 127
+  orig: 161, 296
+  offset: 14, 13
+  index: -1
+h_ld_07
+  rotate: false
+  xy: 597, 8
+  size: 83, 94
+  orig: 161, 296
+  offset: 14, 14
+  index: -1

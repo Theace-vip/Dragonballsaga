@@ -1,0 +1,111 @@
+
+g13_gonggong_texiao.png
+size: 1020,328
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baiguang1
+  rotate: false
+  xy: 957, 263
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+cc
+  rotate: false
+  xy: 247, 112
+  size: 194, 211
+  orig: 256, 256
+  offset: 42, 22
+  index: -1
+ccc_000
+  rotate: true
+  xy: 443, 119
+  size: 204, 177
+  orig: 205, 205
+  offset: 1, 19
+  index: -1
+ccc_001
+  rotate: true
+  xy: 622, 137
+  size: 186, 183
+  orig: 205, 205
+  offset: 0, 16
+  index: -1
+ccc_002
+  rotate: true
+  xy: 807, 167
+  size: 156, 148
+  orig: 205, 205
+  offset: 23, 13
+  index: -1
+ccc_003
+  rotate: false
+  xy: 443, 5
+  size: 149, 112
+  orig: 205, 205
+  offset: 19, 12
+  index: -1
+ddl
+  rotate: false
+  xy: 761, 2
+  size: 134, 30
+  orig: 134, 30
+  offset: 0, 0
+  index: -1
+effect_xx_02
+  rotate: false
+  xy: 957, 202
+  size: 55, 59
+  orig: 64, 64
+  offset: 5, 3
+  index: -1
+s_02
+  rotate: true
+  xy: 349, 11
+  size: 99, 83
+  orig: 196, 140
+  offset: 25, 1
+  index: -1
+s_04
+  rotate: false
+  xy: 622, 3
+  size: 137, 132
+  orig: 196, 140
+  offset: 11, 1
+  index: -1
+s_06
+  rotate: false
+  xy: 807, 34
+  size: 159, 131
+  orig: 196, 140
+  offset: 6, 2
+  index: -1
+s_08
+  rotate: false
+  xy: 247, 19
+  size: 100, 91
+  orig: 196, 140
+  offset: 76, 5
+  index: -1
+s_10
+  rotate: false
+  xy: 897, 8
+  size: 102, 24
+  orig: 196, 140
+  offset: 94, 0
+  index: -1
+wq
+  rotate: false
+  xy: 2, 6
+  size: 200, 71
+  orig: 200, 71
+  offset: 0, 0
+  index: -1
+ww_UI_ring03
+  rotate: false
+  xy: 2, 79
+  size: 243, 244
+  orig: 256, 256
+  offset: 5, 4
+  index: -1

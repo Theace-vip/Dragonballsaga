@@ -1,0 +1,174 @@
+
+g13_pixiu_chengnian.png
+size: 768,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pixiu_1
+  rotate: 270
+  xy: 595, 92
+  size: 72, 69
+  orig: 72, 69
+  offset: 0, 0
+  index: -1
+pixiu_10
+  rotate: false
+  xy: 208, 8
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+pixiu_11
+  rotate: 270
+  xy: 601, 5
+  size: 59, 51
+  orig: 59, 51
+  offset: 0, 0
+  index: -1
+pixiu_12
+  rotate: true
+  xy: 197, 30
+  size: 140, 89
+  orig: 140, 90
+  offset: 0, 1
+  index: -1
+pixiu_13
+  rotate: false
+  xy: 546, 113
+  size: 62, 58
+  orig: 62, 58
+  offset: 0, 0
+  index: -1
+pixiu_14
+  rotate: 180
+  xy: 715, 132
+  size: 41, 38
+  orig: 41, 38
+  offset: 0, 0
+  index: -1
+pixiu_15
+  rotate: true
+  xy: 288, 46
+  size: 125, 111
+  orig: 125, 111
+  offset: 0, 0
+  index: -1
+pixiu_16
+  rotate: false
+  xy: 701, 11
+  size: 41, 41
+  orig: 41, 41
+  offset: 0, 0
+  index: -1
+pixiu_17
+  rotate: 270
+  xy: 696, 54
+  size: 50, 39
+  orig: 50, 39
+  offset: 0, 0
+  index: -1
+pixiu_18
+  rotate: true
+  xy: 390, 62
+  size: 108, 73
+  orig: 108, 73
+  offset: 0, 0
+  index: -1
+pixiu_19
+  rotate: false
+  xy: 2, 18
+  size: 194, 152
+  orig: 194, 152
+  offset: 0, 0
+  index: -1
+pixiu_2
+  rotate: true
+  xy: 641, 61
+  size: 50, 48
+  orig: 50, 48
+  offset: 0, 0
+  index: -1
+pixiu_20
+  rotate: true
+  xy: 475, 88
+  size: 82, 60
+  orig: 82, 60
+  offset: 0, 0
+  index: -1
+pixiu_21
+  rotate: 180
+  xy: 727, 91
+  size: 38, 44
+  orig: 38, 44
+  offset: 0, 0
+  index: -1
+pixiu_22
+  rotate: false
+  xy: 654, 10
+  size: 45, 49
+  orig: 45, 49
+  offset: 0, 0
+  index: -1
+pixiu_23
+  rotate: true
+  xy: 145, 6
+  size: 26, 61
+  orig: 26, 61
+  offset: 0, 0
+  index: -1
+pixiu_24
+  rotate: 180
+  xy: 500, 17
+  size: 75, 93
+  orig: 75, 93
+  offset: 0, 0
+  index: -1
+pixiu_3
+  rotate: false
+  xy: 2, 6
+  size: 45, 31
+  orig: 45, 31
+  offset: 0, 0
+  index: -1
+pixiu_4
+  rotate: 180
+  xy: 662, 101
+  size: 62, 47
+  orig: 62, 47
+  offset: 0, 0
+  index: -1
+pixiu_5
+  rotate: false
+  xy: 534, 38
+  size: 77, 53
+  orig: 77, 53
+  offset: 0, 0
+  index: -1
+pixiu_6
+  rotate: 180
+  xy: 305, 4
+  size: 134, 58
+  orig: 134, 58
+  offset: 0, 0
+  index: -1
+pixiu_7
+  rotate: true
+  xy: 441, 16
+  size: 78, 57
+  orig: 78, 57
+  offset: 0, 0
+  index: -1
+pixiu_8
+  rotate: false
+  xy: 48, 7
+  size: 11, 16
+  orig: 11, 16
+  offset: 0, 0
+  index: -1
+pixiu_9
+  rotate: false
+  xy: 2, 145
+  size: 28, 25
+  orig: 28, 25
+  offset: 0, 0
+  index: -1

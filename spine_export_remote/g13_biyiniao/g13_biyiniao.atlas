@@ -1,0 +1,153 @@
+
+g13_biyiniao.png
+size: 1004,648
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+biyiniao_01
+  rotate: 180
+  xy: 731, 358
+  size: 270, 280
+  orig: 270, 280
+  offset: 0, 0
+  index: -1
+biyiniao_02
+  rotate: 180
+  xy: 773, 68
+  size: 208, 148
+  orig: 208, 148
+  offset: 0, 0
+  index: -1
+biyiniao_03
+  rotate: 180
+  xy: 238, 187
+  size: 211, 193
+  orig: 211, 193
+  offset: 0, 0
+  index: -1
+biyiniao_04
+  rotate: false
+  xy: 609, 108
+  size: 169, 163
+  orig: 169, 163
+  offset: 0, 0
+  index: -1
+biyiniao_05
+  rotate: 270
+  xy: 831, 2
+  size: 113, 119
+  orig: 113, 119
+  offset: 0, 0
+  index: -1
+biyiniao_06
+  rotate: 180
+  xy: 767, 182
+  size: 232, 193
+  orig: 232, 193
+  offset: 0, 0
+  index: -1
+biyiniao_07
+  rotate: false
+  xy: 507, 406
+  size: 270, 242
+  orig: 270, 242
+  offset: 0, 0
+  index: -1
+biyiniao_08
+  rotate: 180
+  xy: 413, 243
+  size: 292, 250
+  orig: 292, 250
+  offset: 0, 0
+  index: -1
+biyiniao_09
+  rotate: false
+  xy: 184, 171
+  size: 80, 53
+  orig: 80, 53
+  offset: 0, 0
+  index: -1
+biyiniao_10
+  rotate: false
+  xy: 0, 371
+  size: 94, 71
+  orig: 94, 71
+  offset: 0, 0
+  index: -1
+biyiniao_11
+  rotate: false
+  xy: 171, 295
+  size: 63, 43
+  orig: 63, 43
+  offset: 0, 0
+  index: -1
+biyiniao_12
+  rotate: false
+  xy: 334, 383
+  size: 91, 62
+  orig: 91, 62
+  offset: 0, 0
+  index: -1
+biyiniao_13
+  rotate: false
+  xy: 184, 69
+  size: 229, 118
+  orig: 229, 118
+  offset: 0, 0
+  index: -1
+daiji_01
+  rotate: false
+  xy: 0, 16
+  size: 94, 89
+  orig: 94, 89
+  offset: 0, 0
+  index: -1
+daiji_02
+  rotate: false
+  xy: 0, 107
+  size: 182, 103
+  orig: 182, 103
+  offset: 0, 0
+  index: -1
+gongji_01
+  rotate: false
+  xy: 443, 107
+  size: 155, 133
+  orig: 155, 133
+  offset: 0, 0
+  index: -1
+gongji_02
+  rotate: true
+  xy: 414, 14
+  size: 91, 105
+  orig: 91, 105
+  offset: 0, 0
+  index: -1
+shouji_01
+  rotate: true
+  xy: 600, 15
+  size: 92, 116
+  orig: 92, 116
+  offset: 0, 0
+  index: -1
+shouji_02
+  rotate: false
+  xy: 0, 212
+  size: 169, 144
+  orig: 169, 144
+  offset: 0, 0
+  index: -1
+yeti_01
+  rotate: false
+  xy: 0, 339
+  size: 413, 178
+  orig: 463, 191
+  offset: 12, 13
+  index: -1
+yeti_02
+  rotate: false
+  xy: 0, 519
+  size: 505, 130
+  orig: 505, 130
+  offset: 0, 0
+  index: -1

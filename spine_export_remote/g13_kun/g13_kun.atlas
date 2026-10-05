@@ -1,0 +1,104 @@
+
+g13_kun.png
+size: 964,964
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 181
+  size: 482, 220
+  orig: 546, 252
+  offset: 44, 32
+  index: -1
+gongji
+  rotate: true
+  xy: 847, 614
+  size: 348, 103
+  orig: 348, 103
+  offset: 0, 0
+  index: -1
+kun_1
+  rotate: true
+  xy: 742, 576
+  size: 386, 103
+  orig: 386, 103
+  offset: 0, 0
+  index: -1
+kun_10
+  rotate: false
+  xy: 2, 790
+  size: 724, 172
+  orig: 724, 172
+  offset: 0, 0
+  index: -1
+kun_2
+  rotate: false
+  xy: 486, 204
+  size: 241, 226
+  orig: 241, 226
+  offset: 0, 0
+  index: -1
+kun_3
+  rotate: false
+  xy: 602, 13
+  size: 196, 189
+  orig: 196, 189
+  offset: 0, 0
+  index: -1
+kun_4
+  rotate: false
+  xy: 800, 2
+  size: 130, 67
+  orig: 130, 67
+  offset: 0, 0
+  index: -1
+kun_5
+  rotate: false
+  xy: 2, 403
+  size: 464, 385
+  orig: 464, 385
+  offset: 0, 0
+  index: -1
+kun_6
+  rotate: false
+  xy: 742, 395
+  size: 181, 179
+  orig: 181, 179
+  offset: 0, 0
+  index: -1
+kun_7
+  rotate: true
+  xy: 468, 432
+  size: 356, 272
+  orig: 356, 272
+  offset: 0, 0
+  index: -1
+kun_8
+  rotate: true
+  xy: 729, 307
+  size: 86, 52
+  orig: 86, 52
+  offset: 0, 0
+  index: -1
+kun_9
+  rotate: true
+  xy: 729, 234
+  size: 71, 57
+  orig: 71, 57
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: true
+  xy: 800, 71
+  size: 322, 160
+  orig: 322, 160
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: false
+  xy: 2, 27
+  size: 598, 152
+  orig: 598, 152
+  offset: 0, 0
+  index: -1

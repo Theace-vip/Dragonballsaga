@@ -1,0 +1,251 @@
+
+g13_shenghuang_texiao.png
+size: 1020,688
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+image/jineng/jineng_chongjibo2_00036
+  rotate: true
+  xy: 542, 498
+  size: 177, 176
+  orig: 224, 229
+  offset: 24, 26
+  index: -1
+image/jineng/jineng_chongjibo_00035
+  rotate: false
+  xy: 357, 338
+  size: 160, 158
+  orig: 250, 229
+  offset: 44, 34
+  index: -1
+image/jineng/jineng_shouji_00034
+  rotate: false
+  xy: 597, 82
+  size: 125, 125
+  orig: 245, 218
+  offset: 57, 50
+  index: -1
+image/jineng/jineng_shouji_00035
+  rotate: false
+  xy: 720, 340
+  size: 168, 161
+  orig: 245, 218
+  offset: 39, 35
+  index: -1
+image/jineng/jineng_shouji_00036
+  rotate: false
+  xy: 187, 339
+  size: 168, 164
+  orig: 245, 218
+  offset: 38, 31
+  index: -1
+image/jineng/jineng_shouji_00037
+  rotate: false
+  xy: 2, 503
+  size: 183, 183
+  orig: 245, 218
+  offset: 28, 19
+  index: -1
+image/jineng/jineng_shouji_00038
+  rotate: true
+  xy: 720, 503
+  size: 172, 168
+  orig: 245, 218
+  offset: 37, 30
+  index: -1
+image/jineng/jineng_shouji_00039
+  rotate: true
+  xy: 368, 498
+  size: 188, 172
+  orig: 245, 218
+  offset: 19, 33
+  index: -1
+image/jineng/jineng_shouji_00040
+  rotate: false
+  xy: 187, 505
+  size: 179, 181
+  orig: 245, 218
+  offset: 28, 19
+  index: -1
+image/jineng/jineng_shouji_00041
+  rotate: false
+  xy: 2, 336
+  size: 165, 165
+  orig: 245, 218
+  offset: 22, 36
+  index: -1
+image/jineng/jineng_shouji_00042
+  rotate: false
+  xy: 519, 344
+  size: 156, 152
+  orig: 245, 218
+  offset: 31, 40
+  index: -1
+image/pugong_shandian_00005
+  rotate: true
+  xy: 2, 10
+  size: 23, 141
+  orig: 102, 333
+  offset: 35, 169
+  index: -1
+image/pugong_shandian_00006
+  rotate: true
+  xy: 2, 137
+  size: 61, 295
+  orig: 102, 333
+  offset: 16, 17
+  index: -1
+image/pugong_shandian_00007
+  rotate: true
+  xy: 308, 152
+  size: 63, 287
+  orig: 102, 333
+  offset: 17, 17
+  index: -1
+image/pugong_shandian_00009
+  rotate: true
+  xy: 299, 91
+  size: 59, 259
+  orig: 102, 333
+  offset: 20, 17
+  index: -1
+image/pugong_shandian_00011
+  rotate: true
+  xy: 210, 46
+  size: 43, 216
+  orig: 102, 333
+  offset: 29, 17
+  index: -1
+image/pugong_shouji1_00006
+  rotate: false
+  xy: 846, 197
+  size: 150, 123
+  orig: 187, 171
+  offset: 15, 22
+  index: -1
+image/pugong_shouji1_00007
+  rotate: true
+  xy: 2, 206
+  size: 128, 146
+  orig: 187, 171
+  offset: 30, 11
+  index: -1
+image/pugong_shouji1_00008
+  rotate: true
+  xy: 519, 217
+  size: 125, 167
+  orig: 187, 171
+  offset: 35, 0
+  index: -1
+image/pugong_shouji1_00009
+  rotate: false
+  xy: 524, 28
+  size: 66, 61
+  orig: 187, 171
+  offset: 62, 47
+  index: -1
+image/pugong_shouji2_00006
+  rotate: false
+  xy: 849, 87
+  size: 118, 108
+  orig: 187, 204
+  offset: 36, 61
+  index: -1
+image/pugong_shouji2_00007
+  rotate: false
+  xy: 724, 90
+  size: 123, 105
+  orig: 187, 204
+  offset: 34, 63
+  index: -1
+image/pugong_shouji2_00008
+  rotate: true
+  xy: 2, 35
+  size: 100, 102
+  orig: 187, 204
+  offset: 53, 66
+  index: -1
+image/pugong_shouji2_00009
+  rotate: false
+  xy: 428, 12
+  size: 94, 77
+  orig: 187, 204
+  offset: 55, 89
+  index: -1
+image/pugong_shouji2_00010
+  rotate: false
+  xy: 210, 93
+  size: 78, 42
+  orig: 187, 204
+  offset: 67, 96
+  index: -1
+image/shandian_00008
+  rotate: true
+  xy: 890, 499
+  size: 187, 118
+  orig: 275, 174
+  offset: 30, 32
+  index: -1
+image/shandian_00009
+  rotate: false
+  xy: 169, 200
+  size: 137, 137
+  orig: 275, 174
+  offset: 80, 13
+  index: -1
+image/shandian_00010
+  rotate: false
+  xy: 688, 209
+  size: 156, 129
+  orig: 275, 174
+  offset: 54, 21
+  index: -1
+image/shandian_00011
+  rotate: true
+  xy: 890, 322
+  size: 175, 126
+  orig: 275, 174
+  offset: 40, 27
+  index: -1
+image/shandian_00012
+  rotate: false
+  xy: 308, 224
+  size: 165, 112
+  orig: 275, 174
+  offset: 45, 42
+  index: -1
+image/shandian_00015
+  rotate: true
+  xy: 724, 16
+  size: 72, 100
+  orig: 275, 174
+  offset: 131, 31
+  index: -1
+image/shandian_00016
+  rotate: false
+  xy: 912, 4
+  size: 81, 81
+  orig: 275, 174
+  offset: 102, 41
+  index: -1
+image/shandian_00017
+  rotate: false
+  xy: 592, 25
+  size: 73, 55
+  orig: 275, 174
+  offset: 128, 55
+  index: -1
+image/shandianqiu1_00000
+  rotate: false
+  xy: 826, 2
+  size: 84, 83
+  orig: 130, 115
+  offset: 22, 17
+  index: -1
+image/shandianqiu2_00000
+  rotate: false
+  xy: 106, 41
+  size: 102, 94
+  orig: 130, 115
+  offset: 13, 11
+  index: -1

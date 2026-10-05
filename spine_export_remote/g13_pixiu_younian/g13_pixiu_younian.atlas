@@ -1,0 +1,146 @@
+
+g13_pixiu_younian.png
+size: 384,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bi
+  rotate: false
+  xy: 169, 178
+  size: 19, 20
+  orig: 19, 20
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 32
+  size: 152, 102
+  orig: 152, 102
+  offset: 0, 0
+  index: -1
+datui_l
+  rotate: 270
+  xy: 237, 4
+  size: 43, 47
+  orig: 43, 47
+  offset: 0, 0
+  index: -1
+datui_r
+  rotate: 180
+  xy: 308, 145
+  size: 61, 66
+  orig: 61, 66
+  offset: 0, 0
+  index: -1
+er_l
+  rotate: true
+  xy: 2, 6
+  size: 39, 44
+  orig: 39, 44
+  offset: 0, 0
+  index: -1
+er_r
+  rotate: false
+  xy: 2, 124
+  size: 47, 44
+  orig: 47, 44
+  offset: 0, 0
+  index: -1
+foot_l
+  rotate: true
+  xy: 340, 214
+  size: 44, 37
+  orig: 44, 37
+  offset: 0, 0
+  index: -1
+foot_r
+  rotate: true
+  xy: 336, 25
+  size: 51, 42
+  orig: 51, 42
+  offset: 0, 0
+  index: -1
+hand_l
+  rotate: 180
+  xy: 248, 118
+  size: 62, 89
+  orig: 62, 89
+  offset: 0, 0
+  index: -1
+hand_r
+  rotate: 180
+  xy: 145, 85
+  size: 67, 91
+  orig: 67, 91
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 2, 136
+  size: 173, 128
+  orig: 173, 128
+  offset: 0, 0
+  index: -1
+lingdang_1
+  rotate: false
+  xy: 139, 4
+  size: 42, 39
+  orig: 42, 39
+  offset: 0, 0
+  index: -1
+lingdang_2
+  rotate: true
+  xy: 196, 65
+  size: 131, 56
+  orig: 131, 56
+  offset: 0, 0
+  index: -1
+mao
+  rotate: 270
+  xy: 175, 19
+  size: 105, 109
+  orig: 105, 109
+  offset: 0, 0
+  index: -1
+toufa_1
+  rotate: false
+  xy: 179, 198
+  size: 92, 61
+  orig: 92, 61
+  offset: 0, 0
+  index: -1
+toushi
+  rotate: 270
+  xy: 323, 78
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: 270
+  xy: 280, 194
+  size: 70, 59
+  orig: 70, 59
+  offset: 0, 0
+  index: -1
+yan_l
+  rotate: false
+  xy: 153, 250
+  size: 23, 13
+  orig: 23, 13
+  offset: 0, 0
+  index: -1
+yan_r
+  rotate: false
+  xy: 2, 252
+  size: 28, 11
+  orig: 28, 11
+  offset: 0, 0
+  index: -1
+zui
+  rotate: true
+  xy: 286, 27
+  size: 89, 48
+  orig: 89, 48
+  offset: 0, 0
+  index: -1

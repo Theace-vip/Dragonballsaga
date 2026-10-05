@@ -1,0 +1,160 @@
+
+g13_huangdi_texiao.png
+size: 908,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baoza_00002
+  rotate: false
+  xy: 289, 24
+  size: 300, 200
+  orig: 382, 284
+  offset: 37, 0
+  index: -1
+baoza_00004
+  rotate: true
+  xy: 386, 226
+  size: 365, 230
+  orig: 382, 284
+  offset: 5, 0
+  index: -1
+baoza_00006
+  rotate: false
+  xy: 2, 226
+  size: 382, 255
+  orig: 382, 284
+  offset: 0, 0
+  index: -1
+baoza_00008
+  rotate: false
+  xy: 2, 483
+  size: 382, 262
+  orig: 382, 284
+  offset: 0, 10
+  index: -1
+baoza_00010
+  rotate: false
+  xy: 2, 747
+  size: 382, 273
+  orig: 382, 284
+  offset: 0, 10
+  index: -1
+baoza_00012
+  rotate: true
+  xy: 386, 717
+  size: 303, 218
+  orig: 382, 284
+  offset: 19, 19
+  index: -1
+baoza_00014
+  rotate: false
+  xy: 2, 2
+  size: 285, 222
+  orig: 382, 284
+  offset: 27, 13
+  index: -1
+baoza_00016
+  rotate: true
+  xy: 618, 226
+  size: 289, 184
+  orig: 382, 284
+  offset: 24, 7
+  index: -1
+baoza_00018
+  rotate: true
+  xy: 606, 729
+  size: 291, 187
+  orig: 382, 284
+  offset: 23, 1
+  index: -1
+baoza_00020
+  rotate: false
+  xy: 606, 604
+  size: 242, 123
+  orig: 382, 284
+  offset: 72, 28
+  index: -1
+baoza_00022
+  rotate: true
+  xy: 795, 729
+  size: 132, 109
+  orig: 382, 284
+  offset: 140, 43
+  index: -1
+baoza_00024
+  rotate: true
+  xy: 795, 888
+  size: 132, 97
+  orig: 382, 284
+  offset: 140, 43
+  index: -1
+baoza_00026
+  rotate: true
+  xy: 820, 129
+  size: 95, 61
+  orig: 382, 284
+  offset: 165, 45
+  index: -1
+dilie_00000
+  rotate: false
+  xy: 618, 526
+  size: 215, 76
+  orig: 230, 115
+  offset: 7, 16
+  index: -1
+h_guang
+  rotate: true
+  xy: 850, 658
+  size: 69, 50
+  orig: 70, 51
+  offset: 1, 1
+  index: -1
+h_ld_01
+  rotate: true
+  xy: 835, 531
+  size: 71, 57
+  orig: 116, 213
+  offset: 44, 155
+  index: -1
+h_ld_02
+  rotate: false
+  xy: 804, 379
+  size: 57, 145
+  orig: 116, 213
+  offset: 58, 66
+  index: -1
+h_ld_03
+  rotate: true
+  xy: 386, 633
+  size: 82, 207
+  orig: 116, 213
+  offset: 33, 4
+  index: -1
+h_ld_04
+  rotate: false
+  xy: 591, 15
+  size: 112, 209
+  orig: 116, 213
+  offset: 3, 1
+  index: -1
+h_ld_05
+  rotate: false
+  xy: 705, 61
+  size: 113, 163
+  orig: 116, 213
+  offset: 2, 1
+  index: -1
+h_ld_06
+  rotate: false
+  xy: 804, 226
+  size: 100, 101
+  orig: 116, 213
+  offset: 1, 1
+  index: -1
+h_ld_07
+  rotate: false
+  xy: 820, 51
+  size: 73, 76
+  orig: 116, 213
+  offset: 1, 4
+  index: -1

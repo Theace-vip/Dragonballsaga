@@ -1,0 +1,139 @@
+
+g13_yuanshitianzun_texiao.png
+size: 1012,424
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1_000
+  rotate: false
+  xy: 634, 287
+  size: 134, 137
+  orig: 160, 160
+  offset: 13, 11
+  index: -1
+1_001
+  rotate: false
+  xy: 770, 288
+  size: 133, 136
+  orig: 160, 160
+  offset: 14, 13
+  index: -1
+1_002
+  rotate: true
+  xy: 770, 156
+  size: 130, 136
+  orig: 160, 160
+  offset: 16, 12
+  index: -1
+1_003
+  rotate: true
+  xy: 0, 50
+  size: 127, 133
+  orig: 160, 160
+  offset: 17, 14
+  index: -1
+1_004
+  rotate: true
+  xy: 385, 0
+  size: 124, 129
+  orig: 160, 160
+  offset: 17, 16
+  index: -1
+1_005
+  rotate: true
+  xy: 609, 22
+  size: 126, 131
+  orig: 160, 160
+  offset: 16, 16
+  index: -1
+1_006
+  rotate: false
+  xy: 634, 150
+  size: 128, 135
+  orig: 160, 160
+  offset: 16, 13
+  index: -1
+1_007
+  rotate: true
+  xy: 473, 126
+  size: 127, 134
+  orig: 160, 160
+  offset: 17, 13
+  index: -1
+1_008
+  rotate: true
+  xy: 764, 30
+  size: 124, 135
+  orig: 160, 160
+  offset: 18, 11
+  index: -1
+1_009
+  rotate: true
+  xy: 247, 71
+  size: 125, 136
+  orig: 160, 160
+  offset: 18, 11
+  index: -1
+c_000
+  rotate: true
+  xy: 516, 81
+  size: 43, 52
+  orig: 128, 128
+  offset: 44, 42
+  index: -1
+c_001
+  rotate: true
+  xy: 901, 14
+  size: 112, 92
+  orig: 128, 128
+  offset: 7, 22
+  index: -1
+c_002
+  rotate: true
+  xy: 905, 302
+  size: 122, 106
+  orig: 128, 128
+  offset: 5, 13
+  index: -1
+c_003
+  rotate: true
+  xy: 135, 60
+  size: 117, 101
+  orig: 128, 128
+  offset: 5, 14
+  index: -1
+guang
+  rotate: false
+  xy: 385, 146
+  size: 50, 50
+  orig: 64, 64
+  offset: 7, 7
+  index: -1
+hx_3448-1
+  rotate: false
+  xy: 0, 179
+  size: 245, 245
+  orig: 320, 320
+  offset: 35, 34
+  index: -1
+xz
+  rotate: false
+  xy: 247, 198
+  size: 224, 226
+  orig: 224, 226
+  offset: 0, 0
+  index: -1
+yun
+  rotate: true
+  xy: 473, 255
+  size: 169, 159
+  orig: 169, 159
+  offset: 0, 0
+  index: -1
+zd
+  rotate: false
+  xy: 908, 128
+  size: 70, 172
+  orig: 70, 172
+  offset: 0, 0
+  index: -1

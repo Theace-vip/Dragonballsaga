@@ -1,0 +1,279 @@
+
+g13_change_texiao.png
+size: 2040,516
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+iamge/chongji_00013
+  rotate: false
+  xy: 1936, 352
+  size: 89, 64
+  orig: 576, 1312
+  offset: 373, 344
+  index: -1
+iamge/longjuanfeng_00000
+  rotate: false
+  xy: 1735, 289
+  size: 199, 225
+  orig: 252, 277
+  offset: 17, 22
+  index: -1
+iamge/longjuanfeng_00001
+  rotate: false
+  xy: 1532, 289
+  size: 201, 225
+  orig: 252, 277
+  offset: 22, 22
+  index: -1
+iamge/longjuanfeng_00002
+  rotate: false
+  xy: 1324, 289
+  size: 206, 225
+  orig: 252, 277
+  offset: 22, 24
+  index: -1
+iamge/longjuanfeng_00003
+  rotate: true
+  xy: 227, 294
+  size: 220, 222
+  orig: 252, 277
+  offset: 21, 25
+  index: -1
+iamge/longjuanfeng_00004
+  rotate: false
+  xy: 2, 293
+  size: 223, 221
+  orig: 252, 277
+  offset: 18, 26
+  index: -1
+iamge/longjuanfeng_00005
+  rotate: false
+  xy: 671, 291
+  size: 215, 223
+  orig: 252, 277
+  offset: 20, 25
+  index: -1
+iamge/longjuanfeng_00006
+  rotate: true
+  xy: 226, 97
+  size: 195, 221
+  orig: 252, 277
+  offset: 24, 26
+  index: -1
+iamge/longjuanfeng_00007
+  rotate: false
+  xy: 451, 293
+  size: 218, 221
+  orig: 252, 277
+  offset: 16, 26
+  index: -1
+iamge/longjuanfeng_00008
+  rotate: false
+  xy: 1108, 291
+  size: 214, 223
+  orig: 252, 277
+  offset: 16, 24
+  index: -1
+iamge/longjuanfeng_00009
+  rotate: false
+  xy: 888, 295
+  size: 218, 219
+  orig: 252, 277
+  offset: 23, 22
+  index: -1
+iamge/longjuanfeng_00010
+  rotate: false
+  xy: 888, 100
+  size: 172, 193
+  orig: 252, 277
+  offset: 42, 28
+  index: -1
+iamge/longjuanfeng_00011
+  rotate: false
+  xy: 2, 103
+  size: 172, 188
+  orig: 252, 277
+  offset: 40, 33
+  index: -1
+iamge/longjuanfeng_00012
+  rotate: false
+  xy: 450, 103
+  size: 165, 188
+  orig: 252, 277
+  offset: 41, 34
+  index: -1
+iamge/longjuanfeng_00013
+  rotate: false
+  xy: 617, 104
+  size: 162, 185
+  orig: 252, 277
+  offset: 42, 35
+  index: -1
+iamge/longjuanfeng_00014
+  rotate: false
+  xy: 1062, 110
+  size: 155, 179
+  orig: 252, 277
+  offset: 45, 36
+  index: -1
+iamge/longjuanfeng_00015
+  rotate: false
+  xy: 1875, 115
+  size: 124, 172
+  orig: 252, 277
+  offset: 61, 37
+  index: -1
+iamge/shouji_00000
+  rotate: false
+  xy: 1936, 418
+  size: 96, 96
+  orig: 178, 162
+  offset: 42, 31
+  index: -1
+iamge/shouji_00001
+  rotate: false
+  xy: 1553, 2
+  size: 148, 135
+  orig: 178, 162
+  offset: 17, 17
+  index: -1
+iamge/shouji_00002
+  rotate: false
+  xy: 1219, 135
+  size: 169, 152
+  orig: 178, 162
+  offset: 7, 10
+  index: -1
+iamge/shouji_00003
+  rotate: false
+  xy: 1553, 139
+  size: 161, 148
+  orig: 178, 162
+  offset: 10, 10
+  index: -1
+iamge/shouji_00004
+  rotate: false
+  xy: 1390, 138
+  size: 161, 149
+  orig: 178, 162
+  offset: 9, 8
+  index: -1
+iamge/shouji_00005
+  rotate: false
+  xy: 1716, 142
+  size: 157, 145
+  orig: 178, 162
+  offset: 11, 11
+  index: -1
+iamge/shouji_00006
+  rotate: false
+  xy: 1716, 3
+  size: 152, 137
+  orig: 178, 162
+  offset: 14, 16
+  index: -1
+iamge/shouji_00007
+  rotate: false
+  xy: 1390, 22
+  size: 122, 114
+  orig: 178, 162
+  offset: 26, 20
+  index: -1
+iamge/xiaosan_00000
+  rotate: false
+  xy: 2001, 270
+  size: 37, 23
+  orig: 113, 116
+  offset: 40, 53
+  index: -1
+iamge/xiaosan_00001
+  rotate: false
+  xy: 176, 229
+  size: 45, 62
+  orig: 113, 116
+  offset: 30, 24
+  index: -1
+iamge/xiaosan_00002
+  rotate: true
+  xy: 1062, 57
+  size: 51, 66
+  orig: 113, 116
+  offset: 28, 20
+  index: -1
+iamge/xiaosan_00003
+  rotate: true
+  xy: 1936, 295
+  size: 55, 78
+  orig: 113, 116
+  offset: 28, 16
+  index: -1
+iamge/xiaosan_00004
+  rotate: false
+  xy: 1870, 34
+  size: 56, 79
+  orig: 113, 116
+  offset: 28, 15
+  index: -1
+iamge/xiaosan_00005
+  rotate: false
+  xy: 1219, 54
+  size: 57, 79
+  orig: 113, 116
+  offset: 28, 15
+  index: -1
+iamge/xiaosan_00006
+  rotate: false
+  xy: 1278, 54
+  size: 57, 79
+  orig: 113, 116
+  offset: 28, 15
+  index: -1
+iamge/xiaosan_00007
+  rotate: false
+  xy: 781, 45
+  size: 56, 80
+  orig: 113, 116
+  offset: 30, 15
+  index: -1
+iamge/xiaosan_00008
+  rotate: false
+  xy: 781, 209
+  size: 57, 80
+  orig: 113, 116
+  offset: 30, 15
+  index: -1
+iamge/xiaosan_00009
+  rotate: false
+  xy: 781, 127
+  size: 57, 80
+  orig: 113, 116
+  offset: 30, 15
+  index: -1
+iamge/xiaosan_00010
+  rotate: false
+  xy: 1928, 33
+  size: 54, 80
+  orig: 113, 116
+  offset: 30, 15
+  index: -1
+iamge/xiaosan_00011
+  rotate: false
+  xy: 2001, 259
+  size: 32, 9
+  orig: 113, 116
+  offset: 31, 30
+  index: -1
+iamge/yumao_00000
+  rotate: false
+  xy: 840, 268
+  size: 34, 21
+  orig: 65, 48
+  offset: 19, 11
+  index: -1
+iamge/zidan_00000
+  rotate: false
+  xy: 617, 78
+  size: 111, 24
+  orig: 136, 42
+  offset: 12, 8
+  index: -1

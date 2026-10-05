@@ -1,0 +1,174 @@
+
+g13_zhujiuyin_texiao.png
+size: 1016,660
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0_01
+  rotate: false
+  xy: 565, 280
+  size: 164, 160
+  orig: 208, 196
+  offset: 25, 1
+  index: -1
+0_02
+  rotate: true
+  xy: 811, 473
+  size: 187, 182
+  orig: 208, 196
+  offset: 12, 4
+  index: -1
+0_03
+  rotate: false
+  xy: 390, 274
+  size: 173, 166
+  orig: 208, 196
+  offset: 19, 30
+  index: -1
+0_04
+  rotate: false
+  xy: 731, 152
+  size: 165, 157
+  orig: 208, 196
+  offset: 22, 39
+  index: -1
+0_05
+  rotate: false
+  xy: 846, 57
+  size: 143, 89
+  orig: 208, 196
+  offset: 24, 107
+  index: -1
+a1278756
+  rotate: false
+  xy: 811, 311
+  size: 204, 160
+  orig: 206, 162
+  offset: 2, 0
+  index: -1
+bz_ci_01
+  rotate: false
+  xy: 541, 145
+  size: 176, 127
+  orig: 186, 163
+  offset: 5, 2
+  index: -1
+bz_ci_02
+  rotate: false
+  xy: 0, 162
+  size: 174, 145
+  orig: 186, 163
+  offset: 5, 3
+  index: -1
+bz_ci_03
+  rotate: false
+  xy: 176, 169
+  size: 179, 138
+  orig: 186, 163
+  offset: 3, 18
+  index: -1
+bz_ci_04
+  rotate: false
+  xy: 357, 141
+  size: 182, 131
+  orig: 186, 163
+  offset: 2, 30
+  index: -1
+dimian
+  rotate: false
+  xy: 0, 309
+  size: 388, 131
+  orig: 389, 149
+  offset: 1, 0
+  index: -1
+fx_guanban
+  rotate: false
+  xy: 666, 93
+  size: 50, 50
+  orig: 64, 64
+  offset: 7, 7
+  index: -1
+h_guang
+  rotate: false
+  xy: 846, 0
+  size: 77, 55
+  orig: 78, 57
+  offset: 1, 2
+  index: -1
+h_tw1
+  rotate: false
+  xy: 446, 18
+  size: 125, 33
+  orig: 128, 33
+  offset: 1, 0
+  index: -1
+h_yun_01
+  rotate: false
+  xy: 176, 58
+  size: 159, 109
+  orig: 202, 134
+  offset: 4, 2
+  index: -1
+h_yun_02
+  rotate: true
+  xy: 898, 148
+  size: 161, 117
+  orig: 202, 134
+  offset: 20, 4
+  index: -1
+h_yun_03
+  rotate: false
+  xy: 0, 42
+  size: 136, 118
+  orig: 202, 134
+  offset: 57, 9
+  index: -1
+h_yun_04
+  rotate: false
+  xy: 719, 43
+  size: 125, 107
+  orig: 202, 134
+  offset: 72, 11
+  index: -1
+h_yun_05
+  rotate: true
+  xy: 337, 39
+  size: 100, 107
+  orig: 202, 134
+  offset: 99, 17
+  index: -1
+long
+  rotate: false
+  xy: 0, 442
+  size: 809, 218
+  orig: 809, 218
+  offset: 0, 0
+  index: -1
+st4
+  rotate: false
+  xy: 446, 54
+  size: 90, 85
+  orig: 94, 88
+  offset: 2, 1
+  index: -1
+st5
+  rotate: true
+  xy: 541, 53
+  size: 90, 123
+  orig: 93, 127
+  offset: 2, 2
+  index: -1
+st6
+  rotate: false
+  xy: 731, 362
+  size: 74, 78
+  orig: 78, 83
+  offset: 2, 2
+  index: -1
+zd
+  rotate: true
+  xy: 138, 4
+  size: 52, 148
+  orig: 52, 151
+  offset: 0, 2
+  index: -1

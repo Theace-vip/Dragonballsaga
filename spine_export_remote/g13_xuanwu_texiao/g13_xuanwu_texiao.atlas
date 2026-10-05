@@ -1,0 +1,139 @@
+
+g13_xuanwu_texiao.png
+size: 1016,368
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a_zha
+  rotate: true
+  xy: 702, 83
+  size: 110, 116
+  orig: 118, 120
+  offset: 4, 3
+  index: -1
+baiguang1
+  rotate: false
+  xy: 184, 14
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+c_001
+  rotate: false
+  xy: 823, 186
+  size: 108, 178
+  orig: 128, 256
+  offset: 7, 8
+  index: -1
+c_003
+  rotate: false
+  xy: 578, 185
+  size: 122, 179
+  orig: 128, 256
+  offset: 5, 59
+  index: -1
+c_005
+  rotate: true
+  xy: 416, 80
+  size: 122, 137
+  orig: 128, 256
+  offset: 6, 115
+  index: -1
+c_007
+  rotate: false
+  xy: 141, 76
+  size: 110, 87
+  orig: 128, 256
+  offset: 7, 165
+  index: -1
+dilie1
+  rotate: false
+  xy: 2, 165
+  size: 412, 199
+  orig: 412, 199
+  offset: 0, 0
+  index: -1
+fx_fan
+  rotate: true
+  xy: 936, 56
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+fx_radial
+  rotate: false
+  xy: 416, 204
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+fx_xinxin_00000
+  rotate: false
+  xy: 118, 10
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+fx_yanwu_a1
+  rotate: true
+  xy: 933, 186
+  size: 118, 78
+  orig: 118, 78
+  offset: 0, 0
+  index: -1
+fx_yanwu_a2
+  rotate: false
+  xy: 555, 95
+  size: 122, 88
+  orig: 122, 88
+  offset: 0, 0
+  index: -1
+fx_yanwu_a3
+  rotate: false
+  xy: 820, 90
+  size: 114, 94
+  orig: 114, 94
+  offset: 0, 0
+  index: -1
+fx_yanwu_a4
+  rotate: true
+  xy: 555, 11
+  size: 82, 98
+  orig: 82, 98
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 253, 2
+  size: 91, 87
+  orig: 91, 87
+  offset: 0, 0
+  index: -1
+sc
+  rotate: true
+  xy: 253, 91
+  size: 72, 131
+  orig: 74, 133
+  offset: 1, 1
+  index: -1
+sc1
+  rotate: true
+  xy: 2, 82
+  size: 81, 137
+  orig: 83, 147
+  offset: 1, 8
+  index: -1
+sc2
+  rotate: false
+  xy: 702, 195
+  size: 119, 169
+  orig: 122, 170
+  offset: 2, 0
+  index: -1
+sc3
+  rotate: true
+  xy: 2, 18
+  size: 62, 114
+  orig: 62, 114
+  offset: 0, 0
+  index: -1

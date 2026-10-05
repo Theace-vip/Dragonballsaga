@@ -1,0 +1,55 @@
+
+g13_sunv_texiao.png
+size: 688,268
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fx_guanban
+  rotate: false
+  xy: 621, 199
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+fx_guangci
+  rotate: false
+  xy: 257, 25
+  size: 136, 238
+  orig: 136, 238
+  offset: 0, 0
+  index: -1
+fx_shguang
+  rotate: true
+  xy: 395, 2
+  size: 59, 86
+  orig: 66, 92
+  offset: 2, 3
+  index: -1
+fx_xinxin_00000
+  rotate: false
+  xy: 621, 141
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 3
+  index: -1
+fx_yibo
+  rotate: false
+  xy: 2, 10
+  size: 253, 253
+  orig: 256, 256
+  offset: 0, 3
+  index: -1
+yinbo_00
+  rotate: true
+  xy: 539, 7
+  size: 256, 80
+  orig: 256, 80
+  offset: 0, 0
+  index: -1
+yinbo_trail
+  rotate: false
+  xy: 395, 63
+  size: 142, 200
+  orig: 142, 200
+  offset: 0, 0
+  index: -1

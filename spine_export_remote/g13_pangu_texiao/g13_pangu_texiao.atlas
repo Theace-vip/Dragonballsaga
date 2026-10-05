@@ -1,0 +1,132 @@
+
+g13_pangu_texiao.png
+size: 1012,320
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+baiguang1
+  rotate: false
+  xy: 764, 2
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+c_001
+  rotate: true
+  xy: 2, 87
+  size: 108, 178
+  orig: 128, 256
+  offset: 7, 8
+  index: -1
+c_003
+  rotate: true
+  xy: 485, 196
+  size: 122, 179
+  orig: 128, 256
+  offset: 5, 59
+  index: -1
+c_005
+  rotate: true
+  xy: 182, 73
+  size: 122, 137
+  orig: 128, 256
+  offset: 6, 115
+  index: -1
+c_007
+  rotate: true
+  xy: 922, 208
+  size: 110, 87
+  orig: 128, 256
+  offset: 7, 165
+  index: -1
+dg_01
+  rotate: false
+  xy: 922, 111
+  size: 85, 95
+  orig: 177, 154
+  offset: 2, 52
+  index: -1
+dg_02
+  rotate: true
+  xy: 666, 154
+  size: 164, 131
+  orig: 177, 154
+  offset: 3, 21
+  index: -1
+dg_03
+  rotate: true
+  xy: 485, 70
+  size: 124, 140
+  orig: 177, 154
+  offset: 44, 3
+  index: -1
+dg_04
+  rotate: true
+  xy: 627, 35
+  size: 117, 135
+  orig: 177, 154
+  offset: 59, 5
+  index: -1
+dg_05
+  rotate: false
+  xy: 321, 30
+  size: 126, 126
+  orig: 177, 154
+  offset: 36, 4
+  index: -1
+dilie1
+  rotate: false
+  xy: 2, 197
+  size: 319, 121
+  orig: 412, 199
+  offset: 37, 34
+  index: -1
+dl1
+  rotate: false
+  xy: 135, 16
+  size: 162, 55
+  orig: 163, 56
+  offset: 1, 1
+  index: -1
+fx_radial
+  rotate: false
+  xy: 323, 158
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 904, 22
+  size: 91, 87
+  orig: 91, 87
+  offset: 0, 0
+  index: -1
+sc
+  rotate: true
+  xy: 2, 11
+  size: 74, 131
+  orig: 74, 133
+  offset: 0, 1
+  index: -1
+sc1
+  rotate: true
+  xy: 764, 64
+  size: 82, 138
+  orig: 83, 147
+  offset: 0, 8
+  index: -1
+sc2
+  rotate: false
+  xy: 799, 148
+  size: 121, 170
+  orig: 122, 170
+  offset: 1, 0
+  index: -1
+sc3
+  rotate: true
+  xy: 449, 6
+  size: 62, 114
+  orig: 62, 114
+  offset: 0, 0
+  index: -1

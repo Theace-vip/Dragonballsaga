@@ -1,0 +1,139 @@
+
+g13_tiangou.png
+size: 968,980
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 371
+  size: 434, 347
+  orig: 434, 347
+  offset: 0, 0
+  index: -1
+chibang_l
+  rotate: true
+  xy: 212, 75
+  size: 179, 264
+  orig: 179, 264
+  offset: 0, 0
+  index: -1
+chibang_r
+  rotate: true
+  xy: 677, 110
+  size: 251, 289
+  orig: 251, 289
+  offset: 0, 0
+  index: -1
+er_l
+  rotate: false
+  xy: 428, 377
+  size: 117, 144
+  orig: 139, 144
+  offset: 22, 0
+  index: -1
+er_r1
+  rotate: false
+  xy: 688, 28
+  size: 150, 124
+  orig: 150, 124
+  offset: 0, 0
+  index: -1
+er_r2
+  rotate: true
+  xy: 376, 567
+  size: 150, 156
+  orig: 150, 156
+  offset: 0, 0
+  index: -1
+foot_l
+  rotate: false
+  xy: 726, 870
+  size: 145, 107
+  orig: 145, 107
+  offset: 0, 0
+  index: -1
+foot_r
+  rotate: false
+  xy: 128, 7
+  size: 148, 92
+  orig: 148, 92
+  offset: 0, 0
+  index: -1
+formal
+  rotate: true
+  xy: 2, 71
+  size: 217, 208
+  orig: 217, 208
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: false
+  xy: 726, 666
+  size: 172, 197
+  orig: 172, 197
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 726, 363
+  size: 300, 233
+  orig: 300, 233
+  offset: 0, 0
+  index: -1
+nianye
+  rotate: false
+  xy: 134, 258
+  size: 541, 117
+  orig: 541, 117
+  offset: 0, 0
+  index: -1
+pao_1
+  rotate: false
+  xy: 2, 355
+  size: 95, 47
+  orig: 95, 47
+  offset: 0, 0
+  index: -1
+pao_2
+  rotate: false
+  xy: 2, 301
+  size: 85, 53
+  orig: 85, 53
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: true
+  xy: 535, 85
+  size: 181, 198
+  orig: 181, 213
+  offset: 0, 3
+  index: -1
+tx_1
+  rotate: false
+  xy: 486, 523
+  size: 55, 47
+  orig: 55, 47
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 392, 4
+  size: 171, 149
+  orig: 171, 149
+  offset: 0, 0
+  index: -1
+ye_1
+  rotate: false
+  xy: 2, 719
+  size: 563, 259
+  orig: 563, 259
+  offset: 0, 0
+  index: -1
+ye_2
+  rotate: true
+  xy: 566, 363
+  size: 614, 157
+  orig: 614, 157
+  offset: 0, 0
+  index: -1

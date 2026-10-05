@@ -1,0 +1,55 @@
+
+g13_jiuweihu_texiao.png
+size: 260,676
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+aixin
+  rotate: false
+  xy: 2, 94
+  size: 142, 142
+  orig: 150, 152
+  offset: 4, 5
+  index: -1
+baiguang1
+  rotate: false
+  xy: 2, 2
+  size: 57, 55
+  orig: 60, 60
+  offset: 2, 2
+  index: -1
+effect_quan09
+  rotate: false
+  xy: 146, 115
+  size: 92, 121
+  orig: 128, 128
+  offset: 14, 3
+  index: -1
+h_tw1
+  rotate: false
+  xy: 2, 59
+  size: 128, 33
+  orig: 128, 33
+  offset: 0, 0
+  index: -1
+x
+  rotate: false
+  xy: 2, 238
+  size: 212, 179
+  orig: 212, 184
+  offset: 0, 4
+  index: -1
+x1
+  rotate: false
+  xy: 146, 22
+  size: 106, 91
+  orig: 106, 92
+  offset: 0, 1
+  index: -1
+xxx
+  rotate: false
+  xy: 2, 419
+  size: 253, 253
+  orig: 253, 253
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,195 @@
+
+g13_luwu_texiao.png
+size: 1016,296
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+2_000
+  rotate: false
+  xy: 887, 6
+  size: 96, 32
+  orig: 170, 85
+  offset: 37, 32
+  index: -1
+2_002
+  rotate: false
+  xy: 210, 39
+  size: 109, 54
+  orig: 170, 85
+  offset: 33, 15
+  index: -1
+2_004
+  rotate: false
+  xy: 640, 32
+  size: 141, 70
+  orig: 170, 85
+  offset: 18, 9
+  index: -1
+2_006
+  rotate: false
+  xy: 85, 37
+  size: 123, 56
+  orig: 170, 85
+  offset: 20, 21
+  index: -1
+2_008
+  rotate: false
+  xy: 836, 121
+  size: 20, 12
+  orig: 170, 85
+  offset: 75, 27
+  index: -1
+3_00000
+  rotate: true
+  xy: 887, 40
+  size: 42, 122
+  orig: 90, 256
+  offset: 28, 2
+  index: -1
+3_00001
+  rotate: true
+  xy: 640, 104
+  size: 62, 194
+  orig: 90, 256
+  offset: 15, 6
+  index: -1
+3_00002
+  rotate: true
+  xy: 133, 95
+  size: 73, 196
+  orig: 90, 256
+  offset: 7, 17
+  index: -1
+3_00003
+  rotate: true
+  xy: 331, 97
+  size: 70, 176
+  orig: 90, 256
+  offset: 6, 50
+  index: -1
+TX_guangquan_0000
+  rotate: false
+  xy: 85, 122
+  size: 32, 44
+  orig: 135, 140
+  offset: 18, 50
+  index: -1
+TX_guangquan_0003
+  rotate: false
+  xy: 419, 29
+  size: 78, 66
+  orig: 135, 140
+  offset: 7, 36
+  index: -1
+TX_guangquan_0006
+  rotate: true
+  xy: 645, 169
+  size: 124, 122
+  orig: 135, 140
+  offset: 3, 11
+  index: -1
+TX_guangquan_0009
+  rotate: false
+  xy: 133, 170
+  size: 127, 123
+  orig: 135, 140
+  offset: 4, 10
+  index: -1
+TX_guangquan_0012
+  rotate: false
+  xy: 517, 172
+  size: 126, 121
+  orig: 135, 140
+  offset: 5, 14
+  index: -1
+TX_guangquan_0015
+  rotate: false
+  xy: 391, 169
+  size: 124, 124
+  orig: 135, 140
+  offset: 5, 10
+  index: -1
+TX_guangquan_0016
+  rotate: false
+  xy: 262, 171
+  size: 127, 122
+  orig: 135, 140
+  offset: 1, 10
+  index: -1
+TX_guangquan_0019
+  rotate: false
+  xy: 2, 168
+  size: 129, 125
+  orig: 135, 140
+  offset: 1, 10
+  index: -1
+TX_guangquan_0022
+  rotate: false
+  xy: 769, 168
+  size: 121, 125
+  orig: 135, 140
+  offset: 8, 10
+  index: -1
+TX_guangquan_0025
+  rotate: true
+  xy: 517, 64
+  size: 106, 121
+  orig: 135, 140
+  offset: 20, 10
+  index: -1
+TX_guangquan_0028
+  rotate: true
+  xy: 892, 171
+  size: 122, 113
+  orig: 135, 140
+  offset: 7, 20
+  index: -1
+TX_tuowei_0000
+  rotate: false
+  xy: 836, 135
+  size: 53, 31
+  orig: 120, 140
+  offset: 56, 109
+  index: -1
+TX_tuowei_0002
+  rotate: false
+  xy: 331, 13
+  size: 86, 82
+  orig: 120, 140
+  offset: 16, 57
+  index: -1
+TX_tuowei_0004
+  rotate: true
+  xy: 892, 84
+  size: 85, 121
+  orig: 120, 140
+  offset: 8, 15
+  index: -1
+TX_tuowei_0006
+  rotate: false
+  xy: 2, 47
+  size: 81, 119
+  orig: 120, 140
+  offset: 7, 8
+  index: -1
+TX_tuowei_0008
+  rotate: true
+  xy: 783, 17
+  size: 85, 102
+  orig: 120, 140
+  offset: 9, 8
+  index: -1
+TX_tuowei_0010
+  rotate: false
+  xy: 561, 13
+  size: 56, 49
+  orig: 120, 140
+  offset: 18, 8
+  index: -1
+baiguang1
+  rotate: false
+  xy: 499, 2
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1

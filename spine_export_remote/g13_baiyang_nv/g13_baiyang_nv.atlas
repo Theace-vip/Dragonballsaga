@@ -1,0 +1,265 @@
+
+g13_baiyang_nv.png
+size: 1024,744
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+WechatIMG55
+  rotate: false
+  xy: 888, 697
+  size: 35, 47
+  orig: 35, 47
+  offset: 0, 0
+  index: -1
+baiyang
+  rotate: false
+  xy: 725, 43
+  size: 155, 124
+  orig: 155, 124
+  offset: 0, 0
+  index: -1
+baiyang1
+  rotate: false
+  xy: 243, 19
+  size: 166, 110
+  orig: 170, 110
+  offset: 0, 0
+  index: -1
+baiyang10
+  rotate: true
+  xy: 262, 241
+  size: 55, 141
+  orig: 60, 154
+  offset: 5, 0
+  index: -1
+baiyang11
+  rotate: 270
+  xy: 25, 104
+  size: 143, 159
+  orig: 143, 159
+  offset: 0, 0
+  index: -1
+baiyang12
+  rotate: false
+  xy: 790, 248
+  size: 80, 58
+  orig: 80, 59
+  offset: 0, 1
+  index: -1
+baiyang13
+  rotate: false
+  xy: 649, 72
+  size: 75, 75
+  orig: 76, 101
+  offset: 0, 15
+  index: -1
+baiyang14
+  rotate: false
+  xy: 416, 38
+  size: 57, 98
+  orig: 57, 98
+  offset: 0, 0
+  index: -1
+baiyang15
+  rotate: false
+  xy: 657, 15
+  size: 88, 56
+  orig: 88, 56
+  offset: 0, 0
+  index: -1
+baiyang16
+  rotate: false
+  xy: 35, 64
+  size: 77, 62
+  orig: 89, 62
+  offset: 12, 0
+  index: -1
+baiyang17
+  rotate: false
+  xy: 336, 476
+  size: 48, 49
+  orig: 60, 51
+  offset: 12, 2
+  index: -1
+baiyang18
+  rotate: 270
+  xy: 281, 117
+  size: 123, 168
+  orig: 131, 174
+  offset: 0, 6
+  index: -1
+baiyang19
+  rotate: true
+  xy: 832, 106
+  size: 109, 191
+  orig: 109, 191
+  offset: 0, 0
+  index: -1
+baiyang2
+  rotate: true
+  xy: 636, 147
+  size: 186, 154
+  orig: 186, 154
+  offset: 0, 0
+  index: -1
+baiyang20
+  rotate: true
+  xy: 92, 26
+  size: 129, 168
+  orig: 129, 173
+  offset: 0, 5
+  index: -1
+baiyang21
+  rotate: true
+  xy: 482, 62
+  size: 84, 176
+  orig: 84, 176
+  offset: 0, 0
+  index: -1
+baiyang22
+  rotate: 270
+  xy: 0, 243
+  size: 182, 160
+  orig: 182, 160
+  offset: 0, 0
+  index: -1
+baiyang23
+  rotate: true
+  xy: 395, 179
+  size: 115, 267
+  orig: 118, 268
+  offset: 3, 1
+  index: -1
+baiyang24
+  rotate: false
+  xy: 922, 477
+  size: 73, 269
+  orig: 83, 284
+  offset: 10, 0
+  index: -1
+baiyang25
+  rotate: true
+  xy: 730, 144
+  size: 262, 293
+  orig: 262, 293
+  offset: 0, 0
+  index: -1
+baiyang26
+  rotate: 270
+  xy: 450, 1
+  size: 173, 268
+  orig: 173, 268
+  offset: 0, 0
+  index: -1
+baiyang27
+  rotate: true
+  xy: 372, 390
+  size: 354, 287
+  orig: 354, 287
+  offset: 0, 0
+  index: -1
+baiyang28
+  rotate: false
+  xy: 182, 4
+  size: 63, 70
+  orig: 63, 70
+  offset: 0, 0
+  index: -1
+baiyang29
+  rotate: false
+  xy: 376, 601
+  size: 70, 95
+  orig: 70, 95
+  offset: 0, 0
+  index: -1
+baiyang3
+  rotate: 270
+  xy: 480, 103
+  size: 107, 176
+  orig: 107, 176
+  offset: 0, 0
+  index: -1
+baiyang30
+  rotate: false
+  xy: 969, 223
+  size: 54, 57
+  orig: 54, 57
+  offset: 0, 0
+  index: -1
+baiyang31
+  rotate: false
+  xy: 660, 698
+  size: 44, 47
+  orig: 44, 47
+  offset: 0, 0
+  index: -1
+baiyang32
+  rotate: false
+  xy: 0, 378
+  size: 386, 367
+  orig: 386, 367
+  offset: 0, 0
+  index: -1
+baiyang4
+  rotate: false
+  xy: 0, 15
+  size: 57, 128
+  orig: 57, 128
+  offset: 0, 0
+  index: -1
+baiyang5
+  rotate: false
+  xy: 135, 156
+  size: 153, 169
+  orig: 160, 169
+  offset: 0, 0
+  index: -1
+baiyang6
+  rotate: false
+  xy: 384, 684
+  size: 102, 60
+  orig: 102, 60
+  offset: 0, 0
+  index: -1
+baiyang7
+  rotate: false
+  xy: 461, 666
+  size: 91, 79
+  orig: 99, 96
+  offset: 0, 17
+  index: -1
+baiyang8
+  rotate: false
+  xy: 854, 10
+  size: 169, 94
+  orig: 173, 96
+  offset: 0, 2
+  index: -1
+baiyang9
+  rotate: false
+  xy: 656, 466
+  size: 266, 279
+  orig: 266, 280
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: true
+  xy: 328, 404
+  size: 67, 133
+  orig: 156, 223
+  offset: 53, 41
+  index: -1
+yeti
+  rotate: false
+  xy: 217, 276
+  size: 511, 126
+  orig: 511, 126
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: false
+  xy: 655, 303
+  size: 369, 169
+  orig: 467, 203
+  offset: 34, 34
+  index: -1

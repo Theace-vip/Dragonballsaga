@@ -1,0 +1,230 @@
+
+g13_shilaimu_xiumuluqiya.png
+size: 608,528
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 183, 241
+  size: 213, 101
+  orig: 241, 115
+  offset: 19, 14
+  index: -1
+gongji
+  rotate: false
+  xy: 456, 159
+  size: 98, 80
+  orig: 99, 80
+  offset: 1, 0
+  index: -1
+luqiya_1
+  rotate: false
+  xy: 531, 407
+  size: 62, 121
+  orig: 62, 122
+  offset: 0, 0
+  index: -1
+luqiya_10
+  rotate: true
+  xy: 577, 20
+  size: 32, 31
+  orig: 32, 31
+  offset: 0, 0
+  index: -1
+luqiya_11
+  rotate: true
+  xy: 531, 363
+  size: 42, 56
+  orig: 42, 56
+  offset: 0, 0
+  index: -1
+luqiya_12
+  rotate: false
+  xy: 556, 123
+  size: 35, 53
+  orig: 35, 53
+  offset: 0, 0
+  index: -1
+luqiya_13
+  rotate: true
+  xy: 568, 278
+  size: 83, 34
+  orig: 83, 34
+  offset: 0, 0
+  index: -1
+luqiya_14
+  rotate: true
+  xy: 180, 65
+  size: 102, 123
+  orig: 102, 125
+  offset: 0, 2
+  index: -1
+luqiya_15
+  rotate: false
+  xy: 396, 363
+  size: 133, 165
+  orig: 133, 166
+  offset: 0, 1
+  index: -1
+luqiya_16
+  rotate: false
+  xy: 231, 26
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+luqiya_17
+  rotate: true
+  xy: 408, 81
+  size: 86, 46
+  orig: 86, 46
+  offset: 0, 0
+  index: -1
+luqiya_18
+  rotate: true
+  xy: 398, 241
+  size: 120, 168
+  orig: 121, 169
+  offset: 1, 1
+  index: -1
+luqiya_19
+  rotate: true
+  xy: 556, 178
+  size: 61, 35
+  orig: 61, 35
+  offset: 0, 0
+  index: -1
+luqiya_2
+  rotate: true
+  xy: 57, 5
+  size: 47, 103
+  orig: 47, 103
+  offset: 0, 0
+  index: -1
+luqiya_20
+  rotate: false
+  xy: 406, 6
+  size: 73, 73
+  orig: 73, 73
+  offset: 0, 0
+  index: -1
+luqiya_21
+  rotate: false
+  xy: 0, 0
+  size: 55, 52
+  orig: 55, 52
+  offset: 0, 0
+  index: -1
+luqiya_22
+  rotate: false
+  xy: 542, 0
+  size: 33, 20
+  orig: 33, 20
+  offset: 0, 0
+  index: -1
+luqiya_23
+  rotate: false
+  xy: 231, 1
+  size: 25, 23
+  orig: 25, 23
+  offset: 0, 0
+  index: -1
+luqiya_25
+  rotate: true
+  xy: 568, 241
+  size: 35, 36
+  orig: 35, 36
+  offset: 0, 0
+  index: -1
+luqiya_29
+  rotate: false
+  xy: 589, 374
+  size: 19, 31
+  orig: 19, 31
+  offset: 0, 0
+  index: -1
+luqiya_3
+  rotate: false
+  xy: 456, 99
+  size: 98, 58
+  orig: 98, 58
+  offset: 0, 0
+  index: -1
+luqiya_30
+  rotate: false
+  xy: 0, 54
+  size: 178, 154
+  orig: 178, 154
+  offset: 0, 0
+  index: -1
+luqiya_33
+  rotate: true
+  xy: 542, 22
+  size: 75, 20
+  orig: 75, 20
+  offset: 0, 0
+  index: -1
+luqiya_4
+  rotate: false
+  xy: 183, 344
+  size: 211, 184
+  orig: 211, 184
+  offset: 0, 0
+  index: -1
+luqiya_5
+  rotate: false
+  xy: 481, 4
+  size: 59, 93
+  orig: 59, 93
+  offset: 0, 0
+  index: -1
+luqiya_6
+  rotate: false
+  xy: 305, 0
+  size: 99, 82
+  orig: 99, 82
+  offset: 0, 0
+  index: -1
+luqiya_7
+  rotate: false
+  xy: 180, 0
+  size: 49, 63
+  orig: 49, 63
+  offset: 0, 0
+  index: -1
+luqiya_8
+  rotate: false
+  xy: 564, 54
+  size: 36, 43
+  orig: 36, 43
+  offset: 0, 0
+  index: -1
+luqiya_9
+  rotate: true
+  xy: 556, 99
+  size: 22, 38
+  orig: 22, 38
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 305, 84
+  size: 101, 83
+  orig: 101, 83
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 0, 210
+  size: 181, 318
+  orig: 358, 511
+  offset: 87, 98
+  index: -1
+yeti
+  rotate: false
+  xy: 183, 169
+  size: 271, 70
+  orig: 271, 70
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,202 @@
+
+g13_ma_nv.png
+size: 1024,784
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+WechatIMG55
+  rotate: false
+  xy: 876, 741
+  size: 34, 42
+  orig: 35, 47
+  offset: 0, 1
+  index: -1
+manv
+  rotate: false
+  xy: 345, 427
+  size: 70, 76
+  orig: 70, 89
+  offset: 0, 9
+  index: -1
+manv1
+  rotate: false
+  xy: 539, 443
+  size: 75, 102
+  orig: 76, 103
+  offset: 0, 1
+  index: -1
+manv10
+  rotate: false
+  xy: 123, 1
+  size: 167, 122
+  orig: 167, 122
+  offset: 0, 0
+  index: -1
+manv11
+  rotate: false
+  xy: 566, 255
+  size: 229, 253
+  orig: 258, 263
+  offset: 29, 0
+  index: -1
+manv12
+  rotate: 270
+  xy: 545, 10
+  size: 79, 155
+  orig: 79, 155
+  offset: 0, 0
+  index: -1
+manv13
+  rotate: false
+  xy: 111, 83
+  size: 71, 183
+  orig: 71, 195
+  offset: 0, 0
+  index: -1
+manv14
+  rotate: false
+  xy: 206, 118
+  size: 121, 114
+  orig: 148, 134
+  offset: 16, 4
+  index: -1
+manv15
+  rotate: false
+  xy: 751, 736
+  size: 77, 49
+  orig: 77, 59
+  offset: 0, 10
+  index: -1
+manv16
+  rotate: false
+  xy: 368, 122
+  size: 109, 151
+  orig: 140, 155
+  offset: 24, 4
+  index: -1
+manv17
+  rotate: false
+  xy: 534, 492
+  size: 218, 291
+  orig: 227, 291
+  offset: 7, 0
+  index: -1
+manv18
+  rotate: 180
+  xy: 0, 233
+  size: 160, 248
+  orig: 167, 248
+  offset: 7, 0
+  index: -1
+manv19
+  rotate: 270
+  xy: 514, 139
+  size: 134, 239
+  orig: 141, 248
+  offset: 7, 0
+  index: -1
+manv2
+  rotate: false
+  xy: 152, 177
+  size: 264, 204
+  orig: 268, 204
+  offset: 0, 0
+  index: -1
+manv20
+  rotate: true
+  xy: 893, 66
+  size: 116, 131
+  orig: 116, 144
+  offset: 0, 13
+  index: -1
+manv21
+  rotate: false
+  xy: 913, 416
+  size: 111, 157
+  orig: 113, 167
+  offset: 0, 10
+  index: -1
+manv22
+  rotate: true
+  xy: 826, 63
+  size: 267, 197
+  orig: 267, 197
+  offset: 0, 0
+  index: -1
+manv23
+  rotate: false
+  xy: 0, 369
+  size: 424, 415
+  orig: 424, 455
+  offset: 0, 22
+  index: -1
+manv3
+  rotate: true
+  xy: 771, 218
+  size: 215, 253
+  orig: 215, 253
+  offset: 0, 0
+  index: -1
+manv4
+  rotate: 270
+  xy: 797, 9
+  size: 76, 152
+  orig: 76, 163
+  offset: 0, 0
+  index: -1
+manv5
+  rotate: false
+  xy: 892, 552
+  size: 105, 232
+  orig: 105, 260
+  offset: 0, 0
+  index: -1
+manv6
+  rotate: false
+  xy: 473, 54
+  size: 94, 110
+  orig: 94, 110
+  offset: 0, 0
+  index: -1
+manv7
+  rotate: false
+  xy: 976, 660
+  size: 41, 124
+  orig: 41, 124
+  offset: 0, 0
+  index: -1
+manv8
+  rotate: false
+  xy: 278, 39
+  size: 157, 128
+  orig: 157, 128
+  offset: 0, 0
+  index: -1
+manv9
+  rotate: 180
+  xy: 650, 37
+  size: 162, 130
+  orig: 162, 130
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 0, 98
+  size: 67, 133
+  orig: 156, 223
+  offset: 53, 41
+  index: -1
+yeti
+  rotate: 270
+  xy: 412, 244
+  size: 539, 137
+  orig: 539, 137
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: true
+  xy: 708, 394
+  size: 390, 186
+  orig: 494, 224
+  offset: 36, 38
+  index: -1

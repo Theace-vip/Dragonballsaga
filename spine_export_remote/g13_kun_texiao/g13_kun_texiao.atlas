@@ -1,0 +1,153 @@
+
+g13_kun_texiao.png
+size: 1324,1984
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+3_00000
+  rotate: false
+  xy: 1032, 1790
+  size: 227, 190
+  orig: 500, 500
+  offset: 131, 77
+  index: -1
+3_00001
+  rotate: true
+  xy: 999, 897
+  size: 318, 308
+  orig: 500, 500
+  offset: 97, 32
+  index: -1
+3_00002
+  rotate: false
+  xy: 697, 68
+  size: 338, 373
+  orig: 500, 500
+  offset: 90, 32
+  index: -1
+3_00012
+  rotate: false
+  xy: 697, 68
+  size: 338, 373
+  orig: 500, 500
+  offset: 90, 32
+  index: -1
+3_00003
+  rotate: false
+  xy: 688, 1217
+  size: 338, 378
+  orig: 500, 500
+  offset: 82, 32
+  index: -1
+3_00004
+  rotate: false
+  xy: 2, 1582
+  size: 344, 398
+  orig: 500, 500
+  offset: 71, 32
+  index: -1
+3_00005
+  rotate: false
+  xy: 2, 788
+  size: 346, 393
+  orig: 500, 500
+  offset: 69, 32
+  index: -1
+3_00006
+  rotate: false
+  xy: 342, 394
+  size: 343, 392
+  orig: 500, 500
+  offset: 77, 32
+  index: -1
+3_00007
+  rotate: false
+  xy: 350, 821
+  size: 350, 379
+  orig: 500, 500
+  offset: 85, 32
+  index: -1
+3_00008
+  rotate: false
+  xy: 2, 4
+  size: 352, 382
+  orig: 500, 500
+  offset: 84, 32
+  index: -1
+3_00009
+  rotate: false
+  xy: 348, 1597
+  size: 350, 383
+  orig: 500, 500
+  offset: 87, 32
+  index: -1
+3_00010
+  rotate: false
+  xy: 2, 388
+  size: 338, 398
+  orig: 500, 500
+  offset: 90, 32
+  index: -1
+3_00011
+  rotate: false
+  xy: 348, 1202
+  size: 338, 393
+  orig: 500, 500
+  offset: 82, 32
+  index: -1
+3_00013
+  rotate: false
+  xy: 700, 1600
+  size: 330, 380
+  orig: 500, 500
+  offset: 86, 32
+  index: -1
+3_00014
+  rotate: false
+  xy: 2, 1183
+  size: 344, 397
+  orig: 500, 500
+  offset: 69, 33
+  index: -1
+3_00015
+  rotate: false
+  xy: 356, 2
+  size: 339, 390
+  orig: 500, 500
+  offset: 77, 33
+  index: -1
+3_00016
+  rotate: false
+  xy: 687, 443
+  size: 348, 376
+  orig: 500, 500
+  offset: 86, 38
+  index: -1
+3_00017
+  rotate: false
+  xy: 702, 854
+  size: 295, 361
+  orig: 500, 500
+  offset: 106, 58
+  index: -1
+3_00018
+  rotate: false
+  xy: 1028, 1275
+  size: 292, 323
+  orig: 500, 500
+  offset: 110, 93
+  index: -1
+c
+  rotate: false
+  xy: 1037, 777
+  size: 130, 118
+  orig: 132, 122
+  offset: 1, 2
+  index: -1
+s
+  rotate: false
+  xy: 1032, 1617
+  size: 213, 171
+  orig: 217, 174
+  offset: 3, 1
+  index: -1

@@ -1,0 +1,251 @@
+
+g13_taowu_nv.png
+size: 1024,620
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+WechatIMG55
+  rotate: false
+  xy: 988, 512
+  size: 35, 47
+  orig: 35, 47
+  offset: 0, 0
+  index: -1
+taowunv
+  rotate: true
+  xy: 932, 304
+  size: 101, 91
+  orig: 101, 91
+  offset: 0, 0
+  index: -1
+taowunv1
+  rotate: true
+  xy: 934, 198
+  size: 103, 87
+  orig: 103, 87
+  offset: 0, 0
+  index: -1
+taowunv10
+  rotate: false
+  xy: 771, 295
+  size: 159, 175
+  orig: 159, 175
+  offset: 0, 0
+  index: -1
+taowunv11
+  rotate: false
+  xy: 715, 29
+  size: 122, 80
+  orig: 122, 80
+  offset: 0, 0
+  index: -1
+taowunv12
+  rotate: false
+  xy: 773, 465
+  size: 77, 59
+  orig: 77, 61
+  offset: 0, 0
+  index: -1
+taowunv13
+  rotate: 180
+  xy: 440, 190
+  size: 298, 117
+  orig: 298, 119
+  offset: 0, 2
+  index: -1
+taowunv14
+  rotate: false
+  xy: 695, 180
+  size: 237, 202
+  orig: 237, 202
+  offset: 0, 0
+  index: -1
+taowunv15
+  rotate: false
+  xy: 417, 1
+  size: 139, 109
+  orig: 139, 109
+  offset: 0, 0
+  index: -1
+taowunv16
+  rotate: false
+  xy: 195, 585
+  size: 42, 36
+  orig: 42, 36
+  offset: 0, 0
+  index: -1
+taowunv17
+  rotate: false
+  xy: 0, 183
+  size: 364, 437
+  orig: 373, 437
+  offset: 0, 0
+  index: -1
+taowunv18
+  rotate: false
+  xy: 84, 603
+  size: 23, 17
+  orig: 23, 17
+  offset: 0, 0
+  index: -1
+taowunv19
+  rotate: true
+  xy: 112, 153
+  size: 180, 255
+  orig: 180, 255
+  offset: 0, 0
+  index: -1
+taowunv2
+  rotate: 180
+  xy: 55, 132
+  size: 155, 138
+  orig: 155, 138
+  offset: 0, 0
+  index: -1
+taowunv20
+  rotate: 270
+  xy: 254, 31
+  size: 87, 129
+  orig: 87, 129
+  offset: 0, 0
+  index: -1
+taowunv21
+  rotate: true
+  xy: 462, 102
+  size: 122, 183
+  orig: 127, 183
+  offset: 0, 0
+  index: -1
+taowunv22
+  rotate: 180
+  xy: 590, 501
+  size: 90, 119
+  orig: 92, 122
+  offset: 2, 0
+  index: -1
+taowunv23
+  rotate: false
+  xy: 584, 236
+  size: 124, 92
+  orig: 124, 92
+  offset: 0, 0
+  index: -1
+taowunv24
+  rotate: 270
+  xy: 222, 93
+  size: 98, 240
+  orig: 98, 240
+  offset: 0, 0
+  index: -1
+taowunv25
+  rotate: true
+  xy: 25, 42
+  size: 112, 216
+  orig: 112, 216
+  offset: 0, 0
+  index: -1
+taowunv26
+  rotate: true
+  xy: 760, 406
+  size: 214, 202
+  orig: 214, 202
+  offset: 0, 0
+  index: -1
+taowunv27
+  rotate: true
+  xy: 595, 346
+  size: 275, 187
+  orig: 275, 187
+  offset: 0, 0
+  index: -1
+taowunv28
+  rotate: false
+  xy: 448, 530
+  size: 94, 91
+  orig: 94, 91
+  offset: 0, 0
+  index: -1
+taowunv29
+  rotate: false
+  xy: 114, 554
+  size: 79, 67
+  orig: 79, 67
+  offset: 0, 0
+  index: -1
+taowunv3
+  rotate: false
+  xy: 959, 555
+  size: 44, 65
+  orig: 51, 65
+  offset: 0, 0
+  index: -1
+taowunv30
+  rotate: false
+  xy: 238, 588
+  size: 53, 33
+  orig: 53, 33
+  offset: 0, 0
+  index: -1
+taowunv4
+  rotate: false
+  xy: 0, 452
+  size: 114, 168
+  orig: 116, 168
+  offset: 1, 0
+  index: -1
+taowunv5
+  rotate: false
+  xy: 663, 91
+  size: 185, 129
+  orig: 185, 129
+  offset: 0, 0
+  index: -1
+taowunv6
+  rotate: false
+  xy: 1, 341
+  size: 92, 112
+  orig: 92, 112
+  offset: 0, 0
+  index: -1
+taowunv7
+  rotate: 180
+  xy: 813, 30
+  size: 147, 106
+  orig: 147, 106
+  offset: 0, 0
+  index: -1
+taowunv8
+  rotate: false
+  xy: 308, 488
+  size: 41, 51
+  orig: 41, 51
+  offset: 0, 0
+  index: -1
+taowunv9
+  rotate: false
+  xy: 566, 32
+  size: 103, 71
+  orig: 103, 71
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: true
+  xy: 891, 111
+  size: 67, 133
+  orig: 156, 223
+  offset: 53, 41
+  index: -1
+yeti
+  rotate: true
+  xy: 343, 189
+  size: 431, 110
+  orig: 431, 110
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: true
+  xy: 451, 309
+  size: 312, 151
+  orig: 395, 182
+  offset: 29, 31
+  index: -1

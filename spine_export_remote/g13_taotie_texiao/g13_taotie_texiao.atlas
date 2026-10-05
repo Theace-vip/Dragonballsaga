@@ -1,0 +1,125 @@
+
+g13_taotie_texiao.png
+size: 976,860
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+6
+  rotate: false
+  xy: 699, 298
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+baiguang1
+  rotate: false
+  xy: 564, 317
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+bz_01_00000
+  rotate: false
+  xy: 205, 134
+  size: 171, 184
+  orig: 200, 200
+  offset: 13, 9
+  index: -1
+c_01
+  rotate: false
+  xy: 773, 29
+  size: 176, 127
+  orig: 186, 163
+  offset: 5, 2
+  index: -1
+c_02
+  rotate: false
+  xy: 597, 151
+  size: 174, 145
+  orig: 186, 163
+  offset: 5, 3
+  index: -1
+c_03
+  rotate: false
+  xy: 773, 158
+  size: 179, 138
+  orig: 186, 163
+  offset: 3, 18
+  index: -1
+c_04
+  rotate: false
+  xy: 378, 60
+  size: 182, 131
+  orig: 186, 163
+  offset: 2, 30
+  index: -1
+fx_shguang
+  rotate: false
+  xy: 2, 30
+  size: 59, 86
+  orig: 66, 92
+  offset: 2, 3
+  index: -1
+fx_xinxin_00000
+  rotate: false
+  xy: 63, 60
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 3
+  index: -1
+h_01
+  rotate: false
+  xy: 699, 556
+  size: 272, 300
+  orig: 324, 324
+  offset: 26, 18
+  index: -1
+h_02
+  rotate: true
+  xy: 426, 547
+  size: 309, 271
+  orig: 324, 324
+  offset: 6, 28
+  index: -1
+h_03
+  rotate: false
+  xy: 2, 118
+  size: 201, 200
+  orig: 201, 200
+  offset: 0, 0
+  index: -1
+h_07
+  rotate: false
+  xy: 562, 2
+  size: 148, 147
+  orig: 148, 147
+  offset: 0, 0
+  index: -1
+taotiedazui_1
+  rotate: false
+  xy: 2, 320
+  size: 317, 240
+  orig: 317, 240
+  offset: 0, 0
+  index: -1
+taotiedazui_2
+  rotate: false
+  xy: 378, 193
+  size: 217, 122
+  orig: 217, 122
+  offset: 0, 0
+  index: -1
+taotiedazui_3
+  rotate: false
+  xy: 2, 562
+  size: 422, 294
+  orig: 422, 294
+  offset: 0, 0
+  index: -1
+taotiedazui_4
+  rotate: false
+  xy: 321, 317
+  size: 336, 228
+  orig: 336, 228
+  offset: 0, 0
+  index: -1

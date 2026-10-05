@@ -1,0 +1,202 @@
+
+g13_zaochi.png
+size: 1008,736
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: 180
+  xy: 329, 184
+  size: 365, 163
+  orig: 415, 187
+  offset: 34, 24
+  index: -1
+gongji1
+  rotate: true
+  xy: 648, 518
+  size: 216, 192
+  orig: 216, 192
+  offset: 0, 0
+  index: -1
+gongji2
+  rotate: 270
+  xy: 587, 269
+  size: 263, 231
+  orig: 263, 233
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 0, 410
+  size: 293, 325
+  orig: 293, 325
+  offset: 0, 0
+  index: -1
+shouji1
+  rotate: false
+  xy: 698, 196
+  size: 93, 74
+  orig: 93, 74
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: true
+  xy: 294, 282
+  size: 452, 116
+  orig: 452, 116
+  offset: 0, 0
+  index: -1
+zaoche_1
+  rotate: true
+  xy: 0, 8
+  size: 75, 151
+  orig: 75, 151
+  offset: 0, 0
+  index: -1
+zaoche_10
+  rotate: false
+  xy: 792, 44
+  size: 188, 97
+  orig: 188, 97
+  offset: 0, 0
+  index: -1
+zaoche_11
+  rotate: 270
+  xy: 412, 498
+  size: 236, 234
+  orig: 236, 234
+  offset: 0, 0
+  index: -1
+zaoche_12
+  rotate: false
+  xy: 153, 16
+  size: 95, 61
+  orig: 95, 61
+  offset: 0, 0
+  index: -1
+zaoche_13
+  rotate: 270
+  xy: 243, 294
+  size: 73, 49
+  orig: 73, 49
+  offset: 0, 0
+  index: -1
+zaoche_133
+  rotate: false
+  xy: 412, 347
+  size: 55, 27
+  orig: 55, 27
+  offset: 0, 0
+  index: -1
+zaoche_14
+  rotate: false
+  xy: 250, 10
+  size: 104, 67
+  orig: 104, 67
+  offset: 0, 0
+  index: -1
+zaoche_15
+  rotate: false
+  xy: 398, 15
+  size: 81, 50
+  orig: 81, 57
+  offset: 0, 0
+  index: -1
+zaoche_155
+  rotate: false
+  xy: 412, 710
+  size: 48, 24
+  orig: 48, 24
+  offset: 0, 0
+  index: -1
+zaoche_16
+  rotate: true
+  xy: 792, 142
+  size: 159, 176
+  orig: 159, 176
+  offset: 0, 0
+  index: -1
+zaoche_17
+  rotate: true
+  xy: 350, 65
+  size: 124, 134
+  orig: 124, 134
+  offset: 0, 0
+  index: -1
+zaoche_177
+  rotate: false
+  xy: 0, 85
+  size: 124, 113
+  orig: 124, 113
+  offset: 0, 0
+  index: -1
+zaoche_18
+  rotate: false
+  xy: 820, 303
+  size: 157, 213
+  orig: 157, 213
+  offset: 0, 0
+  index: -1
+zaoche_2
+  rotate: false
+  xy: 728, 445
+  size: 84, 71
+  orig: 84, 71
+  offset: 0, 0
+  index: -1
+zaoche_3
+  rotate: false
+  xy: 412, 375
+  size: 150, 122
+  orig: 150, 122
+  offset: 0, 0
+  index: -1
+zaoche_4
+  rotate: true
+  xy: 459, 1
+  size: 72, 120
+  orig: 72, 120
+  offset: 0, 0
+  index: -1
+zaoche_5
+  rotate: false
+  xy: 0, 200
+  size: 262, 209
+  orig: 262, 209
+  offset: 0, 0
+  index: -1
+zaoche_6
+  rotate: true
+  xy: 135, 79
+  size: 127, 213
+  orig: 127, 213
+  offset: 0, 0
+  index: -1
+zaoche_66
+  rotate: true
+  xy: 579, 58
+  size: 126, 212
+  orig: 126, 212
+  offset: 0, 0
+  index: -1
+zaoche_7
+  rotate: false
+  xy: 841, 517
+  size: 165, 217
+  orig: 165, 217
+  offset: 0, 0
+  index: -1
+zaoche_8
+  rotate: true
+  xy: 485, 74
+  size: 107, 92
+  orig: 107, 92
+  offset: 0, 0
+  index: -1
+zaoche_9
+  rotate: false
+  xy: 183, 216
+  size: 144, 53
+  orig: 144, 53
+  offset: 0, 0
+  index: -1

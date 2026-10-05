@@ -1,0 +1,237 @@
+
+g13_shengqiling_texiao.png
+size: 608,1016
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ci
+  rotate: true
+  xy: 0, 102
+  size: 134, 140
+  orig: 134, 140
+  offset: 0, 0
+  index: -1
+dimnian1
+  rotate: false
+  xy: 0, 238
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+dimnian4
+  rotate: false
+  xy: 0, 542
+  size: 149, 170
+  orig: 149, 170
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 461, 4
+  size: 50, 50
+  orig: 64, 64
+  offset: 7, 7
+  index: -1
+guangqiu4
+  rotate: false
+  xy: 505, 722
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+guangsu4
+  rotate: false
+  xy: 0, 714
+  size: 145, 300
+  orig: 145, 300
+  offset: 0, 0
+  index: -1
+kuoshan2_000
+  rotate: true
+  xy: 142, 253
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_001
+  rotate: true
+  xy: 142, 126
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_002
+  rotate: true
+  xy: 147, 714
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_003
+  rotate: true
+  xy: 147, 841
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_004
+  rotate: true
+  xy: 151, 542
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_005
+  rotate: true
+  xy: 152, 380
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_006
+  rotate: false
+  xy: 142, 0
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_007
+  rotate: true
+  xy: 268, 253
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan2_008
+  rotate: false
+  xy: 268, 127
+  size: 125, 124
+  orig: 125, 124
+  offset: 0, 0
+  index: -1
+kuoshan3_00
+  rotate: true
+  xy: 395, 248
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_01
+  rotate: true
+  xy: 434, 824
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_02
+  rotate: true
+  xy: 434, 632
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_03
+  rotate: true
+  xy: 461, 56
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_04
+  rotate: true
+  xy: 466, 440
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_05
+  rotate: true
+  xy: 505, 824
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_06
+  rotate: true
+  xy: 532, 248
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+kuoshan3_07
+  rotate: true
+  xy: 532, 56
+  size: 190, 69
+  orig: 190, 69
+  offset: 0, 0
+  index: -1
+qiliu_00
+  rotate: true
+  xy: 273, 824
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_02
+  rotate: true
+  xy: 277, 632
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_04
+  rotate: true
+  xy: 278, 440
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_06
+  rotate: true
+  xy: 355, 824
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_08
+  rotate: true
+  xy: 356, 632
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_10
+  rotate: true
+  xy: 356, 440
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+qiliu_12
+  rotate: false
+  xy: 269, 49
+  size: 190, 76
+  orig: 190, 76
+  offset: 0, 0
+  index: -1
+quan
+  rotate: true
+  xy: 537, 598
+  size: 122, 70
+  orig: 128, 74
+  offset: 3, 1
+  index: -1
+szg
+  rotate: false
+  xy: 537, 496
+  size: 67, 100
+  orig: 67, 100
+  offset: 0, 0
+  index: -1
+szg2
+  rotate: false
+  xy: 0, 380
+  size: 150, 160
+  orig: 150, 160
+  offset: 0, 0
+  index: -1

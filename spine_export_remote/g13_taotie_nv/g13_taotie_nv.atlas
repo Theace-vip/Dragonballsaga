@@ -1,0 +1,223 @@
+
+g13_taotie_nv.png
+size: 1748,2044
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+taotienv
+  rotate: true
+  xy: 809, 1732
+  size: 310, 281
+  orig: 310, 281
+  offset: 0, 0
+  index: -1
+taotienv1
+  rotate: true
+  xy: 1215, 1236
+  size: 284, 234
+  orig: 284, 234
+  offset: 0, 0
+  index: -1
+taotienv10
+  rotate: false
+  xy: 417, 1538
+  size: 123, 187
+  orig: 148, 204
+  offset: 0, 17
+  index: -1
+taotienv11
+  rotate: false
+  xy: 1018, 714
+  size: 313, 517
+  orig: 313, 517
+  offset: 0, 0
+  index: -1
+taotienv12
+  rotate: false
+  xy: 1128, 1522
+  size: 263, 520
+  orig: 263, 520
+  offset: 0, 0
+  index: -1
+taotienv13
+  rotate: false
+  xy: 1451, 1165
+  size: 246, 420
+  orig: 246, 421
+  offset: 0, 0
+  index: -1
+taotienv14
+  rotate: false
+  xy: 417, 1720
+  size: 137, 323
+  orig: 137, 323
+  offset: 0, 0
+  index: -1
+taotienv15
+  rotate: false
+  xy: 904, 1572
+  size: 131, 160
+  orig: 131, 161
+  offset: 0, 1
+  index: -1
+taotienv2
+  rotate: false
+  xy: 2, 1037
+  size: 136, 250
+  orig: 136, 250
+  offset: 0, 0
+  index: -1
+taotienv25
+  rotate: 180
+  xy: 882, 1212
+  size: 331, 398
+  orig: 331, 398
+  offset: 0, 0
+  index: -1
+taotienv26
+  rotate: false
+  xy: 600, 8
+  size: 293, 742
+  orig: 293, 745
+  offset: 0, 0
+  index: -1
+taotienv27
+  rotate: true
+  xy: 1282, 760
+  size: 474, 409
+  orig: 474, 409
+  offset: 0, 0
+  index: -1
+taotienv28
+  rotate: false
+  xy: 1487, 1385
+  size: 256, 271
+  orig: 256, 271
+  offset: 0, 0
+  index: -1
+taotienv29
+  rotate: false
+  xy: 688, 905
+  size: 140, 225
+  orig: 140, 226
+  offset: 0, 0
+  index: -1
+taotienv3
+  rotate: 270
+  xy: 1276, 1561
+  size: 404, 306
+  orig: 404, 306
+  offset: 0, 0
+  index: -1
+taotienv30
+  rotate: 180
+  xy: 981, 333
+  size: 202, 719
+  orig: 202, 719
+  offset: 0, 0
+  index: -1
+taotienv31
+  rotate: 180
+  xy: 821, 15
+  size: 296, 645
+  orig: 296, 645
+  offset: 0, 0
+  index: -1
+taotienv32
+  rotate: true
+  xy: 2, 547
+  size: 795, 421
+  orig: 813, 424
+  offset: 11, 3
+  index: -1
+taotienv33
+  rotate: true
+  xy: 1432, 213
+  size: 432, 312
+  orig: 432, 331
+  offset: 0, 0
+  index: -1
+taotienv34
+  rotate: true
+  xy: 417, 1465
+  size: 578, 390
+  orig: 578, 390
+  offset: 0, 0
+  index: -1
+taotienv35
+  rotate: true
+  xy: 1431, 1644
+  size: 395, 310
+  orig: 395, 310
+  offset: 0, 0
+  index: -1
+taotienv36
+  rotate: true
+  xy: 392, 1082
+  size: 633, 516
+  orig: 641, 516
+  offset: 0, 0
+  index: -1
+taotienv4
+  rotate: false
+  xy: 1109, 75
+  size: 222, 495
+  orig: 223, 495
+  offset: 0, 0
+  index: -1
+taotienv5
+  rotate: false
+  xy: 2, 416
+  size: 152, 278
+  orig: 152, 278
+  offset: 0, 0
+  index: -1
+taotienv6
+  rotate: false
+  xy: 1092, 1942
+  size: 144, 101
+  orig: 145, 102
+  offset: 1, 1
+  index: -1
+taotienv7
+  rotate: false
+  xy: 1333, 21
+  size: 284, 190
+  orig: 284, 190
+  offset: 0, 0
+  index: -1
+taotienv8
+  rotate: true
+  xy: 1308, 517
+  size: 258, 250
+  orig: 258, 250
+  offset: 0, 0
+  index: -1
+taotienv9
+  rotate: 270
+  xy: 2, 4
+  size: 542, 566
+  orig: 544, 566
+  offset: 2, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 1342
+  size: 413, 700
+  orig: 625, 890
+  offset: 114, 108
+  index: -1
+yeti
+  rotate: true
+  xy: 494, 361
+  size: 781, 199
+  orig: 781, 199
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: true
+  xy: 756, 657
+  size: 561, 273
+  orig: 712, 329
+  offset: 53, 56
+  index: -1

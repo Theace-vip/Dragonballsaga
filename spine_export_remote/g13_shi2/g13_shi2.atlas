@@ -1,0 +1,62 @@
+
+g13_shi2.png
+size: 860,540
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d
+  rotate: false
+  xy: 760, 120
+  size: 68, 70
+  orig: 68, 71
+  offset: 0, 1
+  index: -1
+gj
+  rotate: false
+  xy: 552, 2
+  size: 188, 116
+  orig: 194, 116
+  offset: 4, 0
+  index: -1
+sj
+  rotate: true
+  xy: 657, 310
+  size: 194, 97
+  orig: 194, 116
+  offset: 0, 15
+  index: -1
+xx
+  rotate: false
+  xy: 742, 1
+  size: 118, 117
+  orig: 118, 117
+  offset: 0, 0
+  index: -1
+yi
+  rotate: true
+  xy: 464, 120
+  size: 408, 192
+  orig: 408, 192
+  offset: 0, 0
+  index: -1
+yi1
+  rotate: false
+  xy: 0, 22
+  size: 550, 139
+  orig: 550, 139
+  offset: 0, 0
+  index: -1
+zc
+  rotate: true
+  xy: 657, 120
+  size: 188, 101
+  orig: 194, 116
+  offset: 4, 14
+  index: -1
+zt
+  rotate: false
+  xy: 0, 163
+  size: 462, 377
+  orig: 462, 377
+  offset: 0, 0
+  index: -1

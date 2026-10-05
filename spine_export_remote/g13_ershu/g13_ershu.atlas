@@ -1,0 +1,118 @@
+
+g13_ershu.png
+size: 944,736
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 585, 226
+  size: 507, 207
+  orig: 544, 250
+  offset: 0, 43
+  index: -1
+body
+  rotate: false
+  xy: 2, 399
+  size: 431, 334
+  orig: 431, 334
+  offset: 0, 0
+  index: -1
+daiji
+  rotate: true
+  xy: 435, 509
+  size: 224, 146
+  orig: 224, 146
+  offset: 0, 0
+  index: -1
+er_l
+  rotate: false
+  xy: 780, 227
+  size: 154, 247
+  orig: 154, 247
+  offset: 0, 0
+  index: -1
+er_r
+  rotate: 180
+  xy: 418, 22
+  size: 284, 269
+  orig: 284, 269
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: true
+  xy: 699, 3
+  size: 221, 159
+  orig: 224, 160
+  offset: 0, 0
+  index: -1
+hand_l
+  rotate: false
+  xy: 354, 119
+  size: 65, 123
+  orig: 65, 123
+  offset: 0, 0
+  index: -1
+hand_r
+  rotate: false
+  xy: 361, 399
+  size: 150, 89
+  orig: 150, 89
+  offset: 0, 0
+  index: -1
+mao_1
+  rotate: false
+  xy: 583, 632
+  size: 112, 101
+  orig: 112, 101
+  offset: 0, 0
+  index: -1
+mao_2
+  rotate: false
+  xy: 513, 412
+  size: 48, 95
+  orig: 48, 95
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: true
+  xy: 784, 511
+  size: 221, 154
+  orig: 224, 154
+  offset: 0, 0
+  index: -1
+toufa_1
+  rotate: false
+  xy: 251, 15
+  size: 127, 151
+  orig: 127, 151
+  offset: 0, 0
+  index: -1
+tx_1
+  rotate: false
+  xy: 2, 38
+  size: 73, 48
+  orig: 73, 48
+  offset: 0, 0
+  index: -1
+tx_2
+  rotate: false
+  xy: 261, 182
+  size: 66, 61
+  orig: 66, 61
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: true
+  xy: 2, 46
+  size: 197, 259
+  orig: 197, 259
+  offset: 0, 0
+  index: -1
+ye
+  rotate: false
+  xy: 2, 245
+  size: 593, 152
+  orig: 593, 152
+  offset: 0, 0
+  index: -1

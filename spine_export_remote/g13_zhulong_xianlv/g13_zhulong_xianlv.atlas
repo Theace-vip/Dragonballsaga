@@ -1,0 +1,265 @@
+
+g13_zhulong_xianlv.png
+size: 1456,1416
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+effect_Glow004
+  rotate: false
+  xy: 173, 528
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+fx_shguang
+  rotate: false
+  xy: 71, 1349
+  size: 23, 35
+  orig: 26, 37
+  offset: 1, 1
+  index: -1
+fx_xinxin_00000
+  rotate: false
+  xy: 914, 1271
+  size: 51, 51
+  orig: 51, 51
+  offset: 0, 0
+  index: -1
+h_000
+  rotate: false
+  xy: 0, 333
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_001
+  rotate: false
+  xy: 386, 9
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_002
+  rotate: true
+  xy: 0, 596
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_003
+  rotate: true
+  xy: 867, 1215
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_004
+  rotate: true
+  xy: 1129, 64
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_005
+  rotate: true
+  xy: 1176, 69
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_006
+  rotate: true
+  xy: 1327, 127
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+h_007
+  rotate: true
+  xy: 1374, 128
+  size: 198, 45
+  orig: 198, 45
+  offset: 0, 0
+  index: -1
+jian
+  rotate: false
+  xy: 627, 8
+  size: 378, 99
+  orig: 378, 99
+  offset: 0, 0
+  index: -1
+q
+  rotate: false
+  xy: 1300, 19
+  size: 136, 89
+  orig: 136, 89
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: false
+  xy: 0, 143
+  size: 690, 176
+  orig: 690, 176
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: true
+  xy: 771, 751
+  size: 498, 242
+  orig: 632, 291
+  offset: 47, 49
+  index: -1
+zhulong10
+  rotate: false
+  xy: 0, 87
+  size: 118, 88
+  orig: 135, 88
+  offset: 7, 0
+  index: -1
+zhulong11
+  rotate: false
+  xy: 117, 594
+  size: 126, 343
+  orig: 128, 350
+  offset: 1, 2
+  index: -1
+zhulong12
+  rotate: true
+  xy: 1006, 980
+  size: 156, 133
+  orig: 156, 133
+  offset: 0, 0
+  index: -1
+zhulong13
+  rotate: false
+  xy: 0, 1316
+  size: 71, 98
+  orig: 72, 110
+  offset: 0, 12
+  index: -1
+zhulong14
+  rotate: false
+  xy: 606, 109
+  size: 680, 1011
+  orig: 680, 1011
+  offset: 0, 0
+  index: -1
+zhulong15
+  rotate: false
+  xy: 0, 409
+  size: 178, 594
+  orig: 196, 594
+  offset: 18, 0
+  index: -1
+zhulong16
+  rotate: true
+  xy: 85, 1
+  size: 226, 776
+  orig: 226, 776
+  offset: 0, 0
+  index: -1
+zhulong17
+  rotate: true
+  xy: 178, 239
+  size: 474, 683
+  orig: 474, 683
+  offset: 0, 0
+  index: -1
+zhulong18
+  rotate: false
+  xy: 1214, 710
+  size: 201, 223
+  orig: 204, 223
+  offset: 0, 0
+  index: -1
+zhulong19
+  rotate: true
+  xy: 536, 676
+  size: 137, 59
+  orig: 139, 63
+  offset: 2, 4
+  index: -1
+zhulong2
+  rotate: 180
+  xy: 1057, 26
+  size: 269, 321
+  orig: 269, 351
+  offset: 0, 19
+  index: -1
+zhulong20
+  rotate: 270
+  xy: 1268, 1193
+  size: 221, 185
+  orig: 222, 185
+  offset: 1, 0
+  index: -1
+zhulong21
+  rotate: false
+  xy: 1008, 753
+  size: 115, 219
+  orig: 122, 219
+  offset: 1, 0
+  index: -1
+zhulong22
+  rotate: false
+  xy: 938, 601
+  size: 142, 178
+  orig: 142, 178
+  offset: 0, 0
+  index: -1
+zhulong23
+  rotate: false
+  xy: 0, 589
+  size: 866, 825
+  orig: 866, 845
+  offset: 0, 0
+  index: -1
+zhulong3
+  rotate: false
+  xy: 1130, 348
+  size: 194, 360
+  orig: 198, 360
+  offset: 0, 0
+  index: -1
+zhulong4
+  rotate: 270
+  xy: 1328, 551
+  size: 185, 127
+  orig: 186, 131
+  offset: 1, 4
+  index: -1
+zhulong5
+  rotate: false
+  xy: 914, 1324
+  size: 31, 89
+  orig: 31, 89
+  offset: 0, 0
+  index: -1
+zhulong6
+  rotate: false
+  xy: 0, 512
+  size: 29, 82
+  orig: 29, 82
+  offset: 0, 0
+  index: -1
+zhulong7
+  rotate: true
+  xy: 975, 1129
+  size: 285, 311
+  orig: 291, 311
+  offset: 6, 0
+  index: -1
+zhulong8
+  rotate: 180
+  xy: 1258, 328
+  size: 154, 302
+  orig: 154, 302
+  offset: 0, 0
+  index: -1
+zhulong9
+  rotate: false
+  xy: 1185, 915
+  size: 194, 293
+  orig: 194, 293
+  offset: 0, 0
+  index: -1

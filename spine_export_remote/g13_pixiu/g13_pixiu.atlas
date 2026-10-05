@@ -1,0 +1,237 @@
+
+g13_pixiu.png
+size: 1024,672
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: 180
+  xy: 544, 476
+  size: 478, 195
+  orig: 512, 236
+  offset: 0, 41
+  index: -1
+gongji
+  rotate: false
+  xy: 177, 134
+  size: 147, 101
+  orig: 147, 101
+  offset: 0, 0
+  index: -1
+pixiu_10
+  rotate: 180
+  xy: 112, 52
+  size: 106, 79
+  orig: 106, 79
+  offset: 0, 0
+  index: -1
+pixiu_11
+  rotate: 270
+  xy: 887, 167
+  size: 150, 136
+  orig: 150, 136
+  offset: 0, 0
+  index: -1
+pixiu_12
+  rotate: false
+  xy: 561, 554
+  size: 37, 32
+  orig: 37, 32
+  offset: 0, 0
+  index: -1
+pixiu_13
+  rotate: false
+  xy: 0, 227
+  size: 334, 299
+  orig: 334, 299
+  offset: 0, 0
+  index: -1
+pixiu_14
+  rotate: true
+  xy: 609, 1
+  size: 55, 82
+  orig: 55, 82
+  offset: 0, 0
+  index: -1
+pixiu_15
+  rotate: true
+  xy: 506, 72
+  size: 175, 141
+  orig: 175, 141
+  offset: 0, 0
+  index: -1
+pixiu_16
+  rotate: false
+  xy: 533, 433
+  size: 94, 53
+  orig: 94, 53
+  offset: 0, 0
+  index: -1
+pixiu_17
+  rotate: false
+  xy: 765, 44
+  size: 118, 69
+  orig: 118, 69
+  offset: 0, 0
+  index: -1
+pixiu_2
+  rotate: false
+  xy: 326, 174
+  size: 178, 145
+  orig: 178, 145
+  offset: 0, 0
+  index: -1
+pixiu_20
+  rotate: false
+  xy: 741, 316
+  size: 283, 170
+  orig: 283, 170
+  offset: 0, 0
+  index: -1
+pixiu_201
+  rotate: false
+  xy: 309, 10
+  size: 88, 68
+  orig: 88, 68
+  offset: 0, 0
+  index: -1
+pixiu_202
+  rotate: false
+  xy: 165, 330
+  size: 97, 95
+  orig: 97, 95
+  offset: 0, 0
+  index: -1
+pixiu_203
+  rotate: 270
+  xy: 649, 54
+  size: 92, 116
+  orig: 92, 116
+  offset: 0, 0
+  index: -1
+pixiu_204
+  rotate: 180
+  xy: 459, 49
+  size: 84, 100
+  orig: 84, 100
+  offset: 0, 0
+  index: -1
+pixiu_205
+  rotate: false
+  xy: 561, 587
+  size: 82, 83
+  orig: 82, 83
+  offset: 0, 0
+  index: -1
+pixiu_206
+  rotate: true
+  xy: 220, 42
+  size: 89, 95
+  orig: 89, 95
+  offset: 0, 0
+  index: -1
+pixiu_208
+  rotate: true
+  xy: 869, 3
+  size: 71, 79
+  orig: 71, 79
+  offset: 0, 0
+  index: -1
+pixiu_209
+  rotate: true
+  xy: 521, 10
+  size: 73, 86
+  orig: 73, 86
+  offset: 0, 0
+  index: -1
+pixiu_23
+  rotate: false
+  xy: 85, 444
+  size: 89, 37
+  orig: 89, 37
+  offset: 0, 0
+  index: -1
+pixiu_24
+  rotate: false
+  xy: 0, 491
+  size: 47, 35
+  orig: 47, 35
+  offset: 0, 0
+  index: -1
+pixiu_25
+  rotate: false
+  xy: 564, 191
+  size: 313, 137
+  orig: 313, 137
+  offset: 0, 0
+  index: -1
+pixiu_3
+  rotate: false
+  xy: 0, 124
+  size: 139, 100
+  orig: 140, 101
+  offset: 1, 1
+  index: -1
+pixiu_33
+  rotate: false
+  xy: 885, 75
+  size: 139, 71
+  orig: 139, 71
+  offset: 0, 0
+  index: -1
+pixiu_4
+  rotate: true
+  xy: 0, 36
+  size: 86, 89
+  orig: 86, 89
+  offset: 0, 0
+  index: -1
+pixiu_5
+  rotate: false
+  xy: 704, 125
+  size: 209, 118
+  orig: 209, 118
+  offset: 0, 0
+  index: -1
+pixiu_6
+  rotate: false
+  xy: 526, 282
+  size: 212, 193
+  orig: 212, 193
+  offset: 0, 0
+  index: -1
+pixiu_7
+  rotate: 270
+  xy: 882, 569
+  size: 101, 130
+  orig: 101, 130
+  offset: 0, 0
+  index: -1
+pixiu_8
+  rotate: false
+  xy: 335, 321
+  size: 196, 205
+  orig: 196, 205
+  offset: 0, 0
+  index: -1
+pixiu_9
+  rotate: true
+  xy: 173, 417
+  size: 109, 124
+  orig: 109, 124
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 326, 80
+  size: 131, 92
+  orig: 132, 92
+  offset: 0, 0
+  index: -1
+ye
+  rotate: false
+  xy: 0, 527
+  size: 560, 143
+  orig: 560, 143
+  offset: 0, 0
+  index: -1

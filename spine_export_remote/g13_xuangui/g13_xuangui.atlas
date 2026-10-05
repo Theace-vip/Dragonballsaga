@@ -1,0 +1,153 @@
+
+g13_xuangui.png
+size: 1024,692
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: 180
+  xy: 724, 104
+  size: 281, 132
+  orig: 319, 151
+  offset: 26, 19
+  index: -1
+11
+  rotate: false
+  xy: 909, 31
+  size: 113, 72
+  orig: 114, 72
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 846, 636
+  size: 54, 52
+  orig: 55, 53
+  offset: 1, 0
+  index: -1
+cb_h1_a
+  rotate: false
+  xy: 807, 14
+  size: 88, 88
+  orig: 102, 102
+  offset: 7, 7
+  index: -1
+di
+  rotate: false
+  xy: 482, 228
+  size: 536, 108
+  orig: 536, 108
+  offset: 0, 0
+  index: -1
+dian1
+  rotate: false
+  xy: 850, 581
+  size: 49, 53
+  orig: 49, 53
+  offset: 0, 0
+  index: -1
+dian11
+  rotate: false
+  xy: 952, 213
+  size: 70, 45
+  orig: 70, 45
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: true
+  xy: 571, 50
+  size: 178, 130
+  orig: 196, 173
+  offset: 0, 43
+  index: -1
+huzi1
+  rotate: false
+  xy: 385, 609
+  size: 130, 80
+  orig: 130, 80
+  offset: 0, 0
+  index: -1
+hx_3448-1
+  rotate: false
+  xy: 703, 4
+  size: 102, 102
+  orig: 102, 102
+  offset: 0, 0
+  index: -1
+ke
+  rotate: true
+  xy: 385, 304
+  size: 385, 310
+  orig: 385, 310
+  offset: 0, 0
+  index: -1
+ke1
+  rotate: 270
+  xy: 269, 80
+  size: 245, 284
+  orig: 245, 284
+  offset: 0, 0
+  index: -1
+ke11
+  rotate: false
+  xy: 2, 303
+  size: 381, 385
+  orig: 385, 385
+  offset: 2, 0
+  index: -1
+shenti
+  rotate: true
+  xy: 686, 328
+  size: 360, 162
+  orig: 360, 162
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 2, 122
+  size: 217, 179
+  orig: 217, 180
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: 270
+  xy: 221, 38
+  size: 140, 144
+  orig: 140, 144
+  offset: 0, 0
+  index: -1
+yanjing
+  rotate: false
+  xy: 2, 32
+  size: 150, 88
+  orig: 150, 88
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: true
+  xy: 908, 337
+  size: 351, 90
+  orig: 352, 90
+  offset: 1, 0
+  index: -1
+zui1
+  rotate: false
+  xy: 596, 350
+  size: 88, 39
+  orig: 88, 39
+  offset: 0, 0
+  index: -1
+zui12
+  rotate: false
+  xy: 221, 240
+  size: 90, 61
+  orig: 90, 61
+  offset: 0, 0
+  index: -1
+zui2
+  rotate: false
+  xy: 367, 3
+  size: 107, 74
+  orig: 110, 74
+  offset: 3, 0
+  index: -1

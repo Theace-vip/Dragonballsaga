@@ -1,0 +1,195 @@
+
+g13_guai_taowu.png
+size: 1024,644
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 498, 225
+  size: 418, 171
+  orig: 448, 207
+  offset: 0, 36
+  index: -1
+123
+  rotate: false
+  xy: 889, 73
+  size: 131, 92
+  orig: 132, 92
+  offset: 0, 0
+  index: -1
+body
+  rotate: 270
+  xy: 662, 339
+  size: 303, 165
+  orig: 303, 165
+  offset: 0, 0
+  index: -1
+chujiao_l
+  rotate: false
+  xy: 111, 4
+  size: 173, 137
+  orig: 173, 137
+  offset: 0, 0
+  index: -1
+chujiao_r
+  rotate: false
+  xy: 410, 7
+  size: 263, 140
+  orig: 263, 140
+  offset: 0, 0
+  index: -1
+daiji
+  rotate: false
+  xy: 194, 149
+  size: 175, 163
+  orig: 175, 163
+  offset: 0, 0
+  index: -1
+datui_l
+  rotate: true
+  xy: 631, 7
+  size: 70, 83
+  orig: 70, 83
+  offset: 0, 0
+  index: -1
+datui_l2
+  rotate: false
+  xy: 498, 537
+  size: 70, 106
+  orig: 70, 106
+  offset: 0, 0
+  index: -1
+datui_r1
+  rotate: false
+  xy: 948, 204
+  size: 71, 82
+  orig: 71, 82
+  offset: 0, 0
+  index: -1
+datui_r2
+  rotate: true
+  xy: 794, 18
+  size: 74, 93
+  orig: 74, 93
+  offset: 0, 0
+  index: -1
+er_l
+  rotate: false
+  xy: 2, 590
+  size: 54, 52
+  orig: 54, 52
+  offset: 0, 0
+  index: -1
+er_r
+  rotate: false
+  xy: 58, 589
+  size: 50, 53
+  orig: 50, 53
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: false
+  xy: 829, 462
+  size: 175, 181
+  orig: 175, 181
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 331, 604
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+kuoshan
+  rotate: false
+  xy: 2, 147
+  size: 147, 143
+  orig: 154, 154
+  offset: 4, 8
+  index: -1
+mao
+  rotate: false
+  xy: 182, 462
+  size: 80, 98
+  orig: 80, 98
+  offset: 0, 0
+  index: -1
+mao_2
+  rotate: false
+  xy: 655, 152
+  size: 292, 144
+  orig: 292, 144
+  offset: 0, 0
+  index: -1
+piaodai
+  rotate: false
+  xy: 2, 292
+  size: 368, 351
+  orig: 385, 375
+  offset: 3, 19
+  index: -1
+shouji
+  rotate: false
+  xy: 817, 289
+  size: 175, 172
+  orig: 175, 172
+  offset: 0, 0
+  index: -1
+tx_1
+  rotate: false
+  xy: 571, 606
+  size: 38, 37
+  orig: 38, 37
+  offset: 0, 0
+  index: -1
+tx_2
+  rotate: false
+  xy: 2, 555
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 177, 56
+  size: 244, 94
+  orig: 244, 94
+  offset: 0, 0
+  index: -1
+xiaotui_l
+  rotate: 270
+  xy: 673, 78
+  size: 143, 162
+  orig: 143, 162
+  offset: 0, 0
+  index: -1
+xiaotui_l2
+  rotate: false
+  xy: 221, 513
+  size: 108, 129
+  orig: 108, 129
+  offset: 0, 0
+  index: -1
+xiaotui_r1
+  rotate: 270
+  xy: 498, 106
+  size: 167, 173
+  orig: 167, 200
+  offset: 0, 0
+  index: -1
+xiaotui_r2
+  rotate: false
+  xy: 2, 16
+  size: 107, 129
+  orig: 107, 129
+  offset: 0, 0
+  index: -1
+ye
+  rotate: true
+  xy: 371, 152
+  size: 491, 125
+  orig: 491, 125
+  offset: 0, 0
+  index: -1

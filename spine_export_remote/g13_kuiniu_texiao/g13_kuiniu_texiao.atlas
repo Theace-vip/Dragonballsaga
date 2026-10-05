@@ -1,0 +1,251 @@
+
+g13_kuiniu_texiao.png
+size: 972,748
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+8_00
+  rotate: false
+  xy: 456, 38
+  size: 33, 78
+  orig: 35, 87
+  offset: 1, 9
+  index: -1
+baoci4_000
+  rotate: false
+  xy: 2, 571
+  size: 200, 176
+  orig: 200, 176
+  offset: 0, 0
+  index: -1
+ci
+  rotate: true
+  xy: 203, 35
+  size: 99, 134
+  orig: 101, 134
+  offset: 1, 0
+  index: -1
+dimnian1
+  rotate: true
+  xy: 339, 2
+  size: 114, 115
+  orig: 140, 140
+  offset: 12, 10
+  index: -1
+dimnian4
+  rotate: true
+  xy: 2, 426
+  size: 143, 156
+  orig: 149, 170
+  offset: 2, 8
+  index: -1
+elec_25_000
+  rotate: false
+  xy: 407, 406
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_001
+  rotate: false
+  xy: 537, 406
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_003
+  rotate: false
+  xy: 667, 388
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_005
+  rotate: false
+  xy: 797, 388
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_007
+  rotate: false
+  xy: 160, 350
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_009
+  rotate: false
+  xy: 2, 296
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_010
+  rotate: false
+  xy: 290, 276
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_012
+  rotate: false
+  xy: 420, 276
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_013
+  rotate: false
+  xy: 550, 258
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_014
+  rotate: false
+  xy: 680, 258
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+elec_25_015
+  rotate: false
+  xy: 810, 258
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+guang
+  rotate: false
+  xy: 290, 428
+  size: 50, 50
+  orig: 64, 64
+  offset: 7, 7
+  index: -1
+guanghuan6
+  rotate: false
+  xy: 203, 586
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+guanghuan6_1
+  rotate: false
+  xy: 2, 199
+  size: 160, 95
+  orig: 160, 95
+  offset: 0, 0
+  index: -1
+h_yw_01
+  rotate: false
+  xy: 517, 642
+  size: 228, 104
+  orig: 228, 104
+  offset: 0, 0
+  index: -1
+h_yw_02
+  rotate: false
+  xy: 517, 536
+  size: 228, 104
+  orig: 228, 104
+  offset: 0, 0
+  index: -1
+h_yw_03
+  rotate: true
+  xy: 747, 518
+  size: 228, 104
+  orig: 228, 104
+  offset: 0, 0
+  index: -1
+h_yw_04
+  rotate: true
+  xy: 853, 518
+  size: 228, 104
+  orig: 228, 104
+  offset: 0, 0
+  index: -1
+h_yw_05
+  rotate: false
+  xy: 177, 480
+  size: 228, 104
+  orig: 228, 104
+  offset: 0, 0
+  index: -1
+shandian13_000
+  rotate: true
+  xy: 568, 188
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_001
+  rotate: true
+  xy: 769, 188
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_002
+  rotate: true
+  xy: 164, 136
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_003
+  rotate: true
+  xy: 365, 118
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_004
+  rotate: true
+  xy: 566, 118
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_005
+  rotate: true
+  xy: 767, 118
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_006
+  rotate: true
+  xy: 2, 66
+  size: 68, 199
+  orig: 68, 199
+  offset: 0, 0
+  index: -1
+shandian13_007
+  rotate: true
+  xy: 164, 206
+  size: 68, 200
+  orig: 68, 200
+  offset: 0, 0
+  index: -1
+shandian13_008
+  rotate: true
+  xy: 366, 188
+  size: 68, 200
+  orig: 68, 200
+  offset: 0, 0
+  index: -1
+szg2
+  rotate: false
+  xy: 365, 586
+  size: 150, 160
+  orig: 150, 160
+  offset: 0, 0
+  index: -1
+zd
+  rotate: false
+  xy: 132, 310
+  size: 128, 38
+  orig: 134, 40
+  offset: 4, 0
+  index: -1

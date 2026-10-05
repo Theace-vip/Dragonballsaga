@@ -1,0 +1,174 @@
+
+g13_niu_nv.png
+size: 992,364
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+niu
+  rotate: false
+  xy: 862, 49
+  size: 107, 86
+  orig: 107, 86
+  offset: 0, 0
+  index: -1
+niu1
+  rotate: false
+  xy: 489, 23
+  size: 119, 86
+  orig: 119, 86
+  offset: 0, 0
+  index: -1
+niu10
+  rotate: false
+  xy: 411, 330
+  size: 16, 33
+  orig: 16, 33
+  offset: 0, 0
+  index: -1
+niu11
+  rotate: false
+  xy: 294, 328
+  size: 28, 36
+  orig: 28, 36
+  offset: 0, 0
+  index: -1
+niu12
+  rotate: true
+  xy: 570, 92
+  size: 76, 178
+  orig: 76, 178
+  offset: 0, 0
+  index: -1
+niu13
+  rotate: 180
+  xy: 558, 152
+  size: 144, 212
+  orig: 144, 212
+  offset: 0, 0
+  index: -1
+niu14
+  rotate: false
+  xy: 0, 5
+  size: 78, 171
+  orig: 79, 171
+  offset: 0, 0
+  index: -1
+niu15
+  rotate: 270
+  xy: 808, 130
+  size: 74, 164
+  orig: 78, 164
+  offset: 4, 0
+  index: -1
+niu16
+  rotate: false
+  xy: 703, 14
+  size: 135, 128
+  orig: 135, 128
+  offset: 0, 0
+  index: -1
+niu17
+  rotate: true
+  xy: 46, 62
+  size: 84, 173
+  orig: 84, 173
+  offset: 0, 0
+  index: -1
+niu18
+  rotate: false
+  xy: 0, 136
+  size: 228, 228
+  orig: 228, 228
+  offset: 0, 0
+  index: -1
+niu19
+  rotate: true
+  xy: 900, 188
+  size: 41, 91
+  orig: 41, 91
+  offset: 0, 0
+  index: -1
+niu2
+  rotate: true
+  xy: 614, 62
+  size: 60, 110
+  orig: 60, 110
+  offset: 0, 0
+  index: -1
+niu20
+  rotate: false
+  xy: 373, 331
+  size: 40, 33
+  orig: 40, 33
+  offset: 0, 0
+  index: -1
+niu3
+  rotate: true
+  xy: 680, 141
+  size: 222, 114
+  orig: 222, 114
+  offset: 0, 0
+  index: -1
+niu4
+  rotate: true
+  xy: 427, 96
+  size: 104, 113
+  orig: 104, 113
+  offset: 0, 0
+  index: -1
+niu5
+  rotate: false
+  xy: 374, 28
+  size: 76, 131
+  orig: 76, 131
+  offset: 0, 0
+  index: -1
+niu6
+  rotate: false
+  xy: 788, 175
+  size: 143, 189
+  orig: 143, 189
+  offset: 0, 0
+  index: -1
+niu7
+  rotate: false
+  xy: 76, 4
+  size: 121, 84
+  orig: 121, 84
+  offset: 0, 0
+  index: -1
+niu8
+  rotate: false
+  xy: 220, 328
+  size: 17, 35
+  orig: 17, 35
+  offset: 0, 0
+  index: -1
+niu9
+  rotate: 180
+  xy: 432, 195
+  size: 149, 169
+  orig: 149, 170
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 882, 230
+  size: 67, 133
+  orig: 156, 223
+  offset: 53, 41
+  index: -1
+yeti
+  rotate: 270
+  xy: 221, 1
+  size: 362, 92
+  orig: 362, 92
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: 270
+  xy: 313, 101
+  size: 263, 126
+  orig: 332, 152
+  offset: 24, 26
+  index: -1

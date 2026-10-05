@@ -1,0 +1,293 @@
+
+g13_6yuan_nv.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+6b
+  rotate: false
+  xy: 734, 657
+  size: 126, 97
+  orig: 126, 97
+  offset: 0, 0
+  index: -1
+6b1
+  rotate: false
+  xy: 446, 644
+  size: 126, 96
+  orig: 126, 96
+  offset: 0, 0
+  index: -1
+6b10
+  rotate: false
+  xy: 965, 962
+  size: 50, 60
+  orig: 50, 60
+  offset: 0, 0
+  index: -1
+6b11
+  rotate: false
+  xy: 660, 822
+  size: 75, 61
+  orig: 77, 61
+  offset: 0, 0
+  index: -1
+6b12
+  rotate: false
+  xy: 2, 632
+  size: 62, 91
+  orig: 62, 91
+  offset: 0, 0
+  index: -1
+6b13
+  rotate: false
+  xy: 703, 668
+  size: 27, 65
+  orig: 27, 65
+  offset: 0, 0
+  index: -1
+6b14
+  rotate: 270
+  xy: 871, 638
+  size: 57, 143
+  orig: 62, 144
+  offset: 5, 0
+  index: -1
+6b15
+  rotate: true
+  xy: 65, 649
+  size: 59, 82
+  orig: 60, 88
+  offset: 0, 6
+  index: -1
+6b16
+  rotate: false
+  xy: 632, 649
+  size: 75, 78
+  orig: 92, 78
+  offset: 0, 0
+  index: -1
+6b17
+  rotate: true
+  xy: 861, 670
+  size: 77, 126
+  orig: 80, 129
+  offset: 3, 2
+  index: -1
+6b18
+  rotate: false
+  xy: 323, 617
+  size: 133, 85
+  orig: 133, 85
+  offset: 0, 0
+  index: -1
+6b19
+  rotate: 180
+  xy: 438, 809
+  size: 221, 214
+  orig: 221, 214
+  offset: 0, 0
+  index: -1
+6b2
+  rotate: false
+  xy: 312, 758
+  size: 60, 44
+  orig: 60, 44
+  offset: 0, 0
+  index: -1
+6b20
+  rotate: false
+  xy: 556, 670
+  size: 77, 82
+  orig: 79, 82
+  offset: 2, 0
+  index: -1
+6b21
+  rotate: false
+  xy: 831, 813
+  size: 44, 65
+  orig: 44, 69
+  offset: 0, 0
+  index: -1
+6b22
+  rotate: false
+  xy: 220, 667
+  size: 25, 59
+  orig: 25, 59
+  offset: 0, 0
+  index: -1
+6b23
+  rotate: 180
+  xy: 2, 794
+  size: 151, 143
+  orig: 161, 143
+  offset: 8, 0
+  index: -1
+6b24
+  rotate: false
+  xy: 168, 883
+  size: 38, 30
+  orig: 38, 30
+  offset: 0, 0
+  index: -1
+6b25
+  rotate: false
+  xy: 48, 898
+  size: 48, 28
+  orig: 48, 30
+  offset: 0, 2
+  index: -1
+6b26
+  rotate: 270
+  xy: 865, 800
+  size: 168, 156
+  orig: 171, 156
+  offset: 0, 0
+  index: -1
+6b27
+  rotate: 270
+  xy: 2, 703
+  size: 105, 134
+  orig: 120, 138
+  offset: 0, 3
+  index: -1
+6b28
+  rotate: 180
+  xy: 641, 727
+  size: 204, 228
+  orig: 204, 228
+  offset: 0, 0
+  index: -1
+6b29
+  rotate: 180
+  xy: 621, 727
+  size: 145, 106
+  orig: 146, 107
+  offset: 0, 0
+  index: -1
+6b3
+  rotate: false
+  xy: 968, 783
+  size: 53, 51
+  orig: 53, 51
+  offset: 0, 0
+  index: -1
+6b30
+  rotate: true
+  xy: 203, 842
+  size: 87, 242
+  orig: 91, 242
+  offset: 0, 0
+  index: -1
+6b31
+  rotate: 270
+  xy: 382, 717
+  size: 90, 245
+  orig: 93, 249
+  offset: 0, 0
+  index: -1
+6b32
+  rotate: 180
+  xy: 152, 741
+  size: 167, 158
+  orig: 167, 158
+  offset: 0, 0
+  index: -1
+6b33
+  rotate: true
+  xy: 315, 760
+  size: 110, 176
+  orig: 110, 187
+  offset: 0, 0
+  index: -1
+6b34
+  rotate: true
+  xy: 846, 704
+  size: 102, 162
+  orig: 102, 162
+  offset: 0, 0
+  index: -1
+6b35
+  rotate: false
+  xy: 2, 809
+  size: 35, 29
+  orig: 35, 29
+  offset: 0, 0
+  index: -1
+6b36
+  rotate: false
+  xy: 402, 998
+  size: 49, 25
+  orig: 50, 25
+  offset: 0, 0
+  index: -1
+6b4
+  rotate: false
+  xy: 266, 811
+  size: 53, 31
+  orig: 53, 31
+  offset: 0, 0
+  index: -1
+6b5
+  rotate: false
+  xy: 601, 1006
+  size: 14, 17
+  orig: 14, 17
+  offset: 0, 0
+  index: -1
+6b6
+  rotate: false
+  xy: 2, 1005
+  size: 19, 17
+  orig: 19, 17
+  offset: 0, 0
+  index: -1
+6b7
+  rotate: false
+  xy: 22, 1009
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+6b8
+  rotate: false
+  xy: 452, 1006
+  size: 16, 17
+  orig: 16, 17
+  offset: 0, 0
+  index: -1
+6b9
+  rotate: false
+  xy: 136, 689
+  size: 95, 98
+  orig: 95, 98
+  offset: 0, 0
+  index: -1
+WechatIMG55
+  rotate: false
+  xy: 878, 848
+  size: 35, 47
+  orig: 35, 47
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: true
+  xy: 247, 672
+  size: 67, 133
+  orig: 156, 223
+  offset: 53, 41
+  index: -1
+yeti
+  rotate: false
+  xy: 2, 910
+  size: 441, 112
+  orig: 441, 112
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: false
+  xy: 616, 865
+  size: 350, 158
+  orig: 404, 186
+  offset: 14, 28
+  index: -1

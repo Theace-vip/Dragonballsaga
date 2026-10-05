@@ -1,0 +1,160 @@
+
+g13_hongjun_texiao.png
+size: 1024,756
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1278756
+  rotate: false
+  xy: 2, 374
+  size: 204, 160
+  orig: 206, 162
+  offset: 2, 0
+  index: -1
+baiguang1
+  rotate: false
+  xy: 196, 10
+  size: 60, 60
+  orig: 60, 60
+  offset: 0, 0
+  index: -1
+bz_02
+  rotate: false
+  xy: 859, 14
+  size: 120, 135
+  orig: 139, 154
+  offset: 7, 7
+  index: -1
+bz_03
+  rotate: true
+  xy: 568, 15
+  size: 134, 148
+  orig: 139, 154
+  offset: 2, 1
+  index: -1
+bz_04
+  rotate: false
+  xy: 718, 22
+  size: 139, 127
+  orig: 139, 154
+  offset: 0, 27
+  index: -1
+cc_000
+  rotate: false
+  xy: 267, 351
+  size: 256, 186
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+cc_001
+  rotate: false
+  xy: 267, 539
+  size: 256, 212
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+cc_002
+  rotate: false
+  xy: 525, 547
+  size: 256, 204
+  orig: 256, 256
+  offset: 0, 24
+  index: -1
+cc_003
+  rotate: true
+  xy: 783, 495
+  size: 256, 200
+  orig: 256, 256
+  offset: 0, 36
+  index: -1
+dd_000
+  rotate: true
+  xy: 2, 178
+  size: 84, 512
+  orig: 85, 512
+  offset: 1, 0
+  index: -1
+dd_001
+  rotate: true
+  xy: 2, 264
+  size: 85, 512
+  orig: 85, 512
+  offset: 0, 0
+  index: -1
+dd_002
+  rotate: true
+  xy: 516, 267
+  size: 82, 504
+  orig: 85, 512
+  offset: 0, 0
+  index: -1
+dd_003
+  rotate: true
+  xy: 516, 209
+  size: 56, 496
+  orig: 85, 512
+  offset: 21, 0
+  index: -1
+dd_004
+  rotate: true
+  xy: 2, 124
+  size: 52, 414
+  orig: 85, 512
+  offset: 24, 0
+  index: -1
+dd_005
+  rotate: true
+  xy: 516, 151
+  size: 56, 400
+  orig: 85, 512
+  offset: 23, 0
+  index: -1
+fx_radial
+  rotate: false
+  xy: 525, 385
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+fz1
+  rotate: false
+  xy: 2, 536
+  size: 263, 215
+  orig: 271, 223
+  offset: 4, 4
+  index: -1
+fz6
+  rotate: false
+  xy: 285, 36
+  size: 86, 86
+  orig: 86, 86
+  offset: 0, 0
+  index: -1
+h_08
+  rotate: false
+  xy: 418, 2
+  size: 148, 147
+  orig: 148, 147
+  offset: 0, 0
+  index: -1
+h_guang
+  rotate: false
+  xy: 117, 15
+  size: 77, 55
+  orig: 78, 57
+  offset: 1, 2
+  index: -1
+h_gx
+  rotate: true
+  xy: 2, 7
+  size: 63, 113
+  orig: 68, 113
+  offset: 1, 0
+  index: -1
+xian
+  rotate: true
+  xy: 2, 72
+  size: 50, 281
+  orig: 53, 281
+  offset: 2, 0
+  index: -1

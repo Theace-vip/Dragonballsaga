@@ -1,0 +1,307 @@
+
+g13_yuanshitianzun2.png
+size: 1024,812
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tianzun
+  rotate: false
+  xy: 379, 20
+  size: 95, 90
+  orig: 95, 90
+  offset: 0, 0
+  index: -1
+tianzun1
+  rotate: true
+  xy: 2, 480
+  size: 83, 80
+  orig: 83, 80
+  offset: 0, 0
+  index: -1
+tianzun10
+  rotate: false
+  xy: 775, 582
+  size: 39, 47
+  orig: 39, 47
+  offset: 0, 0
+  index: -1
+tianzun11
+  rotate: true
+  xy: 350, 552
+  size: 118, 79
+  orig: 119, 79
+  offset: 1, 0
+  index: -1
+tianzun12
+  rotate: false
+  xy: 875, 535
+  size: 83, 66
+  orig: 83, 66
+  offset: 0, 0
+  index: -1
+tianzun13
+  rotate: true
+  xy: 2, 113
+  size: 159, 160
+  orig: 159, 160
+  offset: 0, 0
+  index: -1
+tianzun14
+  rotate: false
+  xy: 954, 745
+  size: 44, 39
+  orig: 44, 39
+  offset: 0, 0
+  index: -1
+tianzun15
+  rotate: false
+  xy: 507, 165
+  size: 82, 110
+  orig: 82, 110
+  offset: 0, 0
+  index: -1
+tianzun16
+  rotate: false
+  xy: 731, 601
+  size: 59, 59
+  orig: 59, 59
+  offset: 0, 0
+  index: -1
+tianzun17
+  rotate: true
+  xy: 340, 112
+  size: 218, 326
+  orig: 220, 328
+  offset: 2, 1
+  index: -1
+tianzun18
+  rotate: false
+  xy: 234, 767
+  size: 53, 42
+  orig: 53, 42
+  offset: 0, 0
+  index: -1
+tianzun19
+  rotate: false
+  xy: 487, 761
+  size: 56, 47
+  orig: 56, 47
+  offset: 0, 0
+  index: -1
+tianzun2
+  rotate: false
+  xy: 2, 770
+  size: 41, 39
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+tianzun20
+  rotate: true
+  xy: 190, 13
+  size: 159, 208
+  orig: 159, 218
+  offset: 0, 10
+  index: -1
+tianzun21
+  rotate: false
+  xy: 918, 590
+  size: 80, 86
+  orig: 80, 86
+  offset: 0, 0
+  index: -1
+tianzun22
+  rotate: false
+  xy: 659, 583
+  size: 258, 226
+  orig: 274, 241
+  offset: 3, 14
+  index: -1
+tianzun23
+  rotate: false
+  xy: 940, 79
+  size: 82, 84
+  orig: 82, 84
+  offset: 0, 0
+  index: -1
+tianzun24
+  rotate: false
+  xy: 968, 540
+  size: 54, 54
+  orig: 54, 55
+  offset: 0, 0
+  index: -1
+tianzun25
+  rotate: true
+  xy: 666, 164
+  size: 147, 317
+  orig: 149, 323
+  offset: 0, 3
+  index: -1
+tianzun26
+  rotate: false
+  xy: 295, 544
+  size: 93, 164
+  orig: 93, 164
+  offset: 0, 0
+  index: -1
+tianzun27
+  rotate: false
+  xy: 479, 269
+  size: 404, 274
+  orig: 404, 274
+  offset: 0, 0
+  index: -1
+tianzun28
+  rotate: false
+  xy: 706, 5
+  size: 317, 87
+  orig: 327, 91
+  offset: 2, 2
+  index: -1
+tianzun29
+  rotate: false
+  xy: 674, 618
+  size: 46, 29
+  orig: 46, 29
+  offset: 0, 0
+  index: -1
+tianzun3
+  rotate: false
+  xy: 192, 138
+  size: 146, 136
+  orig: 146, 136
+  offset: 0, 0
+  index: -1
+tianzun30
+  rotate: false
+  xy: 287, 781
+  size: 45, 28
+  orig: 45, 28
+  offset: 0, 0
+  index: -1
+tianzun31
+  rotate: 180
+  xy: 753, 117
+  size: 173, 141
+  orig: 174, 141
+  offset: 1, 0
+  index: -1
+tianzun32
+  rotate: false
+  xy: 253, 524
+  size: 42, 57
+  orig: 42, 57
+  offset: 0, 0
+  index: -1
+tianzun33
+  rotate: false
+  xy: 903, 760
+  size: 53, 49
+  orig: 55, 49
+  offset: 0, 0
+  index: -1
+tianzun34
+  rotate: 270
+  xy: 833, 673
+  size: 136, 184
+  orig: 136, 199
+  offset: 0, 15
+  index: -1
+tianzun35
+  rotate: false
+  xy: 939, 303
+  size: 83, 87
+  orig: 83, 87
+  offset: 0, 0
+  index: -1
+tianzun36
+  rotate: false
+  xy: 785, 309
+  size: 237, 224
+  orig: 263, 235
+  offset: 17, 11
+  index: -1
+tianzun37
+  rotate: false
+  xy: 290, 276
+  size: 311, 156
+  orig: 311, 156
+  offset: 0, 0
+  index: -1
+tianzun38
+  rotate: 180
+  xy: 531, 501
+  size: 269, 308
+  orig: 274, 311
+  offset: 3, 0
+  index: -1
+tianzun39
+  rotate: 180
+  xy: 271, 502
+  size: 276, 307
+  orig: 276, 307
+  offset: 0, 0
+  index: -1
+tianzun4
+  rotate: false
+  xy: 545, 770
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+tianzun40
+  rotate: false
+  xy: 2, 518
+  size: 292, 292
+  orig: 293, 293
+  offset: 1, 0
+  index: -1
+tianzun5
+  rotate: false
+  xy: 459, 782
+  size: 25, 26
+  orig: 25, 26
+  offset: 0, 0
+  index: -1
+tianzun6
+  rotate: false
+  xy: 476, 24
+  size: 94, 93
+  orig: 94, 93
+  offset: 0, 0
+  index: -1
+tianzun7
+  rotate: false
+  xy: 554, 4
+  size: 218, 180
+  orig: 218, 180
+  offset: 0, 0
+  index: -1
+tianzun8
+  rotate: 270
+  xy: 2, 4
+  size: 121, 184
+  orig: 121, 184
+  offset: 0, 0
+  index: -1
+tianzun9
+  rotate: false
+  xy: 825, 538
+  size: 50, 51
+  orig: 50, 51
+  offset: 0, 0
+  index: -1
+yeti
+  rotate: 180
+  xy: 40, 414
+  size: 430, 110
+  orig: 430, 110
+  offset: 0, 0
+  index: -1
+yeti2
+  rotate: 180
+  xy: 2, 272
+  size: 311, 151
+  orig: 394, 181
+  offset: 29, 30
+  index: -1

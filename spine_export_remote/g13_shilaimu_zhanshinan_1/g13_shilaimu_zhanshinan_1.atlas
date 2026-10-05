@@ -1,0 +1,286 @@
+
+g13_shilaimu_zhanshinan_1.png
+size: 1024,448
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: true
+  xy: 822, 231
+  size: 213, 101
+  orig: 241, 115
+  offset: 19, 14
+  index: -1
+d_01
+  rotate: false
+  xy: 2, 29
+  size: 93, 35
+  orig: 139, 146
+  offset: 3, 110
+  index: -1
+d_02
+  rotate: false
+  xy: 570, 310
+  size: 122, 134
+  orig: 139, 146
+  offset: 10, 2
+  index: -1
+d_03
+  rotate: false
+  xy: 694, 316
+  size: 126, 128
+  orig: 139, 146
+  offset: 7, 2
+  index: -1
+d_04
+  rotate: false
+  xy: 694, 206
+  size: 125, 108
+  orig: 139, 146
+  offset: 7, 2
+  index: -1
+d_05
+  rotate: false
+  xy: 523, 200
+  size: 123, 108
+  orig: 139, 146
+  offset: 7, 2
+  index: -1
+d_06
+  rotate: false
+  xy: 883, 51
+  size: 115, 39
+  orig: 139, 146
+  offset: 6, 2
+  index: -1
+gongji
+  rotate: false
+  xy: 648, 120
+  size: 107, 85
+  orig: 107, 85
+  offset: 0, 0
+  index: -1
+nanzhan_1
+  rotate: false
+  xy: 821, 235
+  size: 28, 51
+  orig: 28, 51
+  offset: 0, 0
+  index: -1
+nanzhan_10
+  rotate: false
+  xy: 922, 92
+  size: 86, 89
+  orig: 86, 89
+  offset: 0, 0
+  index: -1
+nanzhan_11
+  rotate: false
+  xy: 495, 49
+  size: 78, 75
+  orig: 78, 75
+  offset: 0, 0
+  index: -1
+nanzhan_12
+  rotate: false
+  xy: 757, 149
+  size: 46, 55
+  orig: 46, 55
+  offset: 0, 0
+  index: -1
+nanzhan_14
+  rotate: false
+  xy: 822, 414
+  size: 43, 30
+  orig: 43, 30
+  offset: 0, 0
+  index: -1
+nanzhan_15
+  rotate: false
+  xy: 368, 37
+  size: 85, 60
+  orig: 85, 60
+  offset: 0, 0
+  index: -1
+nanzhan_16
+  rotate: false
+  xy: 575, 51
+  size: 104, 73
+  orig: 104, 73
+  offset: 0, 0
+  index: -1
+nanzhan_17
+  rotate: 270
+  xy: 575, 3
+  size: 75, 68
+  orig: 75, 68
+  offset: 0, 0
+  index: -1
+nanzhan_18
+  rotate: true
+  xy: 681, 34
+  size: 85, 85
+  orig: 86, 85
+  offset: 0, 0
+  index: -1
+nanzhan_19
+  rotate: false
+  xy: 915, 183
+  size: 107, 118
+  orig: 107, 118
+  offset: 0, 0
+  index: -1
+nanzhan_2
+  rotate: true
+  xy: 764, 58
+  size: 90, 133
+  orig: 90, 133
+  offset: 0, 0
+  index: -1
+nanzhan_20
+  rotate: false
+  xy: 407, 99
+  size: 86, 77
+  orig: 86, 77
+  offset: 0, 0
+  index: -1
+nanzhan_21
+  rotate: false
+  xy: 816, 121
+  size: 104, 109
+  orig: 104, 111
+  offset: 0, 0
+  index: -1
+nanzhan_22
+  rotate: false
+  xy: 846, 8
+  size: 67, 41
+  orig: 67, 41
+  offset: 0, 0
+  index: -1
+nanzhan_23
+  rotate: 270
+  xy: 250, 31
+  size: 79, 70
+  orig: 79, 70
+  offset: 0, 0
+  index: -1
+nanzhan_24
+  rotate: false
+  xy: 922, 338
+  size: 94, 107
+  orig: 94, 107
+  offset: 0, 0
+  index: -1
+nanzhan_25
+  rotate: false
+  xy: 915, 12
+  size: 64, 37
+  orig: 64, 37
+  offset: 0, 0
+  index: -1
+nanzhan_26
+  rotate: false
+  xy: 175, 73
+  size: 74, 82
+  orig: 74, 82
+  offset: 0, 0
+  index: -1
+nanzhan_27
+  rotate: true
+  xy: 175, 13
+  size: 59, 64
+  orig: 59, 64
+  offset: 0, 0
+  index: -1
+nanzhan_28
+  rotate: false
+  xy: 984, 308
+  size: 37, 30
+  orig: 37, 30
+  offset: 0, 0
+  index: -1
+nanzhan_29
+  rotate: false
+  xy: 924, 309
+  size: 36, 27
+  orig: 36, 27
+  offset: 0, 0
+  index: -1
+nanzhan_3
+  rotate: false
+  xy: 514, 126
+  size: 108, 72
+  orig: 108, 72
+  offset: 0, 0
+  index: -1
+nanzhan_30
+  rotate: false
+  xy: 648, 268
+  size: 40, 41
+  orig: 40, 41
+  offset: 0, 0
+  index: -1
+nanzhan_4
+  rotate: false
+  xy: 175, 263
+  size: 159, 181
+  orig: 159, 181
+  offset: 0, 0
+  index: -1
+nanzhan_5
+  rotate: false
+  xy: 765, 16
+  size: 79, 50
+  orig: 79, 50
+  offset: 0, 0
+  index: -1
+nanzhan_6
+  rotate: true
+  xy: 407, 281
+  size: 163, 161
+  orig: 163, 161
+  offset: 0, 0
+  index: -1
+nanzhan_7
+  rotate: false
+  xy: 175, 157
+  size: 152, 104
+  orig: 152, 104
+  offset: 0, 0
+  index: -1
+nanzhan_8
+  rotate: false
+  xy: 93, 6
+  size: 71, 59
+  orig: 77, 59
+  offset: 3, 0
+  index: -1
+nanzhan_9
+  rotate: false
+  xy: 294, 82
+  size: 107, 101
+  orig: 107, 101
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 407, 179
+  size: 105, 101
+  orig: 105, 101
+  offset: 0, 0
+  index: -1
+wuqi
+  rotate: false
+  xy: 2, 66
+  size: 171, 378
+  orig: 358, 511
+  offset: 111, 87
+  index: -1
+yeti
+  rotate: true
+  xy: 336, 174
+  size: 271, 70
+  orig: 271, 70
+  offset: 0, 0
+  index: -1

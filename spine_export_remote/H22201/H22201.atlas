@@ -1,0 +1,103 @@
+H22201.png
+size: 1134,405
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hong-meigui
+  rotate: false
+  xy: 1017, 175
+  size: 113, 228
+  orig: 113, 228
+  offset: 0, 0
+  index: -1
+hong-qt
+  rotate: true
+  xy: 2, 2
+  size: 401, 508
+  orig: 451, 593
+  offset: 43, 16
+  index: -1
+hong-tf
+  rotate: true
+  xy: 512, 159
+  size: 244, 191
+  orig: 245, 192
+  offset: 0, 0
+  index: -1
+hong-wj
+  rotate: false
+  xy: 694, 12
+  size: 118, 61
+  orig: 120, 64
+  offset: 0, 0
+  index: -1
+hong-yl
+  rotate: false
+  xy: 694, 75
+  size: 321, 82
+  orig: 321, 82
+  offset: 0, 0
+  index: -1
+hong-ymm
+  rotate: true
+  xy: 705, 178
+  size: 225, 117
+  orig: 225, 117
+  offset: 0, 0
+  index: -1
+hong-ys
+  rotate: true
+  xy: 824, 305
+  size: 98, 153
+  orig: 133, 161
+  offset: 0, 8
+  index: -1
+hong-ys-xz
+  rotate: false
+  xy: 512, 8
+  size: 180, 149
+  orig: 225, 187
+  offset: 13, 30
+  index: -1
+hong-zhijia
+  rotate: false
+  xy: 814, 4
+  size: 55, 69
+  orig: 56, 70
+  offset: 0, 1
+  index: -1
+hong-zmm
+  rotate: false
+  xy: 824, 165
+  size: 84, 138
+  orig: 85, 138
+  offset: 0, 0
+  index: -1
+hong-zs
+  rotate: true
+  xy: 1017, 6
+  size: 167, 115
+  orig: 167, 127
+  offset: 0, 6
+  index: -1
+hong-zs-xiuhou1
+  rotate: false
+  xy: 951, 43
+  size: 41, 30
+  orig: 41, 30
+  offset: 0, 0
+  index: -1
+hong-zs-xiuhou2
+  rotate: true
+  xy: 871, 40
+  size: 33, 78
+  orig: 44, 79
+  offset: 11, 0
+  index: -1
+hong-zs-xz
+  rotate: true
+  xy: 910, 179
+  size: 124, 93
+  orig: 124, 100
+  offset: 0, 0
+  index: -1

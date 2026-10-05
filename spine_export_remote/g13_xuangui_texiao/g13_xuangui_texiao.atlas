@@ -1,0 +1,146 @@
+
+g13_xuangui_texiao.png
+size: 1024,752
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+02
+  rotate: false
+  xy: 104, 447
+  size: 57, 57
+  orig: 170, 170
+  offset: 57, 58
+  index: -1
+03
+  rotate: false
+  xy: 575, 25
+  size: 122, 117
+  orig: 170, 170
+  offset: 20, 23
+  index: -1
+04
+  rotate: false
+  xy: 2, 23
+  size: 153, 148
+  orig: 170, 170
+  offset: 7, 8
+  index: -1
+05
+  rotate: true
+  xy: 704, 3
+  size: 142, 153
+  orig: 170, 170
+  offset: 13, 12
+  index: -1
+06
+  rotate: false
+  xy: 581, 460
+  size: 124, 122
+  orig: 170, 170
+  offset: 23, 20
+  index: -1
+07
+  rotate: false
+  xy: 2, 470
+  size: 100, 98
+  orig: 170, 170
+  offset: 35, 34
+  index: -1
+1
+  rotate: false
+  xy: 2, 419
+  size: 703, 329
+  orig: 797, 377
+  offset: 65, 48
+  index: -1
+cb_h1_a
+  rotate: true
+  xy: 794, 232
+  size: 224, 220
+  orig: 256, 256
+  offset: 16, 18
+  index: -1
+di
+  rotate: false
+  xy: 534, 144
+  size: 402, 81
+  orig: 402, 81
+  offset: 0, 0
+  index: -1
+dian1
+  rotate: false
+  xy: 661, 707
+  size: 37, 40
+  orig: 37, 40
+  offset: 0, 0
+  index: -1
+dian11
+  rotate: false
+  xy: 2, 714
+  size: 52, 33
+  orig: 52, 33
+  offset: 0, 0
+  index: -1
+gongji
+  rotate: false
+  xy: 426, 16
+  size: 147, 130
+  orig: 147, 130
+  offset: 0, 0
+  index: -1
+huzi1
+  rotate: false
+  xy: 281, 262
+  size: 98, 60
+  orig: 98, 60
+  offset: 0, 0
+  index: -1
+hx_3448-1
+  rotate: false
+  xy: 2, 173
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ke
+  rotate: false
+  xy: 503, 223
+  size: 289, 233
+  orig: 289, 233
+  offset: 0, 0
+  index: -1
+ke1
+  rotate: 270
+  xy: 211, 45
+  size: 184, 213
+  orig: 184, 213
+  offset: 0, 0
+  index: -1
+ke11
+  rotate: false
+  xy: 707, 458
+  size: 289, 289
+  orig: 289, 289
+  offset: 0, 0
+  index: -1
+shenti
+  rotate: 270
+  xy: 379, 166
+  size: 270, 122
+  orig: 270, 122
+  offset: 0, 0
+  index: -1
+shouji
+  rotate: false
+  xy: 859, 24
+  size: 163, 135
+  orig: 163, 135
+  offset: 0, 0
+  index: -1
+weiba
+  rotate: false
+  xy: 260, 310
+  size: 105, 108
+  orig: 105, 108
+  offset: 0, 0
+  index: -1

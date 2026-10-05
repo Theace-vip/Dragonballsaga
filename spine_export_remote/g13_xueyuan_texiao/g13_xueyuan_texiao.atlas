@@ -1,0 +1,111 @@
+
+g13_xueyuan_texiao.png
+size: 1020,296
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+000
+  rotate: false
+  xy: 2, 97
+  size: 138, 197
+  orig: 141, 201
+  offset: 2, 2
+  index: -1
+bk1
+  rotate: false
+  xy: 572, 42
+  size: 99, 66
+  orig: 99, 66
+  offset: 0, 0
+  index: -1
+bk2
+  rotate: false
+  xy: 142, 63
+  size: 116, 231
+  orig: 116, 231
+  offset: 0, 0
+  index: -1
+bk3
+  rotate: false
+  xy: 817, 35
+  size: 125, 104
+  orig: 125, 104
+  offset: 0, 0
+  index: -1
+bk4
+  rotate: false
+  xy: 817, 141
+  size: 108, 153
+  orig: 108, 153
+  offset: 0, 0
+  index: -1
+ci_01
+  rotate: true
+  xy: 686, 116
+  size: 178, 129
+  orig: 186, 163
+  offset: 4, 1
+  index: -1
+ci_02
+  rotate: true
+  xy: 260, 118
+  size: 176, 147
+  orig: 186, 163
+  offset: 4, 2
+  index: -1
+ci_03
+  rotate: true
+  xy: 409, 113
+  size: 181, 140
+  orig: 186, 163
+  offset: 2, 17
+  index: -1
+ci_04
+  rotate: true
+  xy: 551, 110
+  size: 184, 133
+  orig: 186, 163
+  offset: 1, 29
+  index: -1
+dimian
+  rotate: false
+  xy: 376, 42
+  size: 194, 66
+  orig: 195, 75
+  offset: 1, 0
+  index: -1
+effect_g_10_mw
+  rotate: false
+  xy: 260, 2
+  size: 114, 114
+  orig: 128, 128
+  offset: 6, 6
+  index: -1
+effect_quan09
+  rotate: true
+  xy: 686, 22
+  size: 92, 121
+  orig: 128, 128
+  offset: 14, 3
+  index: -1
+h_guang
+  rotate: true
+  xy: 944, 64
+  size: 78, 57
+  orig: 78, 57
+  offset: 0, 0
+  index: -1
+h_tw1
+  rotate: false
+  xy: 2, 62
+  size: 128, 33
+  orig: 128, 33
+  offset: 0, 0
+  index: -1
+xiaosh_o_00002
+  rotate: true
+  xy: 927, 144
+  size: 150, 90
+  orig: 150, 90
+  offset: 0, 0
+  index: -1

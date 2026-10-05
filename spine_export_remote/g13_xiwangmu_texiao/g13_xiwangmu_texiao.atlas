@@ -1,0 +1,139 @@
+
+g13_xiwangmu_texiao.png
+size: 1004,508
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1278756
+  rotate: false
+  xy: 2, 102
+  size: 204, 160
+  orig: 206, 162
+  offset: 2, 0
+  index: -1
+c_01
+  rotate: false
+  xy: 727, 2
+  size: 176, 127
+  orig: 186, 163
+  offset: 5, 2
+  index: -1
+c_02
+  rotate: false
+  xy: 370, 117
+  size: 174, 145
+  orig: 186, 163
+  offset: 5, 3
+  index: -1
+c_03
+  rotate: false
+  xy: 546, 124
+  size: 179, 138
+  orig: 186, 163
+  offset: 3, 18
+  index: -1
+c_04
+  rotate: false
+  xy: 727, 131
+  size: 182, 131
+  orig: 186, 163
+  offset: 2, 30
+  index: -1
+dl3
+  rotate: true
+  xy: 249, 264
+  size: 230, 220
+  orig: 256, 256
+  offset: 17, 21
+  index: -1
+dl3_1
+  rotate: true
+  xy: 696, 264
+  size: 212, 208
+  orig: 256, 256
+  offset: 29, 31
+  index: -1
+fx_fan
+  rotate: true
+  xy: 911, 134
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+fx_radial
+  rotate: false
+  xy: 208, 102
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+fx_xinxin_00000
+  rotate: false
+  xy: 639, 7
+  size: 56, 56
+  orig: 64, 64
+  offset: 4, 3
+  index: -1
+guang
+  rotate: false
+  xy: 905, 65
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+h_guang
+  rotate: false
+  xy: 639, 65
+  size: 78, 57
+  orig: 78, 57
+  offset: 0, 0
+  index: -1
+h_tw
+  rotate: true
+  xy: 971, 4
+  size: 128, 31
+  orig: 128, 31
+  offset: 0, 0
+  index: -1
+h_yw_02
+  rotate: true
+  xy: 906, 264
+  size: 199, 79
+  orig: 228, 104
+  offset: 14, 11
+  index: -1
+h_yw_03
+  rotate: false
+  xy: 228, 7
+  size: 211, 93
+  orig: 228, 104
+  offset: 9, 5
+  index: -1
+h_yw_04
+  rotate: false
+  xy: 2, 8
+  size: 224, 92
+  orig: 228, 104
+  offset: 2, 4
+  index: -1
+h_yw_05
+  rotate: false
+  xy: 441, 15
+  size: 196, 100
+  orig: 228, 104
+  offset: 10, 2
+  index: -1
+kuoshan
+  rotate: false
+  xy: 2, 264
+  size: 245, 241
+  orig: 256, 256
+  offset: 6, 13
+  index: -1
+tao
+  rotate: true
+  xy: 471, 264
+  size: 226, 223
+  orig: 227, 223
+  offset: 0, 0
+  index: -1

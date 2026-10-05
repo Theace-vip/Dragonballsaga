@@ -1,0 +1,202 @@
+
+g13_qinluan_texiao.png
+size: 996,652
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Smoke_Trail_00
+  rotate: true
+  xy: 706, 549
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_01
+  rotate: true
+  xy: 706, 445
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_02
+  rotate: true
+  xy: 372, 373
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_03
+  rotate: true
+  xy: 0, 347
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_04
+  rotate: true
+  xy: 613, 341
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_05
+  rotate: true
+  xy: 241, 269
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_06
+  rotate: true
+  xy: 482, 237
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_07
+  rotate: true
+  xy: 723, 237
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_08
+  rotate: true
+  xy: 0, 165
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+Smoke_Trail_09
+  rotate: true
+  xy: 241, 133
+  size: 102, 239
+  orig: 102, 239
+  offset: 0, 0
+  index: -1
+ag
+  rotate: false
+  xy: 268, 3
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+c_00
+  rotate: false
+  xy: 108, 302
+  size: 12, 43
+  orig: 128, 128
+  offset: 55, 5
+  index: -1
+c_01
+  rotate: false
+  xy: 40, 290
+  size: 28, 55
+  orig: 128, 128
+  offset: 48, 15
+  index: -1
+c_02
+  rotate: false
+  xy: 241, 400
+  size: 39, 63
+  orig: 128, 128
+  offset: 41, 29
+  index: -1
+c_03
+  rotate: false
+  xy: 0, 300
+  size: 38, 45
+  orig: 128, 128
+  offset: 42, 43
+  index: -1
+c_04
+  rotate: false
+  xy: 70, 313
+  size: 36, 32
+  orig: 128, 128
+  offset: 43, 50
+  index: -1
+c_05
+  rotate: false
+  xy: 70, 285
+  size: 29, 26
+  orig: 128, 128
+  offset: 43, 53
+  index: -1
+ddd
+  rotate: false
+  xy: 671, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+fx_radial
+  rotate: false
+  xy: 544, 491
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+m
+  rotate: true
+  xy: 398, 30
+  size: 78, 179
+  orig: 78, 179
+  offset: 0, 0
+  index: -1
+sj_00
+  rotate: false
+  xy: 372, 477
+  size: 170, 174
+  orig: 200, 200
+  offset: 19, 18
+  index: -1
+sj_01
+  rotate: false
+  xy: 202, 465
+  size: 168, 186
+  orig: 200, 200
+  offset: 27, 5
+  index: -1
+sj_02
+  rotate: true
+  xy: 482, 110
+  size: 125, 187
+  orig: 200, 200
+  offset: 75, 0
+  index: -1
+sj_03
+  rotate: true
+  xy: 671, 132
+  size: 103, 188
+  orig: 200, 200
+  offset: 97, 0
+  index: -1
+ylizi
+  rotate: true
+  xy: 861, 104
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+ylizi2
+  rotate: true
+  xy: 0, 32
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+ylizi3
+  rotate: true
+  xy: 134, 0
+  size: 131, 132
+  orig: 131, 132
+  offset: 0, 0
+  index: -1
+zha2
+  rotate: false
+  xy: 0, 451
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
