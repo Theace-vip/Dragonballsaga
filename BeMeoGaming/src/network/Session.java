@@ -38,6 +38,8 @@ implements ISession {
         try {
             this.socket.setSendBufferSize(0x100000);
             this.socket.setReceiveBufferSize(0x100000);
+            // Tat Nagle: gui ngay tin nho, bo 40-200ms delayed-ACK/Nagle (khong thi client bi tre)
+            this.socket.setTcpNoDelay(true);
         } catch (SocketException socketException) {
             // empty catch block
         }

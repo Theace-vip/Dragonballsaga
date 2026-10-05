@@ -51,14 +51,13 @@ implements Runnable {
     @Override
     public void run() {
         try {
+            // Khong Sleep(10) sau moi lan gui: poll(1s) tra ve NGAY khi co tin moi
+            // nen do trễ = 0ms (truoc do moi tin bi cham 0-10ms), chi ngu 1 lan/s khi rong.
             while (this.session.isConnected()) {
-                while (!this.messages.isEmpty()) {
-                    Message message = this.messages.poll(5L, TimeUnit.SECONDS);
-                    if (message == null) continue;
-                    this.doSendMessage(message);
-                    message.cleanup();
-                }
-                TimeUnit.MILLISECONDS.sleep(10L);
+                Message message = this.messages.poll(1L, TimeUnit.SECONDS);
+                if (message == null) continue;
+                this.doSendMessage(message);
+                message.cleanup();
             }
         } catch (Exception exception) {
             // empty catch block

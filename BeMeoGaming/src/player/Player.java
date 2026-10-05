@@ -414,8 +414,8 @@ public class Player implements Runnable {
             // Panel > He Thong: linh khi tu luyen / giay + tho nguyen tieu hao / giay
             this.tho_nguyen -= panel.tuning.SystemTuning.getL("tutien_tho_nguyen_moi_giay");
             this.SagaTuTien[0] += panel.tuning.SystemTuning.getL("tutien_linh_khi_moi_giay");
-          
-            PlayerDAO.updateThoNguyen(this);
+            // HUY BO update DB moi giay: updatePlayer (60s + khi logout) da luu tho_nguyen + SagaTuTien.
+            // Truoc do 1000 nguoi = 1000 UPDATE/s tren pool 2 ket noi -> login treo.
             if (this.tho_nguyen == 0) {
                 Service.gI().sendThongBaoFromAdmin(this, "|2|Thọ Nguyên đã hết!\n Bạn Bị Phế Bỏ 100 Triệu Năm Tu Vi\nPhế Bỏ Linh Căn Thành Phàm Nhân");
                 this.SagaTuTien[0] = 0;
