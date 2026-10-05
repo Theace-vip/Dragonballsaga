@@ -559,6 +559,10 @@ public class ChangeMapService {
 
     public void finishLoadMap(Player player) {
         // Fix load map 15/09/2023
+        long stFinish = System.currentTimeMillis();
+        // so giay tinh tu luc server gui -24 (timeChangeZone dat ngay truoc mapInfo)
+        long clientLoad = player.timeChangeZone > 0 ? stFinish - player.timeChangeZone : -1;
+        int mapIdHienTai = (player.zone != null && player.zone.map != null) ? player.zone.map.mapId : -1;
         try {
             TaskService.gI().sendUpdateCountSubTask(player);
             player.zone.load_Me_To_Another(player);
@@ -613,6 +617,10 @@ public class ChangeMapService {
                 player.mabuEgg.sendMabuEgg();
             }
         }
+        // DO THOI GIAN: clientLoad = do client load map (+luu lai), phan con lai = server xu ly
+        Logger.log("[MAP] " + player.name + " xong load map " + mapIdHienTai
+                + ": client mat " + clientLoad + "ms tu luc gui -24, server xu ly finishLoadMap "
+                + (System.currentTimeMillis() - stFinish) + "ms\n");
     }
 
     private void sendEffectMeToMap(Player player) {

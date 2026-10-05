@@ -578,6 +578,7 @@ public class Zone {
 
     public void mapInfo(Player pl) {
         Message msg;
+        long stGui24 = System.currentTimeMillis();
         try {
             msg = new Message(-24);
             msg.writer().writeByte(this.map.mapId);
@@ -697,6 +698,10 @@ public class Zone {
             msg.writer().writeByte(pl.iDMark.getIdSpaceShip());
             msg.writer().writeByte(this.map.mapId == 148 ? 1 : 0);
             pl.sendMessage(msg);
+            // DO THOI GIAN: xay goi -24 + enqueue cho client (nao client nhan duoc va load xong la chung ta do duoc)
+            Logger.log("[MAP] gui -24 map=" + this.map.mapId + " zone=" + this.zoneId + " cho " + pl.name
+                    + " mat " + (System.currentTimeMillis() - stGui24) + "ms, queue dang cho gui="
+                    + (pl.getSession() != null ? pl.getSession().getNumMessages() : -1) + "\n");
 
             msg.cleanup();
 
