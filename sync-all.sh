@@ -28,11 +28,12 @@ warn() { echo "[sync][CANH BAO] $*"; FAIL=1; }
 # $1 = thu muc repo, $2 = ten nhanh, $3 = thong diep commit
 commit_and_push() {
     local dir="$1" ref="$2" msg="$3"
-    if [ -z "$(git -C "$dir" status --porcelain)" ]; then
+    git -C "$dir" add -A
+    # kiem tra SAU add (autocrlf co the lam status "dirty" nhung khong doi noi dung)
+    if git -C "$dir" diff --cached --quiet; then
         log "  khong co gi doi — bo qua"
         return 0
     fi
-    git -C "$dir" add -A
     local n
     n=$(git -C "$dir" diff --cached --name-only | wc -l)
     git -C "$dir" commit -q -m "$msg ($n file thay doi, $STAMP)
@@ -144,10 +145,11 @@ echo "Hoan tat: khoi phuc database [$DB]"
 EOF
     chmod +x "$DB_DIR/restore.sh"
 
+    # -B tren Windows tra ket qua CRLF → bo \r, khong thi mysqldump loi "Couldn't find table"
     TABLES=$("$MYSQL" -h127.0.0.1 -uroot -N -B \
         -e "SELECT table_name FROM information_schema.tables
             WHERE table_schema='$DB_NAME' AND table_type='BASE TABLE'
-            ORDER BY table_name" 2>"$TMP/mysql.err")
+            ORDER BY table_name" 2>"$TMP/mysql.err" | tr -d '\r')
     if [ -z "$TABLES" ]; then
         warn "khong dump duoc DB (MySQL chay khong? loi: $(cat "$TMP/mysql.err"))"
     else
