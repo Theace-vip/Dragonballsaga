@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spine online — 431 bộ (GitHub CDN)</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; display: flex; height: 100vh; font: 13px/1.4 system-ui, sans-serif; background: #14161a; color: #e8eaed; }
+  aside { width: 320px; min-width: 240px; border-right: 1px solid #2a2f37; display: flex; flex-direction: column; }
+  aside h1 { font-size: 14px; margin: 0; padding: 12px 12px 8px; font-weight: 600; }
+  aside input { margin: 0 12px 8px; padding: 7px 9px; border-radius: 6px; border: 1px solid #333a44; background: #1c2027; color: inherit; }
+  #list { overflow: auto; flex: 1; padding-bottom: 12px; }
+  #list button { display: block; width: 100%; text-align: left; padding: 6px 12px; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; }
+  #list button:hover { background: #1e242c; }
+  #list button.active { background: #2a3546; color: #fff; }
+  #list button.marked { color: #ff7b72; }
+  #list button.marked::after { content: ' ⚠'; }
+  #list .ver { color: #7f8a99; font-size: 11px; margin-left: 6px; }
+  main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+  #bar { display: flex; gap: 8px; align-items: center; padding: 8px 12px; border-bottom: 1px solid #2a2f37; flex-wrap: wrap; }
+  #bar select, #bar button, #bar input[type=range] { background: #1c2027; color: inherit; border: 1px solid #333a44; border-radius: 6px; padding: 5px 8px; font: inherit; }
+  #bar button { cursor: pointer; }
+  #bar button.primary { background: #2f6feb; border-color: #2f6feb; color: #fff; }
+  #name { font-weight: 600; margin-right: 4px; }
+  #status { color: #9aa4b2; margin-left: auto; }
+  #wrap { flex: 1; position: relative; min-height: 0; background: repeating-conic-gradient(#1b1f26 0% 25%, #171a20 0% 50%) 50% / 24px 24px; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<aside>
+  <h1>Spine online — 431 bộ</h1>
+  <div style="padding:0 12px 8px;color:#7f8a99;font-size:11px;line-height:1.5;">dữ liệu lấy trực tiếp từ GitHub qua CDN<br><b id="srcHost">cdn.jsdelivr.net · nhánh spine-src</b></div>
+  <input id="q" placeholder="tìm: whis, goku, broly, sg441…">
+  <div id="list"></div>
+</aside>
+<main>
+  <div id="bar">
+    <span id="name">chưa chọn</span>
+    <select id="anim" title="animation"></select>
+    <button id="play">⏸ dừng</button>
+    <label>tốc độ <input id="speed" type="range" min="0" max="2.5" step="0.1" value="1" style="width:90px"></label>
+    <label>zoom <input id="zoom" type="range" min="0.2" max="4" step="0.05" value="1" style="width:90px"></label>
+    <button id="save" class="primary">Lưu PNG</button>
+    <label id="markWrap" title="Tick nếu bộ này render không ổn (rác / không hiện nhân vật)" style="display:flex;align-items:center;gap:5px;cursor:pointer;white-space:nowrap;">
+      <input type="checkbox" id="markBad"> <span>bộ này LỖI</span>
+    </label>
+    <button id="saveMarks" title="Ghi danh sách bộ bị đánh dấu ra file cho agent đọc">Lưu đánh dấu (<span id="markCount">0</span>)</button>
+    <span id="status"></span>
+  </div>
+  <div id="wrap"><canvas id="c"></canvas></div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const canvas = $('c');
+const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true, preserveDrawingBuffer: true, antialias: true });
+
+let sets = [];
+let current = null, skeleton = null, animState = null, renderer = null, assetManager = null, atlas = null;
+let camX = 0, camY = 200, camH = 800, zoomFactor = 1, speed = 1, playing = true, lastTime = 0;
+let loadedVer = null;
+let loadGen = 0; // so hieu loadSet: neu co loadSet moi hon chay, loadSet cu dung lai (khong dap vao state moi)
+
+// CDN lay du lieu spine tu GitHub (nhanh, co cache). Them ?raw=1 de doi sang raw.githubusercontent.com
+const CDN = location.search.includes('raw')
+  ? 'https://raw.githubusercontent.com/Theace-vip/Dragonballsaga/spine-src/spine_export_remote/'
+  : 'https://cdn.jsdelivr.net/gh/Theace-vip/Dragonballsaga@spine-src/spine_export_remote/';
+
+function status(msg) { $('status').textContent = msg; console.log('[viewer]', msg); }
+
+async function ensureRuntime(ver) {
+  const want = ver.startsWith('4.2') ? '4.2' : '4.1';
+  if (loadedVer === want && window.spine) return;
+  const file = want === '4.2' ? 'spine-webgl-4.2.11.js' : 'spine-webgl-4.1.24.js';
+  await new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = file;
+    s.onload = res;
+    s.onerror = () => rej(new Error('không tải được ' + file));
+    document.head.appendChild(s);
+  });
+  loadedVer = want;
+  status('đã nạp runtime spine-webgl ' + want);
+}
+
+function waitForLoad(am) {
+  return new Promise((res, rej) => {
+    const started = performance.now();
+    let done = false, raf = 0, timer = 0;
+    const finish = (fn, arg) => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      cancelAnimationFrame(raf);
+      fn(arg);
+    };
+    const check = () => {
+      if (done) return;
+      // Bat try/catch: neu loi o day, Promise se khong bao gio ket thuc -> viewer "dang nạp" ma khong bao loi
+      try {
+        if (am.hasErrors()) {
+          const errs = am.getErrors(); // tra ve OBJECT (map path -> message), khong phai array
+          const list = Array.isArray(errs) ? errs : Object.keys(errs).map((k) => errs[k]);
+          return finish(rej, new Error(list.join('; ')));
+        }
+        if (am.isLoadingComplete()) return finish(res);
+        if (performance.now() - started > 20000) return finish(rej, new Error('hết 20s chờ tải asset'));
+      } catch (e) {
+        return finish(rej, e);
+      }
+    };
+    // KHONG chi dua vao rAF: khi trang bi an (tab khong thay), rAF dung het -> ca timeout cung khong chay
+    // -> loadSet treo moi doi. setInterval van chay khi an.
+    timer = setInterval(check, 50);
+    const tick = () => { check(); if (!done) raf = requestAnimationFrame(tick); };
+    raf = requestAnimationFrame(tick);
+  });
+}
+
+const req = (am, path) => (typeof am.require === 'function' ? am.require(path) : am.get(path));
+
+async function loadSet(item) {
+  const gen = ++loadGen;
+  try {
+    status('đang nạp ' + item.name + '…');
+    await ensureRuntime(item.ver);
+    if (gen !== loadGen) return; // da co loadSet moi hon -> bo qua
+    current = item;
+    playing = true; // bo moi tai luon chay lai (tranh keo theo trang thai tam dung cua bo truoc)
+    $('play').textContent = '⏸ dừng';
+    updateMarkUI();
+    $('name').textContent = item.name + ' (spine ' + item.ver + ')';
+    [...$('list').children].forEach((b) => b.classList.toggle('active', b.dataset.name === item.name));
+    document.title = 'Spine — ' + item.name;
+
+    const base = CDN + encodeURIComponent(item.name) + '/';
+    console.log('[cdn] load', item.name, '->', base + item.skel);
+    const context = new spine.ManagedWebGLRenderingContext(gl);
+    if (assetManager && assetManager.dispose) { try { assetManager.dispose(); } catch (e) {} }
+    assetManager = new spine.AssetManager(context, base);
+    assetManager.loadTextureAtlas(item.atlas);
+    await waitForLoad(assetManager);
+    if (gen !== loadGen) return; // da co loadSet moi hon -> bo qua
+
+    // KHONG gan vao `atlas` ngay: neu parse loi, skeleton/atlas cu + texture moi se bi ket hop sai -> hinh rac
+    const newAtlas = req(assetManager, item.atlas);
+    const atlasLoader = new spine.AtlasAttachmentLoader(newAtlas);
+    let data;
+    if (item.skel.toLowerCase().endsWith('.json')) {
+      const txt = await (await fetch(base + item.skel)).text();
+      if (gen !== loadGen) return;
+      data = new spine.SkeletonJson(atlasLoader).readSkeletonData(JSON.parse(txt));
+    } else {
+      const buf = await (await fetch(base + item.skel)).arrayBuffer();
+      if (gen !== loadGen) return;
+      data = new spine.SkeletonBinary(atlasLoader).readSkeletonData(new Uint8Array(buf));
+    }
+
+    skeleton = new spine.Skeleton(data);
+    // GOP TAT CA SKIN: nhieu bo (g13_*, VLT...) dat mat/mat the/phan than vao skin rieng
+    // (biaoqing, kong...) va chi hien khi game SetSkin — chi dung default se thieu mat/than/chan, animation
+    // goi ten attachment o skin khac bi null -> an. Gop moi skin vao mot skin chung; default giu vi tri tranh
+    // doi attachment cung ten. (SetSkin luc skeleton.skin=null se attach attachment setup tu skin chung.)
+    if (data.skins && data.skins.length > 1) {
+      try {
+        const combined = new spine.Skin('viewer_all');
+        const ordered = data.skins.slice().sort((a, b) => (a.name === 'default' ? 1 : 0) - (b.name === 'default' ? 1 : 0));
+        for (const sk of ordered) combined.addSkin(sk);
+        skeleton.setSkin(combined);
+      } catch (e) { console.warn('gop skin loi, dung default', e); }
+    }
+    animState = new spine.AnimationState(new spine.AnimationStateData(data));
+    renderer = new spine.SceneRenderer(canvas, context);
+    atlas = newAtlas; // chi gan sau khi parse thanh cong
+
+    const names = data.animations.map((a) => a.name);
+    $('anim').innerHTML = names.map((n) => `<option>${n}</option>`).join('');
+    // Animation dau tien co the RONG (vd H27703: 'action1' co 0 timeline, duration 0) -> khong doi gi
+    // nao ca, skeleton giu pose 'sheet' 205 manh -> hinh van ra. Chon animation dau tien CO timeline.
+    let pick = data.animations.findIndex((a) => a.timelines && a.timelines.length > 0);
+    if (pick < 0) pick = 0;
+    if (names.length) play(names[pick]);
+
+    // Thu camera tren NHIEU moc thoi gian cua animation: nhieu bo (*_texiao) setup khong co
+    // attachment nao, hinh chi xuat hien o giua/ku animation -> chi fit pose t=0.3 thi vuot qua hoi.
+    const extraBoxes = [];
+    try {
+      const an = data.animations[pick];
+      if (an && names.length) {
+        const dur = an.duration || 1;
+        const times = [...new Set([0.3, dur * 0.2, dur * 0.4, dur * 0.6, dur * 0.8, dur])].filter(t => t > 0).sort((a, b) => a - b);
+        for (const t of times) {
+          animState.setAnimation(0, names[pick], true);
+          animState.update(t);
+          animState.apply(skeleton);
+          skeleton.updateWorldTransform();
+          extraBoxes.push(...attachmentBoxes());
+        }
+        play(names[pick]); // chay lai tu dau
+      }
+    } catch (e) { /* anim rong/khong apply duoc -> fitCamera tu fallback */ }
+
+    fitCamera(extraBoxes);
+    status(item.name + ': ' + names.length + ' animation, spine ' + item.ver);
+
+    // CHON ANIM CO HINH + GIU FRAME RO (thay cho cu "anim dau tien + quet 9 moc" cua ban truoc).
+    //   Van de da gap: Full_FX/g13_*_texiao co animation dau tien TRANG toan phan, noi dung nam o
+    //   animation khac -> user thay KHONG HIEN GI CA; va quet 0.1..0.9 bo qua moc dau/cuoi nen
+    //   FX chi xuat hien o 2 dau vong lap bi lo.
+    //   Moi: (1) coarse 5 moc tren TAT CA anim -> chon anim peak cao nhat neu anim mac dinh yeu qua;
+    //        (2) fine 11 moc (0..1) tren anim duoc chon -> neu rai thi giu frame ro nhat;
+    //        (3) fit camera lai theo bbox cua chinh anim duoc chon tai cac moc co hinh.
+    try {
+      const countPx = () => {
+        const N = 64, oc = document.createElement('canvas'); oc.width = N; oc.height = N;
+        const c = oc.getContext('2d', { willReadFrequently: true });
+        c.clearRect(0, 0, N, N); c.drawImage(canvas, 0, 0, N, N);
+        const d = c.getImageData(0, 0, N, N).data;
+        let n = 0; for (let i = 0; i < N * N; i++) if (d[i * 4 + 3] > 16) n++;
+        return n;
+      };
+      const seek = (name, t) => {
+        animState.setAnimation(0, name, true);
+        animState.update(t); animState.apply(skeleton); skeleton.updateWorldTransform(); frame();
+      };
+      if (names.length && playing) {
+        const durOf = i => (data.animations[i].duration || 1);
+        const coarse = [0, 0.3, 0.6, 0.9, 1];
+        // (1) coarse toan bo anim -> chon anim tot nhat.
+        //   - Moi anim duoc fit camera RIENG truoc khi do px: truoc day tat ca dung chung 1 camera
+        //     (fit theo anim dau tien) -> nhan vat (khung nho) bi px thua FX lon: H27701S1 chon Aaction1
+        //     (chi co FX, khong co nhan vat) -> user thay "vo hoan toan".
+        //   - Diem = px * so slot dang hien: thuong tot cho bo co nhan vat; bo FX trong van dung
+        //     (px lon, slot it van co diem cao).
+        const scores = [], peaks = [], coarseBoxes = [];
+        let bestIdx = -1, bestScore = 0, bestPeak = 0;
+        for (let i = 0; i < data.animations.length; i++) {
+          if (!data.animations[i].timelines || !data.animations[i].timelines.length) { scores.push(0); peaks.push(0); coarseBoxes.push([]); continue; }
+          const durA = Math.max(durOf(i), 0.3);
+          const marks = [...new Set(coarse.map(f => +(durA * f).toFixed(2)))];
+          const boxes = [];
+          for (const t of marks) {
+            animState.setAnimation(0, names[i], true);
+            animState.update(t); animState.apply(skeleton); skeleton.updateWorldTransform();
+            boxes.push(...attachmentBoxes());
+          }
+          fitCamera(boxes); // camera rieng cho chinh anim nay -> px cong bang
+          let peak = 0, shown = 0;
+          for (const t of marks) {
+            seek(names[i], t);
+            const px = countPx();
+            if (px > peak) { peak = px; shown = skeleton.slots.filter(s => s.attachment).length; }
+          }
+          peaks.push(peak);
+          scores.push(peak * Math.max(shown, 1));
+          coarseBoxes.push(boxes);
+          if (scores[i] > bestScore) { bestScore = scores[i]; bestIdx = i; bestPeak = peak; }
+        }
+        if (bestPeak < 25) {
+          // khong thay hinh o BAT KY anim nao -> bao ro cho user, van chay binh thuong
+          play(names[pick]);
+          fitCamera(extraBoxes);
+          status(item.name + ': ⚠ không thấy hình ở animation nào (data có thể trống) — ' + names.length + ' animation');
+        } else {
+          // (2) chuyen sang anim tot neu anim mac dinh qua yeu (dung diem px*slot)
+          let target = pick;
+          if (bestIdx >= 0 && bestIdx !== pick) {
+            const own = scores[pick] || 0;
+            if (own < Math.max(bestScore * 0.5, 60)) target = bestIdx;
+          }
+          // (3) fine 11 moc tren target, gom box de fit camera
+          fitCamera(coarseBoxes[target] || []); // camera rieng cua anim se chon -> px giua cac moc tuong minh
+          const durT = durOf(target);
+          const fine = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1];
+          const pxs = []; const boxes = []; const frameBoxes = [];
+          for (const f of fine) {
+            const t = +(Math.max(durT, 0.3) * f).toFixed(2);
+            seek(names[target], t);
+            const fb = attachmentBoxes();
+            frameBoxes.push(fb);
+            boxes.push(...fb);
+            pxs.push({ t, px: countPx() });
+          }
+          fitCamera(boxes);
+          let peakIdx = 0, peakPx = 0, peakT = 0;
+          pxs.forEach((p, i) => { if (p.px > peakPx) { peakPx = p.px; peakT = p.t; peakIdx = i; } });
+          const nguong = Math.max(peakPx, 150) * 0.05;
+          const trong = pxs.filter(p => p.px < nguong).length;
+          if (peakPx >= 25 && trong >= 3) {
+            $('anim').value = names[target]; // dropdown phai theo anim duoc chon (seek khong doi dropdown)
+            seek(names[target], peakT);
+            // FIT LAI theo CHINH frame se hien: fitCamera(boxes) dung UNION qua cac moc (keo khung rong
+            // -> camH hang nghin, nhan vat nho thot ~1% khung — H23601, H27701S1), roi chinh tiep theo
+            // bbox pixel thuc te (loai FX trong/alpha0 khong ve ra gi — H27705).
+            fitCamera(frameBoxes[peakIdx] || []);
+            frame();
+            fitCameraByPixels();
+            frame();
+            playing = false;
+            $('play').textContent = '▶ chạy';
+            status(names[target] + ': hiệu ứng chỉ hiện vài đoạn/lần — đang giữ frame rõ nhất (t=' + peakT + 's)'
+              + (target !== pick ? ' (anim mặc định trống, đã chuyển sang anim có hình)' : '') + ', bấm ▶ để chạy');
+          } else {
+            play(names[target]);
+            // Dau vong trong (t=0 khong co hinh) nhung vong lap co nhieu hinh -> bat dau tu frame co hinh
+            // de user khong thay TRANG luc moi load (play() da setAnimation, bay gio moi advance len peakT).
+            const startFromPeak = peakPx >= 25 && pxs[0].px < nguong;
+            if (startFromPeak) {
+              animState.update(peakT); animState.apply(skeleton); skeleton.updateWorldTransform(); frame();
+            }
+            // Fit theo frame BAT DAU (hinh user thay dau tien), khong fit frame peak: peak co the la
+            // khung FX rong (action3 H27701S1) -> camera keo xa, nhan vat troi nho thot trong khung.
+            fitCamera(frameBoxes[startFromPeak ? peakIdx : 0] || []);
+            frame();
+            fitCameraByPixels();
+            frame();
+            if (target !== pick) status(names[target] + ': anim mặc định trống — đang chạy anim có hình nhất');
+          }
+        }
+      }
+    } catch (e) { console.warn('quét frame lỗi, bỏ qua', e); play(names[pick]); }
+  } catch (err) {
+    if (gen !== loadGen) return; // loi cua loadSet da bi thay the -> khong xoa state cua bo moi
+    status('LỖI: ' + err.message);
+    console.error(err);
+    // Xoa trang thai nua chua: neu khong, frame() se ve skeleton cu bang texture cua bo moi -> hinh rac
+    skeleton = null;
+    animState = null;
+    renderer = null;
+    atlas = null;
+    $('anim').innerHTML = '';
+    $('name').textContent = item.name + ' (LỖI)';
+    try {
+      gl.viewport(0, 0, canvas.width, canvas.height);
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+    } catch (e) {}
+  }
+}
+
+function play(name) {
+  if (!skeleton) return;
+  animState.setAnimation(0, name, true);
+  $('anim').value = name;
+  lastTime = performance.now() / 1000;
+}
+
+// Doc world vertices cua tung attachment dang hien tai (pose hien tai) -> cac bbox
+function attachmentBoxes() {
+  const boxes = [];
+  for (const s of skeleton.slots) {
+    const a = s.attachment;
+    if (!a || typeof a.computeWorldVertices !== 'function') continue;
+    let w = [];
+    try { a.computeWorldVertices(s, w, 0, 2); } catch (e) { w = []; } // Region: 4 tham so
+    if (!w.length && a.worldVerticesLength) {
+      try { a.computeWorldVertices(s, 0, a.worldVerticesLength, w, 0, 2); } catch (e) { w = []; } // Mesh: 6 tham so
+    }
+    if (!w.length) continue;
+    let x0 = 1e18, y0 = 1e18, x1 = -1e18, y1 = -1e18, ok = false;
+    for (let i = 0; i + 1 < w.length; i += 2) {
+      if (!isFinite(w[i]) || !isFinite(w[i + 1])) continue;
+      ok = true;
+      x0 = Math.min(x0, w[i]); x1 = Math.max(x1, w[i]);
+      y0 = Math.min(y0, w[i + 1]); y1 = Math.max(y1, w[i + 1]);
+    }
+    if (ok && x1 > x0 && y1 > y0) boxes.push({ x0, y0, x1, y1 });
+  }
+  return boxes;
+}
+
+// Nhom cac bbox co khoang cach <= gap (lien ket), lay cum LON NHAT lam noi dung chinh.
+// Bo vi du g13_qinglong_nv co 1 attachment 'nv_1' bi dat cach 2400 don vi -> getBounds bi keo lo,
+// tam camera ra giua khung trong -> canvas trong mot khi 43 attachment kia nam luc 0.
+function clusterBounds(boxes, gap) {
+  const n = boxes.length;
+  const parent = boxes.map((_, i) => i);
+  const find = i => (parent[i] === i ? i : (parent[i] = find(parent[i])));
+  const uni = (a, b) => { a = find(a); b = find(b); if (a !== b) parent[b] = a; };
+  for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+    const a = boxes[i], b = boxes[j];
+    const dx = Math.max(0, Math.max(a.x0 - b.x1, b.x0 - a.x1));
+    const dy = Math.max(0, Math.max(a.y0 - b.y1, b.y0 - a.y1));
+    if (Math.max(dx, dy) <= gap) uni(i, j);
+  }
+  const groups = {};
+  for (let i = 0; i < n; i++) (groups[find(i)] = groups[find(i)] || []).push(boxes[i]);
+  let best = null;
+  for (const k in groups) if (!best || groups[k].length > best.length) best = groups[k];
+  if (!best) return null;
+  const r = { x0: 1e18, y0: 1e18, x1: -1e18, y1: -1e18 };
+  for (const b of best) { r.x0 = Math.min(r.x0, b.x0); r.x1 = Math.max(r.x1, b.x1); r.y0 = Math.min(r.y0, b.y0); r.y1 = Math.max(r.y1, b.y1); }
+  return r;
+}
+
+function fitCamera(extraBoxes) {
+  try {
+    skeleton.updateWorldTransform();
+    const boxes = attachmentBoxes().concat(extraBoxes || []);
+    let b = boxes.length ? clusterBounds(boxes, 300) : null;
+    if (!b) {
+      const offset = new spine.Vector2(), size = new spine.Vector2();
+      skeleton.getBounds(offset, size, []);
+      if (size.x > 0 && size.y > 0 && isFinite(size.x) && isFinite(size.y)) b = { x0: offset.x, y0: offset.y, x1: offset.x + size.x, y1: offset.y + size.y };
+    }
+    if (!b) { camX = 0; camY = 200; camH = 800; return; }
+    const w = b.x1 - b.x0, h = b.y1 - b.y0;
+    const aspect = canvas.width / Math.max(canvas.height, 1);
+    camX = (b.x0 + b.x1) / 2;
+    camY = (b.y0 + b.y1) / 2;
+    // fit cao NHOI va rong NHOI, nhung CHAN zoom-out: neuchieu rong keo camera qua xa thi nhan vat
+    // troi nho thot trong khung (fieza, H27705...). Toi da: noi dung >= 33% chieu cao khung.
+    const fitW = (w * 1.15) / Math.max(aspect, 0.1);
+    camH = Math.min(Math.max(h * 1.15, fitW), Math.max(h * 3, 320));
+  } catch (e) { console.warn('fitCamera lỗi, dùng khung mặc định', e); camX = 0; camY = 200; camH = 800; }
+}
+
+function fitCameraByPixels() {
+  // Fit camera theo bbox PIXEL THUC TE cua frame dang xem (khong theo geometry):
+  //  FX alpha~0 / attachment trong khong ve ra gi nhung geometry van rong -> fitCamera keo camera qua xa
+  //  (H27705: geometry rong 1460 don vi, pixel that chi ~470 -> nhan vat chi chip 8% khung).
+  //  Can frame() TRUOC khi goi (doc dung frame vua ve). Tra ve true neu fit thanh cong.
+  try {
+    const W = canvas.width, H = canvas.height;
+    if (!W || !H || !skeleton) return false;
+    const S = 160;
+    const oc = document.createElement('canvas'); oc.width = S; oc.height = S;
+    const c = oc.getContext('2d', { willReadFrequently: true });
+    c.clearRect(0, 0, S, S);
+    c.drawImage(canvas, 0, 0, S, S);
+    const d = c.getImageData(0, 0, S, S).data;
+    let x0 = S, y0 = S, x1 = -1, y1 = -1;
+    for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) {
+      if (d[(y * S + x) * 4 + 3] > 16) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+    }
+    if (x1 < 0) return false; // frame trong -> giu camera hien tai
+    const aspect = W / Math.max(H, 1);
+    const viewH = camH / Math.max(zoomFactor, 0.01);
+    const viewW = viewH * aspect;
+    const toW = px => camX + (px / S - 0.5) * viewW;
+    const toY = py => camY - (py / S - 0.5) * viewH; // pixel y xuoi, world y len
+    const wx0 = toW(x0 - 0.5), wx1 = toW(x1 + 0.5), wy0 = toY(y1 + 0.5), wy1 = toY(y0 - 0.5);
+    const w = wx1 - wx0, h = wy1 - wy0;
+    if (!(w > 0) || !(h > 0) || !isFinite(w) || !isFinite(h)) return false;
+    camX = (wx0 + wx1) / 2;
+    camY = (wy0 + wy1) / 2;
+    const fitW = (w * 1.25) / Math.max(aspect, 0.1);
+    camH = Math.min(Math.max(h * 1.25, fitW), Math.max(h * 3, 320)) * Math.max(zoomFactor, 0.01);
+    return true;
+  } catch (e) { console.warn('fitCameraByPixels loi', e); return false; }
+}
+
+function resize() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = canvas.clientWidth, h = canvas.clientHeight;
+  if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+  }
+}
+
+function frame() {
+  // CHI ve truc tiep — KHONG requestAnimationFrame o day: truoc day moi loi go frame() tai vi tri
+  // (seek/loadSet) deu tang them 1 loop RAF moi -> moi lan load bo them ~15 loop, xem nhieu bo
+  // -> tram loop ve cung 1 khung (lang phi CPU/GPU). RAF loop chi dung 1 (xem startLoop).
+  resize();
+  if (!skeleton || !renderer) return;
+
+  const now = performance.now() / 1000;
+  const delta = Math.min(now - (lastTime || now), 0.1);
+  lastTime = now;
+  if (playing) {
+    animState.update(delta * speed);
+    animState.apply(skeleton);
+  }
+  skeleton.updateWorldTransform();
+
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.clearColor(0, 0, 0, 0);
+  gl.clear(gl.COLOR_BUFFER_BIT);
+
+  const cam = renderer.camera;
+  cam.position.x = camX;
+  cam.position.y = camY;
+  cam.viewportHeight = camH / zoomFactor;
+  cam.viewportWidth = (camH / zoomFactor) * (canvas.width / Math.max(canvas.height, 1));
+  cam.update();
+
+  renderer.begin();
+  renderer.drawSkeleton(skeleton, !!(atlas && atlas.pma));
+  renderer.end();
+}
+
+// RAF loop duy nhat: frame() chi ve, loop nay keo frame() lien tuc
+let loopStarted = false;
+function startLoop() {
+  if (loopStarted) return;
+  loopStarted = true;
+  const tick = () => { frame(); requestAnimationFrame(tick); };
+  requestAnimationFrame(tick);
+}
+
+async function savePng() {
+  if (!skeleton) return;
+  status('đang lưu ảnh…');
+  const anim = $('anim').value || 'anim';
+  canvas.toBlob((blob) => {
+    const a = document.createElement('a');
+    const out = current.name + '--' + anim.replace(/[^\w.-]+/g, '_') + '.png';
+    a.href = URL.createObjectURL(blob);
+    a.download = out;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+    status('đã tải ' + out);
+  }, 'image/png');
+}
+
+$('q').addEventListener('input', renderList);
+$('anim').addEventListener('change', (e) => play(e.target.value));
+$('play').addEventListener('click', () => { playing = !playing; $('play').textContent = playing ? '⏸ dừng' : '▶ chạy'; lastTime = performance.now() / 1000; });
+$('speed').addEventListener('input', (e) => { speed = parseFloat(e.target.value); });
+$('zoom').addEventListener('input', (e) => { zoomFactor = parseFloat(e.target.value); });
+$('save').addEventListener('click', savePng);
+
+// ---- Danh sach bo loi do NGUOI DUNG tick (agent doc file nay de xem tung cai) ----
+const MARKS_KEY = 'spine_web_marks';
+let marks = {};
+async function loadMarks() {
+  try { marks = JSON.parse(localStorage.getItem(MARKS_KEY) || '{}'); } catch (e) { marks = {}; }
+  updateMarkUI();
+}
+async function saveMarks() {
+  try { localStorage.setItem(MARKS_KEY, JSON.stringify(marks)); return true; } catch (e) { return false; }
+}
+function updateMarkUI() {
+  $('markCount').textContent = Object.keys(marks).length;
+  $('markBad').checked = !!(current && marks[current.name]);
+}
+$('markBad').addEventListener('change', async (e) => {
+  if (!current) return;
+  if (e.target.checked) marks[current.name] = { anim: $('anim').value, at: new Date().toISOString() };
+  else delete marks[current.name];
+  const btn = document.querySelector('#list button[data-name="' + CSS.escape(current.name) + '"]');
+  if (btn) btn.classList.toggle('marked', e.target.checked);
+  const ok = await saveMarks(); // tu luu moi lan tick -> khong mat neu quen nhan Luu
+  updateMarkUI();
+  status((ok ? 'đã đánh dấu + lưu tự động' : 'LỖI KHÔNG LƯU ĐƯỢC') + ' — ' + Object.keys(marks).length + ' bộ trong danh sách lỗi');
+});
+$('saveMarks').addEventListener('click', async () => {
+  const ok = await saveMarks();
+  updateMarkUI();
+  status(ok ? 'đã lưu ' + Object.keys(marks).length + ' bộ đánh dấu vào localStorage' : 'LỖI không ghi được đánh dấu');
+});
+loadMarks();
+
+function renderList() {
+  const q = $('q').value.trim().toLowerCase();
+  const items = q ? sets.filter((s) => s.name.toLowerCase().includes(q)) : sets;
+  $('list').innerHTML = items
+    .map((s) => `<button data-name="${s.name}" class="${marks[s.name] ? 'marked' : ''}">${s.name}<span class="ver">${s.ver}</span></button>`)
+    .join('');
+  [...$('list').children].forEach((b) => b.addEventListener('click', () => loadSet(sets.find((s) => s.name === b.dataset.name))));
+}
+
+(async () => {
+  try {
+    sets = await (await fetch('sets.json')).json();
+    status(sets.length + ' bộ spine sẵn sàng — dữ liệu tải từ GitHub CDN');
+    renderList();
+    const first = sets.find((s) => s.name === 'whis') || sets[0];
+    if (first) loadSet(first);
+  } catch (e) {
+    if (location.protocol === 'file:') {
+      status('không tải được danh sách vì đang mở bằng file://');
+      $('list').innerHTML = '<div style="padding:12px">Trang cần chạy qua HTTP (fetch sets.json).<br><br>Chạy <b>node serve.js</b> trong thư mục này rồi mở <b>http://localhost:5760/</b>, hoặc host lên GitHub Pages.</div>';
+      return;
+    }
+    status('LỖI: ' + e.message);
+  }})();
+
+startLoop(); // RAF loop duy nhat (frame() chi ve truc tiep khi duoc goi)
+</script>
+</body>
+</html>

@@ -208,6 +208,7 @@ public class GenCaitrang {
         if (set.equals("g13_juitianxuannv")) return "Cải trang VLT 052";
         if (set.equals("g13_qiongqi_nan")) return "Cải trang VLT 090";
         if (set.equals("g13_tongtianjiaozhu4")) return "Thông Thiên Giáo Chủ";
+        if (set.equals("g13_houtu2")) return "Hậu Thổ";
         return "Cải trang " + set;
     }
 
