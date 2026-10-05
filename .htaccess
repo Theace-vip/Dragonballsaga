@@ -1,0 +1,20 @@
+RewriteEngine On
+
+RewriteRule ^login$ /login.php [L]
+RewriteRule ^register$ /register.php [L]
+RewriteRule ^naptien$ /naptien.php [L]
+RewriteRule ^logout$ /logout.php [L]
+RewriteRule ^change-password$ /change-password.php [L]
+RewriteRule ^napcard$ /recharge_card.php [L]
+RewriteRule ^huongdan$ /huongdan.php [L]
+
+RewriteRule ^home$ /index.php [L]
+
+
+##rank
+RewriteRule ^power$ /rank/top-power.php [L]
+RewriteRule ^task$ /rank/top-task.php [L]
+RewriteRule ^money$ /rank/top-money.php [L]
+
+##mocnap
+RewriteRule ^mocnap$ /cpanel/moc-nap.php [L]

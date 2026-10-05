@@ -1,0 +1,39 @@
+//CODE CHẶN F12 GỐC
+    // document.addEventListener('contextmenu', event => event.preventDefault());
+    // document.addEventListener('keydown', function(event) {
+    //     if (
+    //         event.key === "F12" ||
+    //         (event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J" || event.key === "C")) ||
+    //         (event.ctrlKey && (event.key === "U" || event.key === "S"))
+    //     ) {
+    //         event.preventDefault();
+    //         return false;
+    //     }
+    // });
+
+    function detectDevTools() {
+        const threshold = 160;
+        if (
+            (window.outerWidth - window.innerWidth > threshold) ||
+            (window.outerHeight - window.innerHeight > threshold)
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    if (detectDevTools()) {
+        let count = parseInt(localStorage.getItem('devtools_reload_count')) || 0;
+        count++;
+        localStorage.setItem('devtools_reload_count', count);
+
+        if (count < 10) {
+            location.reload();
+        } else {
+            localStorage.removeItem('devtools_reload_count');
+            window.location.href = 'https://www.google.com';
+        }
+    } else {
+        // Nếu DevTools không mở, reset biến đếm
+        localStorage.removeItem('devtools_reload_count');
+    }
