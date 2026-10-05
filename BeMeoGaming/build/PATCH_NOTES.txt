@@ -1,0 +1,68 @@
+PATCH NOTES — SpineRemote (cach A): cai trang spine tai tu GitHub, ve 60fps tai client
+=======================================================================================
+Ngay: 2026-10-05        Unity: 2022.3.62f3        Applies to: Game1 / Game2 / Game3
+
+1. CACH CAI
+------------------
+Giai nen client_patch.zip vao thu muc GOC cua project Unity (TuanBip), chon
+"Replace all" khi hoi. Ket qua:
+
+  Assets/Scripts/SpineRemote/           (47 file: 46 .cs spine-csharp 4.1 + shader)
+  Assets/Scripts/SpineRemote/SpineRemote.cs          <- loader + renderer + bang cau hinh
+  Assets/Scripts/SpineRemote/Resources/SpineRemotePMA.shader
+  Assets/Scripts/Game1/Char.cs          <- da patch hook TryPaint (dong ~6274)
+  Assets/Scripts/Game2/Char.cs          <- idem
+  Assets/Scripts/Game3/Char.cs          <- idem
+  PATCH_NOTES.txt
+
+File .meta Unity tu sinh khi mo project — khong can copy.
+
+2. NOI DUNG THAY DOI
+------------------
+- Char.paintCharBody (3 ban Game1/2/3): sau paintHat_behind, truoc paintRedEye,
+  goi SpineRemote.TryPaint(...). Tra ve false (khong mac cai trang spine / dang tai /
+  loi parse / khong phai spine 4.1) -> ve part bitmap cu y nhu truoc. KHONG anh huong
+  nhan vat thuong, skill, pet, NPC.
+- SpineRemote: tai .atlas + .png + .skel tu GitHub CDN (jsdelivr, nhanh, co cache),
+  parse bang spine-csharp 4.1 (kem san, khong can cai package), render 60fps
+  moi frame: skeleton -> mesh -> camera nho (RT 512, layer 31) -> Graphics.DrawTexture
+  tai dung vi tri goi. KHONG bake frame, KHONG can build lai client khi them set moi.
+- Anim theo cf (0..32): dung->stand, di->run, danh->attack, skill->skill (xem CF2CAT).
+
+3. CACH TEST IN-GAME
+------------------
+- Mac cai trang "Hau Tho" (item 1939, part 2155/2156/2157) cho nhan vat.
+- Lan dau: log Console/Logcat se thay "[SpineRemote] tai <set> ..." — tai ~1-2MB
+  tu CDN, sau do cache o:
+      Windows Editor: %USERPROFILE%\AppData\LocalLow\<ten game>\spine\<set>\
+      Android: /data/data/<goi game>/files/spine/<set>/
+  Xoa thu muc nay de test lai viec tai.
+- Kiem tra: nhan vat ve day du (dau + than + chan), dung 60fps, doi huong
+  (mirror) dung, khong loi Console.
+- Neu NGUOC dau / NGUOC CHAN: doi const FLIP_Y = true (SpineRemote.cs dong ~45).
+- Neu DAO TRAI/PHAI: trong TryPaint dang nhan dest width/height AM de mirror —
+  neu nguoc thi bo dau am (xem comment trong TryPaint).
+- Neu to/nho/khong dung vi tri: chinh CHAR_PX (400 = chieu cao nhan vat trong RT)
+  va bang cfg (s = scale x2px/world lay tu log bake GenCaitrang).
+
+4. THEM SET MOI (khong can build lai client)
+------------------
+a) Server (da co pipeline): them itemNameFor trong tools/GenCaitrang.java,
+   chay pipeline cai trang (export frame + bytefit + DB) de sinh item/part.
+b) Client: them 1 dong vao bang `table` trong SpineRemote.cs:
+       { <part_head_id>, new Cfg { set = "<ten_set_spine>", s = <scale_tu_log_bake> } },
+c) Push spine len nhanch spine-src (CDN tu cap nhat). Client tai tu dong.
+
+5. GIOI HAN / FALLBACK
+------------------
+- Chi set spine 4.1 (4.2+ se parse loi -> fallback part). Neu can 4.2: cap nhat
+  thu vien trong SpineRemote/ (tai tu spine-runtimes nhanh 4.2).
+- Moi set chi 1 atlas page (nhieu page -> failed -> fallback).
+- Ten anim phai co "stand"/"run"/"attack"/"skill"/"dead" (xem STAND_CAND...).
+- Moi khi loi/dang tai -> ve part cu, khong crash, khong do hinh.
+- Cache 1 lan, giu den khi app thoat (khong doc lai disk moi frame).
+
+6. HIEU NUNG
+------------------
+- Chi co camera RT khi co nhan vat dang mac cai trang spine; khong thay doi
+  pipeline ve Paint cu. Neu thay lag o may yeu: giam RT (512 -> 256) trong SpineRemote.cs.
