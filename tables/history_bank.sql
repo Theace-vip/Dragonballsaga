@@ -33,7 +33,7 @@ CREATE TABLE `history_bank` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_code_per_user` (`username`,`code`),
   KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `history_bank` (
 
 LOCK TABLES `history_bank` WRITE;
 /*!40000 ALTER TABLE `history_bank` DISABLE KEYS */;
+INSERT INTO `history_bank` VALUES (12,'theace',20000,20000,'150900601161 0901632064 naptientheace CKN 901873 E2PZDSER - CONG TY CP DICH VU DI DONG TRUC TUYEN - Ngan hang TMCP Dau tu va Phat trien Viet Nam','sp_88520526','2026-10-10 01:46:13'),(13,'theace',20000,200000,'naptientheace CKN 682295 M2LIMX4K - NGUYEN THIEU BAO - Cong Ty Co phan Dich vu Di dong Truc tuyen MoMo','sp_88520709','2026-10-10 01:47:58');
 /*!40000 ALTER TABLE `history_bank` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 20:40:50
+-- Dump completed on 2026-10-10 19:29:21

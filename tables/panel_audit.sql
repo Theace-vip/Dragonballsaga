@@ -29,7 +29,7 @@ CREATE TABLE `panel_audit` (
   `detail` text DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `panel_audit` (
 
 LOCK TABLES `panel_audit` WRITE;
 /*!40000 ALTER TABLE `panel_audit` DISABLE KEYS */;
+INSERT INTO `panel_audit` VALUES (1,'panel','nap_rate','rate=x3 enabled=1 note=test tu dong','2026-10-09 18:25:11'),(2,'panel','nap_rate','rate=x50 enabled=1 note=thu tran','2026-10-09 18:25:12'),(3,'panel','nap_rate','rate=x1 enabled=0','2026-10-09 18:25:12'),(4,'panel','nap_rate','rate=x3 enabled=1 note=test tu dong','2026-10-09 18:26:23'),(5,'panel','nap_rate','rate=x50 enabled=1 note=thu tran','2026-10-09 18:26:23'),(6,'panel','nap_rate','rate=x1 enabled=0','2026-10-09 18:26:23'),(7,'panel','nap_rate','rate=x10 enabled=1 until=2026-10-11','2026-10-09 18:47:15'),(8,'panel','nap_rate','rate=x1 enabled=0','2026-10-09 18:48:19'),(9,'panel','nap_rate','rate=x1 enabled=1','2026-10-09 18:48:24'),(10,'panel','createGiftcode','test001 count=100 hetHan=30ngay','2026-10-09 21:02:36'),(11,'panel','createGiftcode','test0001 count=100 hetHan=30ngay','2026-10-09 21:04:36');
 /*!40000 ALTER TABLE `panel_audit` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 20:40:53
+-- Dump completed on 2026-10-10 19:29:24

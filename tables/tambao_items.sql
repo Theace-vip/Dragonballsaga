@@ -28,14 +28,14 @@ CREATE TABLE `tambao_items` (
   `item_id` int(11) NOT NULL COMMENT 'item_template.id của phần thưởng',
   `quantity` int(11) NOT NULL DEFAULT 1 COMMENT 'số lượng trao cho người chơi',
   `item_options` varchar(255) NOT NULL DEFAULT '' COMMENT 'option compact, ví dụ 30-1,77-50',
-  `tile_trung_thuong` int(11) NOT NULL DEFAULT 0 COMMENT 'tỉ lệ trúng theo %',
+  `tile_trung_thuong` decimal(7,2) NOT NULL DEFAULT 0.00,
   `des` varchar(255) DEFAULT NULL COMMENT 'ghi chú cho admin',
   `start_at` datetime DEFAULT NULL,
   `end_at` datetime DEFAULT NULL,
   `enabled` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `idx_key_item` (`key_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `tambao_items` (
 
 LOCK TABLES `tambao_items` WRITE;
 /*!40000 ALTER TABLE `tambao_items` DISABLE KEYS */;
-INSERT INTO `tambao_items` VALUES (20,1874,76,1,'',25,'Vàng - số lượng random 1tr-20tr',NULL,NULL,1),(21,1874,220,1,'',8,'Đá lục bảo',NULL,NULL,1),(22,1874,221,1,'',8,'Đá Saphia',NULL,NULL,1),(23,1874,222,1,'',8,'Đá Ruby',NULL,NULL,1),(24,1874,223,1,'',8,'Đá Titan',NULL,NULL,1),(25,1874,224,1,'',8,'Đá thạch anh tím',NULL,NULL,1),(26,1874,381,1,'',6,'Cuồng nộ 10 phút',NULL,NULL,1),(27,1874,382,1,'',6,'Bổ huyết 10 phút',NULL,NULL,1),(28,1874,383,1,'',6,'Bổ khí 10 phút',NULL,NULL,1),(29,1874,384,1,'',6,'Giáp Xên bọ hung 10 phút',NULL,NULL,1),(30,1874,385,1,'',6,'Ẩn danh 10 phút',NULL,NULL,1),(31,1874,457,1,'',3,'Thỏi vàng',NULL,NULL,1),(32,1874,820,1,'',1,'Vé quay ngọc đen',NULL,NULL,1),(33,1874,821,1,'',1,'Vé quay ngọc vàng',NULL,NULL,1),(34,1779,1432,1,'',20,'Thỏi vàng Khóa',NULL,NULL,1),(35,1779,821,1,'',10,'Vé quay ngọc vàng',NULL,NULL,1),(36,1779,220,2,'',10,'Đá lục bảo x2',NULL,NULL,1),(37,1779,222,2,'',10,'Đá Ruby x2',NULL,NULL,1),(38,1779,224,2,'',10,'Đá thạch anh tím x2',NULL,NULL,1);
+INSERT INTO `tambao_items` VALUES (34,1779,1432,1,'',20.00,'Thỏi vàng Khóa',NULL,NULL,1),(35,1779,821,1,'',10.00,'Vé quay ngọc vàng',NULL,NULL,1),(36,1779,220,2,'',10.00,'Đá lục bảo x2',NULL,NULL,1),(37,1779,222,2,'',10.00,'Đá Ruby x2',NULL,NULL,1),(38,1779,224,2,'',10.00,'Đá thạch anh tím x2',NULL,NULL,1),(39,1874,224,100,'',12.00,'Đá thạch anh tím x100',NULL,NULL,1),(40,1874,220,100,'',12.00,'Đá lục bảo x100',NULL,NULL,1),(41,1874,221,100,'',11.00,'Đá Saphia x100',NULL,NULL,1),(42,1874,222,100,'',11.00,'Đá Ruby x100',NULL,NULL,1),(43,1874,223,100,'',10.00,'Đá Titan x100',NULL,NULL,1),(44,1874,457,1000,'',9.00,'Thỏi vàng x1000',NULL,NULL,1),(45,1874,1225,10,'',8.00,'Đá Địa Đạo x10',NULL,NULL,1),(46,1874,1224,1,'',7.00,'Đá Thiên Đạo x1',NULL,NULL,1),(47,1874,1913,2,'',6.00,'Ngọc Tinh Đồ x2',NULL,NULL,1),(48,1874,1588,1,'42-50',5.00,'Sách Ép Premium 50%',NULL,NULL,1),(49,1874,1588,1,'42-60',4.00,'Sách Ép Premium 60%',NULL,NULL,1),(50,1874,1588,1,'42-70',3.00,'Sách Ép Premium 70%',NULL,NULL,1),(51,1874,1588,1,'42-80',1.50,'Sách Ép Premium 80%',NULL,NULL,1),(52,1874,1588,1,'42-100',0.50,'Sách Ép Premium 100%',NULL,NULL,1);
 /*!40000 ALTER TABLE `tambao_items` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-05 20:40:57
+-- Dump completed on 2026-10-10 19:29:29

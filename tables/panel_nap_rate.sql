@@ -16,31 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `worldboss_dame`
+-- Table structure for table `panel_nap_rate`
 --
 
-DROP TABLE IF EXISTS `worldboss_dame`;
+DROP TABLE IF EXISTS `panel_nap_rate`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `worldboss_dame` (
-  `season_id` varchar(32) NOT NULL,
-  `player_id` bigint(20) NOT NULL,
-  `player_name` varchar(64) DEFAULT NULL,
-  `dame` double DEFAULT 0,
+CREATE TABLE `panel_nap_rate` (
+  `id` tinyint(4) NOT NULL,
+  `rate` int(11) NOT NULL DEFAULT 1,
+  `enabled` tinyint(1) NOT NULL DEFAULT 0,
+  `until_at` datetime DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `updated_by` varchar(64) DEFAULT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  PRIMARY KEY (`season_id`,`player_id`),
-  KEY `idx_season_dame` (`season_id`,`dame`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `worldboss_dame`
+-- Dumping data for table `panel_nap_rate`
 --
 
-LOCK TABLES `worldboss_dame` WRITE;
-/*!40000 ALTER TABLE `worldboss_dame` DISABLE KEYS */;
-INSERT INTO `worldboss_dame` VALUES ('20260924_2200',88,'brojp',9e18,'2026-09-24 15:00:35'),('20260924_2200',90,'kandz',9e18,'2026-09-24 15:04:36'),('20260924_2200',91,'bomthue',9e18,'2026-09-24 15:08:37'),('20260924_2200',98,'atula',9e18,'2026-09-24 15:00:35'),('20260924_2212',88,'brojp',9e18,'2026-09-24 15:12:59'),('20260924_2212',91,'bomthue',9e18,'2026-09-24 15:12:59'),('20260924_2213',91,'bomthue',9e18,'2026-09-24 15:13:59'),('20260924_2213',98,'atula',9e18,'2026-09-24 15:13:59'),('20260924_2214',91,'bomthue',9e18,'2026-09-24 15:15:04'),('20260924_2214',98,'atula',9e18,'2026-09-24 15:15:04'),('20260924_2215',88,'brojp',9e18,'2026-09-24 15:15:51'),('20260924_2215',90,'kandz',9e18,'2026-09-24 15:15:51'),('20260924_2215',91,'bomthue',9e18,'2026-09-24 15:15:51'),('20260924_2215',98,'atula',9e18,'2026-09-24 15:19:52'),('20260924_2306',90,'kandz',9e18,'2026-09-24 16:07:39'),('20260924_2306',91,'bomthue',9e18,'2026-09-24 16:11:03'),('20260925_1253',1,'admin',2.852577792349306e24,'2026-09-25 05:54:39');
-/*!40000 ALTER TABLE `worldboss_dame` ENABLE KEYS */;
+LOCK TABLES `panel_nap_rate` WRITE;
+/*!40000 ALTER TABLE `panel_nap_rate` DISABLE KEYS */;
+INSERT INTO `panel_nap_rate` VALUES (1,1,1,NULL,'','panel','2026-10-09 18:48:24');
+/*!40000 ALTER TABLE `panel_nap_rate` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-10 19:29:30
+-- Dump completed on 2026-10-10 19:29:25
