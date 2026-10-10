@@ -196,7 +196,7 @@
     function gan_nghieng_3d() {
         if (giam) { return; }
         if (!window.matchMedia || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) { return; }
-        var chon = ".alert, .ibox-content, .top-tab, .modal-content";
+        var chon = ".alert, .ibox-content, .top-tab";  // KHONG nghieng popup: modal-content co animation rieng
         var the = Array.prototype.slice.call(document.querySelectorAll(chon));
         if (the.length > 24) { the = the.slice(0, 24); }
         the.forEach(function (el) {
@@ -277,7 +277,109 @@
         state.modal_ra_body = dem;
     }
 
-    /* ----------------------------------- 7. DON HIEU UNG CU (particles vang) */
+    /* ------------- 7. BAO HIEM POPUP: KHONG BAO GIO DE POPUP KHOA TRANG
+       Trieu chung that: popup #Noti_Home o trang thai "mo" -> Bootstrap phu
+       .modal-backdrop kin trang nen MOI cu click deu bi chan, nhung khung hoi
+       thoai lai nam ngoai khung nhin (may nao cung co the bi, tuy trinh duyet/
+       kich thuoc cua so) -> nguoi dung khong thay gi de bam "Dong".
+       Ham duoi day: (1) ep khung hoi thoai ve giua khung nhin neu no bi lech,
+       (2) neu van khong hien thi duoc thi dong popup + don sach lop phu,
+       (3) don .modal-backdrop mo côi khi khong con popup nao that su hien. */
+    function popup_co_hien_khong(m) {
+        var d = m.querySelector(".modal-dialog") || m.querySelector(".modal-content");
+        if (!d) { return false; }
+        var r = d.getBoundingClientRect();
+        if (r.width < 2 || r.height < 2) { return false; }
+        return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth;
+    }
+
+    function ep_popup_ve_giua(m) {
+        m.style.setProperty("display", "flex", "important");
+        m.style.setProperty("align-items", "center", "important");
+        m.style.setProperty("justify-content", "center", "important");
+        var d = m.querySelector(".modal-dialog");
+        if (d) {
+            d.style.setProperty("margin", "auto", "important");
+            d.style.setProperty("max-height", "calc(100vh - 24px)", "important");
+            d.style.setProperty("overflow-y", "auto", "important");
+        }
+        state.popup_ep_lai = (state.popup_ep_lai || 0) + 1;
+    }
+
+    function dong_popup(m) {
+        state.popup_tu_dong_dong = (state.popup_tu_dong_dong || 0) + 1;
+        try {
+            if (window.jQuery && window.jQuery.fn && window.jQuery.fn.modal) {
+                window.jQuery(m).modal("hide");
+                return;
+            }
+        } catch (e) { /* bo qua */ }
+        m.classList.remove("show", "in");
+        m.style.setProperty("display", "none", "important");
+    }
+
+    function don_backdrop_chet() {
+        if (document.querySelector(".modal.show")) { return; }
+        var bd = document.querySelectorAll(".modal-backdrop");
+        for (var i = 0; i < bd.length; i++) { bd[i].parentNode.removeChild(bd[i]); }
+        if (bd.length) {
+            state.don_backdrop = (state.don_backdrop || 0) + bd.length;
+            try {
+                document.body.classList.remove("modal-open");
+                document.body.style.removeProperty("padding-right");
+            } catch (e) { log_err("don-backdrop", e); }
+        }
+    }
+
+    var dem_vo_hinh = 0;
+    function bao_hiem_popup() {
+        var ds = document.querySelectorAll(".modal.show");
+        var i, vo_hinh = 0;
+        for (i = 0; i < ds.length; i++) {
+            if (popup_co_hien_khong(ds[i])) { continue; }
+            vo_hinh++;
+            if (!state.popup_ep_lai) { ep_popup_ve_giua(ds[i]); }
+        }
+        if (vo_hinh) {
+            dem_vo_hinh++;
+            if (dem_vo_hinh >= 2) {
+                // Van vo hinh sau 2 lan kiem tra -> dong han, khong the de trang bi khoa
+                for (i = 0; i < ds.length; i++) {
+                    if (!popup_co_hien_khong(ds[i])) { dong_popup(ds[i]); }
+                }
+                dem_vo_hinh = 0;
+            }
+        } else {
+            dem_vo_hinh = 0;
+        }
+        don_backdrop_chet();
+    }
+
+    function boc_jquery_modal() {
+        try {
+            if (!window.jQuery || !window.jQuery.fn || !window.jQuery.fn.modal) { state.co_jquery_modal = false; return; }
+            state.co_jquery_modal = true;
+            if (window.jQuery.fn.modal.__bm_boc) { return; }
+            var goc = window.jQuery.fn.modal;
+            var boc = function () {
+                var kq = goc.apply(this, arguments);
+                setTimeout(bao_hiem_popup, 150);
+                return kq;
+            };
+            boc.__bm_boc = true;
+            window.jQuery.fn.modal = boc;
+        } catch (e) { log_err("boc-modal", e); }
+    }
+
+    function hen_kiem_tra_popup() {
+        var moc = [500, 1400, 2800, 5000];
+        for (var i = 0; i < moc.length; i++) { setTimeout(bao_hiem_popup, moc[i]); }
+        window.addEventListener("resize", function () { bao_hiem_popup(); });
+        window.addEventListener("orientationchange", function () { bao_hiem_popup(); });
+        document.addEventListener("click", function () { setTimeout(bao_hiem_popup, 250); }, true);
+    }
+
+    /* ----------------------------------- 8. DON HIEU UNG CU (particles vang) */
     function don_hieu_ung_cu() {
         var cu = document.getElementById("snow");
         if (cu) { cu.parentNode.removeChild(cu); }
@@ -303,6 +405,9 @@
         try { chay_tan_lua(); } catch (e) { log_err("embers", e); }
         try { hien_dan_khi_cuon(); } catch (e) { log_err("reveal", e); }
         try { gan_nghieng_3d(); } catch (e) { log_err("tilt", e); }
+        try { boc_jquery_modal(); } catch (e) { log_err("boc-modal", e); }
+        try { bao_hiem_popup(); } catch (e) { log_err("bao-hiem-popup", e); }
+        try { hen_kiem_tra_popup(); } catch (e) { log_err("hen-popup", e); }
         document.addEventListener("bm-giam-tai", function (ev) {
             try {
                 var cap = ev && ev.detail && ev.detail.cap ? ev.detail.cap : 2;

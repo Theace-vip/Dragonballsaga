@@ -93,6 +93,13 @@ body {
     display: block;
 }
 
+/* Bao hiem: lop hieu ung (2D/3D/CSS) KHONG BAO GIO duoc chan click cua nguoi dung.
+   Khai bao nay ghi de moi truong hop lop con tu bat pointer-events. */
+#bm-fx,
+#bm-fx * {
+    pointer-events: none !important;
+}
+
 #bm-3d {
     opacity: .95;
 }
