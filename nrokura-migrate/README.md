@@ -2,6 +2,10 @@
 
 Tài liệu này gồm 2 phần: **(A) Cách khởi động / quản lý server** và **(B) Chuyển sang VPS mới**.
 
+> Tổng quan hệ thống + code nằm ở nhánh nào + hướng dẫn chuyển VPS từng bước:
+> xem **[README.md ở gốc repo](../README.md)** (trang chính trên GitHub).
+> File này đi sâu vào vận hành, xử lý sự cố và bộ script migrate.
+
 ---
 
 # PHẦN A — Khởi động & quản lý server
@@ -68,6 +72,22 @@ Có `LISTENING` ở cả 4 port = web + DB + game OK.
 
 Console mangled tiếng Việt → **mở file log bằng Notepad++, đừng đọc trên console**.
 
+## A4b. Cập nhật code lên GitHub
+
+```bash
+./sync-all.sh                 # main + web + database  (hoac click sync-all.bat)
+bash sync-web.sh              # CHI web (nhanh, khong clone lai repo)
+```
+
+`sync-all.sh` mặc định lấy web từ `C:\Users\Administrator\Downloads\Web Nro KOL`.
+Web đang chạy ở chỗ khác thì đặt biến:
+```bash
+SYNC_WEB_SRC="/c/xampp/htdocs/nrokura" bash sync-all.sh
+```
+
+> Web trên server dùng **cache-busting theo `filemtime`** (`head.php` → `?v=<mtime>`),
+> nên sau khi sửa css/js chỉ cần tải lại trang là client nhận bản mới (HTML không bị cache).
+
 ## A5. Quản lý database
 
 - **GUI**: mở trình duyệt **trên máy chủ** → `http://localhost/phpmyadmin`
@@ -114,12 +134,57 @@ Console mangled tiếng Việt → **mở file log bằng Notepad++, đừng đ�
 # PHẦN B — Chuyển sang VPS mới
 
 ## B1. Chuẩn bị trên VPS mới (Windows)
-1. Cài **JDK 21** (chọn bản 21.x).
-2. Cài **XAMPP** (Apache + MySQL + PHP) — để mặc định `C:\xampp`.
+1. Cài **JDK 21** (chọn bản 21.x — máy hiện tại dùng 21.0.9 LTS) vào `C:\Program Files\Java\jdk-21`.
+2. Cài **XAMPP 8.0.x** — để mặc định `C:\xampp`.
+   Máy hiện tại: Apache **2.4.58** + PHP **8.0.30** + MariaDB **10.4.32**,
+   PHP cần bật: `curl, mysqli, pdo_mysql, openssl, mbstring, fileinfo, zip, xml`.
 3. Cài **Git for Windows** (cần `bash.exe` + `curl` cho acme.sh).
 4. Mở RDP → **cmd quyền Administrator**.
+5. **Máy CŨ: dừng ghi dữ liệu trước khi đóng gói**, không thì DB bị lệch:
+   ```cmd
+   schtasks /End /TN GameServer-DBS
+   net stop Apache2.4        :: MySQL de chay vi con phai dump
+   ```
 
-## B2. Trên MẠY CŨ — đóng gói
+## B1b. Không dùng gói backup — lấy code từ GitHub
+
+Toàn bộ code nằm trên GitHub (`main` = game, `web` = web, `database` = dump DB):
+
+```cmd
+:: 1. Game
+ git clone https://github.com/Theace-vip/Dragonballsaga.git C:\Dragonballsaga
+:: 2. Web (noi dung nhanh "web" chinh la thu muc web)
+ git clone -b web --depth 1 https://github.com/Theace-vip/Dragonballsaga.git %TEMP%\web-src
+ robocopy %TEMP%\web-src C:\xampp\htdocs\nrokura /E /XD .git
+:: 3. Database
+ git clone -b database --depth 1 https://github.com/Theace-vip/Dragonballsaga.git %TEMP%\db-src
+ C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE IF NOT EXISTS hondaodragon DEFAULT CHARACTER SET utf8mb4;"
+ for %f in (%TEMP%\db-src\tables\*.sql) do C:\xampp\mysql\bin\mysql.exe -u root --default-character-set=utf8mb4 hondaodragon < "%f"
+```
+
+> Config Apache/MySQL + cert + script (`acme-renew.bat`, `reload-apache.sh`) **không có trên GitHub**
+> → lấy trong gói `make-backup.ps1` (`configs/`, `certs/`, `scripts/`) hoặc làm lại theo mục B1c.
+
+**Bắt buộc sửa sau khi clone:** IP game hardcode trong `data\config\config.properties`:
+```
+server.sv1=hondaodragon:<IP VPS MOI>:14445
+server.port=14445
+```
+
+Nếu IP mới: mở firewall (3389 RDP trước, rồi 14445, 80/443 chỉ cho dải Cloudflare) — xem B4 và mục 11 của `install.ps1`.
+
+## B1c. Cấu hình Apache/MySQL tối thiểu (nếu không có thư mục `configs/`)
+
+1. `C:\xampp\apache\conf\httpd.conf`: bật `mod_rewrite`, `mod_ssl`, `mod_headers`, `mod_reqtimeout`;
+   thêm `ServerTokens Prod`, `ServerSignature Off`, `TraceEnable Off`.
+2. `C:\xampp\apache\conf\extra\httpd-vhosts.conf`:
+   - `:80` → `ServerName nrokura.site`, `DocumentRoot "C:/xampp/htdocs/nrokura"`, `AllowOverride All`,
+     chặn `/sql/`, **301 sang HTTPS**.
+   - `:443` → `SSLCertificateFile "conf/ssl.crt/nrokura.site.crt"`, `SSLCertificateKeyFile "conf/ssl.key/nrokura.site.key"`.
+   - Test: `C:\xampp\apache\bin\httpd.exe -t` → `net stop Apache2.4` + `net start Apache2.4`.
+3. `C:\xampp\mysql\bin\my.ini`: `bind-address="127.0.0.1"` (chỉ sửa **dòng đầu tiên**, không sửa dòng `::1`).
+
+## B2. Trên MÁY CŨ — đóng gói
 ```cmd
 powershell -ExecutionPolicy Bypass -File make-backup.ps1            :: tao thu muc goi
 powershell -ExecutionPolicy Bypass -File make-backup.ps1 -Archive   :: tao ca 1 file .tar
@@ -145,8 +210,10 @@ netstat -ano | findstr ":80 :443 :3306 :14445" | findstr LISTENING
 curl -k https://localhost/
 schtasks /Query /TN GameServer-DBS
 ```
-- Web: `https://nrokura.site` mở được từ điện thoại.
-- Game: client vào được (IP VPS mới — **nhớ cập nhật IP trong client/config nếu hardcode IP cũ**).
+- Web: `https://nrokura.site` mở được từ **điện thoại dùng 4G** (kiểm tra DNS + Cloudflare + firewall từ bên ngoài).
+- Game: client vào được (IP VPS mới — **nhớ cập nhật `server.sv1` trong `data\config\config.properties`,
+  và file config của client nếu client hardcode IP cũ, rồi phát lại link tải**).
+- Đăng ký 1 tài khoản thử trên web → đăng nhập được vào game = web và game đang dùng **chung** database `hondaodragon`.
 
 ## B6. Sau migrate nên làm
 - Chạy `netsh advfirewall show allprofiles` → chắc chắn `State: ON`.
