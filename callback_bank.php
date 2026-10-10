@@ -1,77 +1,102 @@
-<?php 
-require_once('config.php');
-file_put_contents('debug_log_bank.txt', "no bypass header: " . print_r(json_encode($data), true) . "\n", FILE_APPEND);
-$headers = getallheaders();
-//print_r($headers);
-if (!isset($headers['authorization']) || $headers['authorization'] !== 'Apikey '.$sepay_secret) {
-    http_response_code(403);
-    die('Lỗi: Không có quyền truy cập ');
+<?php
+/**
+ * Webhook nhan giao dich ngan hang tu SePay (Sacombank).
+ * Cau hinh tai my.sepay.vn -> Cau hinh cong ty -> Webhook:
+ *   URL      : https://nrokura.site/callback_bank.php
+ *   Xac thuc : API Key  ->  gia tri $sepay_secret trong config.php
+ *   Su kien  : "Tien vao"
+ *
+ * Luon tra ve {"success": true} de SePay khong gui lai (tru khi loi CSDL -> 500).
+ */
+require_once __DIR__ . '/bank_nap.php';
+
+header('Content-Type: application/json; charset=utf-8');
+
+$raw = file_get_contents('php://input');
+
+// ---- Xac thuc: header "Authorization: Apikey <secret>" hoac chu ky HMAC-SHA256 ----
+$headers = function_exists('getallheaders') ? getallheaders() : [];
+if (!$headers && !empty($_SERVER['HTTP_AUTHORIZATION'])) {
+    $headers['Authorization'] = $_SERVER['HTTP_AUTHORIZATION'];
 }
-// print_r($_REQUEST);
-$data = json_decode(file_get_contents('php://input'), true);
-// print_r($data['id']);
-file_put_contents('debug_log_bank.txt', "Data sent: " . print_r(json_encode($data), true) . "\n", FILE_APPEND);
-if ($data){
-    $partner_id = isset($data['id']) ? intval($data['id']) : 0;
-    $noidung = strtolower(isset($data['content']) ? $data['content'] : '');
-    $amount = isset($data['transferAmount']) ? floatval($data['transferAmount']) : 0;
-    $comment = false;
-    // print_r($noidung);
-    // Tìm username trong nội dung chuyển khoản
-    // if (preg_match('/'.$noidung_bank.'([a-zA-Z0-9_]+)/', $noidung, $matches)) {
-    //     $comment = $matches[1];
-    // }
-    if (preg_match('/'.$noidung_bank.'(\d+)/', $noidung, $matches)) {
-        $comment = $matches[1]; // Kết quả: '1'
+$auth = '';
+$sig  = '';
+foreach ($headers as $k => $v) {
+    $lk = strtolower($k);
+    if ($lk === 'authorization') {
+        $auth = (string) $v;
+    } elseif ($lk === 'x-sepay-signature') {
+        $sig = (string) $v;
     }
+}
 
+$authorized = false;
+if ($auth !== '' && hash_equals('Apikey ' . $sepay_secret, $auth)) {
+    $authorized = true;
+} elseif ($sig !== '' && $sepay_secret !== '') {
+    $authorized = hash_equals(hash_hmac('sha256', $raw, $sepay_secret), $sig);
+}
 
-    if (!$comment){
-        die('Lỗi: Nội dung không hợp lệ');
+if (!$authorized) {
+    bank_log('bank_webhook_raw.txt', 'UNAUTHORIZED | header="' . $auth . '" | body=' . substr($raw, 0, 500));
+    http_response_code(401);
+    echo json_encode(['success' => false, 'message' => 'Unauthorized']);
+    exit;
+}
+
+$data = json_decode($raw, true);
+if (!is_array($data)) {
+    bank_log('bank_webhook_raw.txt', 'INVALID_JSON | ' . substr($raw, 0, 1000));
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'JSON khong hop le']);
+    exit;
+}
+
+bank_log('bank_webhook_raw.txt', substr($raw, 0, 2000));
+
+// Ho tro 2 dang payload: 1 giao dich (SePay) va {"transactions":[...]}
+$list = (isset($data['transactions']) && is_array($data['transactions'])) ? $data['transactions'] : [$data];
+
+$credited = 0;
+$skipped  = 0;
+$failed   = 0;
+
+foreach ($list as $t) {
+    if (!is_array($t)) {
+        continue;
     }
-    
-    
+    // id = null => bo qua (theo tai lieu SePay)
+    if (!isset($t['id']) || $t['id'] === null || $t['id'] === '') {
+        $skipped++;
+        continue;
+    }
+    $type = $t['transferType'] ?? ($t['transfer_type'] ?? 'in');
+    if ($type !== 'in') {
+        $skipped++;
+        continue;
+    }
+    $amount  = $t['transferAmount'] ?? ($t['amount_in'] ?? 0);
+    $content = (string) ($t['content'] ?? ($t['transaction_content'] ?? ($t['description'] ?? '')));
 
-    // Tránh SQL Injection bằng prepared statement
-    $stmt = $conn->prepare("SELECT * FROM account WHERE username=?");
-    $stmt->bind_param("s", $comment);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
-
-    if ($user){
-        // Xem tồn tại giao dịch chưa
-        $stmt = $conn->prepare("SELECT * FROM history_bank WHERE username=? AND code=?");
-        $stmt->bind_param("ss", $user['username'], $partner_id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $isPayment = $result->fetch_assoc();
-        if ($isPayment){
-            echo "giao dịch đã tồn tại";
-            die();    
-        }
-        // tồn tại user
-        $handle_cash = ($amount - ($amount * $chietkhau_bank / 100));
-        $chietkhau_bank = isset($chietkhau_bank) ? $chietkhau_bank : 0;
-        $new_cash = $user['cash'] + $handle_cash;
-        $new_totalCard = $user['danap'] + $new_cash;
-
-        // Cập nhật cash và danap cho user
-        $stmt_update = $conn->prepare('UPDATE account SET cash = ?, danap = ? WHERE username = ?');
-        $stmt_update->bind_param("dis", $new_cash, $new_totalCard, $user['username']);
-        $success = $stmt_update->execute();
-
-        if ($success) {
-            //  echo "Nạp tiền thành công cho tài khoản: " . htmlspecialchars($user['username']);
-            // Ghi vào lịch sử nạp tiền
-            $stmt_log = $conn->prepare('INSERT INTO history_bank (username, amount_vnd, amount_cash,description,code, created_at) VALUES (?, ?, ?, ?, ?, NOW())');
-            $stmt_log->bind_param("sddss",$user['username'], $amount, $handle_cash, $noidung, $partner_id);
-            $stmt_log->execute();
-
-            echo "Nạp tiền thành công cho tài khoản: " . htmlspecialchars($user['username']);
-        }
+    $r = bank_credit($conn, $content, $amount, sepay_tx_code($t));
+    if ($r['status'] === 'credited') {
+        $credited++;
+    } elseif ($r['status'] === 'db_error') {
+        $failed++;
     } else {
-        echo "Lỗi: Không tìm thấy tài khoản!";
+        $skipped++;
     }
 }
-?>
+
+if ($failed > 0) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Co ' . $failed . ' giao dich loi CSDL, hay thu lai']);
+    exit;
+}
+
+echo json_encode([
+    'success'  => true,
+    'credited' => $credited,
+    'skipped'  => $skipped,
+    'message'  => 'Da xu ly ' . count($list) . ' giao dich',
+]);

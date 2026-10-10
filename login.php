@@ -30,33 +30,44 @@ function verifyCaptcha($response)
     return $verification['success'] ?? false;
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $user = $_POST['username'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {    $user = trim($_POST['username']);
     $pass = $_POST['password'];
-    $captchaResponse = $_POST['cf-turnstile-response'];
+    $captchaResponse = $_POST['cf-turnstile-response'] ?? '';
 
-    // Kiểm tra captcha
-    // if (!verifyCaptcha($captchaResponse)) {
-    //     echo "
-    //     <script>
-    //         Swal.fire({icon: 'error', title: 'Thông Báo', text: 'Captcha không hợp lệ!', confirmButtonText: 'OK'})
-    //         .then(function() { window.location.href = 'login.php'; });
-    //     </script>";
-    //     exit();
-    // }
+    // Kiểm tra captcha (chi bat khi CF_ENABLED = true trong config.php)
+    if (CF_ENABLED && !verifyCaptcha($captchaResponse)) {
+        echo "
+        <script>
+            Swal.fire({icon: 'error', title: 'Thông Báo', text: 'Captcha không hợp lệ!', confirmButtonText: 'OK'})
+                .then(function() { window.location.href = 'login.php'; });
+        </script>";
+        exit();
+    }
 
-    // Kiểm tra tài khoản và mật khẩu
-    $sql = "SELECT * FROM account WHERE username='$user' AND password='$pass'";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) === 0) {
+    // Kiểm tra tài khoản (prepared statement - chong SQL injection); mật khẩu so bằng PBKDF2
+    $sql = "SELECT * FROM account WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $user);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $account = (mysqli_num_rows($result) > 0) ? mysqli_fetch_assoc($result) : null;
+    if ($account === null || !pw_check($account['password'], $pass)) {
         $msg = "Sai tài khoản hoặc mật khẩu!";
         $icon = "error";
         $redirect = "login.php";
     } else {
-        $account = mysqli_fetch_assoc($result);
+        // Tài khoản cũ còn plaintext -> băm lại ngay khi đăng nhập thành công
+        if (!pw_is_hash($account['password'])) {
+            $up_hash = pw_hash($pass);
+            $up_id = (int) $account['id'];
+            $up = mysqli_prepare($conn, "UPDATE account SET password = ? WHERE id = ?");
+            mysqli_stmt_bind_param($up, "si", $up_hash, $up_id);
+            mysqli_stmt_execute($up);
+        }
         $account_id = $account['id'];
 
         // Kiểm tra xem có nhân vật (player) hay chưa
+        $account_id = (int) $account_id;
         $sql = "SELECT * FROM player WHERE account_id='$account_id'";
         $player_result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($player_result) === 0) {

@@ -1,6 +1,8 @@
 <?php
 session_start();
 include 'config.php';
+require('rank/tops-config.php');
+$topCount = count($TOPS);
 require('views/layout/head.php');
 require('views/layout/nav.php');
 
@@ -63,12 +65,12 @@ $login_status = isset($_SESSION['account']) && !empty($_SESSION['account']);
                 <img class="avatar" src="/assets/images/char/hit.png"
                     style="border-color:red; width: 50px; height: 55px;">
             </div>
-            <a class="alert-link" href="/activated" title="">
-                <i class="fa fa-user-circle" aria-hidden="true" style="color:red"></i> Hướng Dẫn Kích Hoạt Thành Viên
+            <a class="alert-link" href="/dua-top" title="">
+                <i class="fa fa-trophy" aria-hidden="true" style="color:red"></i> Đua Top - Bảng Xếp Hạng <?php echo $namegame ?>
             </a>
             <div class="box_name_eman">bởi <b><b>
-                        <font style="color:red">Hit</font>
-                    </b></b> - <span>Giá chỉ 10.000</span></div>
+                        <font style="color:red">ADMIN</font>
+                    </b></b> - <span><?php echo $topCount ?> bảng xếp hạng, cập nhật theo thời gian thực.</span></div>
         </div>
     </div>
 
@@ -94,7 +96,7 @@ $login_status = isset($_SESSION['account']) && !empty($_SESSION['account']);
                     style="border-color:red; width: 50px; height: 55px;">
             </div>
             <a class="alert-link" href="/chucnang" title="">
-                <i class="fa fa-mobile" aria-hidden="true" style="color:red"></i> Giới Thiệu Và Hướng Dẫn <?php echo $namegame ?>
+                <i class="fa fa-mobile" aria-hidden="true" style="color:red"></i> Giới Thiệu Và Tính Năng <?php echo $namegame ?>
             </a>
             <div class="box_name_eman">bởi <b><b>
                         <font style="color:red">ADMIN</font>

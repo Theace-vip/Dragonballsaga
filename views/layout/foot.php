@@ -18,11 +18,11 @@
     </div>
 </div>
 
-<div class="modal right fade" id="Noti_Home" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="true">
-    <div class="modal-dialog modal-side modal-bottom-right ">
+<div class="modal fade" id="Noti_Home" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 560px; margin: 1.75rem auto;">
         <div class="modal-content">
             <div class="modal-header" style="background-color: #2c2c2c; color: #FFF; text-align: center;">
-                <img src="<?php echo htmlspecialchars($logo); ?>" style="display: block; margin-left: auto; margin-right: auto; max-width: 250px;">
+                <span class="brand-logo"><?php echo htmlspecialchars($brandName); ?></span>
             </div>
             <div class="modal-body">
                 <center>
@@ -35,8 +35,8 @@
                     <h6 style="padding: 10px">
                         Tham gia các nền tảng mạng xã hội !<br>
                     </h6>
-                    <a href="https://zalo.me/0326513937" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" target="_blank"><b>Box Zalo</b></a>
-                    <a href="https://www.facebook.com/nguyn.dev" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" target="_blank"><b>Fanpage</b></a>
+                    <a href="<?php echo htmlspecialchars($boxzalo); ?>" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" target="_blank"><b>Box Zalo</b></a>
+                    <a href="<?php echo htmlspecialchars($fanpage); ?>" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" target="_blank"><b>Fanpage</b></a>
                     <a href="" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" target="_blank"><b>TikTok</b></a>
                     <a id="closeModalBtn" class="btn btn-download" style="border-radius: 10px; color: #FFFFFF;" data-dismiss="modal" aria-label="Close"><b>Đóng</b></a>
                 </center>
@@ -63,8 +63,9 @@
         });
     };
 </script>
+<!-- Anti-devtools script da go: script ma hoa cu tuong trinh duoc se mo Google khi nguoi dung mo DevTools -->
 <script>
-    const _0x24437d = _0x3224;
+    /*const _0x24437d = _0x3224;
 
     function _0x3224(_0x105e85, _0x188d89) {
         const _0x18c65c = _0x18c6();
@@ -107,7 +108,7 @@
     if (detectDevTools()) {
         let count = parseInt(localStorage['getItem'](_0x24437d(0x114))) || 0x0;
         count++, localStorage[_0x24437d(0x110)](_0x24437d(0x114), count), count < 0xa ? location[_0x24437d(0x10b)]() : (localStorage[_0x24437d(0x121)](_0x24437d(0x114)), window[_0x24437d(0x109)][_0x24437d(0x11c)] = _0x24437d(0x117));
-    } else localStorage[_0x24437d(0x121)]('devtools_reload_count');
+    } else localStorage[_0x24437d(0x121)]('devtools_reload_count');*/
 </script>
 
 </div>

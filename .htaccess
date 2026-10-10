@@ -5,16 +5,36 @@ RewriteRule ^register$ /register.php [L]
 RewriteRule ^naptien$ /naptien.php [L]
 RewriteRule ^logout$ /logout.php [L]
 RewriteRule ^change-password$ /change-password.php [L]
-RewriteRule ^napcard$ /recharge_card.php [L]
+RewriteRule ^napcard$ /naptien [R=301,L]
 RewriteRule ^huongdan$ /huongdan.php [L]
 
 RewriteRule ^home$ /index.php [L]
 
 
 ##rank
+RewriteRule ^dua-top$ /rank/index.php [L]
+RewriteRule ^top-([a-z0-9]+)$ /rank/tops.php?t=$1 [L]
+RewriteRule ^chucnang$ /chucnang.php [L]
 RewriteRule ^power$ /rank/top-power.php [L]
 RewriteRule ^task$ /rank/top-task.php [L]
 RewriteRule ^money$ /rank/top-money.php [L]
 
 ##mocnap
 RewriteRule ^mocnap$ /cpanel/moc-nap.php [L]
+# === Chan tai truc tiep file noi bo (log/du lieu nap bank) tu ben ngoai ===
+<FilesMatch "^bank_.*(\.log|\.txt)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Cac file debug noi bo khac (khong bao gio duoc serve)
+<FilesMatch "^debug_.*(\.log|\.txt)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>

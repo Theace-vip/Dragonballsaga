@@ -1,81 +1,3 @@
-<style>
-    #snow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        z-index: -70;
-    }
-</style>
-<div id="snow"><canvas class="particles-js-canvas-el" width="1125" height="901" style="width: 100%; height: 100%;"></canvas></div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
-        script.onload = function() {
-            particlesJS("snow", {
-                "particles": {
-                    "number": {
-                        "value": 75,
-                        "density": {
-                            "enable": true,
-                            "value_area": 400
-                        }
-                    },
-                    "color": {
-                        "value": "#FFCC33"
-                    },
-                    "opacity": {
-                        "value": 1,
-                        "random": true,
-                        "anim": {
-                            "enable": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": true
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 1,
-                        "direction": "top",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
-                        "attract": {
-                            "enable": true,
-                            "rotateX": 300,
-                            "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "events": {
-                        "onhover": {
-                            "enable": false
-                        },
-                        "onclick": {
-                            "enable": false
-                        },
-                        "resize": false
-                    }
-                },
-                "retina_detect": true
-            });
-        }
-        document.head.append(script);
-    });
-</script>
 <div class="container" style="background: #007E70; padding-bottom: 5px;border-radius: 15px;">
 
     <div class="row">
@@ -87,15 +9,17 @@
                         <span style="vertical-align: middle; color: black;">Dành cho người chơi trên 12 tuổi. Chơi quá 180 phút mỗi ngày sẽ có hại sức khỏe.</span>
                     </div>
                     <div class="p-xs mb-3">
-                        <a href="/">
-                            <img src="<?php echo htmlspecialchars($logo); ?>"
-                                style="display: block;margin-left: auto;margin-right: auto;max-width: 300px;">
+                        <a href="/" title="<?php echo htmlspecialchars($brandName); ?>" style="display:block;text-align:center;">
+                            <span class="brand-logo"><?php echo htmlspecialchars($brandName); ?></span>
+                            <div class="brand-slogan"><?php echo htmlspecialchars($brandSlogan); ?></div>
                         </a>
                     </div>
                     <div class="col text-center">
+                        <?php if (!empty($java)): ?>
                         <a href="<?php echo htmlspecialchars($java); ?>" target="_blank" class="btn btn-download text-white" style="border-radius: 10px; width: 100px;">
                             <i class="fa fa-download"></i> JAVA
                         </a>
+                        <?php endif; ?>
                         <a href="<?php echo htmlspecialchars($pc); ?>" target="_blank" class="btn btn-download text-white m-1" style="border-radius: 10px; width: 100px;">
                             <i class="fa fa-windows"></i> PC
                         </a>
@@ -125,14 +49,20 @@
                                 class="fa fa-sign-in"></i> Đăng Nhập</a>
                         <a class="btn btn-action m-1 text-white" href="../register" style="border-radius: 10px;"><i
                                 class="fa fa-user-plus"></i> Đăng Ký</a>
-                        <a class="btn btn-action m-1 text-white" href="../power" style="border-radius: 10px;"><i
-                                class="fa fa-bar-chart"></i> Xếp Hạng</a>
+                        <a class="btn btn-action m-1 text-white" href="../dua-top" style="border-radius: 10px;"><i
+                                class="fa fa-bar-chart"></i> Đua Top</a>
+                        <a class="btn btn-action m-1 text-white" href="../chucnang" style="border-radius: 10px;"><i
+                                class="fa fa-info-circle"></i> Giới Thiệu</a>
                         <a href="<?php echo htmlspecialchars($boxzalo); ?>" class="btn btn-action m-1 text-white"
                             style="border-radius: 10px;"> <i class="fa fa-exclamation-triangle"></i> Báo Lỗi</a>
                     <?php else: ?>
 
                         <a href="../change-password" class="btn btn-action m-1 text-white" style="border-radius: 10px;"><i
                                 class="fa fa-key"></i> Đổi mật khẩu</a>
+                        <a href="../dua-top" class="btn btn-action m-1 text-white" style="border-radius: 10px;"><i
+                                class="fa fa-bar-chart"></i> Đua Top</a>
+                        <a href="../chucnang" class="btn btn-action m-1 text-white" style="border-radius: 10px;"><i
+                                class="fa fa-info-circle"></i> Giới Thiệu</a>
                         <a href="../naptien.php" class="btn btn-action m-1 text-white" style="border-radius: 10px;"><i
                                 class="fa fa-money"></i> Nạp tiền</a>
                         <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] == 1): ?>
@@ -152,10 +82,7 @@
                             <div class="modal-content">
                                 <div class="modal-header"
                                     style="background-color: #2c2c2c; color: #FFF; text-align: center;">
-                                    <img src="https://imgur.com/XnwPrtD.png" style="display: block;
-                                                                              margin-left: auto;
-                                                                              margin-right: auto;
-                                                                              max-width: 250px;">
+                                    <span class="brand-logo sm"><?php echo htmlspecialchars($brandName); ?></span>
                                 </div>
                                 <div class="modal-body">
                                     <p style="padding: 10px">
@@ -164,8 +91,8 @@
                                         <a class="btn btn-warning mb-2" style="border-radius: 10px;"
                                             href="/huongdan">Testflight</a>
                                         <a class="btn btn-danger mb-2" style="border-radius: 10px;"
-                                            href="https://install.appcenter.ms/users/nrorose/apps/nro-rose-232/distribution_groups/rose">AppCenter
-                                            231</a>
+                                            href="<?php echo htmlspecialchars($adr); ?>">Tải APK
+                                            Android</a>
                                         <a class="btn btn-dark mb-2" style="border-radius: 10px;" href="/huongdan">Hướng
                                             Dẫn</a>
                                         <br>
@@ -174,7 +101,7 @@
                                         <br>
                                         <b>Hướng dẫn cài đặt:</b><br>
                                         <a class="btn btn-dark mb-2" style="border-radius: 10px;"
-                                            href="https://www.mediafire.com/file/ojdsl69xln2zmpk/DragonTeam.ipa/file">File
+                                            href="<?php echo htmlspecialchars($ios); ?>">File
                                             IPA</a>
                                         <a class="btn btn-danger mb-2" style="border-radius: 10px;"
                                             href="https://www.youtube.com/watch?v=QwnjV3Xu_sg">Cài bằng Scarlet</a>
@@ -198,10 +125,7 @@
                             <div class="modal-content">
                                 <div class="modal-header"
                                     style="background-color: #2c2c2c; color: #FFF; text-align: center;">
-                                    <img src="https://imgur.com/XnwPrtD.png" style="display: block;
-                                                                              margin-left: auto;
-                                                                              margin-right: auto;
-                                                                              max-width: 250px;">
+                                    <span class="brand-logo sm"><?php echo htmlspecialchars($brandName); ?></span>
                                 </div>
                                 <div class="modal-body">
                                     <p style="padding: 10px">
@@ -209,14 +133,14 @@
                                         <b style="color:red">THÔNG BÁO:</b> Phiên Bản khi dùng phiên bản MOD <b>"Nên Cài
                                             Mật Khẩu Cấp 2"</b> .<br>
                                         <a class="btn btn-warning mb-2" style="border-radius: 10px;"
-                                            href="https://www.mediafire.com/file/6ect76ykxwmb3pt/NRO_ROSE_2.2.2.rar/file">Phiên
+                                            href="<?php echo htmlspecialchars($pc); ?>">Phiên
                                             Bản Gốc</a>
                                         <a class="btn btn-danger mb-2" style="border-radius: 10px;"
-                                            href="https://www.mediafire.com/file/7pnb5yy9nny5nch/NgocRongRose231.zip/file">MOD
-                                            2.3.1</a>
+                                            href="<?php echo htmlspecialchars($adr); ?>">Tải
+                                            Android</a>
                                         <a class="btn btn-danger mb-2" style="border-radius: 10px;"
-                                            href="https://www.mediafire.com/file/cgw36hcjg60nz8n/DragonRose_Mod_225.zip/file">MOD
-                                            2.2.5</a>
+                                            href="<?php echo htmlspecialchars($ios); ?>">Tải
+                                            iOS</a>
                                         <a class="btn btn-dark mb-2" style="border-radius: 10px;" href="/lenhios">Lệnh
                                             Chat</a>
                                         <br>

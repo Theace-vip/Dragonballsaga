@@ -30,12 +30,12 @@ function verifyCaptcha($response)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
-    $user = $_POST['username'];
+    $user = trim($_POST['username']);
     $pass = $_POST['password'];
-    $captchaResponse = $_POST['cf-turnstile-response'];
+    $captchaResponse = $_POST['cf-turnstile-response'] ?? '';
 
     // Kiểm tra captcha
-    if (!verifyCaptcha($captchaResponse)) {
+    if (CF_ENABLED && !verifyCaptcha($captchaResponse)) {
         echo "
         <script>
             Swal.fire({icon: 'error', title: 'Thông Báo', text: 'Captcha không hợp lệ!', confirmButtonText: 'OK'})
@@ -44,28 +44,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
         exit();
     }
 
-    // Kiểm tra tên đăng nhập đã tồn tại
-    $sql = "SELECT 1 FROM account WHERE username='$user'";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
-        $msg = "Tên đăng nhập đã tồn tại!";
+    // Validate giong game (Service.registerAccount): username 6-20 ky tu, password 6-100 ky tu
+    if (!preg_match('/^[A-Za-z0-9_]{6,20}$/', $user)) {
+        $msg = "Tên tài khoản cần 6-20 ký tự, chỉ gồm chữ, số hoặc dấu gạch dưới.";
         $icon = "error";
         $redirect = "register.php";
-    } elseif (!preg_match('/^[a-z0-9]{4,16}$/', $pass)) {
-        $msg = "Mật khẩu không hợp lệ! Chỉ chứa a-z, 0-9 và từ 4-16 ký tự.";
+    } elseif (strlen($pass) < 6 || strlen($pass) > 100) {
+        $msg = "Mật khẩu cần có độ dài từ 6 đến 100 ký tự.";
         $icon = "error";
         $redirect = "register.php";
     } else {
-        // Thêm tài khoản mới
-        $sql = "INSERT INTO account (username, password) VALUES ('$user', '$pass')";
-        if (mysqli_query($conn, $sql)) {
-            $msg = "Tạo tài khoản thành công! Vui lòng đăng nhập.";
-            $icon = "success";
-            $redirect = "login.php";
-        } else {
-            $msg = "Lỗi: " . mysqli_error($conn);
+        // Kiểm tra tên đăng nhập đã tồn tại (prepared statement)
+        $stmt = mysqli_prepare($conn, "SELECT 1 FROM account WHERE username = ?");
+        mysqli_stmt_bind_param($stmt, "s", $user);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+        if (mysqli_num_rows($result) > 0) {
+            $msg = "Tên đăng nhập đã tồn tại!";
             $icon = "error";
             $redirect = "register.php";
+        } else {
+            // Them tai khoan moi - day du cot NOT NULL khong co default (giong game)
+            $stmt = mysqli_prepare($conn, "INSERT INTO account (username, password, ip_address, admin, mabaove, anh_web, gioithieu, gmail) VALUES (?, ?, ?, 0, 0, '', 0, '')");
+            $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+            $pass_hash = pw_hash($pass); // băm trước khi lưu (PBKDF2-SHA256)
+            mysqli_stmt_bind_param($stmt, "sss", $user, $pass_hash, $ip);
+            if (mysqli_stmt_execute($stmt)) {
+                $msg = "Tạo tài khoản thành công! Vui lòng đăng nhập.";
+                $icon = "success";
+                $redirect = "login.php";
+            } else {
+                $msg = "Lỗi: " . mysqli_error($conn);
+                $icon = "error";
+                $redirect = "register.php";
+            }
         }
     }
 
