@@ -24,15 +24,9 @@ public class EpSaoTrangBi {
     }
 
     public static boolean isTrangBiEpPhaLeHoa(Item item) {
-        if (item != null && item.isNotNullItem()) {
-            if (item.template.type < 5 || item.template.type == 32) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
+        // [10/10/2026] Ep Sao Pha Le CHI dung cho 5 mon: Ao, Quan, Gang, Giay, Nhan (type 0-4).
+        // Cai trang / phu kien / giap tap luyen (type 32) phai dung "Ep Sao Phu Kien".
+        return item != null && item.isNotNullItem() && item.template.type < 5;
     }
 
     public static boolean isDaPhaLe(Item item) {
@@ -58,14 +52,22 @@ public class EpSaoTrangBi {
         }
         Item trangBi = null;
         Item daPhaLe = null;
+        boolean coCaiTrangHoacPhuKien = false;
         for (Item item : player.combine.itemsCombine) {
-            if (item.canPhaLeHoa()) {
+            if (isTrangBiEpPhaLeHoa(item)) {
                 trangBi = item;
             } else if (item.isDaPhaLeEpSao()) {
                 daPhaLe = item;
+            } else if (item.canPhaLeHoa()) {
+                coCaiTrangHoacPhuKien = true;
             }
         }
         if (trangBi == null || !trangBi.isNotNullItem() || daPhaLe == null || !daPhaLe.isNotNullItem()) {
+            if (coCaiTrangHoacPhuKien) {
+                Service.gI().sendDialogMessage(player, "Ép Sao Pha Lê chỉ dùng cho Áo, Quần, Găng, Giày, Nhẫn.\n"
+                        + "Cải trang / phụ kiện / giáp tập luyện hãy dùng chức năng 'Ép Sao Phụ Kiện'.");
+                return;
+            }
             Service.gI().sendDialogMessage(player, "Cần 1 trang bị có lỗ sao pha lê và 1 loại ngọc để ép vào.");
             return;
         }
@@ -74,7 +76,12 @@ public class EpSaoTrangBi {
         long cuongHoa = trangBi.getOptionParam(228);
 
         if (star >= starEmpty) {
-            Service.gI().sendDialogMessage(player, "Cần 1 trang bị có lỗ sao pha lê và 1 loại ngọc để ép vào.");
+            if (starEmpty <= 0) {
+                Service.gI().sendDialogMessage(player, "Trang bị chưa có ô Sao Pha Lê nào.\n"
+                        + "Hãy 'Pha Lê Hóa' (theo cấp VIP) để đục lỗ trước rồi mới ép sao.");
+            } else {
+                Service.gI().sendDialogMessage(player, "Trang bị này đã ép đầy " + starEmpty + " ô Sao Pha Lê.");
+            }
             return;
         }
 

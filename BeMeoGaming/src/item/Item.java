@@ -515,7 +515,17 @@ public class Item {
     }
 
     public boolean canPhaLeHoa() {
-        return this.template != null && (this.template.type < 5 || this.template.type == 32);
+        if (this.template == null) {
+            return false;
+        }
+        // [10/10/2026] MoI THU deu pha le hoa duoc theo cap VIP:
+        // Ao-Quan-Gang-Giay-Nhan (type 0-4), Giap tap luyen (32),
+        // Cai trang (5) va phu kien tu o thu 6 tro di (isTrangBiKham).
+        // Chi chan nguyen lieu thuong (27), da kham (87), sao pha le (30) va ngoc rong (id 14-20).
+        if (this.isDaKham() || this.isDaPhaLeEpSao() || (this.template.id >= 14 && this.template.id <= 20)) {
+            return false;
+        }
+        return this.template.type < 5 || this.template.type == 32 || isTrangBiKham();
     }
 
     public boolean isTrangBiKham() {

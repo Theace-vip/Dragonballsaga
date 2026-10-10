@@ -35,9 +35,10 @@ public class Osin extends Npc {
                         this.createOtherMenu(player, ConstNpc.BASE_MENU, "Ta có thể giúp gì cho ngươi ?",
                                 "Đến\nKaio", "Đến\nhành tinh\nBill", "Từ chối");
                     }
+                    // [10/10/2026] Bo nut "Cua hang" theo yeu cau; chi con duong sang hanh tinh nguc tu
                     case 154 ->
                         this.createOtherMenu(player, ConstNpc.BASE_MENU, "Ta có thể giúp gì cho ngươi ?",
-                                "Cửa\nhàng", "Đến\nhành tinh\nngục tù", "Từ chối");
+                                "Đến\nhành tinh\nngục tù", "Từ chối");
                     case 155 ->
                         this.createOtherMenu(player, ConstNpc.BASE_MENU, "Ta có thể giúp gì cho ngươi ?",
                                 "Quay về", "Từ chối");
@@ -116,9 +117,7 @@ public class Osin extends Npc {
                 case 154 -> {
                     if (player.iDMark.isBaseMenu()) {
                         switch (select) {
-                            case 0 ->
-                                ShopService.gI().opendShop(player, "CUAHANG", false);
-                            case 1 -> {
+                            case 0 -> {
                                 if (player.nPoint.power <= 80_000_000_000L) {
                                     Service.gI().sendThongBao(player, "Yêu cầu sức mạnh đạt 80 tỉ");
                                     return;

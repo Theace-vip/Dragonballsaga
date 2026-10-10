@@ -44,6 +44,7 @@ public class DataGame {
     public static byte vsMap = 2;
     public static byte vsSkill = 1;
     // [Cung Menh 24/09/2026] tang version khi them item 1912 (Manh Tinh Tu) + 1913 (Ngoc Tinh Do)
+    // [Ban Nguyen 10/10/2026] tang tiep khi them item 1942 (Manh Vo Tinh Thach) + 1943 (Hat Giong Khoi Nguyen)
     // de client cu xoa cache item template trong RMS (NRitem0/1/2) va tai lai danh sach moi.
     // Neu khong tang, client se dung cache cu -> khong biet template 1912/1913 -> item trong hanh trang
     // bi loi khi ve (NullReferenceException) nen khong hien ra.
@@ -62,7 +63,12 @@ public class DataGame {
     //      icon 32635, avatar 32636) + doi ten 1934 -> "Ngọc Thố Tinh" (co dau).
     // v22: them item 1936 Cai trang VLT 021 (TYPE=5, head/body/leg 2146/2147/2148, icon 32671, avatar 32672).
     // v23: them item 1937 Cai trang VLT 090 (TYPE=5, head/body/leg 2149/2150/2151, icon 32707, avatar 32708).
-    public static byte vsItem = 23;
+    // v24: doi 14 o vong quay Tam Bao sang vat pham moi (224,220,221,222,223,457,1225,1224,1913,1588,1270,
+    //      1271,1150,884,1810,531,1753) -> tang version de client xoa cache item template trong RMS
+    //      (NRitem0/1/2) va tai lai danh sach moi truoc khi mo vong quay.
+    // v25: them item 1942 (Manh Vo Tinh Thach, icon 32745) + 1943 (Hat Giong Khoi Nguyen, icon 32746)
+    //      cho Ban Nguyen Tinh Cau -> client xoa cache item template trong RMS (NRitem0/1/2) va tai lai.
+    public static byte vsItem = 25;
     public static int vsRes = 40;
     public static short maxSmallVersion = 32767;
 

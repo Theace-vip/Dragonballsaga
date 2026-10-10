@@ -5,6 +5,13 @@ require_once '../DHKD/Session.php';
 require_once '../DHKD/Connections.php';
 define('POINTS_PER_TOPUP', 1);
 
+/* ============================================================================
+ * NAP THE CAO: DA NGUNG (2026-10-10)
+ * Toan bo phan doi chieu chu ky + cong tien tu the cao da duoc comment theo yeu
+ * cau - tu day callback cua nha cung cap khong cong tien cho ai nua.
+ * Muon bat lai: bo comment khoi doan code duoi day (va xoa phan tra thong bao
+ * "da tam ngung" o cuoi file).
+ * ----------------------------------------------------------------------------
 // Lấy dữ liệu từ request
 $txtBody = file_get_contents('php://input');
 $jsonBody = json_decode($txtBody);
@@ -91,3 +98,8 @@ if (!empty($log)) {
     fwrite($logFile, date("Y-m-d H:i:s") . "\n" . $log . "\n");
     fclose($logFile);
 }
+ * ========================================================================== */
+
+// Luong the cao da ngung: khong doi chieu chu ky, khong cong tien, khong doi status
+http_response_code(200);
+echo 'Nap the cao da tam ngung. Vui long nap bang chuyen khoan ngan hang.';

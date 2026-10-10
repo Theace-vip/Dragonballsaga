@@ -112,6 +112,9 @@ public class Player implements Runnable {
     // Cung Menh: cap nang cap va so lan dot pha (luu cot cung_menh)
     public int cungMenhLevel = 0;
     public int cungMenhDotPha = 0;
+    // Ban Nguyen Tinh Cau: Cap do Loi (0-10) + Tier tien hoa (0-5) - luu cot ban_nguyen
+    public int banNguyenLevel = 0;
+    public int banNguyenTier = 0;
     // true = da tru bonus cu (cong thang vao hpg/mpg/dameg) - xem CungMenhService.migrateOldBonus
     public boolean cungMenhFixedOldBonus = false;
     public long timevip;
@@ -139,6 +142,8 @@ public class Player implements Runnable {
     public Date weekTimeLogin = new Date();
     // Tầm Bảo (Vòng Quay) - xem services.TamBao
     public int diem_quay;
+    /** So lan da reset vong quay (nhan moc cuoi 2000): quy doi he so qua cua cac moc. */
+    public int reset_vong_quay;
     public List<Integer> listNhan_TamBao = new ArrayList<>();
     public int[] checkNhan_TamBao = new int[0];
     public int[] list_id_nhan = new int[TamBao.SLOTS];
@@ -459,6 +464,11 @@ public class Player implements Runnable {
         if (!this.beforeDispose) {
             try {
                 if (this.zone != null || (!this.isPl() && this.zone == null)) {
+                    // BAN NGUYEN TINH CAU: Namek Tier 5 hoi 5% HP/KI moi giay
+                    try {
+                        services.BanNguyenTinhCauService.gI().tick(this);
+                    } catch (Exception e) {
+                    }
                     if (itemTime != null) {
                         itemTime.update();
                     }
@@ -1338,10 +1348,17 @@ public class Player implements Runnable {
                 return 0;
             }
 
+            double dameTruocGiap = damage;
+
             damage -= ((damage / 100) * tlGiap);
 
             if (!piercing) {
                 damage = this.nPoint.subDameInjureWithDeff(damage);
+            }
+
+            // BAN NGUYEN TINH CAU: Xayda - phan sat thuong chuan (bo qua giap/def cua nan nhan)
+            if (plAtt != null && plAtt.isPl()) {
+                damage = services.BanNguyenTinhCauService.gI().congSatThuongChuan(plAtt, damage, dameTruocGiap);
             }
 
             boolean isUseGX = false;
@@ -1394,7 +1411,11 @@ public class Player implements Runnable {
             if (plAtt != null && plAtt.isBoss && EventSuKien.TrungThuService.gI().isEventBossPlayer(plAtt)) {
                 damage = EventSuKien.TrungThuService.gI().bossFixedDamage();
             }
+            // BAN NGUYEN TINH CAU: Trai Dat - % mien thuong + noi tai giu mang Tier 5
+            damage = services.BanNguyenTinhCauService.gI().truSatThuongNhan(this, damage, isMobAttack);
             this.nPoint.subHP(damage);
+            // BAN NGUYEN TINH CAU: Namek - % phan sat thuong tra lai ke tan cong
+            services.BanNguyenTinhCauService.gI().phanSatThuong(this, plAtt, damage);
             if ((plAtt != null || isMobAttack) && isDie() && !isBoss && !isNewPet && !isNewPet1) {
                 if (Util.isTrue(this.nPoint.tlBom, 100)) {
                     setBom(plAtt);

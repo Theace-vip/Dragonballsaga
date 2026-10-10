@@ -94,8 +94,23 @@ public class TamBao {
     /** Vật phẩm bù vào ô trống khi bảng tambao_items chưa đủ {@link #SLOTS} dòng. */
     private static final int[] FALLBACK_ITEM_IDS = {220, 221, 222, 223, 224, 15, 17, 18, 19, 20, 381, 382, 383, 384, 385};
 
-    private static final int MIN_PERCENT = 0;
-    private static final int MAX_PERCENT = 100;
+    private static final double MIN_PERCENT = 0.0;
+    private static final double MAX_PERCENT = 100.0;
+
+    /** Option "Đã Khóa" - không tăng theo hệ số reset. */
+    private static final int OPTION_LOCK = 30;
+
+    /** Mốc cuối (2000 điểm): nhận xong thì reset vòng quay về đầu. */
+    private static final int MOC_RESET_VALUE = 2000;
+
+    /** Mốc 10-900: mỗi lần reset tăng 1.5 lần số lượng quà. */
+    private static final double MOC_QTY_SCALE = 1.5;
+
+    /** Mốc 1000-1700: mỗi lần reset cộng thêm 2000% vào các dòng chỉ số. */
+    private static final int MOC_OPTION_SCALE = 2000;
+
+    /** Mốc 2000: cứ 3 lần reset thì +1 Hộp quà. */
+    private static final int MOC_BOX_RESETS = 3;
 
     // ==================== MÀU CHỮ THÔNG BÁO ====================
     private static final String COLOR_SUCCESS = "|2|";
@@ -111,8 +126,8 @@ public class TamBao {
     /** Vật phẩm của từng loại chìa (bảng tambao_items, theo key_item_id). */
     private final Map<Integer, List<Item>> pools = new HashMap<>();
 
-    /** Tỉ lệ trúng (%) của từng vật phẩm, song song với {@link #pools}. */
-    private final Map<Integer, List<Integer>> poolRates = new HashMap<>();
+    /** Tỉ lệ trúng (%) của từng vật phẩm, song song với {@link #pools} - cho phép số thập phân (0.5%). */
+    private final Map<Integer, List<Double>> poolRates = new HashMap<>();
 
     /** Bố cục 14 ô đã gửi cho client của lần mở vòng quay gần nhất, theo id nhân vật. */
     private final Map<Long, SpinPool> lastView = new ConcurrentHashMap<>();
@@ -137,9 +152,9 @@ public class TamBao {
 
         final int keyId;
         final List<Item> items;
-        final List<Integer> rates;
+        final List<Double> rates;
 
-        SpinPool(int keyId, List<Item> items, List<Integer> rates) {
+        SpinPool(int keyId, List<Item> items, List<Double> rates) {
             this.keyId = keyId;
             this.items = items;
             this.rates = rates;
@@ -221,7 +236,7 @@ public class TamBao {
                 int keyId = rs.getInt("key_item_id");
                 Item item = createItemWithOptions(templateId, Math.max(1, quantity), rs.getString("item_options"));
                 pools.computeIfAbsent(keyId, key -> new ArrayList<>()).add(item);
-                poolRates.computeIfAbsent(keyId, key -> new ArrayList<>()).add(toPercent(rs.getInt("tile_trung_thuong")));
+                poolRates.computeIfAbsent(keyId, key -> new ArrayList<>()).add(toPercent(rs.getDouble("tile_trung_thuong")));
             }
             if (!pools.isEmpty()) {
                 // mặc định dùng pool "Key vàng" (1874); không có pool đó thì lấy key nhỏ nhất cho ổn định
@@ -352,6 +367,7 @@ public class TamBao {
             return;
         }
         SpinPool pool = spinPoolOf(pl, getCurrentKeyId());
+        logSentPool(pl, pool);
 
         Message msg = new Message(CMD_SEND);
         try {
@@ -422,6 +438,18 @@ public class TamBao {
         } finally {
             msg.cleanup();
         }
+    }
+
+    /** Log 14 o vua gui cho client - dung de doi chieu khi client hien thi sai. */
+    private void logSentPool(Player pl, SpinPool pool) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < pool.items.size(); i++) {
+            Item item = pool.items.get(i);
+            sb.append(item.template.id).append('x').append(item.quantity)
+                    .append('(').append(pool.rates.get(i)).append("%) ");
+        }
+        Logger.success("Gui vong quay Tam Bao cho " + pl.name + ": chia=" + pool.keyId
+                + ", " + pool.items.size() + " o -> " + sb.toString().trim());
     }
 
     private void writeItemInfo(DataOutputStream out, Item item) throws IOException {
@@ -528,16 +556,16 @@ public class TamBao {
      */
     private SpinPool buildSpinPool(int keyId) {
         List<Item> sourceItems = pools.getOrDefault(keyId, Collections.emptyList());
-        List<Integer> sourceRates = poolRates.getOrDefault(keyId, Collections.emptyList());
+        List<Double> sourceRates = poolRates.getOrDefault(keyId, Collections.emptyList());
 
         List<Item> items = new ArrayList<>(SLOTS);
-        List<Integer> rates = new ArrayList<>(SLOTS);
+        List<Double> rates = new ArrayList<>(SLOTS);
 
         List<Integer> order = shuffledIndexes(sourceItems.size());
         for (int i = 0; i < Math.min(SLOTS, order.size()); i++) {
             int index = order.get(i);
             items.add(sourceItems.get(index));
-            rates.add(toPercent(index < sourceRates.size() ? sourceRates.get(index) : 0));
+            rates.add(toPercent(index < sourceRates.size() ? sourceRates.get(index) : 0.0));
         }
 
         List<Integer> fallbackIds = new ArrayList<>();
@@ -552,7 +580,7 @@ public class TamBao {
         }
 
         List<Item> shuffledItems = new ArrayList<>(SLOTS);
-        List<Integer> shuffledRates = new ArrayList<>(SLOTS);
+        List<Double> shuffledRates = new ArrayList<>(SLOTS);
         for (int index : shuffledIndexes(SLOTS)) {
             shuffledItems.add(items.get(index));
             shuffledRates.add(rates.get(index));
@@ -573,7 +601,7 @@ public class TamBao {
      * Quay theo tỉ lệ: ô có tỉ lệ > 0 nhận đúng phần trăm của nó. Tổng > 100 thì chuẩn hoá về 100,
      * tổng < 100 thì chia phần dư cho các ô 0% (thường là ô bù dự phòng), tất cả đều 0 thì chia đều.
      */
-    private int pickSlot(List<Integer> rates) {
+    private int pickSlot(List<Double> rates) {
         int size = rates.size();
         if (size == 0) {
             return 0;
@@ -583,7 +611,7 @@ public class TamBao {
         double totalPercent = 0;
         int zeroSlots = 0;
         for (int i = 0; i < size; i++) {
-            int rate = toPercent(rates.get(i));
+            double rate = toPercent(rates.get(i));
             weights[i] = rate;
             totalPercent += rate;
             if (rate == 0) {
@@ -690,16 +718,62 @@ public class TamBao {
             return;
         }
 
-        pl.listNhan_TamBao.add(moc.id_moc);
+        // mốc cuối: nhận xong thì reset vòng quay, quà các vòng sau tăng theo số lần đã reset
+        final int resetCount = Math.max(0, pl.reset_vong_quay);
+        final boolean lastMoc = moc.max_value >= MOC_RESET_VALUE;
+        if (lastMoc) {
+            pl.listNhan_TamBao.clear();
+            pl.diem_quay = 0;
+            pl.reset_vong_quay = resetCount + 1;
+        } else {
+            pl.listNhan_TamBao.add(moc.id_moc);
+        }
         PlayerDAO.saveVongQuay(pl);
 
         // phải dùng bản sao: addItemBag set quantity = 0 trên item truyền vào
         Item reward = ItemService.gI().copyItem(moc);
+        reward.quantity = scaledQuantity(reward.quantity, moc.max_value, resetCount);
+        applyResetScale(reward, moc.max_value, resetCount);
         int quantity = reward.quantity;
         InventoryService.gI().addItemBag(pl, reward, -333);
         Service.gI().sendThongBao(pl, COLOR_SUCCESS + "Đã nhận x" + quantity + " " + moc.template.name + "\n");
+        if (lastMoc) {
+            Service.gI().sendThongBaoFromAdmin(pl, COLOR_GOLD + "Vòng quay Tầm Bảo đã RESET lần " + pl.reset_vong_quay
+                    + "!\nQuà mốc 10-900 x" + MOC_QTY_SCALE + ", mốc 1000-1700 +" + MOC_OPTION_SCALE
+                    + "% chỉ số, mốc 2000 +1 hộp mỗi " + MOC_BOX_RESETS + " lần reset.");
+        }
         InventoryService.gI().sendItemBag(pl);
         sendMocTamBao(pl);
+    }
+
+    /**
+     * Số lượng quà của mốc sau khi tính hệ số reset: mốc 10-900 x1.5 mỗi lần reset,
+     * mốc 2000 +1 mỗi {@link #MOC_BOX_RESETS} lần reset.
+     */
+    private int scaledQuantity(int baseQuantity, int maxValue, int resetCount) {
+        if (resetCount <= 0) {
+            return baseQuantity;
+        }
+        if (maxValue <= 900) {
+            return Math.max(1, (int) Math.round(baseQuantity * Math.pow(MOC_QTY_SCALE, resetCount)));
+        }
+        if (maxValue >= MOC_RESET_VALUE) {
+            return baseQuantity + resetCount / MOC_BOX_RESETS;
+        }
+        return baseQuantity;
+    }
+
+    /** Mốc 1000-1700: mỗi lần reset cộng thêm {@link #MOC_OPTION_SCALE} vào các dòng chỉ số (bỏ qua option khoá). */
+    private void applyResetScale(Item reward, int maxValue, int resetCount) {
+        if (resetCount <= 0 || maxValue < 1000 || maxValue >= MOC_RESET_VALUE) {
+            return;
+        }
+        long bonus = (long) MOC_OPTION_SCALE * resetCount;
+        for (ItemOption option : reward.itemOptions) {
+            if (option.optionTemplate != null && option.optionTemplate.id != OPTION_LOCK) {
+                option.param += bonus;
+            }
+        }
     }
 
     private int indexOfMoc(int idMoc) {
@@ -736,7 +810,7 @@ public class TamBao {
     // HELPERS
     // =========================================================
 
-    private static int toPercent(Integer rate) {
+    private static double toPercent(Double rate) {
         if (rate == null) {
             return MIN_PERCENT;
         }

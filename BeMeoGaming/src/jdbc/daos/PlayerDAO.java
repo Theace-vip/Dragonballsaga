@@ -1410,7 +1410,7 @@ public class PlayerDAO {
      */
     public static void saveVongQuay(Player player) {
         try (Connection con = DBConnecter.getConnectionServer(); PreparedStatement ps = con.prepareStatement(
-                "UPDATE player SET diem_quay = ?, active_vong_quay = ? WHERE id = ?")) {
+                "UPDATE player SET diem_quay = ?, active_vong_quay = ?, reset_vong_quay = ? WHERE id = ?")) {
             JSONArray data = new JSONArray();
             if (player.listNhan_TamBao != null) {
                 for (Integer idMoc : player.listNhan_TamBao) {
@@ -1421,7 +1421,8 @@ public class PlayerDAO {
             }
             ps.setInt(1, player.diem_quay);
             ps.setString(2, data.toJSONString());
-            ps.setLong(3, player.id);
+            ps.setInt(3, player.reset_vong_quay);
+            ps.setLong(4, player.id);
             ps.executeUpdate();
         } catch (Exception e) {
             Logger.logException(PlayerDAO.class, e, "Lỗi lưu Vòng Quay (Tầm Bảo) " + player.name
@@ -1442,6 +1443,21 @@ public class PlayerDAO {
             ps.executeUpdate();
         } catch (SQLException e) {
             Logger.logException(PlayerDAO.class, e, "Lỗi update cung_menh " + player.name);
+        }
+    }
+
+    /** Luu Ban Nguyen Tinh Cau (JSON) - goi khi nang cap / dot pha tai Bo Mong. */
+    public static void saveBanNguyen(player.Player player) {
+        try (Connection con = DBConnecter.getConnectionServer(); PreparedStatement ps = con.prepareStatement(
+                "UPDATE player SET ban_nguyen = ? WHERE id = ?")) {
+            org.json.simple.JSONObject o = new org.json.simple.JSONObject();
+            o.put("level", String.valueOf(player.banNguyenLevel));
+            o.put("tier", String.valueOf(player.banNguyenTier));
+            ps.setString(1, o.toJSONString());
+            ps.setLong(2, player.id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            Logger.logException(PlayerDAO.class, e, "Lỗi update ban_nguyen " + player.name);
         }
     }
 

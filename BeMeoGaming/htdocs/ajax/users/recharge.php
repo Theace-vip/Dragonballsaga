@@ -16,6 +16,11 @@ if (!isset($_Login) || $_Login === null) {
 }
 if ($_Id) {
 
+    // ========================================================================
+    // NAP THE CAO: DA NGUNG (2026-10-10) - code cu giu nguyen dang comment
+    // Bat lai: bo comment khoi doan duoi va bo dong Ex(false, "... da tam ngung")
+    // ========================================================================
+    /*
     // $player = $CVH->player($user['id']);
 
     $data = json_decode(file_get_contents('php://input'), true) ?? $_POST;
@@ -58,6 +63,10 @@ if ($_Id) {
         Ex(false, "Vui lòng nhập đầy đủ thông tin!");
 
     }
+    */
+
+    // Luong the cao da ngung (khong gui the, khong ghi bang napthe)
+    Ex(false, "Nạp thẻ cào đã tạm ngừng. Vui lòng nạp bằng chuyển khoản ngân hàng.");
 
 
 } else {

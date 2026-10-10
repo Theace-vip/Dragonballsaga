@@ -163,6 +163,13 @@ function insert($conn, $table, $data)
     return $stmt->execute();
 }
 
+/* ============================================================================
+ * NAP THE CAO: DA NGUNG (2026-10-10)
+ * Toan bo phan goi API doithe.vn da duoc comment theo yeu cau - tu day khong
+ * con gui the cao ra nha cung cap nua.
+ * Muon bat lai: bo dau comment khoi doan code cu ben duoi va xoa phan return
+ * "da tam ngung" o phia sau.
+ * ----------------------------------------------------------------------------
 function post_card($request_id, $telco, $pin, $serial, $amount, $partner_id, $partner_key)
     {
         $data = array(
@@ -196,6 +203,15 @@ function post_card($request_id, $telco, $pin, $serial, $amount, $partner_id, $pa
 
         curl_close($curl);
         return json_decode($response, true);
+    }
+ * ========================================================================== */
+function post_card($request_id, $telco, $pin, $serial, $amount, $partner_id, $partner_key)
+    {
+        // Luong the cao da ngung: tra ve trang thai that bai, khong gui the di dau
+        return array(
+            'status' => 0,
+            'message' => 'Nap the cao da tam ngung. Vui long nap bang chuyen khoan ngan hang.'
+        );
     }
 
 function updatePassword($conn, $id, $Password)

@@ -1,0 +1,349 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (23), clan next id: 24
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1942)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (14)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (20)
+[0m[0;32mSuccessfully loaded SK top (20)
+[0m[0;32mSuccessfully loaded NHS top (20)
+[0m[0;32mSuccessfully loaded phòng t?p top (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0mAUTOGIFTTOP [14]
+Thread Update Auto Gift Item Top Running.........
+[0;35mTotal database loading time: 5159 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;34m3h56m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h56m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 220x100(12.0%) 1913x2(6.0%) 224x100(12.0%) 457x1000(9.0%) 221x100(11.0%) 1224x1(7.0%) 1588x1(3.0%) 1588x1(4.0%) 1225x10(8.0%) 222x100(11.0%) 223x100(10.0%) 1588x1(0.5%) 1588x1(5.0%)[0m[0;34m3h56m: Successful login for player admin[237]: 801 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 7ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 100ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 220x100(12.0%) 1913x2(6.0%) 224x100(12.0%) 457x1000(9.0%) 221x100(11.0%) 1224x1(7.0%) 1588x1(3.0%) 1588x1(4.0%) 1225x10(8.0%) 222x100(11.0%) 223x100(10.0%) 1588x1(0.5%) 1588x1(5.0%)[0m[MAP] gui -24 map=14 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[MAP] admin xong load map 14: client mat 317ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 220x100(12.0%) 1913x2(6.0%) 224x100(12.0%) 457x1000(9.0%) 221x100(11.0%) 1224x1(7.0%) 1588x1(3.0%) 1588x1(4.0%) 1225x10(8.0%) 222x100(11.0%) 223x100(10.0%) 1588x1(0.5%) 1588x1(5.0%)[0m[0;32m3h58m: Player admin saved successfully! 20ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m4h0m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h0m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 457x1000(9.0%) 1913x2(6.0%) 1225x10(8.0%) 1588x1(0.5%) 224x100(12.0%) 220x100(12.0%) 223x100(10.0%) 1588x1(1.5%) 1588x1(4.0%) 222x100(11.0%) 221x100(11.0%) 1588x1(3.0%) 1224x1(7.0%) 1588x1(5.0%)[0m[0;34m4h1m: Successful login for player admin[237]: 471 ms
+[0m[MAP] gui -24 map=14 zone=0 cho admin mat 5ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[MAP] admin xong load map 14: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=154 zone=0 cho admin mat 5ms, queue dang cho gui=1
+[0;34m4h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h1m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h1m: [LOGIN] admin -> TAI KHOAN DANG ONLINE (ghost=admin) -> kick session ghost + KICK SESSION HIENTAI, guiLoginFail tren session da dong
+[0m[0;32m4h1m: Player admin saved successfully! 17ms
+[0m[0;34m4h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h1m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 1588x1(5.0%) 1588x1(3.0%) 223x100(10.0%) 1588x1(0.5%) 220x100(12.0%) 1225x10(8.0%) 1588x1(4.0%) 222x100(11.0%) 1913x2(6.0%) 1224x1(7.0%) 457x1000(9.0%) 224x100(12.0%) 221x100(11.0%)[0m[0;34m4h1m: Successful login for player admin[237]: 343 ms
+[0m[MAP] gui -24 map=154 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[MAP] admin xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32m4h1m: Player admin saved successfully! 12ms
+[0m[0;34m4h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h1m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 220x100(12.0%) 1225x10(8.0%) 1588x1(4.0%) 1588x1(0.5%) 457x1000(9.0%) 1913x2(6.0%) 1588x1(3.0%) 223x100(10.0%) 222x100(11.0%) 1588x1(5.0%) 1588x1(1.5%) 224x100(12.0%) 1224x1(7.0%) 221x100(11.0%)[0m[0;34m4h1m: Successful login for player admin[237]: 175 ms
+[0m[MAP] gui -24 map=154 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[MAP] admin xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=5 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 370ms tu luc gui -24, server xu ly finishLoadMap 85ms
+[MAP] gui -24 map=23 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat 537ms tu luc gui -24, server xu ly finishLoadMap 15ms
+[MAP] admin xong load map 23: client mat 8920ms tu luc gui -24, server xu ly finishLoadMap 12ms
+[MAP] gui -24 map=175 zone=0 cho admin mat 1ms, queue dang cho gui=1
+[MAP] admin xong load map 175: client mat 367ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[MAP] gui -24 map=5 zone=0 cho admin mat 1ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 296ms tu luc gui -24, server xu ly finishLoadMap 36ms
+[0;34m4h3m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h3m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h3m: [LOGIN] admin -> TAI KHOAN DANG ONLINE (ghost=admin) -> kick session ghost + KICK SESSION HIENTAI, guiLoginFail tren session da dong
+[0m[0;32m4h3m: Player admin saved successfully! 19ms
+[0m[0;34m4h3m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h3m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(0.5%) 222x100(11.0%) 221x100(11.0%) 1913x2(6.0%) 1224x1(7.0%) 220x100(12.0%) 1588x1(5.0%) 224x100(12.0%) 457x1000(9.0%) 1588x1(1.5%) 223x100(10.0%) 1588x1(4.0%) 1225x10(8.0%) 1588x1(3.0%)[0m[0;34m4h3m: Successful login for player admin[237]: 238 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 50ms
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat 1276ms tu luc gui -24, server xu ly finishLoadMap 19ms
+[MAP] admin xong load map 23: client mat 8056ms tu luc gui -24, server xu ly finishLoadMap 14ms
+[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 711ms tu luc gui -24, server xu ly finishLoadMap 63ms
+[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(0.5%) 222x100(11.0%) 221x100(11.0%) 1913x2(6.0%) 1224x1(7.0%) 220x100(12.0%) 1588x1(5.0%) 224x100(12.0%) 457x1000(9.0%) 1588x1(1.5%) 223x100(10.0%) 1588x1(4.0%) 1225x10(8.0%) 1588x1(3.0%)[0m[0;34m4h5m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h5m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h5m: [LOGIN] admin -> TAI KHOAN DANG ONLINE (ghost=admin) -> kick session ghost + KICK SESSION HIENTAI, guiLoginFail tren session da dong
+[0m[0;32m4h5m: Player admin saved successfully! 12ms
+[0m[0;34m4h5m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h5m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 222x100(11.0%) 1225x10(8.0%) 221x100(11.0%) 224x100(12.0%) 1224x1(7.0%) 1588x1(3.0%) 1588x1(5.0%) 1588x1(4.0%) 1588x1(1.5%) 220x100(12.0%) 223x100(10.0%) 457x1000(9.0%) 1588x1(0.5%) 1913x2(6.0%)[0m[0;34m4h5m: Successful login for player admin[237]: 226 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 34ms
+[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 222x100(11.0%) 1225x10(8.0%) 221x100(11.0%) 224x100(12.0%) 1224x1(7.0%) 1588x1(3.0%) 1588x1(5.0%) 1588x1(4.0%) 1588x1(1.5%) 220x100(12.0%) 223x100(10.0%) 457x1000(9.0%) 1588x1(0.5%) 1913x2(6.0%)[0m[0;34m4h7m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h7m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h7m: [LOGIN] admin -> TAI KHOAN DANG ONLINE (ghost=admin) -> kick session ghost + KICK SESSION HIENTAI, guiLoginFail tren session da dong
+[0m[0;32m4h7m: Player admin saved successfully! 11ms
+[0m[0;34m4h7m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h8m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(3.0%) 1225x10(8.0%) 1588x1(4.0%) 223x100(10.0%) 457x1000(9.0%) 221x100(11.0%) 1224x1(7.0%) 1588x1(1.5%) 224x100(12.0%) 220x100(12.0%) 222x100(11.0%) 1588x1(0.5%) 1588x1(5.0%) 1913x2(6.0%)[0m[0;34m4h8m: Successful login for player admin[237]: 260 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 98ms
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 47ms
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m4h9m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h9m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h9m: [LOGIN] admin -> TAI KHOAN DANG ONLINE (ghost=admin) -> kick session ghost + KICK SESSION HIENTAI, guiLoginFail tren session da dong
+[0m[0;32m4h9m: Player admin saved successfully! 13ms
+[0m[0;34m4h9m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h9m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m4h9m: [LOGIN] admin -> vua logout trong 1s, gui cho doi
+[0m[0;34m4h9m: [CONN] ket noi moi tu 171.250.165.6
+[0m[0;34m4h9m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 220x100(12.0%) 1588x1(1.5%) 221x100(11.0%) 224x100(12.0%) 457x1000(9.0%) 1913x2(6.0%) 1224x1(7.0%) 1588x1(4.0%) 1225x10(8.0%) 1588x1(0.5%) 1588x1(5.0%) 1588x1(3.0%) 222x100(11.0%) 223x100(10.0%)[0m[0;34m4h9m: Successful login for player admin[237]: 247 ms
+[0m[CLIENT] 1 platform=Pc platform xxx|2.3.7 type=2 -> version=237[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 30ms
+[0;32m4h10m: Player admin saved successfully! 11ms
+[0m[0;34m4h10m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h10m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h10m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 224x100(12.0%) 1224x1(7.0%) 1588x1(4.0%) 222x100(11.0%) 223x100(10.0%) 1225x10(8.0%) 1588x1(5.0%) 221x100(11.0%) 1913x2(6.0%) 457x1000(9.0%) 1588x1(0.5%) 1588x1(3.0%) 220x100(12.0%)[0m[0;34m4h10m: Successful login for player admin[237]: 272 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 29ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m4h11m: Player admin saved successfully! 12ms
+[0m[0;34m4h14m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h14m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1224x1(7.0%) 1588x1(1.5%) 1588x1(5.0%) 1225x10(8.0%) 1588x1(4.0%) 1588x1(3.0%) 221x100(11.0%) 1913x2(6.0%) 457x1000(9.0%) 224x100(12.0%) 222x100(11.0%) 223x100(10.0%) 1588x1(0.5%) 220x100(12.0%)[0m[0;34m4h14m: Successful login for player admin[237]: 320 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 66ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m4h14m: Player admin saved successfully! 9ms
+[0m[0;34m4h14m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h14m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h14m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 457x1000(9.0%) 1588x1(1.5%) 1225x10(8.0%) 221x100(11.0%) 223x100(10.0%) 1224x1(7.0%) 1913x2(6.0%) 224x100(12.0%) 222x100(11.0%) 1588x1(4.0%) 220x100(12.0%) 1588x1(0.5%) 1588x1(3.0%) 1588x1(5.0%)[0m[0;34m4h14m: Successful login for player admin[237]: 218 ms
+[0m[MAP] gui -24 map=5 zone=0 cho admin mat 1ms, queue dang cho gui=2
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 33ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32m4h15m: Player admin saved successfully! 12ms
+[0m[0;34m4h15m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h15m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho theace: chia=1874, 14 o -> 220x100(12.0%) 1224x1(7.0%) 222x100(11.0%) 1588x1(5.0%) 1913x2(6.0%) 1225x10(8.0%) 224x100(12.0%) 1588x1(1.5%) 223x100(10.0%) 221x100(11.0%) 457x1000(9.0%) 1588x1(3.0%) 1588x1(0.5%) 1588x1(4.0%)[0m[0;34m4h15m: Successful login for player theace[237]: 301 ms
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[0;34m4h15m: [LOGIN] Yeu cau login: user=theacelkjkljjk ip=171.250.165.6 sessionPlayer=theace
+[0m[0;34m4h15m: [LOGIN] -> session DA CO player theace -> BO QUA, khong tra loi gi (client se treo man hinh)
+[0m[MAP] gui -24 map=154 zone=0 cho theace mat 30ms, queue dang cho gui=1
+[MAP] theace xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[0;32m4h15m: Player theace saved successfully! 6ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m

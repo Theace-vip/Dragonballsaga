@@ -44,6 +44,67 @@ public class OngGohan extends Npc {
         return SystemTuning.getI("vip_gia_" + vipLevel);
     }
 
+    // ===== Danh sach mua VIP (2 trang: VIP1-6 va VIP7-13) =====
+    private String vipBuyHeader(Player player, String trang) {
+        return "|7|˚₊· ͟͟͞͞➳❥MUA VIP VĨNH VIỄN - " + trang + "\n"
+                + "•❅────✧❅✦❅✧────❅••❅────✧❅✦❅✧────❅•\n"
+                + "|2|✎Số Dư hiện tại : " + Util.format(player.getSession().vnd) + " Cash"
+                + "\n|7|✎TRẠNG THÁI : VIP " + player.Saga_VIP
+                + "\n✎ĐẶC QUYỀN HOÀN " + SystemTuning.getI("vip_hoan") + "% PHÍ VIP CŨ\n"
+                + "•❅────✧❅✦❅✧────❅••❅────✧❅✦❅✧────❅•\n"
+                + (player.timevip > 0 ? "\n|5|Hạn còn : " + "Vĩnh Viễn" : "");
+    }
+
+    // Trang 1: mua VIP 1-6 (indexMenu 1: case 0-5 = chi tiet VIP1-6, case 6 = sang trang 2)
+    private void openVipBuyPage1(Player player) {
+        this.createOtherMenu(player, 1, vipBuyHeader(player, "TRANG 1/2"),
+                "VIP1\n" + Util.numberToText(SystemTuning.getI("vip_gia_1")) + "\n Cash",
+                "VIP2\n" + Util.numberToText(SystemTuning.getI("vip_gia_2")) + "\nCash",
+                "VIP3\n" + Util.numberToText(SystemTuning.getI("vip_gia_3")) + "\n Cash",
+                "VIP4\n" + Util.numberToText(SystemTuning.getI("vip_gia_4")) + "\n Cash",
+                "VIP5\n" + Util.numberToText(SystemTuning.getI("vip_gia_5")) + "\nCash",
+                "VIP6\n" + Util.numberToText(SystemTuning.getI("vip_gia_6")) + "\nCash",
+                "Trang 2\nVIP 7-13");
+    }
+
+    // Trang 2: mua VIP 7-13 (indexMenu 16: case 0-6 = chi tiet VIP7-13, case 7 = quay lai trang 1)
+    private void openVipBuyPage2(Player player) {
+        this.createOtherMenu(player, 16, vipBuyHeader(player, "TRANG 2/2"),
+                "VIP7\n" + Util.numberToText(SystemTuning.getI("vip_gia_7")) + "\nCash",
+                "VIP8\n" + Util.numberToText(SystemTuning.getI("vip_gia_8")) + "\nCash",
+                "VIP9\n" + Util.numberToText(SystemTuning.getI("vip_gia_9")) + "\nCash",
+                "VIP10\n" + Util.numberToText(SystemTuning.getI("vip_gia_10")) + "\nCash",
+                "VIP11\n" + Util.numberToText(SystemTuning.getI("vip_gia_11")) + "\nCash",
+                "VIP12\n" + Util.numberToText(SystemTuning.getI("vip_gia_12")) + "\nCash",
+                "VIP13\n" + Util.numberToText(SystemTuning.getI("vip_gia_13")) + "\nCash",
+                "«\nQuay lại");
+    }
+
+    // Man hinh quyen loi + nut Kich Hoat cua VIP (indexMenu gui len = vipLevel + 1)
+    private void openVipInfo(Player player, int vipLevel) {
+        String[] hp = {"500", "1000", "3000", "5000", "10.000", "20.000", "50000",
+            "100.000", "15.000", "180.000", "250.000", "300.000", "350.000"};
+        String[] tnsm = {"100", "150", "250", "350", "550", "650", "750",
+            "850", "1050", "1250", "1550", "1850", "2250"};
+        String[] sao = {"Pha Lê Hóa +8sao", "Pha Lê Hóa +12sao", "Pha Lê Hóa +15sao",
+            "Pha Lê Hóa +18sao", "Pha Lê Hóa +25sao", "Pha Lê Hóa +30sao",
+            "Tăng Đục Sao,Khảm 65Sao", "Tăng Đục Sao,Khảm 99Sao", "Tăng Đục Sao,Khảm 200Sao",
+            "Tăng Đục Sao,Khảm 300Sao", "Tăng Đục Sao,Khảm 500Sao", "Tăng Đục Sao,Khảm 700Sao",
+            "Tăng Đục Sao,Khảm 999Sao"};
+        int i = vipLevel - 1;
+        String title = vipLevel <= 2 ? "VIP" : "VIP " + vipLevel;
+        this.createOtherMenu(player, vipLevel + 1,
+                "|7|" + title + "\n"
+                + "|4|Quyền lợi Mở Vip đi kèm.."
+                + "\nTăng " + hp[i] + "% HP,KI,SD"
+                + "\nTăng " + tnsm[i] + "% TNSM"
+                + "\n" + sao[i]
+                + "\nĐặcquyền ThôngBáo Vào Game"
+                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
+                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
+                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+    }
+
     int[][] napVang = {{20000, 20000}, {50000, 60000}, {100000, 150000}, {500000, 800000}, {1000000, 2000000}, {2000000, 6000000}, {5000000, 50000000}};
 
     @Override
@@ -187,20 +248,7 @@ public class OngGohan extends Npc {
             } else if (player.iDMark.getIndexMenu() == 0) {
                 switch (select) {
                     case 0:
-                        this.createOtherMenu(player, 1, "|7|˚₊· ͟͟͞͞➳❥MUA VIP VĨNH VIỄN\n"
-                                + "•❅────✧❅✦❅✧────❅••❅────✧❅✦❅✧────❅•\n"
-                                + "|2|✎Số Dư hiện tại : " + Util.format(player.getSession().vnd) + " Cash"
-                                + "\n|7|✎TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + "\n✎ĐẶC QUYỀN HOÀN " + SystemTuning.getI("vip_hoan") + "% PHÍ VIP CŨ\n"
-                                //  + "\n|7|✎Điểm Vip :  " + Util.FormatNumber(player.point_vip)
-                                + (player.timevip > 0 ? "\n|5|Hạn còn : " + "Vĩnh Viễn" : ""),
-                                "VIP1\n" + Util.numberToText(SystemTuning.getI("vip_gia_1")) + "\n Cash",
-                                "VIP2\n" + Util.numberToText(SystemTuning.getI("vip_gia_2")) + "\nCash",
-                                "VIP3\n" + Util.numberToText(SystemTuning.getI("vip_gia_3")) + "\n Cash",
-                                "VIP4\n" + Util.numberToText(SystemTuning.getI("vip_gia_4")) + "\n Cash",
-                                "VIP5\n" + Util.numberToText(SystemTuning.getI("vip_gia_5")) + "\nCash",
-                                "VIP6\n" + Util.numberToText(SystemTuning.getI("vip_gia_6")) + "\nCash"
-                        );
+                        openVipBuyPage1(player);
                         break;
 
                     case 1:
@@ -248,152 +296,53 @@ public class OngGohan extends Npc {
             } else if (player.iDMark.getIndexMenu() == 1) {
                 switch (select) {
                     case 0:
-                        this.createOtherMenu(player, 2, "|7|VIP\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 500% HP,KI,SD"
-                                + "\nTăng 100% TNSM"
-                                + "\nPha Lê Hóa +8sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 1);
                         break;
                     case 1:
-                        this.createOtherMenu(player, 3, "|7|VIP\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 1000% HP,KI,SD"
-                                + "\nTăng 150% TNSM"
-                                + "\nPha Lê Hóa +12sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 2);
                         break;
                     case 2:
-                        this.createOtherMenu(player, 4, "|7|VIP 3\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 3000% HP,KI,SD"
-                                + "\nTăng 250% TNSM"
-                                + "\nPha Lê Hóa +15sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 3);
                         break;
                     case 3:
-                        this.createOtherMenu(player, 5, "|7|VIP 4\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 5000% HP,KI,SD"
-                                + "\nTăng 350% TNSM\n"
-                                + "\nPha Lê Hóa +18sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 4);
                         break;
                     case 4:
-                        this.createOtherMenu(player, 6, "|7|VIP 5\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 10.000% HP,KI,SD"
-                                + "\nTăng 550% TNSM"
-                                + "\nPha Lê Hóa +25sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 5);
                         break;
-
                     case 5:
-                        this.createOtherMenu(player, 7, "|7|VIP 6\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 20.000% HP,KI,SD"
-                                + "\nTăng 650% TNSM"
-                                + "\nPha Lê Hóa +30sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 6);
+                        break;
+                    case 6: // nut "Trang 2" tren danh sach mua VIP
+                        openVipBuyPage2(player);
+                        break;
+                }
+            } else if (player.iDMark.getIndexMenu() == 16) {
+                switch (select) {
+                    case 0:
+                        openVipInfo(player, 7);
+                        break;
+                    case 1:
+                        openVipInfo(player, 8);
+                        break;
+                    case 2:
+                        openVipInfo(player, 9);
+                        break;
+                    case 3:
+                        openVipInfo(player, 10);
+                        break;
+                    case 4:
+                        openVipInfo(player, 11);
+                        break;
+                    case 5:
+                        openVipInfo(player, 12);
                         break;
                     case 6:
-                        this.createOtherMenu(player, 8, "|7|VIP 7\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 50000% HP,KI,SD"
-                                + "\nTăng 750% TNSM"
-                                + "\nTăng Đục Sao,Khảm 65Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                        openVipInfo(player, 13);
                         break;
-                    case 7:
-                        this.createOtherMenu(player, 9, "|7|VIP 8\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 100.000% HP,KI,SD"
-                                + "\nTăng 850% TNSM"
-                                + "\nTăng Đục Sao,Khảm 99Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
+                    case 7: // quay lai trang 1
+                        openVipBuyPage1(player);
                         break;
-                    case 8:
-                        this.createOtherMenu(player, 10, "|7|VIP 9\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 15.000% HP,KI,SD"
-                                + "\nTăng 1050% TNSM"
-                                + "\nTăng Đục Sao,Khảm 200Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
-                        break;
-                    case 9:
-                        this.createOtherMenu(player, 11, "|7|VIP 10\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 180.000% HP,KI,SD"
-                                + "\nTăng 1250% TNSM"
-                                + "\nTăng Đục Sao,Khảm 300Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
-                        break;
-                    case 10:
-                        this.createOtherMenu(player, 12, "|7|VIP 11\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 250.000% HP,KI,SD"
-                                + "\nTăng 1550% TNSM"
-                                + "\nTăng Đục Sao,Khảm 500Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
-                        break;
-
-                    case 11:
-                        this.createOtherMenu(player, 13, "|7|VIP 12\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 300.000% HP,KI,SD"
-                                + "\nTăng 1850% TNSM"
-                                + "\nTăng Đục Sao,Khảm 700Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
-                        break;
-
-                    case 12:
-                        this.createOtherMenu(player, 14, "|7|VIP 13\n"
-                                + "|4|Quyền lợi Mở Vip đi kèm.."
-                                + "\nTăng 350.000% HP,KI,SD"
-                                + "\nTăng 2250% TNSM"
-                                + "\nTăng Đục Sao,Khảm 999Sao"
-                                + "\nĐặcquyền ThôngBáo Vào Game"
-                                + "\nĐặcquyền Hoàn " + SystemTuning.getI("vip_hoan") + "% Phí VIP Cũ"
-                                + "\n|7|TRẠNG THÁI : VIP " + player.Saga_VIP
-                                + (player.timevip > 0 ? "\nHạn còn : " + "Vĩnh Viễn" : ""), "Kích Hoạt", "Đóng");
-                        break;
-
                 }
             } else if (player.iDMark.getIndexMenu() == 2) {
                 switch (select) {

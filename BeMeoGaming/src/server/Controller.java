@@ -97,8 +97,13 @@ public class Controller implements IMessageHandler {
                     HomThuService.gI().readMsg(_msg, player);
                     break;
                 case TamBao.CMD_SEND:
+                    // Client gui cmd 106 moi lan mo vong quay (TamBao.perform 999 -> loadMocTamBao).
+                    // Phai gui lai day du 3 goi: 14 o vat pham (status 0) + moc thuong (status 1)
+                    // + o vua trung (status 2), neu thieu status 0 thi client ve rong.
                     if (player != null) {
+                        TamBao.gI().sendTamBao(player);
                         TamBao.gI().sendMocTamBao(player);
+                        TamBao.gI().sendWonSlots(player);
                     }
                     break;
                 case TamBao.CMD_ACTIVE:

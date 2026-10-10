@@ -68,8 +68,11 @@ public class LuckyNumber implements Runnable {
                             rewardWinGame();
                         }
                     }
-                    Thread.sleep(1000);
                 }
+                // [10/10/2026] Sleep LUON 1s moi vong, ke ca ngoai gio 8h-22h.
+                // Truoc day sleep nam trong if (isOpen()) -> ngoai gio vong lap quay cuong 100% CPU
+                // + Calendar.getInstance() moi vong -> ngon RAM/Heap tang lien tuc.
+                Thread.sleep(1000);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -188,7 +188,7 @@ public class CombineService {
             case XOA_SPL ->
                 XoaSpl.XoaSpl(player);
             case MO_CHI_SO_CAI_TRANG ->
-                MoChiSoCaiTrang.MoChiSoCaiTrang(player);
+                MoChiSoCaiTrang.MoChiSoCaiTrang(player, num);
             case NANG_CAP_CHAN_MENH ->
                 NangCapChanMenh.NangCapChanMenh(player);
             case EP_SAO_TRANG_BI ->
@@ -686,14 +686,16 @@ public class CombineService {
     private String getTextInfoTabCombine(int type) {
         return switch (type) {
             case EP_SAO_TRANG_BI ->
-                "Vào hành trang\nChọn trang bị\n(Áo, quần, găng, giày hoặc rađa) có ô đặt sao pha lê\nChọn loại sao pha lê\n"
+                "Vào hành trang\nChọn trang bị\n(Áo, quần, găng, giày, nhẫn) có ô đặt sao pha lê\nChọn loại sao pha lê\n"
+                + "Cải trang / phụ kiện hãy dùng 'Ép Sao Phụ Kiện'\n"
                 + "Ép Full Sét 18,30,45,65,99,200,300,500,999sao\n"
                 + "Xuất Hiện Dòng SKH Siêu Vip\n"
                 + "Chi Phí 10k Lượng Bạc\n"
                 + "Sau đó chọn 'Nâng cấp'";
             case PHA_LE_HOA_TRANG_BI ->
-                "Vào hành trang\nChọn trang bị\n(Áo, quần, găng, giày hoặc rađa)\n"
-                + "Tối Đa 25sao\n"
+                "Vào hành trang\nChọn trang bị\n(Áo, quần, găng, giày, nhẫn, cải trang, phụ kiện...)\n"
+                + "Mọi trang bị đều pha lê hóa được\n"
+                + "Số lỗ đục tối đa theo cấp VIP\n"
                 + "Tỉ Lệ Đục Phụ Thuộc Vip Nữa\n"
                 + "Tiêu Tốn Rất Nhiều Tài Nguyên\n"
                 + "Sau đó chọn 'Nâng cấp'\n";
@@ -781,9 +783,12 @@ public class CombineService {
                 + "Max Đục 30Sao"; 
                 
                  case KHAM_EP_DA ->
-                "Chọn Trang Bị,Cải Trang Trở Lên\n"
-                + "Ép Đá Khảm Cực Vip Từ Sb + Nạp Ngày \n"
-                + "Yêu Cầu: 100k Lượng Bạc Và 1 Lượng vàng"
+                "Chọn Trang Bị Từ Ô Thứ 6 Trở Lên\n"
+                + "(Cải trang, Phụ kiện, Giáp tập luyện...)\n"
+                + "Ép Đá Khảm, Sao Pha Lê Hoặc Sách Ép Premium\n"
+                + "Chi Phí: 100k Lượng Bạc + 1 Lượng Vàng\n"
+                + "(Tự trừ trong hành trang, không cần kéo vào ô)\n"
+                + "Chưa có lỗ thì Pha Lê Hóa trước\n"
                 + "Sau đó chọn 'Nâng cấp'";     
                        case nangcapruong ->
                 "Chọn 7 Rương Thần Bí 1Sao Hoặc sao cao Hơn\n"

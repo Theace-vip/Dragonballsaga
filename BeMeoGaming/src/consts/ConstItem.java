@@ -1187,6 +1187,9 @@ public class ConstItem {
     // Cung Menh: nguyen lieu nang cap / dot pha tai NPC Bo Mong
     public static final int MANH_TINH_TU = 1912;
     public static final int NGOC_TINH_DO = 1913;
+    // Ban Nguyen Tinh Cau: nguyen lieu nang cap / dot pha tai NPC Bo Mong
+    public static final int MANH_VO_TINH_THACH = 1942;
+    public static final int HAT_GIONG_KHOI_NGUYEN = 1943;
     public static final int PET_MEO_TRANG_DUOI_VANG = 1206;
     public static final int PET_MEO_TRANG_DUOI_VANG_1207 = 1207;
     public static final int MANH_RONG_THAN_NAMEC = 1208;

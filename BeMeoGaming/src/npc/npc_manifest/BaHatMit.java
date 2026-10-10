@@ -97,8 +97,9 @@ public class BaHatMit extends Npc {
                                 case 0 ->
                                     createOtherMenu(player, ConstMenu.MENU_PHA_LE,
                                             "|7|Chức Năng Ep Khảm Sao Pha Lê••\n"
-                                            + "|4|˚Ép Sao : Từ áo - giáp Luyện Tập\n"
-                                            + "•Ép Phụ Kiện Từ Cải Trang Trở Đi•\n"
+                                            + "|4|˚Ép Sao Pha Lê : Áo, Quần, Găng, Giày, Nhẫn\n"
+                                            + "•Ép Sao Phụ Kiện : Từ ô thứ 6 (Cải trang, Phụ kiện, Giáp luyện tập)•\n"
+                                            + "•Pha Lê Hóa : Mọi trang bị đều đục được lỗ theo cấp VIP•\n"
                                             + "FREE\n",
                                             "Ép sao\ntrang bị",
                                             "Pha Lê Hóa",
@@ -225,7 +226,14 @@ public class BaHatMit extends Npc {
 //                                            CombineService.gI().startCombine(player,1);
                                     }
                                 }
-                                case CombineService.NANG_CAP_BONG_TAI, CombineService.NANG_CHI_SO_BONG_TAI, CombineService.NANG_CAP_KICH_HOAT_VIP, CombineService.NANG_CAP_KICH_HOAT, CombineService.NANG_CAP_SAO_PHA_LE, CombineService.DANH_BONG_SAO_PHA_LE, CombineService.CUONG_HOA_LO_SAO_PHA_LE, CombineService.TAO_DA_HEMATITE, CombineService.EP_SAO_TRANG_BI, CombineService.NANG_CAP_CHAN_MENH, CombineService.MO_CHI_SO_CAI_TRANG, CombineService.XOA_SPL, CombineService.DUC_LO_KHAM, CombineService.KHAM_EP_DA ,CombineService.NHAP_NGOC_RONG ,CombineService.nangcapruong ,CombineService.Nang_cap_canh-> {
+                                case CombineService.MO_CHI_SO_CAI_TRANG -> {
+                                    // Mo chi so cai trang: 3 muc chi phi -> 0=20 luong (x1), 1=40 luong (x2), 2=100 luong (x6); 3=Tu choi
+                                    switch (select) {
+                                        case 0, 1, 2 ->
+                                            CombineService.gI().startCombine(player, select);
+                                    }
+                                }
+                                case CombineService.NANG_CAP_BONG_TAI, CombineService.NANG_CHI_SO_BONG_TAI, CombineService.NANG_CAP_KICH_HOAT_VIP, CombineService.NANG_CAP_KICH_HOAT, CombineService.NANG_CAP_SAO_PHA_LE, CombineService.DANH_BONG_SAO_PHA_LE, CombineService.CUONG_HOA_LO_SAO_PHA_LE, CombineService.TAO_DA_HEMATITE, CombineService.EP_SAO_TRANG_BI, CombineService.NANG_CAP_CHAN_MENH, CombineService.XOA_SPL, CombineService.DUC_LO_KHAM, CombineService.KHAM_EP_DA ,CombineService.NHAP_NGOC_RONG ,CombineService.nangcapruong ,CombineService.Nang_cap_canh-> {
                                     switch (select) {
                                         case 0:
                                             CombineService.gI().startCombine(player);

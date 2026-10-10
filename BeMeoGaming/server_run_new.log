@@ -1,0 +1,611 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (23), clan next id: 24
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1942)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (30)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (6)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (20)
+[0m[0;32mSuccessfully loaded SK top (20)
+[0m[0;32mSuccessfully loaded NHS top (20)
+[0m[0;32mSuccessfully loaded phòng t?p top (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0mAUTOGIFTTOP [14]
+Thread Update Auto Gift Item Top Running.........
+[0;35mTotal database loading time: 5129 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m1h49m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h49m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m1h49m: Successful login for player admin[237]: 1288 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 5ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 103ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=45 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[MAP] admin xong load map 45: client mat 329ms tu luc gui -24, server xu ly finishLoadMap 48ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[MAP] gui -24 map=154 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[MAP] admin xong load map 154: client mat 639ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (31)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (31)[0m[0;32m1h50m: Player admin saved successfully! 24ms
+[0m[0;34m1h50m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h50m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m1h50m: Successful login for player admin[237]: 587 ms
+[0m[MAP] gui -24 map=154 zone=0 cho admin mat 2ms, queue dang cho gui=9
+[MAP] admin xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (31)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (33)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (33)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (34)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (34)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (33)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (32)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (33)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (34)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (35)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (35)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (36)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (37)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (38)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (39)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (38)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (39)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (40)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (41)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (42)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (43)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (44)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (45)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (46)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (47)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (48)[0m[0;32m1h59m: Player admin saved successfully! 15ms
+[0m[0;34m1h59m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h59m: [CONN] ket noi moi tu 171.250.165.6
+[0m[0;34m1h59m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m1h59m: Successful login for player theace[237]: 302 ms
+[0m[CLIENT] 114 platform=Pc platform xxx|2.3.7 type=2 -> version=237[MAP] gui -24 map=4 zone=0 cho theace mat 12ms, queue dang cho gui=1
+[EFF] send id=0 idT=0 zoom=2 data=140B img=5200B
+[EFF] send id=9 idT=9 zoom=2 data=340B img=7578B
+[MAP] theace xong load map 4: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 109ms
+[EFF] send id=41 idT=41 zoom=2 data=182B img=942B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[0;32m1h59m: Player theace saved successfully! 8ms
+[0m[0;34m1h59m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h59m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h0m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h0m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m2h0m: Successful login for player admin[237]: 284 ms
+[0m[MAP] gui -24 map=154 zone=0 cho admin mat 3ms, queue dang cho gui=2
+[MAP] admin xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m2h0m: Player admin saved successfully! 15ms
+[0m[0;34m2h0m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h0m: [LOGIN] Yeu cau login: user=theace ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m2h0m: Successful login for player theace[237]: 264 ms
+[0m[MAP] gui -24 map=21 zone=0 cho theace mat 4ms, queue dang cho gui=1
+[EFF] send id=10 idT=10 zoom=2 data=394B img=3069B
+[EFF] send id=0 idT=0 zoom=2 data=140B img=5200B
+[MAP] theace xong load map 21: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 61ms
+[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (47)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (46)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (47)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (48)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (49)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (50)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (51)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (52)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (53)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (54)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (55)[0m[MAP] gui -24 map=154 zone=0 cho theace mat 2ms, queue dang cho gui=1
+[MAP] theace xong load map 154: client mat 323ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (56)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (56)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (56)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (56)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (57)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (57)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (58)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (59)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (60)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (60)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (60)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (60)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (60)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (61)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (61)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (62)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (62)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (63)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (63)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (64)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (65)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (66)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (66)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (66)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (66)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (66)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (67)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (67)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (67)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (67)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (68)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (68)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (68)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (69)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (70)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (71)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (71)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (71)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (71)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (72)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (73)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (74)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (75)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (76)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (77)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (77)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (77)[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[MAP] gui -24 map=24 zone=0 cho theace mat 7ms, queue dang cho gui=0
+[EFF] send id=10 idT=10 zoom=2 data=394B img=3069B
+[MAP] theace xong load map 24: client mat 391ms tu luc gui -24, server xu ly finishLoadMap 5ms
+[MAP] gui -24 map=154 zone=0 cho theace mat 13ms, queue dang cho gui=1
+[MAP] theace xong load map 154: client mat 310ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32m2h25m: Player theace saved successfully! 55ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m2h33m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h33m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h33m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m2h33m: Successful login for player admin[237]: 327 ms
+[0m[MAP] gui -24 map=154 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[MAP] admin xong load map 154: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=23 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat 317ms tu luc gui -24, server xu ly finishLoadMap 21ms
+[MAP] gui -24 map=14 zone=0 cho admin mat 7ms, queue dang cho gui=1
+[MAP] admin xong load map 14: client mat 246ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[MAP] gui -24 map=23 zone=0 cho admin mat 1ms, queue dang cho gui=1
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat 651ms tu luc gui -24, server xu ly finishLoadMap 12ms
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32m2h49m: Player admin saved successfully! 8ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m3h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[0;34m3h1m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m3h1m: Successful login for player admin[237]: 360 ms
+[0m[CLIENT] 1 platform=Pc platform xxx|2.3.7 type=2 -> version=237[MAP] gui -24 map=23 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 21ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m3h1m: Player admin saved successfully! 10ms
+[0m[0;34m3h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h1m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m3h2m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m3h2m: Successful login for player admin[237]: 230 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 8ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 22ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m3h2m: Player admin saved successfully! 10ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m3h11m: [CONN] ket noi moi tu 171.250.165.6
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h11m: [LOGIN] Yeu cau login: user=admin ip=171.250.165.6 sessionPlayer=null
+[0m[0;34m3h11m: Successful login for player admin[237]: 274 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 12ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 27ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32m3h13m: Player admin saved successfully! 14ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m

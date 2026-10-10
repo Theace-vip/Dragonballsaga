@@ -4,6 +4,13 @@ include '../DHKD/Connections.php';
 include '../DHKD/Session.php';
 include '../DHKD/Configs.php';
 
+/* ============================================================================
+ * NAP THE CAO: DA NGUNG (2026-10-10)
+ * Toan bo phan xu ly gui the len nha cung cap (chargingws/v2) da duoc comment
+ * theo yeu cau - khong con gui the cao ra ngoai.
+ * Muon bat lai: bo comment khoi doan code duoi day (va xoa phan tra JSON
+ * "da tam ngung" o cuoi file).
+ * ----------------------------------------------------------------------------
 // Xử lý yêu cầu POST từ client
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $postData = json_decode(file_get_contents('php://input'), true);
@@ -90,3 +97,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     header('Content-Type: application/json');
     echo json_encode($response);
 }
+ * ========================================================================== */
+
+// Luong the cao da ngung: tra ve thong bao, khong gui the di dau
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode(array(
+    'success' => false,
+    'message' => 'Nạp thẻ cào đã tạm ngừng. Vui lòng nạp bằng chuyển khoản ngân hàng.'
+));

@@ -298,6 +298,20 @@ public class NDVSqlFetcher {
                     }
                 }
             } catch (Exception e) {}
+            // Ban Nguyen Tinh Cau: cap do loi + tier (JSON ban_nguyen)
+            try {
+                String banNguyenJson = rs.getString("ban_nguyen");
+                player.banNguyenLevel = 0;
+                player.banNguyenTier = 0;
+                if (banNguyenJson != null && !banNguyenJson.isEmpty()) {
+                    Object o = org.json.simple.JSONValue.parse(banNguyenJson);
+                    if (o instanceof org.json.simple.JSONObject) {
+                        org.json.simple.JSONObject jo = (org.json.simple.JSONObject) o;
+                        try { player.banNguyenLevel = Integer.parseInt(String.valueOf(jo.get("level"))); } catch (Exception e) {}
+                        try { player.banNguyenTier = Integer.parseInt(String.valueOf(jo.get("tier"))); } catch (Exception e) {}
+                    }
+                }
+            } catch (Exception e) {}
             player.dakethon = rs.getByte("dakethon");
             player.duockethon = rs.getByte("duockethon");
             player.NapDau = rs.getByte("NapDau");
@@ -563,6 +577,11 @@ public class NDVSqlFetcher {
                 player.diem_quay = rs.getInt("diem_quay");
             } catch (Exception ex) {
                 player.diem_quay = 0;
+            }
+            try {
+                player.reset_vong_quay = rs.getInt("reset_vong_quay");
+            } catch (Exception ex) {
+                player.reset_vong_quay = 0;
             }
             try {
                 String vongQuayData = rs.getString("active_vong_quay");

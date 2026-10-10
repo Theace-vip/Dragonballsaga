@@ -43,6 +43,8 @@ public class ControlPanel extends JFrame {
         contentCards.add(buildPlayerMng(), "PLYMNG");
         contentCards.add(buildInventory(), "INV");
         contentCards.add(buildTransactions(), "TX");
+        contentCards.add(buildNapThePage(), "NAPTHE");
+        contentCards.add(buildNapRatePage(), "NAPRATE");
         contentCards.add(buildAudit(), "AUDIT");
         contentCards.add(buildMailPage(), "MAIL");
         contentCards.add(buildShop(), "SHOP");
@@ -120,6 +122,8 @@ public class ControlPanel extends JFrame {
         p.add(sideBtn("Phuc Loi (Qua Online)", "PHUCLOI"));
         p.add(sideBtn("Gui Qua (Mail)", "MAIL"));
         p.add(sideBtn("Lich Su Giao Dich", "TX"));
+        p.add(sideBtn("Lich Su Nap The", "NAPTHE"));
+        p.add(sideBtn("Ty Le Nap (x2/x3...)", "NAPRATE"));
         p.add(Box.createVerticalStrut(6));
         p.add(sideLabel("TINH NANG GAME"));
         p.add(sideBtn("Cung Menh (Bo Mong)", "CUNGMENH"));
@@ -1025,6 +1029,8 @@ public class ControlPanel extends JFrame {
             int oid = (idx >= 0 && idx < ids.size()) ? ids.get(idx) : 47;
             long pv = 0;
             try { pv = Long.parseLong(fP.getText().trim().replaceAll("[^0-9-]", "")); } catch (Exception ex) {}
+            String er = optParamErrById(oid, pv);
+            if (er != null) { err(er); return; }
             m.options.add(new ShopItemModel.Opt(oid, pv));
             reload.run();
         });
@@ -1228,19 +1234,31 @@ public class ControlPanel extends JFrame {
         JPanel optBar = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JComboBox<String> cbOpt = new JComboBox<>();
         java.util.List<Integer> optIds = new java.util.ArrayList<>();
-        bg(() -> {
+        final JTextField fOptQ = tf(10);
+        final Runnable fillOptCombo = () -> {
+            String q = fOptQ.getText().trim().toLowerCase();
+            String qNo = q;
+            try { qNo = boss.BossManager.convertString(q); } catch (Exception ex) {}
+            cbOpt.removeAllItems(); optIds.clear();
             if (optDictCache == null || optDictCache.isEmpty()) optDictCache = PanelService.listOptionDict();
-            SwingUtilities.invokeLater(() -> {
-                cbOpt.removeAllItems(); optIds.clear();
-                for (Map<String, Object> o : optDictCache) {
-                    int id = ((Number) o.get("id")).intValue();
-                    optIds.add(id);
-                    String tv = o.get("ten_viet") == null ? "" : String.valueOf(o.get("ten_viet"));
-                    String nm = o.get("name") == null ? "" : String.valueOf(o.get("name"));
-                    cbOpt.addItem("#" + id + " " + (tv.isEmpty() ? nm : tv));
+            for (Map<String, Object> o : optDictCache) {
+                int id = ((Number) o.get("id")).intValue();
+                String tv = o.get("ten_viet") == null ? "" : String.valueOf(o.get("ten_viet"));
+                String nm = o.get("name") == null ? "" : String.valueOf(o.get("name"));
+                String lbl = "#" + id + " " + (tv.isEmpty() ? nm : tv);
+                if (!q.isEmpty()) {
+                    boolean match = lbl.toLowerCase().contains(q) || String.valueOf(id).contains(q);
+                    if (!match) { try { match = boss.BossManager.convertString(lbl.toLowerCase()).contains(qNo); } catch (Exception ex) {} }
+                    if (!match) continue;
                 }
-            });
+                optIds.add(id);
+                cbOpt.addItem(lbl);
+            }
+        };
+        fOptQ.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override public void keyReleased(java.awt.event.KeyEvent e) { fillOptCombo.run(); }
         });
+        bg(() -> SwingUtilities.invokeLater(fillOptCombo::run));
         JTextField fParam = new JTextField("0", 10);
         JButton bOptAdd = new JButton("Them option");
         JButton bOptDel = new JButton("Xoa option");
@@ -1250,11 +1268,14 @@ public class ControlPanel extends JFrame {
             int oid = optIds.get(idx);
             long pv;
             try { pv = Long.parseLong(fParam.getText().trim()); } catch (Exception ex) { err("Param phai la so"); return; }
+            String er = optParamErrById(oid, pv);
+            if (er != null) { err(er); return; }
             m.options.add(new ShopItemModel.Opt(oid, pv));
             reloadOpt.run();
         });
         bOptDel.addActionListener(e -> { int r = optTable.getSelectedRow(); if (r < 0 || r >= m.options.size()) { err("Chon 1 option"); return; } m.options.remove(r); reloadOpt.run(); });
         optBar.add(new JLabel("Option (dropdown tu dien):")); optBar.add(cbOpt);
+        optBar.add(new JLabel("Loc:")); optBar.add(fOptQ);
         optBar.add(new JLabel("Param (so):")); optBar.add(fParam);
         optBar.add(bOptAdd); optBar.add(bOptDel);
         JPanel optPanel = new JPanel(new BorderLayout());
@@ -1359,6 +1380,7 @@ public class ControlPanel extends JFrame {
         JButton bGive = btn("Tang cho player");
         JButton bCopyNew = btn("Tao do moi tu dong nay (tai dung anh cu)");
         JButton bSpec = btn("Xuat spec anh moi (muc 2)");
+        final JLabel lbCount = new JLabel("Hien 0 do");
         Runnable doFind = () -> bg(() -> {
             int typeF = -1;
             int si = cbType.getSelectedIndex();
@@ -1366,14 +1388,15 @@ public class ControlPanel extends JFrame {
             else if (si == 4) typeF = 3; else if (si == 5) typeF = 4; else if (si == 6) typeF = 5; else if (si == 7) typeF = 27;
             int genF = cbGender.getSelectedIndex() - 1;
             if (si == 8) {
-                java.util.List<Map<String, Object>> all = PanelService.listItemTemplatesFull(fKey.getText(), -1, genF < 0 ? -1 : genF, 2000);
+                java.util.List<Map<String, Object>> all = PanelService.listItemTemplatesFull(fKey.getText(), -1, genF < 0 ? -1 : genF, 100000);
                 java.util.List<Map<String, Object>> fl = new java.util.ArrayList<>();
-                for (Map<String, Object> x : all) { int t = ((Number) x.get("type")).intValue(); if (t != 0 && t != 1 && t != 2 && t != 3 && t != 4 && t != 5 && t != 27) fl.add(x); if (fl.size() >= 500) break; }
+                for (Map<String, Object> x : all) { int t = ((Number) x.get("type")).intValue(); if (t != 0 && t != 1 && t != 2 && t != 3 && t != 4 && t != 5 && t != 27) fl.add(x); }
                 libCache = fl;
-            } else libCache = PanelService.listItemTemplatesFull(fKey.getText(), typeF, genF < 0 ? -1 : genF, 500);
+            } else libCache = PanelService.listItemTemplatesFull(fKey.getText(), typeF, genF < 0 ? -1 : genF, 100000);
             SwingUtilities.invokeLater(() -> {
                 libModel.setRowCount(0);
                 for (Map<String, Object> x : libCache) libModel.addRow(new Object[]{x.get("id"), x.get("name"), x.get("type_vn"), x.get("gender_vn"), x.get("icon"), x.get("part"), x.get("gold")});
+                lbCount.setText("Hien " + libCache.size() + " / " + server.Manager.ITEM_TEMPLATES.size() + " do (khong con gioi han 500)");
             });
         });
         bFind.addActionListener(e -> doFind.run());
@@ -1409,7 +1432,7 @@ public class ControlPanel extends JFrame {
             bg(() -> { String s = PanelService.exportNewItemSpec(ten, 0, -1, "Admin ghi them mo ta o day"); SwingUtilities.invokeLater(() -> info(s)); });
         });
         top.add(new JLabel("Tim:")); top.add(fKey); top.add(cbType); top.add(cbGender); top.add(bFind);
-        top.add(bUsed); top.add(bGive); top.add(bCopyNew); top.add(bSpec);
+        top.add(bUsed); top.add(bGive); top.add(bCopyNew); top.add(bSpec); top.add(lbCount);
         body.add(top, BorderLayout.NORTH);
         libModel = new DefaultTableModel(new String[]{"ID", "Ten", "Loai", "Phai", "IconID", "Part", "Gia goc"}, 0) {
             @Override public boolean isCellEditable(int r, int c) { return false; }
@@ -1434,11 +1457,21 @@ public class ControlPanel extends JFrame {
         body.setBackground(CARD);
         body.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(230, 234, 242)), new EmptyBorder(12, 14, 12, 14)));
         JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        top.setBackground(CARD);
-        JButton bReload = btn("Tai lai tu dien");
+        top.setBackground(CARD);        JButton bReload = btn("Tai lai tu dien");
         JButton bSave = btn("Luu dong dang chon");
-        bSave.setBackground(new Color(40, 150, 80)); bSave.setForeground(Color.WHITE);
+        bSave.setBackground(new Color(40, 150, 80));
+        bSave.setForeground(Color.WHITE);
+        JButton bNew = btn("Them option moi");
+        bNew.setBackground(new Color(70, 120, 220));
+        bNew.setForeground(Color.WHITE);
+        bNew.addActionListener(e -> showNewOptionDialog());
+        optDictFKey = tf(12);
+        optDictFKey.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override public void keyReleased(java.awt.event.KeyEvent e) { applyOptFilter(); }
+        });
+        optDictCount = new JLabel("Hien 0 option");
         JTextField fTen = tf(16); JTextField fGoiY = tf(20);
+        JTextField fCach = tf(40);
         JTextField fMin = tf("0", 8); JTextField fMax = tf("999999", 8);
         bReload.addActionListener(e -> bg(this::loadOptDict));
         bSave.addActionListener(e -> {
@@ -1447,14 +1480,50 @@ public class ControlPanel extends JFrame {
             int oid = ((Number) optDictModel.getValueAt(r, 0)).intValue();
             bg(() -> {
                 String s;
-                try { s = PanelService.saveOptionDict(oid, fTen.getText().trim(), fGoiY.getText().trim(), Long.parseLong(fMin.getText().trim()), Long.parseLong(fMax.getText().trim())); }
+                try { s = PanelService.saveOptionDict(oid, fTen.getText().trim(), fGoiY.getText().trim(), Long.parseLong(fMin.getText().trim()), Long.parseLong(fMax.getText().trim()), fCach.getText().trim()); }
                 catch (Exception ex) { s = "Loi: " + ex.getMessage(); }
                 final String rr = s;
                 SwingUtilities.invokeLater(() -> { info(rr); loadOptDict(); optDictCache = PanelService.listOptionDict(); });
             });
         });
-        optDictTable = new JTable(optDictModel = new DefaultTableModel(new String[]{"ID", "Ten goc", "Ten Viet", "Goi y param", "Min", "Max"}, 0) {
+        optDictModel = new DefaultTableModel(new String[]{"ID", "Ten goc", "Ten Viet", "Goi y param", "Min", "Max", "Cach dung"}, 0) {
             @Override public boolean isCellEditable(int r, int c) { return false; }
+        };
+        optDictTable = new JTable(optDictModel) {
+            // tooltip hien noi day khi chuot treo len o (dac biet useful neu text bi cat)
+            @Override public String getToolTipText(java.awt.event.MouseEvent e) {
+                int r = rowAtPoint(e.getPoint()), c = columnAtPoint(e.getPoint());
+                if (r < 0 || c < 0) return null;
+                Object v = getValueAt(r, c);
+                if (v == null || String.valueOf(v).isEmpty()) return null;
+                String s = String.valueOf(v).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
+                return "<html><div style='width:380px'>" + s + "</div></html>";
+            }
+        };
+        // cot co dinh rong + cuon ngang, khong keo lai bang (de doc 'Cach dung' cho de nhin)
+        optDictTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        optDictTable.setRowHeight(24);
+        optDictTable.setFillsViewportHeight(true);
+        int[] optW = {46, 155, 150, 175, 75, 85, 430};
+        for (int i = 0; i < optW.length && i < optDictTable.getColumnModel().getColumnCount(); i++) {
+            optDictTable.getColumnModel().getColumn(i).setPreferredWidth(optW[i]);
+        }
+        // cot 'Cach dung': text den 252 ky tu -> wrap nhieu dong boi JTextArea renderer
+        final JTextArea cachRender = new JTextArea();
+        cachRender.setLineWrap(true);
+        cachRender.setWrapStyleWord(true);
+        cachRender.setOpaque(true);
+        cachRender.setEditable(false);
+        cachRender.setFocusable(false);
+        cachRender.setFont(optDictTable.getFont());
+        cachRender.setBorder(new EmptyBorder(3, 5, 3, 5));
+        optDictTable.getColumnModel().getColumn(6).setCellRenderer(new javax.swing.table.TableCellRenderer() {
+            @Override public Component getTableCellRendererComponent(JTable t, Object v, boolean sel, boolean foc, int row, int col) {
+                cachRender.setText(v == null ? "" : String.valueOf(v));
+                if (sel) { cachRender.setBackground(t.getSelectionBackground()); cachRender.setForeground(t.getSelectionForeground()); }
+                else { cachRender.setBackground(t.getBackground()); cachRender.setForeground(t.getForeground()); }
+                return cachRender;
+            }
         });
         optDictTable.getSelectionModel().addListSelectionListener(e -> {
             int r = optDictTable.getSelectedRow();
@@ -1463,26 +1532,161 @@ public class ControlPanel extends JFrame {
             fGoiY.setText(String.valueOf(optDictModel.getValueAt(r, 3) == null ? "" : optDictModel.getValueAt(r, 3)));
             fMin.setText(String.valueOf(optDictModel.getValueAt(r, 4) == null ? "0" : optDictModel.getValueAt(r, 4)));
             fMax.setText(String.valueOf(optDictModel.getValueAt(r, 5) == null ? "" : optDictModel.getValueAt(r, 5)));
+            fCach.setText(String.valueOf(optDictModel.getValueAt(r, 6) == null ? "" : optDictModel.getValueAt(r, 6)));
         });
-        top.add(bReload); top.add(new JLabel("Ten Viet:")); top.add(fTen);
+        top.add(bReload); top.add(new JLabel("Loc:")); top.add(optDictFKey); top.add(bNew);
+        top.add(new JLabel("Ten Viet:")); top.add(fTen);
         top.add(new JLabel("Goi y:")); top.add(fGoiY);
-        top.add(new JLabel("Min:")); top.add(fMin); top.add(new JLabel("Max:")); top.add(fMax); top.add(bSave);
-        body.add(top, BorderLayout.NORTH);
+        JPanel row2 = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        row2.setBackground(CARD);
+        row2.add(new JLabel("Cach dung:")); row2.add(fCach);
+        row2.add(new JLabel("Min:")); row2.add(fMin); row2.add(new JLabel("Max:")); row2.add(fMax);
+        row2.add(bSave); row2.add(optDictCount);
+        JPanel north = new JPanel(new GridLayout(2, 1));
+        north.setBackground(CARD);
+        north.add(top); north.add(row2);
+        body.add(north, BorderLayout.NORTH);
         body.add(new JScrollPane(optDictTable), BorderLayout.CENTER);
-        JLabel note = new JLabel("Vi du 47: Giap | 50: Suc danh. Min/Max de panel canh bao khi admin nhap param sai. Khong sua bang goc item_option_template.");
+        JLabel note = new JLabel("Vi du 47: Giap | 50: Suc danh. Min/Max de panel canh bao khi admin nhap param sai. Cot 'Cach dung' ghi cach option phat huy tac dung (vd: 'Cong don % vao dame', 'Chi tinh khi crit'). Khong sua bang goc item_option_template.");
         note.setFont(new Font("Segoe UI", Font.PLAIN, 11));
         body.add(note, BorderLayout.SOUTH);
         bg(this::loadOptDict);
-        return wrapPage(body, "Tu Dien Option", "Bang dich option: id + ten Viet + goi y param + min/max. Dung chung Shop va Giftcode.");
+        return wrapPage(body, "Tu Dien Option", "Bang dich option: id + ten Viet + goi y param + min/max + cach dung. Dung chung Shop va Giftcode.");
     }
 
     private void loadOptDict() {
         java.util.List<Map<String, Object>> list = PanelService.listOptionDict();
         optDictCache = list;
-        SwingUtilities.invokeLater(() -> {
-            optDictModel.setRowCount(0);
-            for (Map<String, Object> m : list) optDictModel.addRow(new Object[]{m.get("id"), m.get("name"), m.get("ten_viet"), m.get("goi_y"), m.get("min"), m.get("max")});
+        SwingUtilities.invokeLater(this::applyOptFilter);
+    }
+
+    private JTextField optDictFKey;
+    private JLabel optDictCount;
+
+    // loc tu dien option theo id/ten/khong dau (go trong o 'Loc' cua Tab Tu Dien Option)
+    private void applyOptFilter() {
+        if (optDictModel == null) return;
+        String key = optDictFKey == null ? "" : optDictFKey.getText().trim().toLowerCase();
+        String keyNo = key;
+        try { keyNo = boss.BossManager.convertString(key); } catch (Exception e) {}
+        java.util.List<Map<String, Object>> list = optDictCache;
+        optDictModel.setRowCount(0);
+        int shown = 0;
+        if (list != null) {
+            for (Map<String, Object> m : list) {
+                if (!key.isEmpty()) {
+                    String hay = (m.get("id") + " " + m.get("name") + " " + m.get("ten_viet") + " " + m.get("cach_dung")).toLowerCase();
+                    boolean match = hay.contains(key);
+                    if (!match) { try { match = boss.BossManager.convertString(hay).contains(keyNo); } catch (Exception e) {} }
+                    if (!match) continue;
+                }
+                optDictModel.addRow(new Object[]{m.get("id"), m.get("name"), m.get("ten_viet"), m.get("goi_y"), m.get("min"), m.get("max"), m.get("cach_dung")});
+                shown++;
+            }
+        }
+        if (optDictCount != null) optDictCount.setText("Hien " + shown + "/" + (list == null ? 0 : list.size()) + " option");
+        reflowOptDictRows();
+    }
+
+    // tinh chieu cao tung dong theo do dai 'Cach dung' de text wrap het, khong bi cat
+    private void reflowOptDictRows() {
+        if (optDictTable == null || optDictModel == null) return;
+        try {
+            int cw = optDictTable.getColumnModel().getColumn(6).getWidth() - 14;
+            if (cw < 80) cw = 80;
+            java.awt.FontMetrics fm = optDictTable.getFontMetrics(optDictTable.getFont());
+            int lh = fm.getHeight() + 4;
+            for (int r = 0; r < optDictTable.getRowCount(); r++) {
+                Object v = optDictModel.getValueAt(r, 6);
+                String s = v == null ? "" : String.valueOf(v);
+                int lines = 1, cur = 0;
+                for (String w : s.split(" +")) {
+                    int ww = fm.stringWidth(w);
+                    if (cur == 0) cur = ww;
+                    else if (cur + 1 + ww <= cw) cur += 1 + ww;
+                    else { lines++; cur = ww; }
+                }
+                optDictTable.setRowHeight(r, Math.max(24, lines * lh + 8));
+            }
+        } catch (Exception e) {}
+    }
+
+    // kiem tra param co nam trong min/max cua Tu Dien Option (null = hop le)
+    private String optParamErrById(int oid, long pv) {
+        try {
+            if (optDictCache == null || optDictCache.isEmpty()) return null;
+            for (Map<String, Object> m : optDictCache) {
+                if (((Number) m.get("id")).intValue() != oid) continue;
+                long lo = ((Number) m.get("min")).longValue();
+                long hi = ((Number) m.get("max")).longValue();
+                if (hi > lo && (pv < lo || pv > hi)) {
+                    return "Param " + pv + " ngoai khoang [" + lo + " .. " + hi + "] cua option #" + oid + " (sua Min/Max o Tab Tu Dien Option neu muon cho phep)";
+                }
+                break;
+            }
+        } catch (Exception e) {}
+        return null;
+    }
+
+    // dialog tao option MOI (id ke tiep tu dong, chen truc tiep vao item_option_template)
+    private void showNewOptionDialog() {
+        final JDialog d = new JDialog(this, "Them option moi", true);
+        d.setSize(480, 384);
+        d.setLocationRelativeTo(this);
+        JPanel p = new JPanel(new java.awt.GridLayout(0, 2, 8, 6));
+        p.setBorder(new EmptyBorder(12, 12, 12, 12));
+        final JTextField fId = tf("", 8);
+        final JTextField fName = tf(24);
+        final JTextField fType = tf("0", 4);
+        final JTextField fTv = tf(24);
+        final JTextField fGoiY = tf(24);
+        final JTextField fCach = tf(24);
+        final JTextField fMin = tf("0", 10);
+        final JTextField fMax = tf("999999", 10);
+        bg(() -> {
+            final int next = server.Manager.ITEM_OPTION_TEMPLATES.size();
+            SwingUtilities.invokeLater(() -> fId.setText(String.valueOf(next)));
         });
+        p.add(new JLabel("ID (ke tiep, tu dong):")); p.add(fId);
+        p.add(new JLabel("Ten goc (dung # cho param):")); p.add(fName);
+        p.add(new JLabel("Type (0 = mac dinh):")); p.add(fType);
+        p.add(new JLabel("Ten Viet:")); p.add(fTv);
+        p.add(new JLabel("Goi y param:")); p.add(fGoiY);
+        p.add(new JLabel("Cach dung:")); p.add(fCach);
+        p.add(new JLabel("Min:")); p.add(fMin);
+        p.add(new JLabel("Max:")); p.add(fMax);
+        JLabel tip = new JLabel("<html>• ID phai ke tiep 0..N - client gan id = vi tri mang, chen giua se lam SAI ten option.<br>"
+                + "• Toi da 255 option (dem 1 byte). Option moi: client dang online can DANG NHAP LAI moi thay.<br>"
+                + "• Ten goc nen co '#' (vi du '+# suc danh') de hien thi param.</html>");
+        tip.setFont(new Font("Segoe UI", Font.PLAIN, 11));
+        tip.setForeground(new Color(90, 100, 130));
+        JPanel south = new JPanel(new BorderLayout());
+        south.setBorder(new EmptyBorder(0, 12, 8, 12));
+        south.add(tip, BorderLayout.CENTER);
+        JPanel bb = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JButton bOk = btn("TAO OPTION");
+        bOk.setBackground(new Color(40, 150, 80));
+        bOk.setForeground(Color.WHITE);
+        JButton bCancel = btn("Huy");
+        bb.add(bOk); bb.add(bCancel);
+        south.add(bb, BorderLayout.EAST);
+        d.add(p, BorderLayout.CENTER);
+        d.add(south, BorderLayout.SOUTH);
+        bCancel.addActionListener(e -> d.dispose());
+        bOk.addActionListener(e -> bg(() -> {
+            String s;
+            try {
+                s = PanelService.createOptionTemplate(Integer.parseInt(fId.getText().trim()), fName.getText().trim(),
+                        Integer.parseInt(fType.getText().trim()), fTv.getText().trim(), fGoiY.getText().trim(),
+                        Long.parseLong(fMin.getText().trim()), Long.parseLong(fMax.getText().trim()), fCach.getText().trim());
+            } catch (Exception ex) { s = "Loi nhap: " + ex.getMessage(); }
+            final String rr = s;
+            SwingUtilities.invokeLater(() -> {
+                if (rr.startsWith("OK")) { info(rr); d.dispose(); } else { err(rr); }
+                loadOptDict();
+            });
+        }));
+        d.setVisible(true);
     }
 
     // ================= NPC + SHOP (wizard 3 buoc, buoc 3 cho research map) =================
@@ -2624,6 +2828,8 @@ public class ControlPanel extends JFrame {
                 int oid = (idx >= 0 && idx < ids.size()) ? ids.get(idx) : 50;
                 long pv = 0;
                 try { pv = Long.parseLong(fP.getText().trim().replaceAll("[^0-9-]", "")); } catch (Exception ex) {}
+                String er = optParamErrById(oid, pv);
+                if (er != null) { err(er); return; }
                 m.options.add(new GiftItemModel.Opt(oid, pv));
                 reload.run();
             });
@@ -3286,16 +3492,80 @@ public class ControlPanel extends JFrame {
         } catch (Exception e) { e.printStackTrace(); JPanel f = new JPanel(); try { f.add(new JLabel("Loi tao tab Chi So: " + e.getMessage())); } catch (Exception ex) {} return wrapPage(f, "Chi So", "Loi"); }
     }
 
+    // Dien giai ten tham so tab Chi So sang tieng Viet de hieu truoc khi sua
+    private static String statMeaning(String key) {
+        try {
+            String k = key == null ? "" : key.trim();
+            if (k.startsWith("d_") || k.startsWith("r_")) k = k.substring(2);
+            // cuoi ten = chi so dung cho he nao
+            String suf = "";
+            String base = k;
+            if (base.endsWith("_dame")) { suf = "SD (sát thương)"; base = base.substring(0, base.length() - 5); }
+            else if (base.endsWith("_hp")) { suf = "HP (máu)"; base = base.substring(0, base.length() - 3); }
+            else if (base.endsWith("_ki")) { suf = "KI (năng lượng)"; base = base.substring(0, base.length() - 3); }
+            if (!suf.isEmpty()) {
+                String he = base;
+                switch (base) {
+                    case "chuyensinh" -> he = "Chuyển sinh";
+                    case "thiendo" -> he = "Thiên Đạo";
+                    case "capPb" -> he = "Cấp Pb (Boss)";
+                    case "lyruou" -> he = "Lý rượu";
+                    case "dakethon" -> he = "Đá Kết Hôn";
+                    case "duockethon" -> he = "Kết hôn";
+                    default -> { if (base.startsWith("pet")) he = "Pet bậc " + base.substring(3); }
+                }
+                return "Hệ " + he + ": chỉ số " + suf + " - cột Thực tế là giá trị % server cộng thật";
+            }
+            switch (base) {
+                case "globalFactor": return "TOÀN CỤC: nhân MỌI cột 'Thực tế' (1.0 = giữ nguyên, 1.5 = x1.5 toàn server)";
+                case "opt49_factor": return "Option 49 - Tấn công %: % thật = param trên đồ × Thực/100";
+                case "opt50_factor": return "Option 50 - Sức đánh %: % thật = param trên đồ × Thực/100";
+                case "opt77_factor": return "Option 77 - HP %: % thật = param trên đồ × Thực/100";
+                case "opt103_factor": return "Option 103 - KI %: % thật = param trên đồ × Thực/100";
+                case "banhgaquay": return "Bánh gà quay: chỉ số nhận khi ăn";
+                case "cuongno_sc": return "Cường Nổ (sc): chỉ số khi dùng";
+                case "cuongno2": return "Cường Nổ 2: chỉ số khi dùng";
+                case "bohuyet_sc": return "Bộ Huyết (sc): chỉ số khi dùng";
+                case "bokhi_sc": return "Bộ Khí (sc): chỉ số khi dùng";
+                case "gogeta": return "Gogeta: chỉ số theo mốc";
+                case "worldcup": return "Sự kiện World Cup: chỉ số theo mốc";
+                case "nhatAn": return "Nhật Án: chỉ số theo mốc";
+                case "nguyetAn": return "Nguyệt Án: chỉ số theo mốc";
+                case "tinhAn": return "Tinh Án: chỉ số theo mốc";
+                case "clan_per_lv": return "Bang hội: chỉ số cộng theo CẤP BANG";
+                case "bachho_per_lv": return "Bạch Hổ: chỉ số cộng mỗi cấp";
+                case "thanhlong_per_lv": return "Thanh Long: chỉ số cộng mỗi cấp";
+                default: break;
+            }
+            if (base.startsWith("opt")) return "Option % trên đồ: % thật = param × Thực/100";
+            if (base.startsWith("star")) return "Sao Pha Lê: chỉ số thưởng khi đạt " + base.substring(4) + " sao trên trang bị";
+            if (base.startsWith("saoDen")) return "Sao Đen " + base.substring(6) + ": chỉ số thưởng";
+            if (base.startsWith("vip")) return "VIP bậc " + base.substring(3) + ": chỉ số theo bậc VIP đang có";
+            if (base.startsWith("set")) return "Set đồ " + base.substring(3) + ": chỉ số khi mang đủ bộ";
+            if (base.startsWith("pet")) return "Pet bậc " + base.substring(3) + ": chỉ số pet buff cho chủ";
+            return "Chưa có mô tả - 'Hiển thị' = số hiện trong game, 'Thực tế' = số server cộng thật";
+        } catch (Exception e) { return key; }
+    }
+
     private JPanel makeStatRateTab(String hint, java.util.function.Predicate<String> filter) {
         JPanel p = new JPanel(new BorderLayout(8, 8));
         try { p.setBackground(CARD); } catch (Exception e) {}
         try { p.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(230, 234, 242)), new EmptyBorder(12, 14, 12, 14))); } catch (Exception e) {}
-        try { p.add(new JLabel("<html><b>Cach dung:</b> " + hint + "</html>"), BorderLayout.NORTH); } catch (Exception e) {}
-        DefaultTableModel m = new DefaultTableModel(new String[]{"Ten", "Hien thi", "Thuc te"}, 0) {
-            @Override public boolean isCellEditable(int r, int c) { try { return c == 1 || c == 2; } catch (Exception e) { return false; } }
+        try { p.add(new JLabel("<html><b>Cách dùng:</b> cột <b>Ý nghĩa</b> giải thích tham số là gì - đọc nó trước khi sửa. "
+                + "Cột <b>Hiển thị</b> = số player nhìn thấy trên đồ, cột <b>Thực tế</b> = số server thật sự cộng vào chỉ số. "
+                + "Sửa 2 cột đó rồi bấm <b>Lưu</b> = áp dụng ngay, không cần restart. " + hint + "</html>"), BorderLayout.NORTH); } catch (Exception e) {}
+        DefaultTableModel m = new DefaultTableModel(new String[]{"Tham số", "Ý nghĩa / cách dùng", "Hiển thị", "Thực tế"}, 0) {
+            @Override public boolean isCellEditable(int r, int c) { try { return c == 2 || c == 3; } catch (Exception e) { return false; } }
         };
         JTable t = new JTable(m);
         try { t.setAutoCreateRowSorter(true); } catch (Exception e) {}
+        try {
+            javax.swing.table.TableColumnModel ccm = t.getColumnModel();
+            ccm.getColumn(0).setPreferredWidth(150);
+            ccm.getColumn(1).setPreferredWidth(470);
+            ccm.getColumn(2).setPreferredWidth(90);
+            ccm.getColumn(3).setPreferredWidth(90);
+        } catch (Exception e) {}
         try { p.add(new JScrollPane(t), BorderLayout.CENTER); } catch (Exception e) {}
         JPanel bar = new JPanel(new FlowLayout(FlowLayout.LEFT));
         try { bar.setBackground(CARD); } catch (Exception e) {}
@@ -3306,7 +3576,7 @@ public class ControlPanel extends JFrame {
         try { bar.add(bLoad); } catch (Exception e) {}
         try { bar.add(bSave); } catch (Exception e) {}
         try { bar.add(bReset); } catch (Exception e) {}
-        try { bar.add(new JLabel(" | Hien thi=DISPLAY, Thuc te=REAL")); } catch (Exception e) {}
+        try { bar.add(new JLabel(" | Hiển thị = số game hiện · Thực tế = số server cộng thật · Khoi phuc = đặt Thực tế về bằng Hiển thị")); } catch (Exception e) {}
         try { p.add(bar, BorderLayout.SOUTH); } catch (Exception e) {}
         Runnable load = () -> {
             try {
@@ -3318,7 +3588,7 @@ public class ControlPanel extends JFrame {
                             try {
                                 String k = String.valueOf(row.get("key"));
                                 if (filter != null && !filter.test(k)) continue;
-                                m.addRow(new Object[]{k, row.get("display"), row.get("real")});
+                                m.addRow(new Object[]{k, statMeaning(k), row.get("display"), row.get("real")});
                             } catch (Exception ex) {}
                         }
                     } catch (Exception e) { e.printStackTrace(); }
@@ -3334,8 +3604,8 @@ public class ControlPanel extends JFrame {
                     for (int i = 0; i < m.getRowCount(); i++) {
                         try {
                             String k = String.valueOf(m.getValueAt(i, 0));
-                            double d = Double.parseDouble(String.valueOf(m.getValueAt(i, 1)));
-                            double r = Double.parseDouble(String.valueOf(m.getValueAt(i, 2)));
+                            double d = Double.parseDouble(String.valueOf(m.getValueAt(i, 2)));
+                            double r = Double.parseDouble(String.valueOf(m.getValueAt(i, 3)));
                             vals.put(k, new double[]{d, r});
                         } catch (Exception ex) {}
                     }
@@ -3348,14 +3618,14 @@ public class ControlPanel extends JFrame {
             bReset.addActionListener(e -> bg(() -> {
                 try {
                     for (int i = 0; i < m.getRowCount(); i++) {
-                        try { m.setValueAt(m.getValueAt(i, 1), i, 2); } catch (Exception ex) {}
+                        try { m.setValueAt(m.getValueAt(i, 2), i, 3); } catch (Exception ex) {}
                     }
                     Map<String, double[]> vals = new java.util.LinkedHashMap<>();
                     for (int i = 0; i < m.getRowCount(); i++) {
                         try {
                             String k = String.valueOf(m.getValueAt(i, 0));
-                            double d = Double.parseDouble(String.valueOf(m.getValueAt(i, 1)));
-                            double r = Double.parseDouble(String.valueOf(m.getValueAt(i, 2)));
+                            double d = Double.parseDouble(String.valueOf(m.getValueAt(i, 2)));
+                            double r = Double.parseDouble(String.valueOf(m.getValueAt(i, 3)));
                             vals.put(k, new double[]{d, r});
                         } catch (Exception ex) {}
                     }
@@ -3712,7 +3982,7 @@ public class ControlPanel extends JFrame {
                 final int key = Integer.parseInt(fKey.getText().trim());
                 final int tid = Integer.parseInt(fTemp.getText().trim());
                 final int qty = Integer.parseInt(fQty.getText().trim());
-                final int rate = Integer.parseInt(fRate.getText().trim());
+                final double rate = Double.parseDouble(fRate.getText().trim().replace(",", "."));
                 final String opt = fOpt.getText().trim(), des = fDes.getText().trim();
                 final String st = fStart.getText().trim(), en = fEnd.getText().trim();
                 final boolean on = cbOn.getSelectedIndex() == 0;
@@ -3728,7 +3998,7 @@ public class ControlPanel extends JFrame {
                 final int key = Integer.parseInt(fKey.getText().trim());
                 final int tid = Integer.parseInt(fTemp.getText().trim());
                 final int qty = Integer.parseInt(fQty.getText().trim());
-                final int rate = Integer.parseInt(fRate.getText().trim());
+                final double rate = Double.parseDouble(fRate.getText().trim().replace(",", "."));
                 final String opt = fOpt.getText().trim(), des = fDes.getText().trim();
                 final String st = fStart.getText().trim(), en = fEnd.getText().trim();
                 final boolean on = cbOn.getSelectedIndex() == 0;
@@ -4596,6 +4866,8 @@ public class ControlPanel extends JFrame {
             int oid = (idx >= 0 && idx < ids.size()) ? ids.get(idx) : 50;
             long pv = 0;
             try { pv = Long.parseLong(fP.getText().trim().replaceAll("[^0-9-]", "")); } catch (Exception ex) {}
+            String er = optParamErrById(oid, pv);
+            if (er != null) { err(er); return; }
             m.options.add(new GiftItemModel.Opt(oid, pv));
             reload.run();
         });
@@ -5366,6 +5638,8 @@ public class ControlPanel extends JFrame {
             int oid = (idx >= 0 && idx < ids.size()) ? ids.get(idx) : 50;
             long pv = 0;
             try { pv = Long.parseLong(fP.getText().trim().replaceAll("[^0-9-]", "")); } catch (Exception ex) {}
+            String er = optParamErrById(oid, pv);
+            if (er != null) { err(er); return; }
             m.options.add(new GiftItemModel.Opt(oid, pv));
             reload.run();
         });
@@ -6010,32 +6284,156 @@ public class ControlPanel extends JFrame {
     // ================= DONATE =================
     private DefaultTableModel topModel;
     private JTable topTable;
+    private JTextField napIdField;
+    private JLabel napState = new JLabel(" ");
+    private final Map<String, JLabel> napCur = new java.util.LinkedHashMap<>();
+    private final Map<String, JTextField> napIn = new java.util.LinkedHashMap<>();
 
     private JPanel buildDonate() {
         JPanel body = new JPanel(new BorderLayout(8, 8));
         body.setBackground(CARD);
         body.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(230, 234, 242)), new EmptyBorder(12, 14, 12, 14)));
+
+        // --- dong 1: chon account + tai hien trang
         JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
         top.setBackground(CARD);
-        JTextField fId = tf(8); JTextField fVnd = tf("0", 8); JTextField fTong = tf("0", 8); JTextField fVip = tf("-1", 4);
-        JButton bBuff = btn("Buff VND (theo ID)");
-        bBuff.setBackground(new Color(40, 150, 80)); bBuff.setForeground(Color.WHITE);
+        napIdField = tf(8);
+        JButton bLoad = btn("Tải hiện trạng");
+        bLoad.setBackground(new Color(40, 120, 200)); bLoad.setForeground(Color.WHITE);
         JButton bReload = btn("Tai lai Top Nap");
-        bBuff.addActionListener(e -> bg(() -> { String r; try { r = PanelService.buffVnd(Integer.parseInt(fId.getText().trim()), Long.parseLong(fVnd.getText().trim()), Long.parseLong(fTong.getText().trim()), Integer.parseInt(fVip.getText().trim())); } catch (Exception ex) { r = "Loi: " + ex.getMessage(); } final String rr = r; SwingUtilities.invokeLater(() -> { info(rr); loadTop(); }); }));
+        bLoad.addActionListener(e -> refreshNap());
         bReload.addActionListener(e -> bg(this::loadTop));
-        top.add(new JLabel("Account ID:")); top.add(fId);
-        top.add(new JLabel("VND+:")); top.add(fVnd);
-        top.add(new JLabel("TongNap+:")); top.add(fTong);
-        top.add(new JLabel("VIP(-1=giu):")); top.add(fVip);
-        top.add(bBuff); top.add(bReload);
-        body.add(top, BorderLayout.NORTH);
+        top.add(new JLabel("Account ID:")); top.add(napIdField);
+        top.add(bLoad); top.add(bReload); top.add(napState);
+
+        // --- dong 2: nap day du (danh nhieu phan cung luc, giong nap that)
+        JPanel full = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        full.setBackground(CARD);
+        JTextField fAmount = tf("20000", 10);
+        JComboBox<String> cbTarget = new JComboBox<>(new String[]{"vnd (vao so du ngay)", "temp_vnd (so du cho)"});
+        JCheckBox cTong = new JCheckBox("Tong nap", true);
+        JCheckBox cDanap = new JCheckBox("Da nap (top web)", true);
+        JCheckBox cActive = new JCheckBox("Mo thanh vien", true);
+        JCheckBox cReset = new JCheckBox("Dat lai qua nap dau", false);
+        JButton bFull = btn("NẠP ĐẦY ĐỦ");
+        bFull.setBackground(new Color(40, 150, 80)); bFull.setForeground(Color.WHITE);
+        bFull.addActionListener(e -> bg(() -> {
+            String r;
+            try {
+                int id = Integer.parseInt(napIdField.getText().trim());
+                long amount = Long.parseLong(fAmount.getText().trim().replace(".", ""));
+                r = PanelService.napFull(id, amount, cbTarget.getSelectedIndex() == 0,
+                        cTong.isSelected(), cDanap.isSelected(), cActive.isSelected(), cReset.isSelected());
+            } catch (Exception ex) {
+                r = "Loi: " + ex.getMessage();
+            }
+            final String rr = r;
+            SwingUtilities.invokeLater(() -> { info(rr); refreshNap(); loadTop(); });
+        }));
+        full.add(new JLabel("So tien:")); full.add(fAmount);
+        full.add(new JLabel("Vao:")); full.add(cbTarget);
+        full.add(cTong); full.add(cDanap); full.add(cActive); full.add(cReset);
+        full.add(bFull);
+
+        JPanel north = new JPanel();
+        north.setLayout(new BoxLayout(north, BoxLayout.Y_AXIS));
+        north.setBackground(CARD);
+        top.setAlignmentX(Component.LEFT_ALIGNMENT);
+        full.setAlignmentX(Component.LEFT_ALIGNMENT);
+        north.add(top);
+        north.add(full);
+        body.add(north, BorderLayout.NORTH);
+
+        // --- tung phan tien: sua rieng le tung cai
+        JPanel parts = new JPanel();
+        parts.setLayout(new BoxLayout(parts, BoxLayout.Y_AXIS));
+        parts.setBackground(CARD);
+        JLabel h = new JLabel("Tung phan - sua rieng le   (Cong = + o nhap, Dat = ghi de gia tri; moc nap / qua nap dau / phuc loi doc tu TONG NAP)");
+        h.setFont(new Font("Segoe UI", Font.BOLD, 12));
+        h.setBorder(new EmptyBorder(4, 4, 4, 4));
+        h.setAlignmentX(Component.LEFT_ALIGNMENT);
+        parts.add(h);
+        for (String[] p : PanelService.napParts()) {
+            parts.add(partRow(p[0], p[1]));
+        }
+        JScrollPane partScroll = new JScrollPane(parts);
+        partScroll.setBorder(BorderFactory.createEmptyBorder());
+        body.add(partScroll, BorderLayout.CENTER);
+
+        // --- bang top nap
         topModel = new DefaultTableModel(new String[]{"ID", "Username", "VND", "TongNap", "VIP"}, 0) {
             @Override public boolean isCellEditable(int r, int c) { return false; }
         };
         topTable = new JTable(topModel);
-        body.add(new JScrollPane(topTable), BorderLayout.CENTER);
+        JScrollPane topScroll = new JScrollPane(topTable);
+        topScroll.setPreferredSize(new Dimension(200, 170));
+        body.add(topScroll, BorderLayout.SOUTH);
+
         bg(this::loadTop);
-        return wrapPage(body, "Nap Tien / Buff VND", "Top nap + cong VND/tongnap/VIP theo account ID");
+        return wrapPage(body, "Nap Tien / Buff VND", "Tung phan rieng le + nap day du (so du, cho nap, tong nap, top web, mo TV, VIP, qua nap dau)");
+    }
+
+    private JPanel partRow(String key, String desc) {
+        JPanel row = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 2));
+        row.setBackground(CARD);
+        row.setAlignmentX(Component.LEFT_ALIGNMENT);
+        JLabel name = new JLabel(desc);
+        name.setPreferredSize(new Dimension(280, 22));
+        JLabel cur = new JLabel("-");
+        cur.setForeground(new Color(90, 100, 120));
+        cur.setPreferredSize(new Dimension(150, 22));
+        JTextField in = tf("0", 10);
+        JButton bAdd = btn("+ Cong");
+        bAdd.setBackground(new Color(40, 150, 80)); bAdd.setForeground(Color.WHITE);
+        JButton bSet = btn("Dat");
+        bSet.setBackground(new Color(210, 130, 30)); bSet.setForeground(Color.WHITE);
+        napCur.put(key, cur);
+        napIn.put(key, in);
+        bAdd.addActionListener(e -> applyNapPart(key, in, true));
+        bSet.addActionListener(e -> applyNapPart(key, in, false));
+        row.add(name); row.add(cur); row.add(new JLabel("O nhap:")); row.add(in); row.add(bAdd); row.add(bSet);
+        return row;
+    }
+
+    private void applyNapPart(String key, JTextField in, boolean add) {
+        final int id;
+        final long v;
+        try {
+            id = Integer.parseInt(napIdField.getText().trim());
+            v = Long.parseLong(in.getText().trim().replace(".", ""));
+        } catch (Exception ex) {
+            err("Loi: can nhap Account ID va o nhap la so. " + ex.getMessage());
+            return;
+        }
+        bg(() -> {
+            String r = PanelService.napApply(id, key, v, add);
+            final String rr = r;
+            SwingUtilities.invokeLater(() -> { info(rr); refreshNap(); loadTop(); });
+        });
+    }
+
+    /** Tai hien trang cac phan tien cua account dang nhap o o Account ID. */
+    private void refreshNap() {
+        final int id;
+        try {
+            id = Integer.parseInt(napIdField.getText().trim());
+        } catch (Exception ex) {
+            err("Nhap Account ID (so) truoc");
+            return;
+        }
+        bg(() -> {
+            Map<String, Object> st = PanelService.napStatus(id);
+            SwingUtilities.invokeLater(() -> {
+                Object er = st.get("error");
+                if (er != null) { err("Loi: " + er); return; }
+                if (!Boolean.TRUE.equals(st.get("found"))) { err("Khong tim thay account id " + id); return; }
+                for (Map.Entry<String, JLabel> e : napCur.entrySet()) {
+                    Object v = st.get(e.getKey());
+                    e.getValue().setText(v == null ? "-" : fmt(((Number) v).longValue()));
+                }
+                napState.setText(Boolean.TRUE.equals(st.get("online")) ? "   [player ONLINE]" : "   [player offline]");
+            });
+        });
     }
 
     private void loadTop() {
@@ -6423,14 +6821,14 @@ public class ControlPanel extends JFrame {
         "Don nap MoMo/ZaloPay (order)", "MoMo trans (momo_trans)", "Web shop (web_shop_history)"};
     private static final String[][] TX_HEADERS = {
         {"Thoi gian", "Player 1", "Player 2", "Do cua P1", "Do cua P2"},
-        {"Thoi gian", "Tai khoan nap", "Nha mang", "So tien", "Status", "Serial", "Code"},
+        {"Thoi gian", "Tai khoan nap", "Ten ingame", "Nha mang", "So tien", "Status", "Serial", "Code"},
         {"Thoi gian", "Username", "VND", "Cash", "Code", "Mo ta"},
         {"Thoi gian", "AccountID", "OrderId", "Loai", "So tien", "Status", "TransId"},
         {"Thoi gian", "Username", "Transaction", "So tien", "Noi dung"},
         {"Thoi gian", "Username", "Vat pham", "SL", "Don gia", "Tong tien"}};
     private static final String[][] TX_KEYS = {
         {"time", "p1", "p2", "i1", "i2"},
-        {"time", "user", "telco", "amount", "status", "serial", "code"},
+        {"time", "user", "ingame", "telco", "amount", "status", "serial", "code"},
         {"time", "user", "vnd", "cash", "code", "desc"},
         {"time", "acc", "orderid", "type", "amount", "status", "transid"},
         {"time", "user", "txid", "amount", "content"},
@@ -6497,6 +6895,152 @@ public class ControlPanel extends JFrame {
                 }
                 if (rows.isEmpty()) info("Khong co du lieu nao phu hop.");
             });
+        });
+    }
+
+    // ================= LICH SU NAP THE (the cao) =================
+    private DefaultTableModel ntModel;
+    private JTable ntTable;
+    private JTextField ntFilter;
+    private JComboBox<String> ntLimit;
+
+    private JPanel buildNapThePage() {
+        JPanel body = new JPanel(new BorderLayout(8, 8));
+        body.setBackground(CARD);
+        body.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(230, 234, 242)), new EmptyBorder(12, 14, 12, 14)));
+        JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        top.setBackground(CARD);
+        ntFilter = tf(18);
+        ntLimit = new JComboBox<>(new String[]{"100", "500", "1000", "5000"});
+        JButton bLoad = btn("Tai lich su the");
+        bLoad.setBackground(new Color(70, 120, 220)); bLoad.setForeground(Color.WHITE);
+        top.add(new JLabel("Loc (tai khoan / ten ingame / so the):")); top.add(ntFilter);
+        top.add(new JLabel("  So dong:")); top.add(ntLimit); top.add(bLoad);
+        body.add(top, BorderLayout.NORTH);
+        ntModel = new DefaultTableModel(new String[]{"Tai khoan", "Ten ingame", "So tien nap", "Thoi gian nap", "Nha mang", "Status", "Serial", "Code"}, 0) {
+            @Override public boolean isCellEditable(int r, int c) { return false; }
+        };
+        ntTable = new JTable(ntModel);
+        body.add(new JScrollPane(ntTable), BorderLayout.CENTER);
+        JPanel bot = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        bot.setBackground(CARD);
+        JLabel hint = new JLabel("Luong nap the da ngung o web (code giu dang comment) - lich su o day de doi soat va cong tay khi can.");
+        hint.setForeground(new Color(90, 100, 130));
+        bot.add(hint);
+        bLoad.addActionListener(e -> loadNapThe());
+        body.add(bot, BorderLayout.SOUTH);
+        bg(this::loadNapThe);
+        return wrapPage(body, "Lich Su Nap The",
+                "Tai khoan - Ten ingame - So tien nap - Thoi gian nap (loc theo tai khoan / ten nhan vat / so the)");
+    }
+
+    private void loadNapThe() {
+        final String f = ntFilter == null ? "" : ntFilter.getText();
+        int lim = 100;
+        try { lim = Integer.parseInt((String) ntLimit.getSelectedItem()); } catch (Exception e) { }
+        final int limit = lim;
+        bg(() -> {
+            final List<Map<String, Object>> rows = PanelService.listNapThe(f, limit);
+            SwingUtilities.invokeLater(() -> {
+                ntModel.setRowCount(0);
+                for (Map<String, Object> m : rows) {
+                    ntModel.addRow(new Object[]{m.get("user"), m.get("ingame"), m.get("amount"), m.get("time"),
+                        m.get("telco"), m.get("status"), m.get("serial"), m.get("code")});
+                }
+                if (rows.isEmpty()) info("Khong co du lieu nap the nao phu hop.");
+            });
+        });
+    }
+
+    // ================= TY LE NAP (x2 / x3 / ... / x50) =================
+    private JTextField nrRate, nrUntil, nrNote;
+    private JCheckBox nrEnabled;
+    private JLabel nrNow;
+
+    private JPanel buildNapRatePage() {
+        JPanel body = new JPanel(new BorderLayout(8, 8));
+        body.setBackground(CARD);
+        body.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(new Color(230, 234, 242)), new EmptyBorder(12, 14, 12, 14)));
+
+        JPanel form = new JPanel(new GridLayout(0, 2, 6, 6));
+        form.setBackground(CARD);
+        form.setBorder(BorderFactory.createTitledBorder("Cau hinh ty le nap (tran toi da x" + PanelService.NAP_RATE_MAX + ")"));
+        nrRate = tf(8);
+        nrUntil = tf(16);
+        nrNote = tf(24);
+        nrEnabled = new JCheckBox("Bat ty le nay");
+        nrEnabled.setBackground(CARD);
+        form.add(new JLabel("Ty le nap (1 - " + PanelService.NAP_RATE_MAX + ", vi du 2 = x2):")); form.add(nrRate);
+        form.add(new JLabel("Trang thai:")); form.add(nrEnabled);
+        form.add(new JLabel("Ket thuc luc (yyyy-MM-dd HH:mm, trong = khong han):")); form.add(nrUntil);
+        form.add(new JLabel("Ghi chu (dip le...):")); form.add(nrNote);
+
+        JButton bSave = btn("Luu ty le");
+        bSave.setBackground(new Color(70, 120, 220)); bSave.setForeground(Color.WHITE);
+        bSave.addActionListener(e -> saveNapRate());
+        JButton bReload = btn("Tai lai");
+        bReload.addActionListener(e -> loadNapRate());
+        JPanel act = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        act.setBackground(CARD); act.add(bSave); act.add(bReload);
+
+        nrNow = new JLabel(" ");
+        nrNow.setForeground(new Color(60, 70, 110));
+        nrNow.setBorder(new EmptyBorder(6, 2, 6, 2));
+        JTextArea guide = new JTextArea(
+                "Cach dung:\n"
+                + "- Ty le nay ap dung cho NAP CHUYEN KHOAN tren web nap (nrokura.site) va cho nap the khi bat lai.\n"
+                + "- Vi du: ty le = 2 -> nap 20.000d duoc 40.000d (x2); ty le = 10 -> x10. Tran toi da x" + PanelService.NAP_RATE_MAX + ".\n"
+                + "- Dat 'Ket thuc luc' de het le ty le tu tat (bo trong = khong gioi han thoi gian).\n"
+                + "- Web nap doc truc tiep bang panel_nap_rate trong DB game -> ap dung ngay, khong can restart server.");
+        guide.setEditable(false); guide.setLineWrap(true); guide.setWrapStyleWord(true);
+        guide.setBackground(new Color(246, 248, 252));
+        guide.setBorder(new EmptyBorder(8, 8, 8, 8));
+        JPanel mid = new JPanel(new BorderLayout(8, 8));
+        mid.setBackground(CARD);
+        mid.add(new JScrollPane(guide), BorderLayout.CENTER);
+        mid.add(nrNow, BorderLayout.SOUTH);
+
+        JPanel right = new JPanel(new BorderLayout(8, 8));
+        right.setBackground(CARD);
+        right.add(act, BorderLayout.NORTH);
+        right.add(mid, BorderLayout.CENTER);
+
+        body.add(form, BorderLayout.NORTH);
+        body.add(right, BorderLayout.CENTER);
+        bg(this::loadNapRate);
+        return wrapPage(body, "Ty Le Nap (Su Kien)",
+                "Dat x2 / x3 / x10 cho dip le - tran x" + PanelService.NAP_RATE_MAX + " - co the gioi han thoi gian, het han tu tat");
+    }
+
+    private void loadNapRate() {
+        bg(() -> {
+            final Map<String, Object> m = PanelService.getNapRate();
+            final int rate = ((Number) m.get("rate")).intValue();
+            final int en = ((Number) m.get("enabled")).intValue();
+            SwingUtilities.invokeLater(() -> {
+                nrRate.setText(String.valueOf(rate));
+                nrEnabled.setSelected(en == 1);
+                nrUntil.setText(m.get("until_at") == null ? "" : String.valueOf(m.get("until_at")));
+                nrNote.setText(m.get("note") == null ? "" : String.valueOf(m.get("note")));
+                nrNow.setText("Hien tai: x" + rate + (en == 1 ? " (DANG BAT)" : " (TAT)")
+                        + (m.get("until_at") == null ? "" : " | ket thuc: " + m.get("until_at"))
+                        + (m.get("note") == null || String.valueOf(m.get("note")).isEmpty() ? "" : " | ghi chu: " + m.get("note"))
+                        + " | cap nhat: " + m.get("updated_by") + " luc " + m.get("updated_at"));
+            });
+        });
+    }
+
+    private void saveNapRate() {
+        int rate;
+        try { rate = Integer.parseInt(nrRate.getText().trim()); } catch (Exception e) { err("Ty le phai la so tu 1 den " + PanelService.NAP_RATE_MAX); return; }
+        if (rate < 1 || rate > PanelService.NAP_RATE_MAX) { err("Ty le chi trong khoang 1 - " + PanelService.NAP_RATE_MAX + " (tran x" + PanelService.NAP_RATE_MAX + ")"); return; }
+        final int r = rate;
+        final boolean en = nrEnabled.isSelected();
+        final String until = nrUntil.getText().trim();
+        final String note = nrNote.getText().trim();
+        bg(() -> {
+            final String msg = PanelService.setNapRate(r, en, until, note, PanelService.AUDIT_ACTOR);
+            SwingUtilities.invokeLater(() -> { info(msg); loadNapRate(); });
         });
     }
 
@@ -6737,9 +7281,11 @@ public class ControlPanel extends JFrame {
         JPanel optBtns = new JPanel(new FlowLayout(FlowLayout.LEFT));
         final JComboBox<String> cbOpt = new JComboBox<>();
         final JTextField fParam = tf("0", 8);
+        final JTextField fOptQ = tf(10);
         JButton bAddOpt = btn("Them option");
         JButton bDelOpt = btn("Xoa option chon");
         optBtns.add(new JLabel("Option:")); optBtns.add(cbOpt);
+        optBtns.add(new JLabel("Loc:")); optBtns.add(fOptQ);
         optBtns.add(new JLabel("Param:")); optBtns.add(fParam);
         optBtns.add(bAddOpt); optBtns.add(bDelOpt);
         optPanel.add(optBtns, BorderLayout.SOUTH);
@@ -6766,7 +7312,7 @@ public class ControlPanel extends JFrame {
         bSearch.addActionListener(e -> {
             final String key = fKey.getText().trim();
             bg(() -> {
-                final List<Map<String, Object>> list = PanelService.listItemTemplatesFull(key, -1, -1, 100);
+                final List<Map<String, Object>> list = PanelService.listItemTemplatesFull(key, -1, -1, 5000);
                 SwingUtilities.invokeLater(() -> {
                     resM.setRowCount(0);
                     for (Map<String, Object> m : list) {
@@ -6784,11 +7330,28 @@ public class ControlPanel extends JFrame {
                 }
             }
         });
+        final java.util.List<Map<String, Object>> optsAll = new java.util.ArrayList<>();
+        final Runnable fillOpt = () -> {
+            String q = fOptQ.getText().trim().toLowerCase();
+            String qNo = q;
+            try { qNo = boss.BossManager.convertString(q); } catch (Exception ex) {}
+            cbOpt.removeAllItems();
+            for (Map<String, Object> m : optsAll) {
+                String lbl = m.get("id") + " - " + m.get("name");
+                if (!q.isEmpty()) {
+                    boolean match = lbl.toLowerCase().contains(q) || String.valueOf(m.get("id")).contains(q);
+                    if (!match) { try { match = boss.BossManager.convertString(lbl.toLowerCase()).contains(qNo); } catch (Exception ex) {} }
+                    if (!match) continue;
+                }
+                cbOpt.addItem(lbl);
+            }
+        };
+        fOptQ.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override public void keyReleased(java.awt.event.KeyEvent e) { fillOpt.run(); }
+        });
         bg(() -> {
             final List<Map<String, Object>> opts = PanelService.listOptionDict();
-            SwingUtilities.invokeLater(() -> {
-                for (Map<String, Object> m : opts) cbOpt.addItem(m.get("id") + " - " + m.get("name"));
-            });
+            SwingUtilities.invokeLater(() -> { optsAll.addAll(opts); fillOpt.run(); });
         });
         bAddOpt.addActionListener(e -> {
             String sel = (String) cbOpt.getSelectedItem();
@@ -6796,6 +7359,8 @@ public class ControlPanel extends JFrame {
             try {
                 int oid = Integer.parseInt(sel.split(" - ")[0].trim());
                 long param = Long.parseLong(fParam.getText().trim());
+                String er = optParamErrById(oid, param);
+                if (er != null) { err(er); return; }
                 optM.addRow(new Object[]{oid, sel.substring(sel.indexOf(" - ") + 3), param});
             } catch (Exception ex) { err("Param phai la so: " + ex.getMessage()); }
         });

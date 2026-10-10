@@ -139,6 +139,230 @@ public class PanelService {
         } catch (Exception e) { return "Loi: " + e.getMessage(); }
     }
 
+    // ============ NAP TIEN THEO TUNG PHAN ============
+    /**
+     * Cac phan tien rieng le (admin sua tung phan mot):
+     * - vnd: so du Cash (nguoi choi dung mua trong game)
+     * - temp_vnd: so du nap khi OFFLINE, tu + vnd o lan login (NDVSqlFetcher)
+     * - tongnap: tong nap - mo mo qua nap dau (50k/200k/500k/1tr/2tr), moc phuc loi tab 2,
+     *   top nap, event, achievement
+     * - danap: da nap - bang xep hang top nap tren WEB (top-nap.php)
+     * - active: mo thanh vien 20k (web tu dong mo khi nap > 20k neu _AutoMember)
+     * - vip: VIP tai khoan (account.vip -> session.vip, NPoint.t2278)
+     * - napdau: player.NapDau - qua nap dau da nhan (0 = cho phep nhan lai)
+     * - sagavip: player.Saga_VIP - VIP in-game (khau truoc, aura, mua VIP)
+     */
+    public static String[][] napParts() {
+        return new String[][]{
+            {"vnd", "Số dư Cash (account.vnd)"},
+            {"temp_vnd", "Số dư chờ nạp (account.temp_vnd)"},
+            {"tongnap", "Tổng nạp (account.tongnap)"},
+            {"danap", "Đã nạp - Top web (account.danap)"},
+            {"active", "Mở thành viên (account.active)"},
+            {"vip", "VIP tài khoản (account.vip)"},
+            {"napdau", "Quà nạp đầu đã nhận (player.NapDau)"},
+            {"sagavip", "VIP in-game (player.Saga_VIP)"}
+        };
+    }
+
+    /** Doc hien trang tat ca phan tien cua 1 account (key khop voi napParts). */
+    public static Map<String, Object> napStatus(int accId) {
+        Map<String, Object> out = new LinkedHashMap<>();
+        out.put("found", false);
+        try (Connection con = jdbc.DBConnecter.getConnectionServer();
+                PreparedStatement ps = con.prepareStatement(
+                        "SELECT a.vnd, a.temp_vnd, a.tongnap, a.danap, a.active, a.vip, "
+                        + "p.NapDau, p.Saga_VIP FROM account a "
+                        + "LEFT JOIN player p ON p.account_id = a.id WHERE a.id = ? LIMIT 1")) {
+            ps.setInt(1, accId);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    out.put("found", true);
+                    out.put("vnd", rs.getLong("vnd"));
+                    out.put("temp_vnd", rs.getLong("temp_vnd"));
+                    out.put("tongnap", rs.getLong("tongnap"));
+                    out.put("danap", rs.getLong("danap"));
+                    out.put("active", rs.getLong("active"));
+                    out.put("vip", rs.getLong("vip"));
+                    out.put("napdau", rs.getLong("NapDau"));
+                    out.put("sagavip", rs.getLong("Saga_VIP"));
+                }
+            }
+        } catch (Exception e) {
+            out.put("error", e.getMessage());
+        }
+        try {
+            out.put("online", server.Client.gI().getPlayerByUser(accId) != null);
+        } catch (Exception e) {
+            out.put("online", false);
+        }
+        return out;
+    }
+
+    private static player.Player onlineByAcc(int accId) {
+        try {
+            return server.Client.gI().getPlayerByUser(accId);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private static String fmtSo(long n) {
+        return String.format("%,d", n).replace(',', '.');
+    }
+
+    /**
+     * Cong (add=true) hoac dat dung gia tri (add=false) mot phan tien.
+     * Neu player dang online thi dong bo luon session/player va gui tien ve client.
+     */
+    public static String napApply(int accId, String part, long value, boolean add) {
+        try {
+            switch (part) {
+                case "vnd":
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set vnd = vnd + ? where id = ?"
+                            : "update account set vnd = ? where id = ?", value, accId);
+                    break;
+                case "temp_vnd":
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set temp_vnd = temp_vnd + ? where id = ?"
+                            : "update account set temp_vnd = ? where id = ?", value, accId);
+                    break;
+                case "tongnap":
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set tongnap = tongnap + ? where id = ?"
+                            : "update account set tongnap = ? where id = ?", value, accId);
+                    break;
+                case "danap":
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set danap = danap + ? where id = ?"
+                            : "update account set danap = ? where id = ?", value, accId);
+                    break;
+                case "active":
+                    value = Math.max(0, value);
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set active = active + ? where id = ?"
+                            : "update account set active = ? where id = ?", value, accId);
+                    break;
+                case "vip":
+                    value = Math.max(0, value);
+                    jdbc.DBConnecter.executeUpdate(add ? "update account set vip = vip + ? where id = ?"
+                            : "update account set vip = ? where id = ?", value, accId);
+                    break;
+                case "napdau":
+                    value = Math.max(0, value);
+                    jdbc.DBConnecter.executeUpdate(add ? "update player set NapDau = NapDau + ? where account_id = ?"
+                            : "update player set NapDau = ? where account_id = ?", value, accId);
+                    break;
+                case "sagavip":
+                    value = Math.max(0, Math.min(127, value)); // player.Saga_VIP la byte
+                    jdbc.DBConnecter.executeUpdate(add ? "update player set Saga_VIP = Saga_VIP + ? where account_id = ?"
+                            : "update player set Saga_VIP = ? where account_id = ?", value, accId);
+                    break;
+                default:
+                    return "Loi: phan tien khong ton tai: " + part;
+            }
+
+            player.Player p = onlineByAcc(accId);
+            String onlineNote = "";
+            if (p != null && p.getSession() != null) {
+                switch (part) {
+                    case "vnd":
+                        p.getSession().vnd = add ? p.getSession().vnd + (int) value : (int) value;
+                        break;
+                    case "tongnap":
+                        p.getSession().tongnap = add ? p.getSession().tongnap + (int) value : (int) value;
+                        break;
+                    case "vip":
+                        p.getSession().vip = add ? p.getSession().vip + (int) value : (int) value;
+                        break;
+                    case "active":
+                        p.getSession().actived = add ? (p.getSession().actived || value != 0) : value != 0;
+                        break;
+                    case "napdau":
+                        p.NapDau = add ? p.NapDau + value : value;
+                        break;
+                    case "sagavip":
+                        p.Saga_VIP = (byte) (add ? Math.max(0, Math.min(127, p.Saga_VIP + value)) : value);
+                        break;
+                    default:
+                        break; // temp_vnd / danap: chi ghi DB, khong co session
+                }
+                try {
+                    services.Service.getInstance().sendMoney(p);
+                } catch (Exception e) {
+                }
+                onlineNote = " | player ONLINE: da dong bo trong RAM";
+            }
+            audit("napApply", "id=" + accId + " " + part + (add ? "+=" : "=") + value);
+            return "OK - " + part + (add ? " + " : " = ") + fmtSo(value) + onlineNote;
+        } catch (Exception e) {
+            return "Loi: " + e.getMessage();
+        }
+    }
+
+    /**
+     * Nap day du 1 lan (giong nap that cua web): + so du, + tong nap, + danap,
+     * mo thanh vien, dat lai qua nap dau.
+     * Luu y: moc nap (phuc loi tab 2), qua nap dau, top nap, event deu doc tu
+     * tongnap -> chi can + tongnap la cac moc tu hien lech, khong can sua them cho.
+     */
+    public static String napFull(int accId, long amount, boolean vndNgay, boolean tongnap,
+            boolean danap, boolean active, boolean resetNapdau) {
+        if (amount <= 0) {
+            return "Loi: so tien nap phai > 0";
+        }
+        try {
+            StringBuilder ch = new StringBuilder();
+            if (vndNgay) {
+                jdbc.DBConnecter.executeUpdate("update account set vnd = vnd + ? where id = ?", amount, accId);
+                ch.append("so_du+").append(fmtSo(amount));
+            } else {
+                jdbc.DBConnecter.executeUpdate("update account set temp_vnd = temp_vnd + ? where id = ?", amount, accId);
+                ch.append("cho_nap+").append(fmtSo(amount));
+            }
+            if (tongnap) {
+                jdbc.DBConnecter.executeUpdate("update account set tongnap = tongnap + ? where id = ?", amount, accId);
+                ch.append(", tongnap+").append(fmtSo(amount));
+            }
+            if (danap) {
+                jdbc.DBConnecter.executeUpdate("update account set danap = danap + ? where id = ?", amount, accId);
+                ch.append(", danap+").append(fmtSo(amount));
+            }
+            if (active) {
+                jdbc.DBConnecter.executeUpdate("update account set active = 1 where id = ? and active = 0", accId);
+                ch.append(", active=1");
+            }
+            if (resetNapdau) {
+                jdbc.DBConnecter.executeUpdate("update player set NapDau = 0 where account_id = ?", accId);
+                ch.append(", napdau=0 (nhan lai qua nap dau)");
+            }
+
+            player.Player p = onlineByAcc(accId);
+            String note;
+            if (p != null && p.getSession() != null) {
+                if (vndNgay) {
+                    p.getSession().vnd += (int) amount;
+                }
+                if (tongnap) {
+                    p.getSession().tongnap += (int) amount;
+                }
+                if (active) {
+                    p.getSession().actived = true;
+                }
+                if (resetNapdau) {
+                    p.NapDau = 0;
+                }
+                try {
+                    services.Service.getInstance().sendMoney(p);
+                } catch (Exception e) {
+                }
+                note = vndNgay ? "player ONLINE: da cong trong RAM" : "player ONLINE: tien vao cho nap, cham len so du o login sau";
+            } else {
+                note = "player OFFLINE: " + (vndNgay ? "da vao so du" : "tien vao cho nap, tu + so du o login");
+            }
+            audit("napFull", "id=" + accId + " amount=" + amount + " " + ch);
+            return "OK - nap " + fmtSo(amount) + ": " + ch + " | " + note;
+        } catch (Exception e) {
+            return "Loi: " + e.getMessage();
+        }
+    }
+
     public static String deleteAccount(int id) {
         try {
             jdbc.DBConnecter.executeUpdate("delete from account where id = ?", id);
@@ -305,21 +529,31 @@ public class PanelService {
         return out;
     }
 
-    /** Nap the (napthe): time, user, telco, amount, status, serial, code */
+    /**
+     * Nap the (napthe): time, user, ingame (ten nhan vat), telco, amount, status, serial, code.
+     * Ten ingame lay tu account.username -> player.name (join theo TRIM de chiu duoc du lieu cu co khoang trang).
+     */
     public static List<Map<String, Object>> listNapThe(String filter, int limit) {
         String like = filter == null ? "" : filter.trim();
-        String sql = "SELECT created_at, user_nap, telco, amount, status, serial, code FROM napthe "
-                + (like.isEmpty() ? "" : "WHERE user_nap LIKE ? OR serial LIKE ? OR code LIKE ? ")
-                + "ORDER BY id DESC LIMIT " + lim(limit);
+        // Du lieu cu co the dinh \r\n trong user_nap -> cat sach de hien thi va join dung account
+        String userExpr = "TRIM(REPLACE(REPLACE(n.user_nap, '\\r', ''), '\\n', ''))";
+        String sql = "SELECT n.created_at, " + userExpr + " AS user_nap, p.name AS ingame, n.telco, n.amount, n.status, n.serial, n.code "
+                + "FROM napthe n "
+                + "LEFT JOIN account a ON a.username = " + userExpr + " "
+                + "LEFT JOIN player p ON p.account_id = a.id "
+                + (like.isEmpty() ? "" : "WHERE " + userExpr + " LIKE ? OR n.serial LIKE ? OR n.code LIKE ? OR p.name LIKE ? ")
+                + "ORDER BY n.id DESC LIMIT " + lim(limit);
         List<Map<String, Object>> out = new ArrayList<>();
         try (Connection con = jdbc.DBConnecter.getConnectionServer();
                 PreparedStatement ps = con.prepareStatement(sql)) {
-            if (!like.isEmpty()) { ps.setString(1, "%" + like + "%"); ps.setString(2, "%" + like + "%"); ps.setString(3, "%" + like + "%"); }
+            if (!like.isEmpty()) { ps.setString(1, "%" + like + "%"); ps.setString(2, "%" + like + "%"); ps.setString(3, "%" + like + "%"); ps.setString(4, "%" + like + "%"); }
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     Map<String, Object> m = new LinkedHashMap<>();
                     m.put("time", rs.getString("created_at"));
                     m.put("user", rs.getString("user_nap"));
+                    String ingame = rs.getString("ingame");
+                    m.put("ingame", ingame == null ? "" : ingame);
                     m.put("telco", rs.getString("telco"));
                     m.put("amount", rs.getString("amount"));
                     m.put("status", rs.getString("status"));
@@ -330,6 +564,77 @@ public class PanelService {
             }
         } catch (Exception e) { e.printStackTrace(); }
         return out;
+    }
+
+    // ============ TY LE NAP (su kien x2 / x3 / ... / x50) ============
+    /** Tran ty le nap toi da (lan). */
+    public static final int NAP_RATE_MAX = 50;
+
+    private static volatile boolean napRateTableReady = false;
+
+    private static void ensureNapRateTable() {
+        if (napRateTableReady) return;
+        try (Connection con = jdbc.DBConnecter.getConnectionServer();
+                PreparedStatement ps = con.prepareStatement("CREATE TABLE IF NOT EXISTS panel_nap_rate ("
+                        + "id TINYINT NOT NULL PRIMARY KEY, "
+                        + "rate INT NOT NULL DEFAULT 1, "
+                        + "enabled TINYINT(1) NOT NULL DEFAULT 0, "
+                        + "until_at DATETIME NULL, "
+                        + "note VARCHAR(255) NULL, "
+                        + "updated_by VARCHAR(64) NULL, "
+                        + "updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)")) {
+            ps.execute();
+            napRateTableReady = true;
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+
+    /** Ty le nap hien tai: rate (1..50), enabled (0/1), until_at, note, updated_by, updated_at. */
+    public static Map<String, Object> getNapRate() {
+        ensureNapRateTable();
+        Map<String, Object> m = new LinkedHashMap<>();
+        m.put("rate", 1);
+        m.put("enabled", 0);
+        m.put("until_at", null);
+        m.put("note", "");
+        m.put("updated_by", "");
+        m.put("updated_at", "");
+        try (Connection con = jdbc.DBConnecter.getConnectionServer();
+                PreparedStatement ps = con.prepareStatement("SELECT rate, enabled, until_at, note, updated_by, updated_at FROM panel_nap_rate WHERE id = 1");
+                ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) {
+                m.put("rate", rs.getInt("rate"));
+                m.put("enabled", rs.getInt("enabled"));
+                m.put("until_at", rs.getString("until_at"));
+                m.put("note", rs.getString("note"));
+                m.put("updated_by", rs.getString("updated_by"));
+                m.put("updated_at", rs.getString("updated_at"));
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return m;
+    }
+
+    /**
+     * Luu ty le nap. Tran toi da x50 (NAP_RATE_MAX).
+     * until: 'yyyy-MM-dd HH:mm' hoac rong = khong gioi han thoi gian.
+     */
+    public static String setNapRate(int rate, boolean enabled, String until, String note, String actor) {
+        if (rate < 1) rate = 1;
+        if (rate > NAP_RATE_MAX) rate = NAP_RATE_MAX;
+        ensureNapRateTable();
+        String untilSql = (until == null || until.trim().isEmpty()) ? null : until.trim();
+        try (Connection con = jdbc.DBConnecter.getConnectionServer();
+                PreparedStatement ps = con.prepareStatement("INSERT INTO panel_nap_rate (id, rate, enabled, until_at, note, updated_by) VALUES (1, ?, ?, ?, ?, ?) "
+                        + "ON DUPLICATE KEY UPDATE rate = VALUES(rate), enabled = VALUES(enabled), until_at = VALUES(until_at), note = VALUES(note), updated_by = VALUES(updated_by)")) {
+            ps.setInt(1, rate);
+            ps.setInt(2, enabled ? 1 : 0);
+            if (untilSql == null) ps.setNull(3, java.sql.Types.TIMESTAMP); else ps.setString(3, untilSql);
+            ps.setString(4, note == null ? "" : note);
+            ps.setString(5, actor == null || actor.trim().isEmpty() ? "panel" : actor.trim());
+            ps.executeUpdate();
+        } catch (Exception e) { e.printStackTrace(); return "Loi luu ty le nap: " + e.getMessage(); }
+        audit("nap_rate", "rate=x" + rate + " enabled=" + (enabled ? 1 : 0) + (untilSql == null ? "" : " until=" + untilSql) + (note == null || note.isEmpty() ? "" : " note=" + note));
+        return "Da luu ty le nap: x" + rate + (enabled ? " (DANG BAT)" : " (TAT)") + (untilSql == null ? "" : ", ket thuc " + untilSql)
+                + ". Web nap (nrokura.site) doc truc tiep tu bang panel_nap_rate -> ap dung ngay cho chuyen khoan.";
     }
 
     /** Nap bang bank (history_bank): time, user, vnd, cash, code, desc */
@@ -967,7 +1272,7 @@ public class PanelService {
                 m.put("item_id", rs.getInt("item_id"));
                 m.put("quantity", rs.getInt("quantity"));
                 m.put("item_options", rs.getString("item_options"));
-                m.put("rate", rs.getInt("tile_trung_thuong"));
+                m.put("rate", rs.getDouble("tile_trung_thuong"));
                 m.put("des", rs.getString("des"));
                 m.put("start_at", rs.getString("start_at"));
                 m.put("end_at", rs.getString("end_at"));
@@ -1038,7 +1343,7 @@ public class PanelService {
     }
 
     /** Them 1 dong vat pham vong quay. Option compact vd "30-1,77-50". Sau do tu reload TamBao. */
-    public static String addTamBaoItem(int keyId, int itemId, int qty, String options, int rate, String des, String startAt, String endAt, boolean enabled) {
+    public static String addTamBaoItem(int keyId, int itemId, int qty, String options, double rate, String des, String startAt, String endAt, boolean enabled) {
         if (qty < 1) return "Loi: SL phai >= 1";
         if (rate < 0 || rate > 100) return "Loi: Ty le phai trong khoang 0..100";
         String bad = checkTamBaoItem(itemId); if (bad != null) return bad;
@@ -1048,7 +1353,7 @@ public class PanelService {
              PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, keyId); ps.setInt(2, itemId); ps.setInt(3, qty);
             ps.setString(4, options == null ? "" : options.trim());
-            ps.setInt(5, rate); ps.setString(6, des);
+            ps.setDouble(5, rate); ps.setString(6, des);
             ps.setString(7, emptyToNull(startAt)); ps.setString(8, emptyToNull(endAt));
             ps.setInt(9, enabled ? 1 : 0);
             ps.executeUpdate();
@@ -1057,7 +1362,7 @@ public class PanelService {
     }
 
     /** Sua 1 dong vat pham vong quay theo id. */
-    public static String updateTamBaoItem(int id, int keyId, int itemId, int qty, String options, int rate, String des, String startAt, String endAt, boolean enabled) {
+    public static String updateTamBaoItem(int id, int keyId, int itemId, int qty, String options, double rate, String des, String startAt, String endAt, boolean enabled) {
         if (qty < 1) return "Loi: SL phai >= 1";
         if (rate < 0 || rate > 100) return "Loi: Ty le phai trong khoang 0..100";
         String bad = checkTamBaoItem(itemId); if (bad != null) return bad;
@@ -1066,7 +1371,7 @@ public class PanelService {
              PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, keyId); ps.setInt(2, itemId); ps.setInt(3, qty);
             ps.setString(4, options == null ? "" : options.trim());
-            ps.setInt(5, rate); ps.setString(6, des);
+            ps.setDouble(5, rate); ps.setString(6, des);
             ps.setString(7, emptyToNull(startAt)); ps.setString(8, emptyToNull(endAt));
             ps.setInt(9, enabled ? 1 : 0); ps.setInt(10, id);
             if (ps.executeUpdate() == 0) return "Loi: khong tim thay id=" + id;
@@ -1518,10 +1823,15 @@ public class PanelService {
     // ============ SHOP EDITOR: bang phu ============
     public static void ensureHelperTables() {
         try (Connection con = jdbc.DBConnecter.getConnectionServer();
-             PreparedStatement ps1 = con.prepareStatement("CREATE TABLE IF NOT EXISTS panel_option_dict (option_id INT PRIMARY KEY, ten_viet VARCHAR(255) NOT NULL DEFAULT '', goi_y_param VARCHAR(255) NOT NULL DEFAULT '', min_param BIGINT NOT NULL DEFAULT 0, max_param BIGINT NOT NULL DEFAULT 999999999, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)");
+             PreparedStatement ps1 = con.prepareStatement("CREATE TABLE IF NOT EXISTS panel_option_dict (option_id INT PRIMARY KEY, ten_viet VARCHAR(255) NOT NULL DEFAULT '', goi_y_param VARCHAR(255) NOT NULL DEFAULT '', cach_dung VARCHAR(512) NOT NULL DEFAULT '', min_param BIGINT NOT NULL DEFAULT 0, max_param BIGINT NOT NULL DEFAULT 999999999, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP)");
              PreparedStatement ps2 = con.prepareStatement("CREATE TABLE IF NOT EXISTS panel_history (id INT AUTO_INCREMENT PRIMARY KEY, tab_id INT NOT NULL DEFAULT 0, actor VARCHAR(64) NOT NULL DEFAULT 'admin', action VARCHAR(32) NOT NULL DEFAULT 'save', summary TEXT, items_backup MEDIUMTEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")) {
             try { ps1.execute(); } catch (Exception e) {}
             try { ps2.execute(); } catch (Exception e) {}
+            // them cot cach_dung cho bang da tao truoc (CREATE IF NOT EXISTS khong add cot moi)
+            // - da co cot thi loi 1060 duplicate column -> bo qua
+            try (PreparedStatement ps3 = con.prepareStatement("ALTER TABLE panel_option_dict ADD COLUMN cach_dung VARCHAR(512) NOT NULL DEFAULT ''")) {
+                try { ps3.execute(); } catch (Exception e) {}
+            } catch (Exception e) {}
         } catch (Exception e) {}
     }
 
@@ -1529,7 +1839,7 @@ public class PanelService {
         ensureHelperTables();
         List<Map<String, Object>> out = new ArrayList<>();
         try (Connection con = jdbc.DBConnecter.getConnectionServer();
-             PreparedStatement ps = con.prepareStatement("SELECT o.id AS oid, o.name AS oname, d.ten_viet, d.goi_y_param, d.min_param, d.max_param FROM item_option_template o LEFT JOIN panel_option_dict d ON d.option_id=o.id ORDER BY o.id");
+             PreparedStatement ps = con.prepareStatement("SELECT o.id AS oid, o.name AS oname, d.ten_viet, d.goi_y_param, d.cach_dung, d.min_param, d.max_param FROM item_option_template o LEFT JOIN panel_option_dict d ON d.option_id=o.id ORDER BY o.id");
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
                 Map<String, Object> m = new LinkedHashMap<>();
@@ -1537,6 +1847,7 @@ public class PanelService {
                 m.put("name", rs.getString("oname"));
                 m.put("ten_viet", rs.getString("ten_viet"));
                 m.put("goi_y", rs.getString("goi_y_param"));
+                m.put("cach_dung", rs.getString("cach_dung"));
                 m.put("min", rs.getLong("min_param"));
                 m.put("max", rs.getLong("max_param"));
                 out.add(m);
@@ -1546,17 +1857,61 @@ public class PanelService {
     }
 
     public static String saveOptionDict(int optionId, String tenViet, String goiY, long min, long max) {
+        return saveOptionDict(optionId, tenViet, goiY, min, max, null);
+    }
+
+    public static String saveOptionDict(int optionId, String tenViet, String goiY, long min, long max, String cachDung) {
         ensureHelperTables();
         try (Connection con = jdbc.DBConnecter.getConnectionServer();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO panel_option_dict(option_id,ten_viet,goi_y_param,min_param,max_param) VALUES(?,?,?,?,?) ON DUPLICATE KEY UPDATE ten_viet=VALUES(ten_viet),goi_y_param=VALUES(goi_y_param),min_param=VALUES(min_param),max_param=VALUES(max_param)")) {
+             PreparedStatement ps = con.prepareStatement("INSERT INTO panel_option_dict(option_id,ten_viet,goi_y_param,cach_dung,min_param,max_param) VALUES(?,?,?,?,?,?) ON DUPLICATE KEY UPDATE ten_viet=VALUES(ten_viet),goi_y_param=VALUES(goi_y_param),cach_dung=VALUES(cach_dung),min_param=VALUES(min_param),max_param=VALUES(max_param)")) {
             ps.setInt(1, optionId);
             ps.setString(2, tenViet == null ? "" : tenViet);
             ps.setString(3, goiY == null ? "" : goiY);
-            ps.setLong(4, min);
-            ps.setLong(5, max);
+            ps.setString(4, cachDung == null ? "" : cachDung);
+            ps.setLong(5, min);
+            ps.setLong(6, max);
             ps.executeUpdate();
             return "OK da luu tu dien option " + optionId;
         } catch (Exception e) { return "Loi: " + e.getMessage(); }
+    }
+
+    // ============ TU DIEN OPTION: tao option MOI tu panel ============
+    // LUU Y man hinh (Controller.createItem): client gan option id = VI TRI mang
+    // va dem so option bang 1 byte (readUnsignedByte) -> id phai ke tiep 0..N
+    // (chen giau lam SAI ten toan bo option sau do), tong toi da 255.
+    public static String createOptionTemplate(int id, String name, int type, String tenViet, String goiY, long min, long max, String cachDung) {
+        ensureHelperTables();
+        if (name == null || name.trim().isEmpty()) return "Loi: ten option khong duoc rong";
+        if (min > max) return "Loi: min lon hon max";
+        int next = -1;
+        try (Connection con = jdbc.DBConnecter.getConnectionServer();
+             PreparedStatement ps = con.prepareStatement("SELECT MAX(id) FROM item_option_template");
+             ResultSet rs = ps.executeQuery()) {
+            if (rs.next()) next = rs.getInt(1) + 1;
+        } catch (Exception e) { return "Loi doc item_option_template: " + e.getMessage(); }
+        if (id != next) return "Loi: id phai la " + next + " (ke tiep). Client gan id = vi tri mang 0..N -> chen giua/nho hon se lam SAI ten toan bo option sau do.";
+        if (next > 254) return "Loi: da day 255 option (client dem 1 byte). Can nang giao thuc writeShort + patch Controller.cs truoc khi them tu 255 tro len.";
+        try (Connection con = jdbc.DBConnecter.getConnectionServer()) {
+            try (PreparedStatement ps = con.prepareStatement("INSERT INTO item_option_template (id, NAME, type) VALUES (?,?,?)")) {
+                ps.setInt(1, id); ps.setString(2, name.trim()); ps.setInt(3, type);
+                ps.executeUpdate();
+            }
+            try (PreparedStatement ps = con.prepareStatement("INSERT INTO panel_option_dict(option_id,ten_viet,goi_y_param,cach_dung,min_param,max_param) VALUES(?,?,?,?,?,?) ON DUPLICATE KEY UPDATE ten_viet=VALUES(ten_viet),goi_y_param=VALUES(goi_y_param),cach_dung=VALUES(cach_dung),min_param=VALUES(min_param),max_param=VALUES(max_param)")) {
+                ps.setInt(1, id);
+                ps.setString(2, tenViet == null ? "" : tenViet);
+                ps.setString(3, goiY == null ? "" : goiY);
+                ps.setString(4, cachDung == null ? "" : cachDung);
+                ps.setLong(5, min); ps.setLong(6, max);
+                ps.executeUpdate();
+            }
+        } catch (Exception e) { return "Loi INSERT: " + e.getMessage(); }
+        // append vao bo nho ngay (khong clear -> khong race voi thread dang login)
+        try {
+            boolean has = false;
+            for (models.Template.ItemOptionTemplate t : server.Manager.ITEM_OPTION_TEMPLATES) if (t.id == id) { has = true; break; }
+            if (!has) server.Manager.ITEM_OPTION_TEMPLATES.add(new models.Template.ItemOptionTemplate(id, name.trim(), type));
+        } catch (Exception e) {}
+        return "OK da tao option " + id + " - " + name + ". LUU Y: client dang online can DANG NHAP LAI de nhan ds option moi.";
     }
 
     public static String optionDisplay(int id) {
@@ -1591,7 +1946,7 @@ public class PanelService {
         String keyNoAccent = key;
         try { keyNoAccent = boss.BossManager.convertString(key); } catch (Exception e) {}
         int count = 0;
-        int lim = Math.max(50, Math.min(5000, limit));
+        int lim = Math.max(50, Math.min(100000, limit)); // [07/10/2026] tang cap de Thu Vien Vat Pham hien TOAN BO item_template (truoc do bi chan 500)
         try {
             for (models.Template.ItemTemplate t : server.Manager.ITEM_TEMPLATES) {
                 if (t == null) continue;

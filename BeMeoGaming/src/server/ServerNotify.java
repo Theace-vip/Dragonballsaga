@@ -78,7 +78,9 @@ public class ServerNotify extends Thread {
     public void sendNotifyTab(Player player) {
         Message msg;
         try {
-            msg = new Message(51);
+            // cmd 50 = bang thong bao (client Controller.case 50 -> Panel.vGameInfo).
+            // Truoc do loi gui 51 (lenh Mabu) nen client khong bao gio nhan duoc.
+            msg = new Message(50);
             msg.writer().writeByte(Manager.NOTIFY.size());
             for (int i = 0; i < Manager.NOTIFY.size(); i++) {
                 String[] arr = Manager.NOTIFY.get(i).split("<>");

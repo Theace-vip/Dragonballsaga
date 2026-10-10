@@ -94,7 +94,7 @@ public class DucLoKham {
                 coNe = item;
             } else if (item.template.id == 1270) {
                 zenNiNe = item;
-            } else if (item.isTrangBiKham()) {
+            } else if (isTrangBiDucLoKham(item)) {
                 trangBiKham = item;
             }
         }
@@ -130,6 +130,20 @@ public class DucLoKham {
                 "Nâng cấp x" + required, "Từ chối");
     }
 
+    /**
+     * [10/10/2026] Duc kham lo (duc lo sao pha le bang Thoi Vang + Luong Vang) ap dung cho
+     * moi trang bi tu o thu 6 tro di: cai trang (5), phu kien, giap tap luyen (32)...
+     */
+    private static boolean isTrangBiDucLoKham(Item item) {
+        if (item == null || !item.isNotNullItem()) {
+            return false;
+        }
+        if (item.isDaKham() || item.isDaPhaLeEpSao() || (item.template.id >= 14 && item.template.id <= 20)) {
+            return false;
+        }
+        return item.isTrangBiKham() || item.template.type == 32;
+    }
+
     public static void DucLoKham(Player player, int... numm) {
         int n = (numm.length > 0) ? numm[0] : 1;
         Item coNe = null;
@@ -144,7 +158,7 @@ public class DucLoKham {
                 coNe = item;
             } else if (item.template.id == 1270) {
                 zenNiNe = item;
-            } else if (item.isTrangBiKham()) {
+            } else if (isTrangBiDucLoKham(item)) {
                 trangBiKham = item;
             }
         }

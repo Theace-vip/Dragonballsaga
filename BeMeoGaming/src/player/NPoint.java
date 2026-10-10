@@ -511,6 +511,11 @@ public class NPoint {
             services.CungMenhService.gI().applyBonus(this.player, this);
         } catch (Exception e) {
         }
+        // BAN NGUYEN TINH CAU: % HP/KI/SD theo Cap do Loi + Tier tien hoa
+        try {
+            services.BanNguyenTinhCauService.gI().applyBonus(this.player, this);
+        } catch (Exception e) {
+        }
         setDameTrainArmor();
         setBasePoint();
         setOutfitFusion();
@@ -2173,6 +2178,9 @@ public class NPoint {
             player.effectSkin.isXChuong = false;
             player.effectSkin.lastTimeXChuong = System.currentTimeMillis();
         }
+
+        // BAN NGUYEN TINH CAU: Xayda Tier 5 - noi tai Zenkai (HP cang thap sat thuong cang cao)
+        dameAttack = services.BanNguyenTinhCauService.gI().applyZenkai(player, dameAttack);
 
         return dameAttack;
     }

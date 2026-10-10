@@ -3,6 +3,7 @@ package npc.npc_manifest;
 import consts.ConstNpc;
 import npc.Npc;
 import player.Player;
+import services.BanNguyenTinhCauService;
 import services.CungMenhService;
 import services.TaskService;
 import models.Achievement.AchievementService;
@@ -34,7 +35,7 @@ public class BoMong extends Npc {
             if (this.mapId == 47 || this.mapId == 84) {
                 this.createOtherMenu(player, ConstNpc.BASE_MENU,
                         CungMenhService.gI().menuText(player),
-                        "Nâng cấp", "Đột phá", "Đóng");
+                        "Nâng cấp\nCung Mệnh", "Đột phá\nCung Mệnh", "Bản Nguyên\nTinh Cầu", "Đóng");
             }
         }
     }
@@ -49,6 +50,25 @@ public class BoMong extends Npc {
                             CungMenhService.gI().nangCap(player);
                         case 1 ->
                             CungMenhService.gI().dotPha(player);
+                        case 2 ->
+                            this.createOtherMenu(player, BanNguyenTinhCauService.MENU_BAN_NGUYEN,
+                                    BanNguyenTinhCauService.gI().menuText(player),
+                                    "Nâng cấp\nLõi", "Đột phá\nTiến Hóa", "Đóng");
+                    }
+                } else if (player.iDMark.getIndexMenu() == BanNguyenTinhCauService.MENU_BAN_NGUYEN) {
+                    switch (select) {
+                        case 0 -> {
+                            BanNguyenTinhCauService.gI().nangCap(player);
+                            this.createOtherMenu(player, BanNguyenTinhCauService.MENU_BAN_NGUYEN,
+                                    BanNguyenTinhCauService.gI().menuText(player),
+                                    "Nâng cấp\nLõi", "Đột phá\nTiến Hóa", "Đóng");
+                        }
+                        case 1 -> {
+                            BanNguyenTinhCauService.gI().dotPha(player);
+                            this.createOtherMenu(player, BanNguyenTinhCauService.MENU_BAN_NGUYEN,
+                                    BanNguyenTinhCauService.gI().menuText(player),
+                                    "Nâng cấp\nLõi", "Đột phá\nTiến Hóa", "Đóng");
+                        }
                     }
                 }
             }
