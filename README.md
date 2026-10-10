@@ -61,7 +61,7 @@ SYNC_WEB_SRC="/c/xampp/htdocs/nrokura" bash sync-all.sh
 | Cổng | `80`, `443` (web) · `14445` (game) · `3306` (DB, chỉ local) |
 | Thư mục web | `C:\xampp\htdocs\nrokura` (DocumentRoot của vhost) |
 | Thư mục game | `C:\Users\Administrator\Downloads\Dragonballsaga\BeMeoGaming` |
-| Lệnh chạy game | `java -Dfile.encoding=UTF-8 --enable-preview -classpath "lib/*;build/classes" --module-path build/classes server.ServerManager` |
+| Lệnh chạy game | `java -Xms512m -Xmx2g -Dfile.encoding=UTF-8 --enable-preview -classpath "lib/*;build/classes" --module-path build/classes server.ServerManager` |
 | Cấu hình game | `BeMeoGaming/data/config/config.properties` (`server.port=14445`, `server.sv1=hondaodragon:<IP>:14445`) |
 | HTTPS | Let's Encrypt **EC-256**, lưu ở `C:\Users\Administrator\.acme.sh\nrokura.site_ecc` |
 | Task tự động | `GameServer-DBS` (khi Windows khởi động) · `acme-renew-nrokura` (02:30 hằng ngày) |
