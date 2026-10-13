@@ -38,6 +38,17 @@ public class ClanMember {
      */
     public int clanPoint;
 
+    /**
+     * Diem capsule bang ma thanh vien nay kiem duoc trong NGAY (reset khi sang ngay moi).
+     * Dung de ap tran "clan_capsule_ngay_toi_da" diem/ngay/nguoi.
+     */
+    public int capsuleToday;
+
+    /**
+     * Ngay (yyyyMMdd) cua lan cong diem capsule gan nhat - de biet khi nao reset bo dem ngay.
+     */
+    public int capsuleDay;
+
     public int lastRequest;
 
     public int joinTime;

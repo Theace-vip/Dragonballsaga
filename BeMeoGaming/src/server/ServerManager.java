@@ -98,6 +98,16 @@ public class ServerManager {
         new Thread(DeathOrAliveArenaManager.gI(), "Update Võ Đài Sinh Tử").start();
         new Thread(WorldMartialArtsTournamentManager.gI(), "Update WMAT").start();
         new Thread(AutoMaintenance.gI(), "Update Bảo Trì Tự Động").start();
+        // Ghi diem capsule bang hoi (cong don khi ha quai) xuong DB dinh ky 5 giay/lan
+        new Thread(() -> {
+            while (true) {
+                try {
+                    ClanService.gI().flushDirtyClans();
+                    Thread.sleep(5000L);
+                } catch (Exception e) {
+                }
+            }
+        }, "Update Clan Capsule").start();
         new Thread(ShenronEventManager.gI(), "Update Shenron").start();
 //        new Thread(UpdateManager.gI(), "Update Manager").start();
         //new Thread(RemoteServerManager.gI(), "Remote Server Manager").start();

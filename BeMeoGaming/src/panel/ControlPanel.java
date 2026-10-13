@@ -3532,7 +3532,7 @@ public class ControlPanel extends JFrame {
                 case "nhatAn": return "Nhật Án: chỉ số theo mốc";
                 case "nguyetAn": return "Nguyệt Án: chỉ số theo mốc";
                 case "tinhAn": return "Tinh Án: chỉ số theo mốc";
-                case "clan_per_lv": return "Bang hội: chỉ số cộng theo CẤP BANG";
+                case "clan_per_lv": return "Bang hội: % sức đánh cộng thêm cho MỖI CẤP BANG (mặc định 200)";
                 case "bachho_per_lv": return "Bạch Hổ: chỉ số cộng mỗi cấp";
                 case "thanhlong_per_lv": return "Thanh Long: chỉ số cộng mỗi cấp";
                 default: break;

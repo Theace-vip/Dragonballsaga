@@ -64,12 +64,9 @@ public class SuperBroly extends Boss {
 
     @Override
     public void reward(Player plKill) {
-        if (plKill.pet != null) {
-            return;
-        }
-        if (plKill.pet == null) {
-           PetService.gI().createbroly(this);
-        }
+        // [FIX lag 11/10/2026] Truoc day cho CHINH BOSS tu tao de tu (createbroly(this)) moi
+        // lan ha boss -> moi lan sinh 1 thread 1 giay + 1 Pet moi, boss chet lien tuc lam
+        // nghen CPU/GC ca server. De tu cua boss da tao 1 lan duy nhat trong joinMap().
     }
 
     @Override
@@ -110,6 +107,11 @@ public class SuperBroly extends Boss {
     @Override
     public void joinMap() {
         super.joinMap();
-        PetService.gI().createbroly(this);
+        // [FIX lag 11/10/2026] Chi tao de tu 1 LAN cho boss. Truoc day moi lan join map lai tao
+        // them 1 Pet + 1 thread (PetService.createbroly) -> do duoc ~1700 thread/giay khi boss
+        // ket vong lap RESPAWN -> JOIN_MAP, lam nghen CPU va GC.
+        if (this.pet == null) {
+            PetService.gI().createbroly(this);
+        }
     }
 }

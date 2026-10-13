@@ -173,6 +173,26 @@ public class WorldBossTracker {
         return sb.toString();
     }
 
+    /**
+     * [Thong bao Top 30s] Bang dame dang text de thong bao toan server.
+     * - Chi liet ke nguoi CO gay dame vao boss; ai khong dame thi khong dua vao.
+     * - Khong ai dame -> tra ve chuoi rong (ben goi se khong thong bao gi).
+     */
+    public static String topNotifyText(int n) {
+        StringBuilder sb = new StringBuilder();
+        try {
+            List<Entry> t = top(n);
+            for (int i = 0; i < t.size(); i++) {
+                Entry e = t.get(i);
+                if (e == null || e.dame <= 0) continue;
+                if (sb.length() > 0) sb.append("\n");
+                sb.append("Top ").append(i + 1).append(": ").append(e.name).append(" - ").append(fmtDame(e.dame));
+            }
+        } catch (Exception e) {
+        }
+        return sb.toString();
+    }
+
     public static List<int[]> parseReward(String s) {
         List<int[]> out = new ArrayList<>();
         if (s == null || s.trim().isEmpty()) return out;

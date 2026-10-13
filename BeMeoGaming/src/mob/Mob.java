@@ -163,7 +163,6 @@ public class Mob {
                     this.sendMobDieAffterAttacked(plAtt, damage);
                     TaskService.gI().checkDoneTaskKillMob(plAtt, this);
                     TaskService.gI().checkDoneSideTaskKillMob(plAtt, this);
-                    TaskService.gI().checkDoneClanTaskKillMob(plAtt, this);
                     AchievementService.gI().checkDoneTaskKillMob(plAtt, this);
                 }
                 if (this.id == 13) {
@@ -1115,6 +1114,30 @@ public class Mob {
             + (heSoThe > 1 ? ("Thẻ x" + heSoThe + " Điểm Farm\n") : "")
             + "Nhận: " + realGain + " điểm");
 }
+
+        // [Capsule bang 11/10/2026] Ha quai cong diem capsule bang cho bang hoi
+        // Cong thuc: (HP quai / clan_capsule_hp_div) * clan_capsule_mul + Saga_VIP * clan_capsule_vip_moi
+        // Tran ngay theo TUNG NGUOI duoc ap trong Clan.addCapsule (het tran -> moi quai 100 diem).
+        Player plCapsule = player;
+        if (plCapsule.isPet) {
+            plCapsule = ((Pet) plCapsule).master;
+        }
+        if (plCapsule != null && plCapsule.isPl() && plCapsule.clan != null) {
+            if (!this.isBigBoss() || panel.tuning.SystemTuning.getI("clan_capsule_boss") == 1) {
+                long hpMob = (long) this.point.getHpFull();
+                int hpDiv = panel.tuning.SystemTuning.getI("clan_capsule_hp_div");
+                if (hpDiv <= 0) {
+                    hpDiv = 10000;
+                }
+                int heSo = panel.tuning.SystemTuning.getI("clan_capsule_mul");
+                if (heSo <= 0) {
+                    heSo = 1;
+                }
+                long diemCapsule = (hpMob / hpDiv) * heSo
+                        + (long) plCapsule.Saga_VIP * panel.tuning.SystemTuning.getI("clan_capsule_vip_moi");
+                plCapsule.clan.addCapsule(diemCapsule, plCapsule);
+            }
+        }
 
         
           if (player.zone.map.mapId >= 122 && player.zone.map.mapId <= 124) {

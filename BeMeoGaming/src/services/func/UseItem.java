@@ -3800,7 +3800,19 @@ public class UseItem {
         }
         if (pea != null) {
             long hpKiHoiPhuc = 0;
-            int lvPea = Integer.parseInt(pea.template.name.substring(13));
+            // Cap dau: uu tien dang ten cu "Dau than cap N" (13 ky tu dau), khong duoc thi lay so dau tien trong ten
+            int lvPea = 9;
+            try {
+                lvPea = Integer.parseInt(pea.template.name.substring(13).trim());
+            } catch (Exception e) {
+                try {
+                    java.util.regex.Matcher m = java.util.regex.Pattern.compile("(\\d+)").matcher(pea.template.name);
+                    if (m.find()) {
+                        lvPea = Integer.parseInt(m.group(1));
+                    }
+                } catch (Exception e2) {
+                }
+            }
             for (Item.ItemOption io : pea.itemOptions) {
                 if (io.optionTemplate.id == 2) {
                     hpKiHoiPhuc = io.param * 1000;
@@ -3827,6 +3839,19 @@ public class UseItem {
                 Service.gI().chatJustForMe(player, player.pet, "Cám ơn sư phụ");
             }
 
+            // ĐẬU VĨNH VIỄN (item riêng, mang option 254): ăn xong +1% HP / Sức đánh / KI vĩnh viễn
+            if (pea.haveOption(254)) {
+                player.dauVinhVien += 1;
+                try {
+                    player.nPoint.calPoint();
+                    player.nPoint.setFullHpMp();
+                } catch (Exception e) {
+                }
+                PlayerService.gI().sendInfoHpMp(player);
+                PlayerDAO.updatePlayer(player);
+                Service.gI().sendThongBao(player, "|1|Đậu vĩnh viễn: +1% HP, +1% Sức đánh, +1% KI (đã ăn: "
+                        + player.dauVinhVien + " cục)");
+            }
             InventoryService.gI().subQuantityItemsBag(player, pea, 1);
             InventoryService.gI().sendItemBag(player);
         }

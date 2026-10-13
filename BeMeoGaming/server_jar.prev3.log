@@ -1,0 +1,388 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (1), clan next id: 16
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1944)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (14)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (2)
+[0m[0;32mSuccessfully loaded SK top (2)
+[0m[0;32mSuccessfully loaded NHS top (2)
+[0m[0;32mSuccessfully loaded phòng t?p top (2)
+[0m[0;32mSuccessfully loaded sanboss top (2)
+[0m[0;32mSuccessfully loaded San vi thu top (2)
+[0m[0;32mSuccessfully loaded leo thop top (1)
+[0m[0;32mSuccessfully loaded leo top Sm (2)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (2)
+[0m[0;32mSuccessfully loaded Topbdkb (2)
+[0m[0;32mSuccessfully loaded m? r??ng (2)
+[0m[0;32mSuccessfully loaded dapdo (2)
+[0m[0;32mSuccessfully loaded T?m B?o (2)
+[0m[0;32mSuccessfully loaded câu cá (2)
+[0m[0;32mSuccessfully loaded Thiên ??o (2)
+[0m[0;32mSuccessfully loaded ??a ??o (2)
+[0m[0;32mSuccessfully loaded Tu Tiên (2)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (2)
+[0mAUTOGIFTTOP [14]
+Thread Update Auto Gift Item Top Running.........
+[0;35mTotal database loading time: 4076 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;34m18h9m: [CONN] ket noi moi tu 127.0.0.1
+[0m[0;32mLoad Top N?p Thành Công (2)
+[0m[0;32mLoad Top sk Thành Công (2)
+[0m[0;32mLoad Top NHS Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mSuccessfully loaded sanboss top (2)
+[0m[0;32mSuccessfully loaded San vi thu top (2)
+[0m[0;32mSuccessfully loaded leo thop top (1)
+[0m[0;32mSuccessfully loaded leo top Sm (2)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (2)
+[0m[0;32mSuccessfully loaded Topbdkb (2)
+[0m[0;32mSuccessfully loaded m? r??ng (2)
+[0m[0;32mSuccessfully loaded dapdo (2)
+[0m[0;32mSuccessfully loaded T?m B?o (2)
+[0m[0;32mSuccessfully loaded câu cá (2)
+[0m[0;32mSuccessfully loaded Thiên ??o (2)
+[0m[0;32mSuccessfully loaded ??a ??o (2)
+[0m[0;32mSuccessfully loaded Tu Tiên (2)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (2)
+[0m[0;34m18h11m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m18h11m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 220x100(12.0%) 1225x10(8.0%) 1588x1(4.0%) 222x100(11.0%) 457x1000(9.0%) 1913x2(6.0%) 221x100(11.0%) 1588x1(0.5%) 224x100(12.0%) 1224x1(7.0%) 223x100(10.0%) 1588x1(5.0%) 1588x1(1.5%) 1588x1(3.0%)[0m[0;34m18h11m: Successful login for player admin[237]: 680 ms
+[0m[MAP] gui -24 map=14 zone=0 cho admin mat 5ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[MAP] admin xong load map 14: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 22ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=15 zone=0 cho admin mat 17ms, queue dang cho gui=1
+[EFF] send id=13 idT=13 zoom=2 data=1481B img=7204B
+[MAP] admin xong load map 15: client mat 282ms tu luc gui -24, server xu ly finishLoadMap 1ms
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=2 sel=14 eff=false mp=2.0096521422163668E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=114 idT=114 zoom=2 data=335B img=92149B
+[EFF] send id=115 idT=115 zoom=2 data=87B img=68589B
+[EFF] send id=113 idT=113 zoom=2 data=104B img=135823B
+[0;32m18h12m: Player admin saved successfully! 36ms
+[0m[0;32mLoad Top N?p Thành Công (2)
+[0m[0;32mLoad Top sk Thành Công (2)
+[0m[0;32mLoad Top NHS Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mSuccessfully loaded sanboss top (2)
+[0m[0;32mSuccessfully loaded San vi thu top (2)
+[0m[0;32mSuccessfully loaded leo thop top (1)
+[0m[0;32mSuccessfully loaded leo top Sm (2)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (2)
+[0m[0;32mSuccessfully loaded Topbdkb (2)
+[0m[0;32mSuccessfully loaded m? r??ng (2)
+[0m[0;32mSuccessfully loaded dapdo (2)
+[0m[0;32mSuccessfully loaded T?m B?o (2)
+[0m[0;32mSuccessfully loaded câu cá (2)
+[0m[0;32mSuccessfully loaded Thiên ??o (2)
+[0m[0;32mSuccessfully loaded ??a ??o (2)
+[0m[0;32mSuccessfully loaded Tu Tiên (2)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (2)
+[0m[0;34m18h16m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m18h16m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1225x10(8.0%) 222x100(11.0%) 223x100(10.0%) 224x100(12.0%) 221x100(11.0%) 1588x1(5.0%) 220x100(12.0%) 1588x1(3.0%) 1588x1(0.5%) 1224x1(7.0%) 457x1000(9.0%) 1588x1(1.5%) 1913x2(6.0%) 1588x1(4.0%)[0m[0;34m18h16m: Successful login for player admin[237]: 395 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 55ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 22ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=5 zone=0 cho admin mat 7ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 342ms tu luc gui -24, server xu ly finishLoadMap 62ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Noel Phát quà mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[MAP] gui -24 map=0 zone=0 cho admin mat 6ms, queue dang cho gui=1
+[EFF] send id=0 idT=0 zoom=2 data=140B img=5200B
+[EFF] send id=1 idT=1 zoom=2 data=816B img=3176B
+[EFF] send id=5 idT=5 zoom=2 data=178B img=8772B
+[MAP] admin xong load map 0: client mat 219ms tu luc gui -24, server xu ly finishLoadMap 33ms
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=14 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=6 sid=-1 pt=null mt=null sel=13 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=110 idT=110 zoom=2 data=119B img=149833B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=121 idT=121 zoom=2 data=325B img=121897B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=true mana=true cd=true
+[MAP] gui -24 map=0 zone=1 cho admin mat 1ms, queue dang cho gui=0
+[MAP] admin xong load map 0: client mat 101ms tu luc gui -24, server xu ly finishLoadMap 44ms
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=Boss Th? Gi?i mt=null sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=110 idT=110 zoom=2 data=119B img=149833B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=4 eff=false mp=1.8661055606294835E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=116 idT=116 zoom=2 data=339B img=110082B
+[SK] in pl=admin st=7 sid=-1 pt=null mt=null sel=14 eff=false mp=1.8866122151418954E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=111 idT=111 zoom=2 data=119B img=164524B
+[EFF] send id=118 idT=118 zoom=2 data=341B img=176545B
+[EFF] send id=117 idT=117 zoom=2 data=335B img=200518B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[SK] in pl=admin st=10 sid=-1 pt=null mt=null sel=21 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=39 idT=39 zoom=2 data=152B img=3496B
+[0;32m18h20m: Player admin saved successfully! 15ms
+[0m[0;34m18h20m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m18h20m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 222x100(11.0%) 1588x1(4.0%) 1588x1(1.5%) 1588x1(3.0%) 457x1000(9.0%) 221x100(11.0%) 1588x1(0.5%) 220x100(12.0%) 224x100(12.0%) 1224x1(7.0%) 1225x10(8.0%) 1913x2(6.0%) 223x100(10.0%) 1588x1(5.0%)[0m[0;34m18h20m: Successful login for player admin[237]: 416 ms
+[0m[MAP] gui -24 map=0 zone=0 cho admin mat 0ms, queue dang cho gui=6
+[EFF] send id=0 idT=0 zoom=2 data=140B img=5200B
+[EFF] send id=1 idT=1 zoom=2 data=816B img=3176B
+[EFF] send id=5 idT=5 zoom=2 data=178B img=8772B
+[MAP] admin xong load map 0: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 57ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=1 zone=0 cho admin mat 38ms, queue dang cho gui=1
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 1: client mat 289ms tu luc gui -24, server xu ly finishLoadMap 41ms
+[EFF] send id=33 idT=33 zoom=2 data=52B img=66372B
+[EFF] send id=41 idT=41 zoom=2 data=182B img=942B
+[MAP] gui -24 map=1 zone=2 cho admin mat 0ms, queue dang cho gui=1
+[MAP] admin xong load map 1: client mat 224ms tu luc gui -24, server xu ly finishLoadMap 39ms
+[EFF] send id=41 idT=41 zoom=2 data=182B img=942B
+[0;32mLoad Top N?p Thành Công (2)
+[0m[0;32mLoad Top sk Thành Công (2)
+[0m[0;32mLoad Top NHS Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mSuccessfully loaded sanboss top (2)
+[0m[0;32mSuccessfully loaded San vi thu top (2)
+[0m[0;32mSuccessfully loaded leo thop top (1)
+[0m[0;32mSuccessfully loaded leo top Sm (2)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (2)
+[0m[0;32mSuccessfully loaded Topbdkb (2)
+[0m[0;32mSuccessfully loaded m? r??ng (2)
+[0m[0;32mSuccessfully loaded dapdo (2)
+[0m[0;32mSuccessfully loaded T?m B?o (2)
+[0m[0;32mSuccessfully loaded câu cá (2)
+[0m[0;32mSuccessfully loaded Thiên ??o (2)
+[0m[0;32mSuccessfully loaded ??a ??o (2)
+[0m[0;32mSuccessfully loaded Tu Tiên (2)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (2)
+[0m[SK] in pl=admin st=-1 sid=-1 pt=null mt=0 sel=23 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=32 idT=32 zoom=2 data=59B img=19994B
+[MAP] gui -24 map=2 zone=0 cho admin mat 22ms, queue dang cho gui=1
+[MAP] admin xong load map 2: client mat 202ms tu luc gui -24, server xu ly finishLoadMap 32ms
+[SK] in pl=admin st=1 sid=-1 pt=null mt=null sel=8 eff=false mp=2.0506654512411855E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=2 sid=-1 pt=null mt=null sel=8 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[0;32m18h21m: Player admin saved successfully! 13ms
+[0m[0;34m18h22m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;32mLoad Top N?p Thành Công (2)
+[0m[0;32mLoad Top sk Thành Công (2)
+[0m[0;32mLoad Top NHS Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (2)
+[0m[0;32mSuccessfully loaded sanboss top (2)
+[0m[0;32mSuccessfully loaded San vi thu top (2)
+[0m[0;32mSuccessfully loaded leo thop top (1)
+[0m[0;32mSuccessfully loaded leo top Sm (2)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (2)
+[0m[0;32mSuccessfully loaded Topbdkb (2)
+[0m[0;32mSuccessfully loaded m? r??ng (2)
+[0m[0;32mSuccessfully loaded dapdo (2)
+[0m[0;32mSuccessfully loaded T?m B?o (2)
+[0m[0;32mSuccessfully loaded câu cá (2)
+[0m[0;32mSuccessfully loaded Thiên ??o (2)
+[0m[0;32mSuccessfully loaded ??a ??o (2)
+[0m[0;32mSuccessfully loaded Tu Tiên (2)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (2)
+[0m

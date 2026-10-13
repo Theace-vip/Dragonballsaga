@@ -1,17 +1,14 @@
 package npc.npc_manifest;
 
 import clan.Clan;
-import clan.ClanMember;
 import consts.ConstNpc;
 import consts.ConstPlayer;
-import consts.ConstTask;
 import dragon.Functions;
 
 import java.util.ArrayList;
 
 import npc.Npc;
 import player.Player;
-import server.Client;
 import services.ClanService;
 import services.NpcService;
 import services.Service;
@@ -37,11 +34,8 @@ public class DrDrief extends Npc {
 
                 ArrayList<String> menu = new ArrayList<>();
                 Clan clan = pl.clan;
-                if (clan != null) {
-                    if (clan.isLeader(pl)) {
-                        menu.add("Chức năng\nbang hội");
-                    }
-                    menu.add("Nhiệm vụ Bang\n[" + pl.playerTask.clanTask.leftTask + "/" + ConstTask.MAX_CLAN_TASK + "]");
+                if (clan != null && clan.isLeader(pl)) {
+                    menu.add("Chức năng\nbang hội");
                 }
                 menu.add("Đảo Kame");
                 menu.add("Từ chối");
@@ -62,54 +56,27 @@ public class DrDrief extends Npc {
             if (this.mapId == 84) {
                 ChangeMapService.gI().changeMapBySpaceShip(player, player.gender + 24, -1, -1);
             } else if (this.mapId == 153) {
-                OUTER:
                 switch (player.iDMark.getIndexMenu()) {
                     case ConstNpc.BASE_MENU -> {
                         Clan clan = player.clan;
-                        if (clan != null) {
-                            if (clan.isLeader(player)) {
-                                switch (select) {
-                                    case 0 ->
-                                            createOtherMenu(player, 1, "Tôi có thể giúp gì cho bang hội của bạn ?", "Đổi tên\ntên bang\nviết tắt", "Chọn ngẫu nhiên tên bang viết tắt", "Nâng cấp Bang hội", "Đóng");
-                                    case 1 -> {
-                                        if (player.playerTask.clanTask.template != null) {
-                                            if (player.playerTask.clanTask.isDone()) {
-                                                createOtherMenu(player, ConstNpc.MENU_CLAN_TASK, "Nhiệm vụ đã hoàn thành, hãy nhận " + ((player.playerTask.clanTask.level + 1) * 10) + " capsule bang", "Nhận\nthưởng", "Đóng");
-                                                break;
-                                            }
-                                            createOtherMenu(player, ConstNpc.MENU_CLAN_TASK, "Nhiệm vụ hiện tại: " + player.playerTask.clanTask.getName() + ". Đã hạ được " + player.playerTask.clanTask.count, "OK", "Hủy bỏ\nNhiệm vụ\nnày");
-                                        } else {
-                                            TaskService.gI().changeClanTask(this, player, (byte) Util.nextInt(5));
-                                        }
-                                    }
-                                    case 2 -> ChangeMapService.gI().changeMapBySpaceShip(player, 5, -1, -1);
-                                    default -> {
-                                    }
-                                }
-                            } else {
-                                switch (select) {
-                                    case 0 -> {
-                                        if (player.playerTask.clanTask.template != null) {
-                                            if (player.playerTask.clanTask.isDone()) {
-                                                createOtherMenu(player, ConstNpc.MENU_CLAN_TASK, "Nhiệm vụ đã hoàn thành, hãy nhận " + ((player.playerTask.clanTask.level + 1) * 10) + " capsule bang", "Nhận\nthưởng", "Đóng");
-                                                break;
-                                            }
-                                            createOtherMenu(player, ConstNpc.MENU_CLAN_TASK, "Nhiệm vụ hiện tại: " + player.playerTask.clanTask.getName() + ". Đã hạ được " + player.playerTask.clanTask.count, "OK", "Hủy bỏ\nNhiệm vụ\nnày");
-                                        } else {
-                                            TaskService.gI().changeClanTask(this, player, (byte) Util.nextInt(5));
-                                        }
-                                    }
-                                    case 1 -> ChangeMapService.gI().changeMapBySpaceShip(player, 5, -1, -1);
-                                    default -> {
-                                    }
+                        if (clan != null && clan.isLeader(player)) {
+                            switch (select) {
+                                case 0 ->
+                                    createOtherMenu(player, 1, "Tôi có thể giúp gì cho bang hội của bạn ?", "Đổi tên\ntên bang\nviết tắt", "Chọn ngẫu nhiên tên bang viết tắt", "Nâng cấp Bang hội", "Đóng");
+                                case 1 ->
+                                    ChangeMapService.gI().changeMapBySpaceShip(player, 5, -1, -1);
+                                default -> {
                                 }
                             }
+                        } else if (select == 0) {
+                            ChangeMapService.gI().changeMapBySpaceShip(player, 5, -1, -1);
                         }
                     }
                     case 1 -> {
                         Clan clan;
                         switch (select) {
-                            case 0 -> Input.gI().createFormBangHoi(player);
+                            case 0 ->
+                                Input.gI().createFormBangHoi(player);
                             case 1 -> {
                                 clan = player.clan;
                                 if (clan != null) {
@@ -125,21 +92,17 @@ public class DrDrief extends Npc {
                             }
                             case 2 -> {
                                 clan = player.clan;
-                                if (clan != null) {
-                                    int level = clan.level;
-                                    if (clan.isLeader(player)) {
-                                        if (level > 10) {
-                                            Service.gI().sendThongBao(player, "Đang ở cấp độ cao nhất.");
-                                            return;
-                                        }
-                                        String npcSay = "Cần " + Util.chiaNho(ClanService.gI().capsule(clan)) + " capsule bang [đang có " + Util.chiaNho(clan.capsuleClan) + " capsule bang] để nâng cấp bang hội lên cấp " + (level + 1);
-                                        npcSay += "\n+1 tối đa số lượng thành viên";
-                                        if (level > 1) {
-                                            npcSay += "\n+1 ô trống tối đa rương bang.";
-                                        }
-                                        npcSay += "\n+Mở bán bùa bang cấp " + (level + 1);
-                                        createOtherMenu(player, ConstNpc.MENU_CLAN_UP, npcSay, "Đồng ý", "Từ chối");
+                                if (clan != null && clan.isLeader(player)) {
+                                    if (clan.level >= Clan.LEVEL_MAX) {
+                                        Service.gI().sendThongBao(player, "Bang hội đã đạt cấp tối đa (" + Clan.LEVEL_MAX + ").");
+                                        return;
                                     }
+                                    String npcSay = "Cần " + Util.chiaNho(ClanService.gI().capsuleCost(clan.level)) + " capsule bang [đang có " + Util.chiaNho(clan.capsuleClan) + " capsule bang] để nâng cấp bang hội lên cấp " + (clan.level + 1);
+                                    npcSay += "\n+1 tối đa số lượng thành viên";
+                                    npcSay += "\n+1 ô trống tối đa rương bang.";
+                                    npcSay += "\n+Mở bán bùa bang cấp " + (clan.level + 1);
+                                    npcSay += "\nMỗi cấp bang tăng 200% sức đánh cho toàn bang.";
+                                    createOtherMenu(player, ConstNpc.MENU_CLAN_UP, npcSay, "Đồng ý", "Từ chối");
                                 }
                             }
                             default -> {
@@ -147,53 +110,8 @@ public class DrDrief extends Npc {
                         }
                     }
                     case ConstNpc.MENU_CLAN_UP -> {
-                        Clan clan = player.clan;
-                        if (clan != null) {
-                            if (clan.isLeader(player)) {
-                                if (clan.level > 10) {
-                                    Service.gI().sendThongBao(player, "Đang ở cấp độ cao nhất.");
-                                    return;
-                                }
-                                int capsuleCan = ClanService.gI().capsule(clan);
-                                int capsuleBang = clan.capsuleClan;
-                                if (capsuleBang >= capsuleCan) {
-                                    clan.capsuleClan -= capsuleCan;
-                                    clan.level++;
-                                    clan.maxMember++;
-                                    Service.gI().sendThongBao(player, "Chúc mừng bang hội của bạn đã lên cấp " + (clan.level));
-                                    for (ClanMember cm : player.clan.getMembers()) {
-                                        Player pl = Client.gI().getPlayer(cm.id);
-                                        if (pl != null) {
-                                            ClanService.gI().sendMyClan(player);
-                                        }
-                                    }
-                                } else {
-                                    Service.gI().sendThongBao(player, "Không đủ capsule bang, cần " + Util.chiaNho(capsuleCan - capsuleBang) + " capsule bang nữa.");
-                                }
-                            }
-                        }
-                    }
-                    case ConstNpc.MENU_CLAN_TASK -> {
-                        if (player.playerTask.clanTask.template != null) {
-                            switch (select) {
-                                case 0 -> {
-                                    if (player.playerTask.clanTask.isDone()) {
-                                        TaskService.gI().payClanTask(player);
-                                    }
-                                }
-                                case 1 -> {
-                                    if (!player.playerTask.clanTask.isDone()) {
-                                        createOtherMenu(player, ConstNpc.MENU_CLAN_TASK_REMOVE, "Bạn có chắc muốn hủy nhiệm vụ này?\nNếu hủy nhiệm vụ bạn sẽ mất 1 lượt nhiệm vụ trong ngày.", "Đồng ý", "Từ chối");
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    case ConstNpc.MENU_CLAN_TASK_REMOVE -> {
-                        if (player.playerTask.clanTask.template != null) {
-                            if (select == 0 && !player.playerTask.clanTask.isDone()) {
-                                TaskService.gI().removeClanTask(player);
-                            }
+                        if (select == 0) {
+                            ClanService.gI().upgradeClan(player);
                         }
                     }
                     default -> {
@@ -201,9 +119,12 @@ public class DrDrief extends Npc {
                 }
             } else if (player.iDMark.isBaseMenu()) {
                 switch (select) {
-                    case 0 -> ChangeMapService.gI().changeMapBySpaceShip(player, 25, -1, -1);
-                    case 1 -> ChangeMapService.gI().changeMapBySpaceShip(player, 26, -1, -1);
-                    case 2 -> ChangeMapService.gI().changeMapBySpaceShip(player, 84, -1, -1);
+                    case 0 ->
+                        ChangeMapService.gI().changeMapBySpaceShip(player, 25, -1, -1);
+                    case 1 ->
+                        ChangeMapService.gI().changeMapBySpaceShip(player, 26, -1, -1);
+                    case 2 ->
+                        ChangeMapService.gI().changeMapBySpaceShip(player, 84, -1, -1);
                 }
             }
         }

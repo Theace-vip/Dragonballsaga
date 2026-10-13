@@ -1,0 +1,568 @@
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (23), clan next id: 24
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1944)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (14)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (20)
+[0m[0;32mSuccessfully loaded SK top (20)
+[0m[0;32mSuccessfully loaded NHS top (20)
+[0m[0;32mSuccessfully loaded phòng t?p top (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0mAUTOGIFTTOP [14]
+[0;35mTotal database loading time: 5097 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m1h47m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h47m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(4.0%) 223x100(10.0%) 1588x1(5.0%) 1588x1(3.0%) 1588x1(0.5%) 221x100(11.0%) 1225x10(8.0%) 1913x2(6.0%) 1224x1(7.0%) 220x100(12.0%) 457x1000(9.0%) 222x100(11.0%) 224x100(12.0%) 1588x1(1.5%)[0m[0;34m1h48m: Successful login for player admin[237]: 1005 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 11ms, queue dang cho gui=0
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 89ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m1h50m: Player admin saved successfully! 46ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m1h54m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m1h54m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 220x100(12.0%) 1588x1(0.5%) 1224x1(7.0%) 221x100(11.0%) 1588x1(4.0%) 1588x1(3.0%) 1588x1(5.0%) 224x100(12.0%) 1913x2(6.0%) 1588x1(1.5%) 222x100(11.0%) 457x1000(9.0%) 223x100(10.0%) 1225x10(8.0%)[0m[0;34m1h54m: Successful login for player admin[237]: 582 ms
+[0m[MAP] gui -24 map=23 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[EFF] send id=8 idT=8 zoom=2 data=310B img=4617B
+[MAP] admin xong load map 23: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 19ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=14 zone=0 cho admin mat 10ms, queue dang cho gui=1
+[MAP] admin xong load map 14: client mat 263ms tu luc gui -24, server xu ly finishLoadMap 1ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32m1h56m: Player admin saved successfully! 29ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m2h5m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h5m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 221x100(11.0%) 222x100(11.0%) 1588x1(4.0%) 1588x1(3.0%) 1224x1(7.0%) 1225x10(8.0%) 220x100(12.0%) 1588x1(0.5%) 1588x1(5.0%) 1588x1(1.5%) 224x100(12.0%) 223x100(10.0%) 457x1000(9.0%) 1913x2(6.0%)[0m[0;34m2h5m: Successful login for player admin[237]: 250 ms
+[0m[MAP] gui -24 map=14 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[EFF] send id=3 idT=3 zoom=2 data=140B img=5441B
+[MAP] admin xong load map 14: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 1ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=15 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[EFF] send id=13 idT=13 zoom=2 data=1481B img=7204B
+[MAP] admin xong load map 15: client mat 269ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[0;32m2h5m: Player admin saved successfully! 16ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m2h18m: [CONN] ket noi moi tu 113.173.36.33
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h18m: [LOGIN] Yeu cau login: user=nameko ip=113.173.36.33 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho namee: chia=1874, 14 o -> 1588x1(4.0%) 221x100(11.0%) 457x1000(9.0%) 1588x1(3.0%) 1225x10(8.0%) 1224x1(7.0%) 224x100(12.0%) 1913x2(6.0%) 1588x1(0.5%) 220x100(12.0%) 223x100(10.0%) 1588x1(5.0%) 222x100(11.0%) 1588x1(1.5%)[0m[0;34m2h18m: Successful login for player namee[237]: 297 ms
+[0m[MAP] gui -24 map=8 zone=0 cho namee mat 3ms, queue dang cho gui=1
+[EFF] send id=13 idT=13 zoom=2 data=1481B img=7204B
+[MAP] namee xong load map 8: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 6ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=9 zone=0 cho namee mat 3ms, queue dang cho gui=1
+[MAP] namee xong load map 9: client mat 1371ms tu luc gui -24, server xu ly finishLoadMap 11ms
+[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[MAP] gui -24 map=11 zone=0 cho namee mat 3ms, queue dang cho gui=1
+[EFF] send id=16 idT=16 zoom=2 data=221B img=5964B
+[MAP] namee xong load map 11: client mat 1142ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[MAP] gui -24 map=12 zone=0 cho namee mat 3ms, queue dang cho gui=1
+[MAP] namee xong load map 12: client mat 173ms tu luc gui -24, server xu ly finishLoadMap 1ms
+[MAP] gui -24 map=5 zone=0 cho namee mat 3ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] namee xong load map 5: client mat 796ms tu luc gui -24, server xu ly finishLoadMap 53ms
+[MAP] gui -24 map=5 zone=5 cho namee mat 2ms, queue dang cho gui=1
+[MAP] namee xong load map 5: client mat 249ms tu luc gui -24, server xu ly finishLoadMap 40ms
+[0;32m2h21m: Player namee saved successfully! 8ms
+[0m[0;34m2h24m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h24m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h24m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h24m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;34m2h26m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 224x100(12.0%) 1588x1(3.0%) 1588x1(5.0%) 1224x1(7.0%) 1588x1(1.5%) 1588x1(4.0%) 221x100(11.0%) 457x1000(9.0%) 1588x1(0.5%) 223x100(10.0%) 1225x10(8.0%) 220x100(12.0%) 1913x2(6.0%) 222x100(11.0%)[0m[0;34m2h26m: Successful login for player admin[237]: 394 ms
+[0m[MAP] gui -24 map=15 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[EFF] send id=13 idT=13 zoom=2 data=1481B img=7204B
+[MAP] admin xong load map 15: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 3ms
+[0;32m2h28m: Player admin saved successfully! 7ms
+[0m[0;34m2h28m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h28m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 223x100(10.0%) 1588x1(0.5%) 457x1000(9.0%) 1224x1(7.0%) 221x100(11.0%) 1588x1(3.0%) 1588x1(5.0%) 1588x1(1.5%) 1225x10(8.0%) 220x100(12.0%) 222x100(11.0%) 224x100(12.0%) 1588x1(4.0%) 1913x2(6.0%)[0m[0;34m2h28m: Successful login for player admin[237]: 269 ms
+[0m[MAP] gui -24 map=15 zone=0 cho admin mat 0ms, queue dang cho gui=1
+[EFF] send id=13 idT=13 zoom=2 data=1481B img=7204B
+[MAP] admin xong load map 15: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 1ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=16 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 16: client mat 248ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[0;32m2h28m: Player admin saved successfully! 13ms
+[0m[0;32mLoad Top N?p Thành Công (20)
+[0m[0;32mLoad Top sk Thành Công (20)
+[0m[0;32mLoad Top NHS Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (20)
+[0m[0;32mSuccessfully loaded sanboss top (20)
+[0m[0;32mSuccessfully loaded San vi thu top (20)
+[0m[0;32mSuccessfully loaded leo thop top (53)
+[0m[0;32mSuccessfully loaded leo top Sm (54)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (20)
+[0m[0;32mSuccessfully loaded Topbdkb (20)
+[0m[0;32mSuccessfully loaded m? r??ng (20)
+[0m[0;32mSuccessfully loaded dapdo (20)
+[0m[0;32mSuccessfully loaded T?m B?o (50)
+[0m[0;32mSuccessfully loaded câu cá (20)
+[0m[0;32mSuccessfully loaded Thiên ??o (20)
+[0m[0;32mSuccessfully loaded ??a ??o (20)
+[0m[0;32mSuccessfully loaded Tu Tiên (20)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (20)
+[0m[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (1), clan next id: 16
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1944)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (14)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (1)
+[0m[0;32mSuccessfully loaded SK top (1)
+[0m[0;32mSuccessfully loaded NHS top (1)
+[0m[0;32mSuccessfully loaded phòng t?p top (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0mAUTOGIFTTOP [14]
+[0;35mTotal database loading time: 4031 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;34m2h49m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m2h49m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 224x100(12.0%) 1913x2(6.0%) 222x100(11.0%) 1225x10(8.0%) 1588x1(4.0%) 1588x1(3.0%) 223x100(10.0%) 221x100(11.0%) 1588x1(0.5%) 457x1000(9.0%) 1588x1(5.0%) 1588x1(1.5%) 1224x1(7.0%) 220x100(12.0%)[0m[0;34m2h49m: Successful login for player admin[237]: 803 ms
+[0m[MAP] gui -24 map=16 zone=0 cho admin mat 4ms, queue dang cho gui=1
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 16: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 9ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m2h49m: Player admin saved successfully! 38ms
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;34m3h1m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h1m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(0.5%) 222x100(11.0%) 1588x1(3.0%) 1588x1(5.0%) 220x100(12.0%) 1225x10(8.0%) 221x100(11.0%) 457x1000(9.0%) 1224x1(7.0%) 223x100(10.0%) 224x100(12.0%) 1913x2(6.0%) 1588x1(4.0%) 1588x1(1.5%)[0m[0;34m3h1m: Successful login for player admin[237]: 417 ms
+[0m[MAP] gui -24 map=16 zone=0 cho admin mat 3ms, queue dang cho gui=3
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 16: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 2ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m3h1m: Player admin saved successfully! 14ms
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m

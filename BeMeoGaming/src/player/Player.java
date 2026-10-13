@@ -263,6 +263,9 @@ public class Player implements Runnable {
     public long point_moruong;
     public long point_vip;
     public long point_dapdo;
+
+    /** ĐẬU VĨNH VIỄN: số cục đậu vĩnh viễn đã ăn. Mỗi cục +1% HP, +1% Sức đánh, +1% KI, KHÔNG giới hạn. */
+    public int dauVinhVien;
     public long point_PassFree;
     public long point_PassVIP;
     public long point_MokhoaVip;

@@ -50,16 +50,48 @@ public class Broly extends Boss {
         ));
     }
 
+    /** [FIX lag 11/10/2026] So Super Broly song cung luc - chan xoan so luong boss. */
+    private static final int MAX_SUPER_BROLY = 20;
+
     @Override
     public void update() {
-        if (nPoint.hp >= 16_600_000) {
+        // [FIX lag 11/10/2026] 16.6M la nguong HP GOC cua Broly (hoiPhuc nang dan len).
+        // Tu khi cong them HP boss (panel boss_hp_them = 1E18), hp luc nao cung >= 16.6M nen
+        // Broly tu sat + sinh Super Broly MOI TICK -> hang nghin boss + ~1700 thread/giay -> lag.
+        // Tru di phan HP cong them de so sanh dung voi HP goc.
+        if (nPoint.hp - hpThem() >= 16_600_000) {
             Zone zoneTemp = zone;
             setDie(null);
             die(null);
             Service.gI().charDie(this);
-             BossManager.gI().createBoss(BossID.SUPER_BROLY);
+            if (soSuperBroly() < MAX_SUPER_BROLY) {
+                BossManager.gI().createBoss(BossID.SUPER_BROLY);
+            }
         }
         super.update();
+    }
+
+    /** [FIX lag 11/10/2026] HP cong them tu panel (boss_hp_them) - de so sanh voi nguong HP goc. */
+    private double hpThem() {
+        try {
+            return panel.tuning.BossTuning.hpThem(this);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    /** [FIX lag 11/10/2026] Dem so Super Broly dang song (tranh sinh vo han). */
+    private int soSuperBroly() {
+        int c = 0;
+        try {
+            for (Boss b : BossManager.gI().getBosses()) {
+                if (b != null && b.id == BossID.SUPER_BROLY) {
+                    c++;
+                }
+            }
+        } catch (Exception e) {
+        }
+        return c;
     }
 
     private void hoiPhuc() {
@@ -75,8 +107,9 @@ public class Broly extends Boss {
         chat("Graaaaaa...");
         lastTimeHP = System.currentTimeMillis();
         timeHP = Util.nextInt(2000, 5000);
-        if (nPoint.hp > 16000000) {
-            nPoint.hp = 16000000;
+        // [FIX lag 11/10/2026] tran HP goc 16M, phai cong lai phan HP boss cong them
+        if (nPoint.hp - hpThem() > 16000000) {
+            nPoint.hp = 16000000 + hpThem();
         }
         Player pl = zone.getRandomPlayerInMap();
         if (pl == null || pl.isDie()) {
@@ -105,7 +138,8 @@ public class Broly extends Boss {
         damage = Math.min(damage, nPoint.hpMax * 5 / 100);
         nPoint.subHP(damage);
         if (isDie()) {
-            if (nPoint.hpMax < 16_600_000) {
+            // [FIX lag 11/10/2026] nguong HP goc: tru phan HP boss cong them (1E18)
+            if (nPoint.hpMax - hpThem() < 16_600_000) {
                 nPoint.addHp(nPoint.hpMax * 20 / 100);
                 Service.gI().Send_Info_NV(this);
                 active();

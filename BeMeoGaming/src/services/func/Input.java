@@ -569,7 +569,7 @@ public class Input {
 
                 case BANSLLKnb:
                     int slknb = Integer.parseInt(text[0]);
-                    long costknb = (long) slknb * 10000;
+                    long costknb = (long) slknb * 2000; // 1 Luong Vang = 2.000 Cash (Qua Online 2026-10)
                     if (slknb < 0) {
                         Service.gI().sendThongBao(player, "Có cái dái");
                         return;
@@ -593,7 +593,7 @@ public class Input {
                     break;
                 case BANSLLKnbac:
                     int slknbac = Integer.parseInt(text[0]);
-                    long costknbac = (long) slknbac * 100;
+                    long costknbac = (long) slknbac * 10; // 1 Luong Bac = 10 Ngoc Xanh (Qua Online 2026-10)
                     if (slknbac < 0) {
                         Service.gI().sendThongBao(player, "Có cái dái");
                         return;
@@ -929,13 +929,13 @@ public class Input {
 
     public void createFormBanSLLKnb(Player pl) {
         createForm(pl, BANSLLKnb, "Bạn muốn bán bao nhiêu [Lượng Vàng] ?\n"
-                + "1 Lượng Vàng = 10.000 Cash - Có Thể Nạp Đổi 12.000 Cash/Lượng",
+                + "1 Lượng Vàng = 2.000 Cash - Có Thể Nạp Đổi 12.000 Cash/Lượng",
                 new SubInput("Số lượng", NUMERIC));
     }
 
     public void createFormBanSLLKnbac(Player pl) {
         createForm(pl, BANSLLKnbac, "Bạn muốn bán bao nhiêu [Lượng Bạc] ?\n"
-                + "1 Lượng Bạc = 100 Ngọc Xanh - Có Thể Up quái 1 Con/Lượng",
+                + "1 Lượng Bạc = 10 Ngọc Xanh - Có Thể Up quái 1 Con/Lượng",
                 new SubInput("Số lượng", NUMERIC));
     }
 

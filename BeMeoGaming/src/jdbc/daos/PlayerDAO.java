@@ -1211,7 +1211,7 @@ public class PlayerDAO {
                         + "rank = ?, data_super_rank = ?, data_achievement = ?, giftcode = ?, firstTimeLogin = ?, dataBadges = ?, dataTaskBadges = ?, dailyGift = ?, power = ?, "
                         + "homthu = ?, phuc_loi = ?,diemfam =? ,sukien =?, point_phongtap =? , point_sb =?, point_vithu =?,isbienhinh=?, leoThap =?,Saga_VIP=?,diemdanh=?,"
                         + "SagaThienDao = ?, PhapTac_ThienDao= ?, TamkjllCapPb= ?,SagaChuyenSinh= ?, SagaDiaDao= ?, DLbTamkjll= ?, TamkjllThomo= ?, TamkjllThomoExp= ?,SagaTuTien= ?, TamkjllDLDL= ?, Tamkjll_Pet= ?, Tamkjll_Tu_Ma= ? ,SukienTamBao =? ,point_bdkb = ?,point_moruong =? ,point_vip =?,point_dapdo =?,"
-                        + "dakethon =? ,duockethon =? ,NapDau =? ,point_cauca =?,tho_nguyen =? ,point_PassFree =? ,point_PassVIP =? ,point_MokhoaVip =?,SoXuMenhDaNhan =?,SoXuMenhDaNhanvip =? where id = ?";
+                        + "dakethon =? ,duockethon =? ,NapDau =? ,point_cauca =?,tho_nguyen =? ,point_PassFree =? ,point_PassVIP =? ,point_MokhoaVip =?,SoXuMenhDaNhan =?,SoXuMenhDaNhanvip =?,dau_vinh_vien = ? where id = ?";
 
                 DBConnecter.executeUpdate(query,
                         player.head,
@@ -1303,6 +1303,7 @@ public class PlayerDAO {
                         player.point_MokhoaVip,
                         player.SoXuMenhDaNhan,
                         player.SoXuMenhDaNhanvip,
+                        player.dauVinhVien,
                         player.id);
                 if (player.isOffline) {
                     Logger.log(Logger.PURPLE, TimeUtil.getCurrHour() + "h" + TimeUtil.getCurrMin() + "m: Player " + player.name + " updated successfully! " + (System.currentTimeMillis() - st) + "ms\n");

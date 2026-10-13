@@ -101,7 +101,7 @@ public class StatRateTuning {
             put("worldcup", 10);
             put("gogeta", 10);
             // Clan per level
-            put("clan_per_lv", 30);
+            put("clan_per_lv", 200); // moi cap bang tang 200% suc danh cho toan bang (11/10/2026)
             // Thien dao (he so %)
             put("thiendo_dame", 1);
             put("thiendo_hp", 1);

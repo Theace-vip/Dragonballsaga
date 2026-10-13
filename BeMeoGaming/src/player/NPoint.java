@@ -110,6 +110,9 @@ public class NPoint {
      */
     public double hpAdd, mpAdd, dameAdd, defAdd, critAdd, hpHoiAdd, mpHoiAdd, dameBoss;
 
+    /** OPTION 247: +% sat thuong them khi danh Boss (Kich Sat Boss). */
+    public double dameKichSatBoss;
+
     /**
      * //+#% sức đánh chí mạng
      */
@@ -188,6 +191,9 @@ public class NPoint {
     public short tlchinhxac;
 
     public short tlTNSMPet;
+
+    /** OPTION 79: +% suc danh cho DE TU khi su phu mac do. */
+    public short tlDamePet;
     public short xChuong;
 
     public short setltdb;
@@ -516,6 +522,12 @@ public class NPoint {
             services.BanNguyenTinhCauService.gI().applyBonus(this.player, this);
         } catch (Exception e) {
         }
+        // ĐẬU VĨNH VIỄN: mỗi cục đã ăn +1% HP, +1% Sức đánh, +1% KI (không giới hạn, lưu qua relog)
+        if (this.player.dauVinhVien > 0) {
+            this.tlHp.add((long) this.player.dauVinhVien);
+            this.tlMp.add((long) this.player.dauVinhVien);
+            this.tlDame.add((long) this.player.dauVinhVien);
+        }
         setDameTrainArmor();
         setBasePoint();
         setOutfitFusion();
@@ -740,6 +752,15 @@ public class NPoint {
             case 173: // Phục hồi #% HP và KI cho đồng đội
                 this.tlHpHoiBanThanVaDongDoi += io.param;
                 this.tlMpHoiBanThanVaDongDoi += io.param;
+                break;
+            case 79: // +% suc danh cho DE TU khi su phu mac (doc o nhanh dame cua pet)
+                this.tlDamePet += io.param;
+                break;
+            case 192: // +#% Chi mang - alias cua option 14 (critAdd)
+                this.critAdd += io.param;
+                break;
+            case 247: // Kich Sat Boss +#% sat thuong them khi danh boss (Boss.injured)
+                this.dameKichSatBoss += io.param;
                 break;
             case 204:
                 this.dameBoss += io.param;
@@ -1180,6 +1201,8 @@ public class NPoint {
             if (this.player.isBoss) hpMax = hpMax * GameTuning.HP_GLOBAL * GameTuning.BOSS_HP_SCALE;
             else hpMax = hpMax * GameTuning.HP_GLOBAL;
             hpMax = GameTuning.softCapHp(hpMax);
+            // [Boss HP 11/10/2026] cong them HP cho MOI boss (tru boss nhiem vu), cong SAU soft-cap
+            if (this.player.isBoss) hpMax += panel.tuning.BossTuning.hpThem(this.player);
         } catch (Exception e) {}
 
         this.hpMax = hpMax;
@@ -1531,7 +1554,7 @@ public class NPoint {
             //    Service.getInstance().sendThongBao(player, "Đã tăng 100% sức đánh");
         }
         if (player.clan != null && player.clan.level >= 1) {
-            try { this.dame += (this.dame * (player.clan.level * rate("clan_per_lv", 30)) / 100L); } catch (Exception e) { this.dame += (this.dame * (player.clan.level * 30L) / 100L); }
+            try { this.dame += (this.dame * (player.clan.level * rate("clan_per_lv", 200)) / 100L); } catch (Exception e) { this.dame += (this.dame * (player.clan.level * 200L) / 100L); }
         }
 
         if (player.setClothes.setsaga == 5) {
@@ -1762,6 +1785,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).master.SagaThienDao >= panel.tuning.SystemTuning.getI("thiendao_moc_500")) {
             dame += dame * (((Pet) this.player).master.SagaThienDao / 15) / 100d;
         }
+        // OPTION 79: su phu mac do => cong % suc danh cho de tu (param = %)
+        if (this.player.isPet && ((Pet) this.player).master != null
+                && ((Pet) this.player).master.nPoint != null
+                && ((Pet) this.player).master.nPoint.tlDamePet > 0) {
+            dame += dame * ((Pet) this.player).master.nPoint.tlDamePet / 100d;
+        }
         if (this.player.dakethon > 0) {
             try { this.dame += dame * (this.player.dakethon * rate("dakethon_dame", 1000) / 100d); } catch (Exception e) { this.dame += dame * (this.player.dakethon * 1000d / 100d); }
         }
@@ -1877,6 +1906,7 @@ public class NPoint {
 
     private void resetPoint() {
         this.dameBoss = 0;
+        this.dameKichSatBoss = 0;
         this.voHieuChuong = 0;
         this.hpAdd = 0;
         this.mpAdd = 0;
@@ -1914,6 +1944,7 @@ public class NPoint {
         this.tlxgc = 0;
         this.tlchinhxac = 0;
         this.tlTNSMPet = 0;
+        this.tlDamePet = 0;
         this.xChuong = 0;
         this.setltdb = 0;
         this.setTinhAn = 0;

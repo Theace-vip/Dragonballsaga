@@ -176,6 +176,20 @@ public class SystemTuning {
         reg("Hieu Ung Ket Liet", "Tong quan", "killfx_enable", 1, "Bat hieu ung ket liu quai khi player giet quai (1 = bat, 0 = tat)");
         reg("Hieu Ung Ket Liet", "Tong quan", "killfx_vip", 3, "VIP toi thieu (Saga_VIP) de co hieu ung ket liu");
 
+        // ================= BANG HOI =================
+        // Diem capsule bang khi ha quai: (HP quai / clan_capsule_hp_div) * clan_capsule_mul + Saga_VIP * clan_capsule_vip_moi
+        // Tran ngay theo TUNG NGUOI: clan_capsule_ngay_toi_da diem/ngay, het tran thi moi quai = clan_capsule_sau_tran diem.
+        reg("Bang Hoi", "Diem capsule theo quai", "clan_capsule_hp_div", 10000, "Chia HP quai de ra diem capsule (HP/10000)");
+        reg("Bang Hoi", "Diem capsule theo quai", "clan_capsule_mul", 1, "Nhan them cho phan diem tinh tu HP quai");
+        reg("Bang Hoi", "Diem capsule theo quai", "clan_capsule_vip_moi", 1, "Cong them moi cap VIP (Saga_VIP) diem capsule");
+        reg("Bang Hoi", "Diem capsule theo quai", "clan_capsule_boss", 0, "Quai boss co duoc tinh diem capsule (1 = co, 0 = khong)");
+        reg("Bang Hoi", "Tran diem theo ngay", "clan_capsule_ngay_toi_da", 20000, "Tran diem capsule moi NGUOI moi NGAY theo cong thuc (0 = khong gioi han)");
+        reg("Bang Hoi", "Tran diem theo ngay", "clan_capsule_sau_tran", 100, "Diem capsule moi quai sau khi da het tran ngay");
+
+        // ================= BOSS =================
+        // HP cong them cho MOI boss (tru boss nhiem vu - xem boss.BossID.isBossNhiemVu)
+        reg("Boss", "HP boss", "boss_hp_them", 1.0E18, "HP cong them cho moi boss, tru boss nhiem vu (0 = tat)");
+
         // ================= VIP =================
         // Gia mua/nang VIP tai NPC Ong Gohan
         reg("VIP", "Gia mua/nang VIP", "vip_gia_1", 10000, "Gia mua VIP 1 (Cash)");

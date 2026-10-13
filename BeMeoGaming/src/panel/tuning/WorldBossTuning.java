@@ -32,6 +32,10 @@ public class WorldBossTuning {
     public static String TOP23_JSON = "";
     public static String TOP410_JSON = "";
     public static String CONSOL_JSON = "";
+    // [Thong bao Top] Moi TOP_NOTIFY_SEC giay thong bao bang dame cho toan server (0 = tat).
+    public static int TOP_NOTIFY_SEC = 30;
+    // So hang hien trong thong bao (1..10).
+    public static int TOP_NOTIFY_N = 5;
 
     static { load(); }
 
@@ -65,6 +69,11 @@ public class WorldBossTuning {
             if (TOP23_JSON == null) TOP23_JSON = "";
             if (TOP410_JSON == null) TOP410_JSON = "";
             if (CONSOL_JSON == null) CONSOL_JSON = "";
+            try { TOP_NOTIFY_SEC = Integer.parseInt(p.getProperty("topNotifySec", "30")); } catch (Exception e) { TOP_NOTIFY_SEC = 30; }
+            if (TOP_NOTIFY_SEC < 0) TOP_NOTIFY_SEC = 0;
+            try { TOP_NOTIFY_N = Integer.parseInt(p.getProperty("topNotifyN", "5")); } catch (Exception e) { TOP_NOTIFY_N = 5; }
+            if (TOP_NOTIFY_N < 1) TOP_NOTIFY_N = 1;
+            if (TOP_NOTIFY_N > 10) TOP_NOTIFY_N = 10;
         } catch (Exception e) { e.printStackTrace(); }
     }
 
@@ -88,6 +97,8 @@ public class WorldBossTuning {
         p.setProperty("top23Json", TOP23_JSON == null ? "" : TOP23_JSON);
         p.setProperty("top410Json", TOP410_JSON == null ? "" : TOP410_JSON);
         p.setProperty("consolJson", CONSOL_JSON == null ? "" : CONSOL_JSON);
+        p.setProperty("topNotifySec", String.valueOf(TOP_NOTIFY_SEC));
+        p.setProperty("topNotifyN", String.valueOf(TOP_NOTIFY_N));
         try {
             File f = new File(PATH);
             f.getParentFile().mkdirs();

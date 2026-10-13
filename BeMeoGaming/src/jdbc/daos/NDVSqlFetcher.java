@@ -282,6 +282,11 @@ public class NDVSqlFetcher {
             player.point_moruong = rs.getInt("point_moruong");
             player.point_vip = rs.getInt("point_vip");
             player.point_dapdo = rs.getInt("point_dapdo");
+            try {
+                player.dauVinhVien = rs.getInt("dau_vinh_vien");
+            } catch (Exception e) {
+                player.dauVinhVien = 0; // chua chay ALTER bang player
+            }
             player.Saga_VIP = rs.getByte("Saga_VIP");
             // Cung Menh: cap + dot pha (JSON cung_menh)
             try {

@@ -405,7 +405,6 @@ public class Zone {
             }
             TaskService.gI().checkDoneTaskPickItem(player, itemMap);
             TaskService.gI().checkDoneSideTaskPickItem(player, itemMap);
-            TaskService.gI().checkDoneClanTaskPickItem(player, itemMap);
         } else {
             Service.gI().sendThongBao(player, "Không thể thực hiện");
         }

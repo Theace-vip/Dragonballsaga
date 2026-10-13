@@ -36,6 +36,12 @@ public class Clan {
     public static final byte DEPUTY = 1;
     public static final byte MEMBER = 2;
 
+    /** Cap bang toi da (level duoc gui cho client dang byte). */
+    public static final int LEVEL_MAX = 127;
+
+    /** Slot thanh vien toi da (max_member luu dang byte). */
+    public static final int MEMBER_MAX = 127;
+
     public int id;
     public int imgId;
     public String name;
@@ -47,6 +53,12 @@ public class Clan {
     public int level;
     public boolean active;
     public int capsuleClan;
+
+    /** Co thay doi (diem capsule cong don theo quai) chua ghi xuong DB. */
+    public transient volatile boolean dirtySave;
+
+    /** Lan cuoi gui lai thong tin bang cho thanh vien online (chong spam goi tin). */
+    private volatile long lastTimeSendCapsule;
 
     public long lastTimeOpenDoanhTrai;
     public boolean haveGoneDoanhTrai;
@@ -228,8 +240,97 @@ public class Clan {
         return list;
     }
 
+    /**
+     * Cong diem capsule bang khi ha quai (Mob.getItemMobReward goi).
+     * - TRAN NGAY theo TUNG NGUOI (panel: clan_capsule_ngay_toi_da / clan_capsule_sau_tran).
+     * - Cong don vao capsuleClan + diem cong hien ca nhan cua nguoi ha quai.
+     * - Danh dau dirtySave de thread dinh ky ghi xuong DB (ca bo dem diem ngay).
+     * - Gui lai thong tin bang cho toi da 1 lan / 2 giay de thanh vien thay ngay.
+     */
+    public synchronized void addCapsule(long points, Player gainer) {
+        if (points <= 0) {
+            return;
+        }
+        ClanMember cm = null;
+        long award = points;
+        if (gainer != null) {
+            cm = getClanMember((int) gainer.id);
+            if (cm != null) {
+                award = diemCapsuleTheoNgay(cm, points);
+            }
+        }
+        this.dirtySave = true;
+        if (award <= 0) {
+            return;
+        }
+        long total = (long) this.capsuleClan + award;
+        this.capsuleClan = total > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) total;
+        if (cm != null) {
+            cm.memberPoint = congAnToan(cm.memberPoint, award);
+            cm.clanPoint = congAnToan(cm.clanPoint, award);
+        }
+        long now = System.currentTimeMillis();
+        if (now - lastTimeSendCapsule >= 2000L) {
+            lastTimeSendCapsule = now;
+            sendMyClanForAllMember();
+        }
+    }
+
+    /** Khoa ngay (yyyyMMdd) - dung de reset bo dem diem capsule ngay. */
+    public static int ngayHienTai() {
+        java.util.Calendar c = java.util.Calendar.getInstance();
+        return c.get(java.util.Calendar.YEAR) * 10000 + (c.get(java.util.Calendar.MONTH) + 1) * 100
+                + c.get(java.util.Calendar.DAY_OF_MONTH);
+    }
+
+    /** Cong so nguyen an toan (chong tran int). */
+    private static int congAnToan(int a, long b) {
+        long s = (long) a + b;
+        if (s < 0) {
+            return 0;
+        }
+        return s > Integer.MAX_VALUE ? Integer.MAX_VALUE : (int) s;
+    }
+
+    /**
+     * Diem capsule THUC NHAN cua 1 thanh vien khi ha quai, co tran ngay:
+     * - Sang ngay moi: tu dong reset bo dem ve 0.
+     * - Chua het tran ngay: lay theo cong thuc (khong vuot qua phan con lai cua tran).
+     * - Het tran ngay: moi quai chi con "clan_capsule_sau_tran" diem.
+     */
+    public synchronized long diemCapsuleTheoNgay(ClanMember cm, long diemCongThuc) {
+        if (cm == null) {
+            return diemCongThuc;
+        }
+        int ngay = ngayHienTai();
+        if (cm.capsuleDay != ngay) {
+            cm.capsuleDay = ngay;
+            cm.capsuleToday = 0;
+        }
+        int tranNgay = 20000;
+        int sauTran = 100;
+        try {
+            tranNgay = panel.tuning.SystemTuning.getI("clan_capsule_ngay_toi_da");
+            sauTran = panel.tuning.SystemTuning.getI("clan_capsule_sau_tran");
+        } catch (Exception e) {
+        }
+        if (tranNgay <= 0) {
+            cm.capsuleToday = congAnToan(cm.capsuleToday, diemCongThuc);
+            return diemCongThuc;
+        }
+        long nhan;
+        if (cm.capsuleToday >= tranNgay) {
+            nhan = Math.max(0, sauTran);
+        } else {
+            nhan = Math.min(diemCongThuc, (long) tranNgay - cm.capsuleToday);
+        }
+        cm.capsuleToday = congAnToan(cm.capsuleToday, nhan);
+        return nhan;
+    }
+
     public void sendMyClanForAllMember() {
-        for (Player pl : this.membersInGame) {
+        List<Player> snapshot = new ArrayList<>(this.membersInGame);
+        for (Player pl : snapshot) {
             if (pl != null) {
                 ClanService.gI().sendMyClan(pl);
             }
@@ -335,6 +436,8 @@ public class Clan {
             dataObject.put("receive_donate", cm.receiveDonate);
             dataObject.put("member_point", cm.memberPoint);
             dataObject.put("clan_point", cm.clanPoint);
+            dataObject.put("capsule_today", cm.capsuleToday);
+            dataObject.put("capsule_day", cm.capsuleDay);
             dataObject.put("join_time", cm.joinTime);
             dataObject.put("ask_pea_time", cm.timeAskPea);
             dataObject.put("power", cm.powerPoint);
@@ -389,6 +492,8 @@ public class Clan {
             dataObject.put("receive_donate", cm.receiveDonate);
             dataObject.put("member_point", cm.memberPoint);
             dataObject.put("clan_point", cm.clanPoint);
+            dataObject.put("capsule_today", cm.capsuleToday);
+            dataObject.put("capsule_day", cm.capsuleDay);
             dataObject.put("join_time", cm.joinTime);
             dataObject.put("ask_pea_time", cm.timeAskPea);
             dataObject.put("power", cm.powerPoint);

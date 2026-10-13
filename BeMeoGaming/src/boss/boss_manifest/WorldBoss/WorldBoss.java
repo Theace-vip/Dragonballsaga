@@ -19,6 +19,8 @@ public class WorldBoss extends Boss {
     private long lastTopChat = 0;
     private long bornAt = 0;
     private long lastZoneHop = 0;
+    // [Thong bao Top 30s] lan cuoi gui bang dame cho toan server
+    private long lastTopNotify = 0;
     private int zoneIdx = 0;
     private volatile boolean killedByAdmin = false;
 
@@ -79,6 +81,7 @@ public class WorldBoss extends Boss {
                     try { WorldBossTracker.start(lifeMin); } catch (Exception ex) {}
                     bornAt = System.currentTimeMillis();
                     lastZoneHop = bornAt;
+                    lastTopNotify = bornAt;
                     zoneIdx = 0;
                     try { this.nPoint.hp = this.nPoint.hpMax; } catch (Exception ex) {}
                     return;
@@ -91,6 +94,7 @@ public class WorldBoss extends Boss {
         try {
             if (bornAt <= 0) bornAt = System.currentTimeMillis();
             if (lastZoneHop <= 0) lastZoneHop = bornAt;
+            if (lastTopNotify <= 0) lastTopNotify = bornAt;
         } catch (Exception e) {}
     }
 
@@ -171,6 +175,22 @@ public class WorldBoss extends Boss {
         } catch (Exception e) {}
     }
 
+    /**
+     * [Thong bao Top 30s] Noi dung thong bao bang dame gui cho toan server.
+     * Tra ve chuoi RONG khi chua ai gay dame vao boss -> ben goi se KHONG thong bao gi.
+     */
+    public static String bangDameThongBao(int notifySec, int n) {
+        try {
+            String bangDame = WorldBossTracker.topNotifyText(n);
+            if (bangDame == null || bangDame.isEmpty()) {
+                return "";
+            }
+            return "|6|BOSS THE GIOI - Bang dame " + notifySec + "s:\n|4|" + bangDame;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
     @Override
     public void die(Player plKill) {
         try {
@@ -199,6 +219,27 @@ public class WorldBoss extends Boss {
             } catch (Exception e) {}
             if (lifeMin <= 0) lifeMin = 60;
             if (zoneSec < 5) zoneSec = 5;
+            // [Thong bao Top 30s] Moi TOP_NOTIFY_SEC giay thong bao ai dang top may va gay bao nhieu dame.
+            // Ai khong gay dame vao boss thi khong co ten trong thong bao (chua ai danh -> khong gui gi).
+            try {
+                int notifySec = panel.tuning.WorldBossTuning.TOP_NOTIFY_SEC;
+                if (lastTopNotify <= 0) {
+                    lastTopNotify = now;
+                }
+                if (notifySec > 0 && now - lastTopNotify >= notifySec * 1000L) {
+                    lastTopNotify = now;
+                    String thongBao = bangDameThongBao(notifySec, panel.tuning.WorldBossTuning.TOP_NOTIFY_N);
+                    if (!thongBao.isEmpty()) {
+                        Service.gI().sendThongBaoAllPlayer(thongBao);
+                        // Ghi log de doi chieu nhip thong bao (khong co ai danh thi khong co dong log)
+                        try {
+                            utils.Logger.log("[WORLDBOSS] Thong bao bang dame " + notifySec + "s:\n"
+                                    + WorldBossTracker.topNotifyText(panel.tuning.WorldBossTuning.TOP_NOTIFY_N) + "\n");
+                        } catch (Exception e) {
+                        }
+                    }
+                }
+            } catch (Exception e) {}
             if (now - bornAt > lifeMin * 60000L) {
                 String log = "";
                 try { log = WorldBossTracker.rewardAll(); } catch (Exception e) {}

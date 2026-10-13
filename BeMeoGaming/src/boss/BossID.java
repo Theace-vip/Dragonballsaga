@@ -283,5 +283,25 @@ public class BossID {
     //========================BOSS THE GIOI (bat tu, tinh dame top 10)========================
     public static final int WORLD_BOSS = -7000;
 
+    /**
+     * BOSS NHIEM VU - cac boss xuat hien trong nhiem vu chinh (xem TaskService.checkDoneTaskKillBoss).
+     * Nhung boss nay KHONG duoc cong HP them (panel: boss_hp_them) de nguoi choi van lam nhiem vu duoc.
+     */
+    private static final java.util.Set<Integer> BOSS_NHIEM_VU = java.util.Set.of(
+            KUKU, MAP_DAU_DINH, RAMBO,
+            SO_4, SO_3, SO_1, TIEU_DOI_TRUONG,
+            FIDE,
+            ANDROID_19, DR_KORE,
+            ANDROID_15, ANDROID_14, ANDROID_13,
+            POC, PIC, KING_KONG,
+            XEN_BO_HUNG, SIEU_BO_HUNG, XEN_CON_1,
+            DRABURA, DRABURA_2, DRABURA_3,
+            BUI_BUI, BUI_BUI_2, YA_CON, MABU_12H,
+            TRUNG_UY_TRANG);
+
+    /** true neu id boss thuoc nhom boss nhiem vu (mien cong HP them). */
+    public static boolean isBossNhiemVu(int bossId) {
+        return BOSS_NHIEM_VU.contains(bossId);
+    }
 
 }

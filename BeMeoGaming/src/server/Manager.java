@@ -282,6 +282,14 @@ public final class Manager {
                     cm.receiveDonate = Integer.parseInt(String.valueOf(dataObject.get("receive_donate")));
                     cm.memberPoint = Integer.parseInt(String.valueOf(dataObject.get("member_point")));
                     cm.clanPoint = Integer.parseInt(String.valueOf(dataObject.get("clan_point")));
+                    // [Capsule ngay 11/10/2026] bo dem diem capsule trong ngay cua tung thanh vien
+                    try {
+                        cm.capsuleToday = Integer.parseInt(String.valueOf(dataObject.get("capsule_today")));
+                        cm.capsuleDay = Integer.parseInt(String.valueOf(dataObject.get("capsule_day")));
+                    } catch (Exception e) {
+                        cm.capsuleToday = 0;
+                        cm.capsuleDay = 0;
+                    }
                     cm.joinTime = Integer.parseInt(String.valueOf(dataObject.get("join_time")));
                     cm.timeAskPea = Long.parseLong(String.valueOf(dataObject.get("ask_pea_time")));
                     try {

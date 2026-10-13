@@ -1,0 +1,254 @@
+[0;32mSuccessfully loaded file properties!
+[0m[0;32mLoad set_config thanh cong (9)[0m[0;32mSuccessfully loaded clan (1), clan next id: 16
+[0m[0;32mSuccessfully loaded Consign Item (0)
+[0m[0;32mSuccessfully loaded part (2164)
+[0m[0;32mSuccessfully loaded bg item template (597)
+[0m[0;32mSuccessfully loaded arr head 2 frames (52)
+[0m[0;32mSuccessfully loaded skill (3)
+[0m[0;32mSuccessfully loaded head avatar (553)
+[0m[0;32mSuccessfully loaded flag bag (198)
+[0m[0;32mSuccessfully loaded intrinsic (27)
+[0m[0;32mSuccessfully loaded task (33)
+[0m[0;32mSuccessfully loaded side task (59)
+[0m[0;32mSuccessfully loaded task badges (11)
+[0m[0;32mSuccessfully loaded clan task (59)
+[0m[0;32mSuccessfully loaded achievement (21)
+[0m[0;32mSuccessfully loaded map item template (1944)
+[0m[0;32mSuccessfully loaded map item option template (254)
+[0m[0;32mSuccessfully loaded shop (26)
+[0m[0;32mSuccessfully loaded notify (33)
+[0m[0;32mLoad phuc_loi thành công (9)[0m[0;32mLoad phuc_loi_tab thành công (78)[0m[0;32mLoad tambao_items thành công: 19 dòng, 2 pool[0m[0;32mLoad moc_vong_quay thành công (14)[0m[0;32mSuccessfully loaded images by name (195)
+[0m[0;32mSuccessfully loaded mount (29)
+[0m[0;32mSuccessfully loaded mob template (117)
+[0m[0;32mSuccessfully loaded npc template (112)
+[0m[0;32mSuccessfully loaded map template (185)
+[0m[0;32mSuccessfully loaded radar template (18)
+[0m[0;32mSuccessfully loaded badges template (14)
+[0m[0;32mSuccessfully loaded VND top (1)
+[0m[0;32mSuccessfully loaded SK top (1)
+[0m[0;32mSuccessfully loaded NHS top (1)
+[0m[0;32mSuccessfully loaded phòng t?p top (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0mAUTOGIFTTOP [14]
+[0;35mTotal database loading time: 3703 (ms)
+[0m[0;32mInitialize map successfully!
+[0mFinish connect Server: hondaodragon
+[0;32mServer initialized and listening on port 14445
+[0m[0;34m3h9m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h9m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1588x1(1.5%) 1913x2(6.0%) 1588x1(3.0%) 221x100(11.0%) 1588x1(4.0%) 220x100(12.0%) 224x100(12.0%) 1588x1(0.5%) 222x100(11.0%) 457x1000(9.0%) 1588x1(5.0%) 223x100(10.0%) 1225x10(8.0%) 1224x1(7.0%)[0m[0;34m3h9m: Successful login for player admin[237]: 764 ms
+[0m[MAP] gui -24 map=16 zone=0 cho admin mat 5ms, queue dang cho gui=1
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 16: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 20ms
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[0;32m3h9m: Player admin saved successfully! 42ms
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;34m3h18m: [CONN] ket noi moi tu 171.250.164.159
+[0m[CLIENT] 0 platform=Pc platform xxx|2.3.7 type=2 -> version=237[0;34m3h18m: [LOGIN] Yeu cau login: user=admin ip=171.250.164.159 sessionPlayer=null
+[0m[0;32mGui vong quay Tam Bao cho admin: chia=1874, 14 o -> 1224x1(7.0%) 222x100(11.0%) 1588x1(4.0%) 1588x1(3.0%) 1588x1(5.0%) 1588x1(0.5%) 221x100(11.0%) 457x1000(9.0%) 1225x10(8.0%) 223x100(10.0%) 1588x1(1.5%) 220x100(12.0%) 1913x2(6.0%) 224x100(12.0%)[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;34m3h18m: Successful login for player admin[237]: 438 ms
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[MAP] gui -24 map=16 zone=0 cho admin mat 2ms, queue dang cho gui=2
+[EFF] send id=12 idT=12 zoom=2 data=347B img=2299B
+[MAP] admin xong load map 16: client mat -1ms tu luc gui -24, server xu ly finishLoadMap 4ms
+[EFF] send id=366 idT=366 zoom=2 data=143B img=112573B
+[EFF] send id=-1 idT=-1 zoom=2 data=-1B img=-1B
+[EFF] send id=1029 idT=1029 zoom=2 data=145B img=138544B
+[EFF] send id=82 idT=82 zoom=2 data=161B img=74067B
+[MAP] gui -24 map=5 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 623ms tu luc gui -24, server xu ly finishLoadMap 43ms
+[MAP] gui -24 map=153 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 153: client mat 500ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[MAP] gui -24 map=175 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[MAP] admin xong load map 175: client mat 591ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[MAP] gui -24 map=5 zone=0 cho admin mat 3ms, queue dang cho gui=1
+[EFF] send id=4 idT=4 zoom=2 data=202B img=13574B
+[MAP] admin xong load map 5: client mat 383ms tu luc gui -24, server xu ly finishLoadMap 59ms
+[EFF] send id=33 idT=33 zoom=2 data=52B img=66372B
+[MAP] gui -24 map=29 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 29: client mat 300ms tu luc gui -24, server xu ly finishLoadMap 100ms
+[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat 731ms tu luc gui -24, server xu ly finishLoadMap 105ms
+[EFF] send id=33 idT=33 zoom=2 data=52B img=66372B
+[MAP] gui -24 map=29 zone=0 cho admin mat 1ms, queue dang cho gui=1
+[MAP] admin xong load map 29: client mat 214ms tu luc gui -24, server xu ly finishLoadMap 31ms
+[SK] in pl=admin st=6 sid=-1 pt=null mt=null sel=13 eff=false mp=2.0506654512411907E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=2 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=2 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=113 idT=113 zoom=2 data=104B img=135823B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=5 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=5 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=5 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=118 idT=118 zoom=2 data=341B img=176545B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=3 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[EFF] send id=121 idT=121 zoom=2 data=325B img=121897B
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=4 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=4 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=4 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=false
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=4 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[SK] in pl=admin st=-1 sid=-1 pt=null mt=4 sel=4 eff=false mp=1.8455989061170716E18
+[SK] chk eff=false canAtk=true mobDie=false mana=true cd=true
+[MAP] gui -24 map=5 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 5: client mat 1384ms tu luc gui -24, server xu ly finishLoadMap 50ms
+[EFF] send id=33 idT=33 zoom=2 data=52B img=66372B
+[MAP] gui -24 map=153 zone=0 cho admin mat 2ms, queue dang cho gui=1
+[MAP] admin xong load map 153: client mat 195ms tu luc gui -24, server xu ly finishLoadMap 0ms
+[0;32m3h20m: Player admin saved successfully! 25ms
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m[0;32mLoad Top N?p Thành Công (1)
+[0m[0;32mLoad Top sk Thành Công (1)
+[0m[0;32mLoad Top NHS Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mLoad Top PHÒNG T?P Thành Công (1)
+[0m[0;32mSuccessfully loaded sanboss top (1)
+[0m[0;32mSuccessfully loaded San vi thu top (1)
+[0m[0;32mSuccessfully loaded leo thop top (0)
+[0m[0;32mSuccessfully loaded leo top Sm (1)
+[0m[0;32mSuccessfully loaded TopTienBang (0)
+[0m[0;32mSuccessfully loaded TopNhapMa (0)
+[0m[0;32mSuccessfully loaded Topmabu (1)
+[0m[0;32mSuccessfully loaded Topbdkb (1)
+[0m[0;32mSuccessfully loaded m? r??ng (1)
+[0m[0;32mSuccessfully loaded dapdo (1)
+[0m[0;32mSuccessfully loaded T?m B?o (1)
+[0m[0;32mSuccessfully loaded câu cá (1)
+[0m[0;32mSuccessfully loaded Thiên ??o (1)
+[0m[0;32mSuccessfully loaded ??a ??o (1)
+[0m[0;32mSuccessfully loaded Tu Tiên (1)
+[0m[0;32mSuccessfully loaded Chuy?n Sinh (1)
+[0m

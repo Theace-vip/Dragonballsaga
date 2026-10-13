@@ -43,6 +43,33 @@ public class BossTuning {
 
     static { load(); }
 
+    /**
+     * [Boss HP 11/10/2026] HP cong them cho MOI boss (tru boss nhiem vu).
+     * Gia tri lay tu panel He Thong - key "boss_hp_them" (mac dinh 1E18, 0 = tat).
+     * Cong SAU soft-cap nen khong bi GameTuning.softCapHp cat bot.
+     */
+    public static double hpThem(player.Player pl) {
+        if (pl == null || !pl.isBoss) {
+            return 0;
+        }
+        double them;
+        try {
+            them = panel.tuning.SystemTuning.get("boss_hp_them");
+        } catch (Exception e) {
+            return 0;
+        }
+        if (them <= 0) {
+            return 0;
+        }
+        try {
+            if (boss.BossID.isBossNhiemVu((int) pl.id)) {
+                return 0;
+            }
+        } catch (Exception e) {
+        }
+        return them;
+    }
+
     public static synchronized void load() {
         CACHE.clear();
         // 1) doc tu DB panel_boss_override

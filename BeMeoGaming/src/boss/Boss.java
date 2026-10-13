@@ -73,6 +73,8 @@ public class Boss extends Player implements IBoss, IBossOutfit {
     public boolean isZone01SpawnDisabled;
 
     private long lastTimeCheck;
+    /** [FIX lag 11/10/2026] So lan lien tiep khong tim duoc khu de join - chan vong lap vo han. */
+    private int soLanKhongJoinDuoc;
 
     public Boss(int id, boolean isNotifyDisabled, boolean isZone01SpawnDisabled, BossData... data) throws Exception {
         this(id, data);
@@ -222,6 +224,9 @@ public class Boss extends Player implements IBoss, IBossOutfit {
         } catch (Exception e) {}
         this.nPoint.hp = nPoint.hpg;
         this.nPoint.calPoint();
+        // [Boss HP 11/10/2026] hpMax co the da duoc cong them HP boss (panel He Thong - boss_hp_them)
+        // -> cho boss day mau, neu khong boss chi con hpg goc va van chet nhu cu.
+        this.nPoint.hp = this.nPoint.hpMax;
         this.initSkill();
         this.resetBase();
     }
@@ -469,6 +474,7 @@ public class Boss extends Player implements IBoss, IBossOutfit {
             this.zone = getMapJoin();
         }
         if (this.zone != null) {
+            this.soLanKhongJoinDuoc = 0;
             try {
                 if (this.currentLevel == 0) {
                     if (this.parentBoss == null) {
@@ -527,7 +533,16 @@ public class Boss extends Player implements IBoss, IBossOutfit {
                 }
             }
         } else {
-            this.changeStatus(BossStatus.RESPAWN);
+            // [FIX lag 11/10/2026] Boss khong tim duoc khu se quay vong RESPAWN -> JOIN_MAP ->
+            // joinMap() moi tick (500ms) mai mai, ton CPU vo ich. Cho boss nghi 1 nhip roi thu lai
+            // (boss nao thuc su khong the join thi nam nghi, khong quay nong CPU).
+            if (++this.soLanKhongJoinDuoc >= 10) {
+                this.soLanKhongJoinDuoc = 0;
+                this.lastTimeRest = System.currentTimeMillis();
+                this.changeStatus(BossStatus.REST);
+            } else {
+                this.changeStatus(BossStatus.RESPAWN);
+            }
         }
     }
 
@@ -782,6 +797,15 @@ public class Boss extends Player implements IBoss, IBossOutfit {
                 return 1;
             }
 
+            // OPTION 204 (dameBoss) + OPTION 247 (Kich Sat Boss): +% sat thuong khi danh Boss
+            if (plAtt != null && plAtt.nPoint != null) {
+                if (plAtt.nPoint.dameBoss > 0) {
+                    damage += damage * plAtt.nPoint.dameBoss / 100;
+                }
+                if (plAtt.nPoint.dameKichSatBoss > 0) {
+                    damage += damage * plAtt.nPoint.dameKichSatBoss / 100;
+                }
+            }
             damage = this.nPoint.subDameInjureWithDeff(damage);
 
             if (!piercing && effectSkill.isShielding) {

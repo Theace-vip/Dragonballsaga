@@ -1005,6 +1005,8 @@ public class ClanService {
                     dataObject.put("receive_donate", cm.receiveDonate);
                     dataObject.put("member_point", cm.memberPoint);
                     dataObject.put("clan_point", cm.clanPoint);
+                    dataObject.put("capsule_today", cm.capsuleToday);
+                    dataObject.put("capsule_day", cm.capsuleDay);
                     dataObject.put("join_time", cm.joinTime);
                     dataObject.put("ask_pea_time", cm.timeAskPea);
                     dataObject.put("power", cm.powerPoint);
@@ -1033,45 +1035,78 @@ public class ClanService {
         }
     }
 
+    /**
+     * Chi phi capsule de nang bang hoi len cap tiep theo.
+     * Cap 1 = 10.000 va moi cap cong them 20.000 (khong con gioi han cap).
+     */
+    public long capsuleCost(int level) {
+        long cost = 20000L * Math.max(1, level) - 10000L;
+        return Math.min(cost, Integer.MAX_VALUE);
+    }
+
     public int capsule(Clan clan) {
-        if (clan != null) {
-            switch (clan.level) {
-                case 1 -> {
-                    return 10000;
-                }
-                case 2 -> {
-                    return 30000;
-                }
-                case 3 -> {
-                    return 50000;
-                }
-                case 4 -> {
-                    return 70000;
-                }
-                case 5 -> {
-                    return 90000;
-                }
-                case 6 -> {
-                    return 110000;
-                }
-                case 7 -> {
-                    return 130000;
-                }
-                case 8 -> {
-                    return 150000;
-                }
-                case 9 -> {
-                    return 170000;
-                }
-                case 10 -> {
-                    return 190000;
-                }
-                case 11 -> {
-                    return 210000;
+        return clan == null ? 0 : (int) capsuleCost(clan.level);
+    }
+
+    /**
+     * Nang cap bang hoi (dung chung cho NPC DrDrief va GiuMaDauBo).
+     * - Tru capsule, +1 cap bang, +1 slot thanh vien.
+     * - Luu DB ngay va gui lai thong tin bang cho tat ca thanh vien online ngay lap tuc.
+     */
+    public void upgradeClan(Player player) {
+        Clan clan = player.clan;
+        if (clan == null) {
+            Service.gI().sendThongBao(player, "Bạn chưa có bang hội.");
+            return;
+        }
+        if (!clan.isLeader(player)) {
+            Service.gI().sendThongBao(player, "Chỉ bang chủ mới được nâng cấp bang hội.");
+            return;
+        }
+        if (clan.level >= Clan.LEVEL_MAX) {
+            Service.gI().sendThongBao(player, "Bang hội đã đạt cấp tối đa (" + Clan.LEVEL_MAX + ").");
+            return;
+        }
+        long cost = capsuleCost(clan.level);
+        if (clan.capsuleClan < cost) {
+            Service.gI().sendThongBao(player, "Không đủ capsule bang, cần "
+                    + Util.chiaNho(cost - clan.capsuleClan) + " capsule bang nữa.");
+            return;
+        }
+        clan.capsuleClan -= (int) cost;
+        clan.level++;
+        if (clan.maxMember < Clan.MEMBER_MAX) {
+            clan.maxMember++;
+        }
+        clan.dirtySave = false;
+        clan.update();
+        clan.sendMyClanForAllMember();
+        Service.gI().sendThongBao(player, "Chúc mừng bang hội của bạn đã lên cấp " + clan.level
+                + "\n+Mỗi cấp bang tăng 200% sức đánh cho toàn bang");
+        ClanMessage cmg = new ClanMessage(clan);
+        cmg.type = 0;
+        cmg.role = clan.getRole(player);
+        cmg.playerId = (int) player.id;
+        cmg.playerName = player.name;
+        cmg.text = player.name + " đã nâng cấp bang hội lên cấp " + clan.level;
+        cmg.color = ClanMessage.RED;
+        clan.addClanMessage(cmg);
+        clan.sendMessageClan(cmg);
+    }
+
+    /** Ghi DB cac bang hoi co diem capsule thay doi (ServerManager goi dinh ky). */
+    public void flushDirtyClans() {
+        for (Clan clan : new ArrayList<>(Manager.CLANS)) {
+            if (clan != null && clan.dirtySave) {
+                try {
+                    clan.dirtySave = false;
+                    clan.update();
+                } catch (Exception e) {
+                    clan.dirtySave = true;
+                    Logger.logException(ClanService.class, e, "Lỗi lưu capsule bang " + clan.id);
                 }
             }
         }
-        return 500000;
     }
 
 }
