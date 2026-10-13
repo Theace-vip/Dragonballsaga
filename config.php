@@ -78,7 +78,7 @@ $favicon = '/assets/images/favicon.jpg';
 $keywords = 'NROKuRA, nrokura, 7 vien ngoc rong, tro choi 7 vien ngoc rong, game ngoc rong, ngoc rong online, dragon ball online, nro';
 $logo = '/assets/images/logo.gif'; // file logo chinh - thay bang logo.gif cua ban
 $description = 'Website chính thức của NROKuRA – Server 7 Viên Ngọc Rồng Online nhập vai trực tuyến trên máy tính và điện thoại. Đăng ký miễn phí, cày cuốc, đua top, săn boss cùng cộng đồng NROKuRA!';
-$boxzalo = 'https://zalo.me/g/pnde68ve5zmxtzxrk4vt'; // Box Zalo NROKuRA
+$boxzalo = 'https://zalo.me/g/qvjjxorcthn8g2ci9ous'; // Box Zalo NROKuRA
 $namegame = 'NROKuRA';
 
 // ==== Thong tin server (doc tu BeMeoGaming/src + data/config/config.properties) ====
@@ -90,8 +90,9 @@ $serverMaxPerIp  = 5;           // server.maxperip
 $siteUrl = 'https://nrokura.site';
 
 // Download game (client cua server NROKuRA)
-$pc = 'https://drive.google.com/file/d/15GIQUbFldJF2OTn0yJdEE39Hos0Ovf4k/view?usp=drive_link';
-$adr = 'https://drive.google.com/file/d/1inUO5XAEbRrrLp50Ti0nndOG6DubybQB/view?usp=drive_link';
+// [Cap nhat 11/10/2026] PC + APK doi sang link thu muc Google Drive moi
+$pc = 'https://drive.google.com/drive/folders/1OuH2fmfJyEYOPBum5TEad3cZj0pE7R2O?usp=sharing';
+$adr = 'https://drive.google.com/drive/folders/1REqeLBeL-6uH4KduBwrHw-_A-xIXHeIe?usp=sharing';
 $ios = 'https://drive.google.com/file/d/1j7hWvDGRqqhULlXmazGKDI775wOf8mUh/view?usp=drive_link';
 $java = ''; // chua co link client Java -> de rong se an nut trong nav
 $zalo = $boxzalo;
