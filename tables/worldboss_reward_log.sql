@@ -36,7 +36,7 @@ CREATE TABLE `worldboss_reward_log` (
 
 LOCK TABLES `worldboss_reward_log` WRITE;
 /*!40000 ALTER TABLE `worldboss_reward_log` DISABLE KEYS */;
-INSERT INTO `worldboss_reward_log` VALUES ('20260924_2200','2026-09-24 15:12:27','[{\"name\":\"bomthue\",\"rank\":1,\"id\":91,\"dame\":9000000000000000000},{\"name\":\"brojp\",\"rank\":2,\"id\":88,\"dame\":9000000000000000000},{\"name\":\"atula\",\"rank\":3,\"id\":98,\"dame\":9000000000000000000},{\"name\":\"kandz\",\"rank\":4,\"id\":90,\"dame\":9000000000000000000}]'),('20260925_1253','2026-09-25 05:54:39','[{\"name\":\"admin\",\"rank\":1,\"id\":1,\"dame\":2.852577792349306E24}]');
+INSERT INTO `worldboss_reward_log` VALUES ('20261011_1818','2026-10-11 11:18:33','[]');
 /*!40000 ALTER TABLE `worldboss_reward_log` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-10 19:29:30
+-- Dump completed on 2026-10-13 21:08:44

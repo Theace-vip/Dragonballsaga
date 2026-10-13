@@ -30,7 +30,7 @@ CREATE TABLE `kho_web` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `template_id` int(11) DEFAULT 1238,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `kho_web` (
 
 LOCK TABLES `kho_web` WRITE;
 /*!40000 ALTER TABLE `kho_web` DISABLE KEYS */;
-INSERT INTO `kho_web` VALUES (25,'admin','🎁 Hộp quà VIP Đền Bù',1,'2025-08-15 23:24:02',1238),(26,'admin','🎁 Hộp quà VIP  Đền Bù',1,'2025-08-17 01:45:50',1238),(27,'ngocquyenn','🎁 Hộp quà VIP  Đền Bù',1,'2025-08-17 08:14:36',1238),(28,'ericvan97','🎁 Hộp quà VIP  Đền Bù',0,'2025-09-05 14:08:53',1238),(29,'ericvan97','🎁 Hộp quà VIP  Đền Bù',0,'2025-09-05 14:16:52',1238),(30,'ericvan95','🎁 Hộp quà VIP  Đền Bù',1,'2025-09-05 17:21:52',1238),(31,'tuandung','🎁 Hộp quà VIP  Đền Bù',1,'2025-09-09 15:47:56',1238),(32,'truongbeo','🎁 Hộp quà VIP  Đền Bù',0,'2025-09-12 11:45:47',1238),(33,'sslsvn123456','🎁 Hộp quà VIP  Đền Bù',0,'2025-09-14 19:08:47',1238),(34,'Chinhneji','🎁 Hộp quà VIP  Đền Bù',1,'2025-09-17 11:47:53',1238),(35,'huyhuy12','🎁 Hộp quà VIP',1,'2025-09-19 01:33:39',1238);
+INSERT INTO `kho_web` VALUES (25,'admin','🎁 Hộp quà VIP Đền Bù',1,'2025-08-15 23:24:02',1238),(26,'admin','🎁 Hộp quà VIP  Đền Bù',1,'2025-08-17 01:45:50',1238);
 /*!40000 ALTER TABLE `kho_web` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-10 19:29:22
+-- Dump completed on 2026-10-13 21:08:33

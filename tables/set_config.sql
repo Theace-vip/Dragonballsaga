@@ -48,7 +48,7 @@ CREATE TABLE `set_config` (
 
 LOCK TABLES `set_config` WRITE;
 /*!40000 ALTER TABLE `set_config` DISABLE KEYS */;
-INSERT INTO `set_config` VALUES (1,'Thanh Long',149,1,0,0,0,500,0,0,0,0,0,0,''),(2,'Chu Tuoc',150,1,0,500,0,0,0,0,0,0,0,0,''),(3,'Bach Ho',151,1,0,0,0,0,0,1000,0,0,0,0,''),(4,'Huyen Vu',152,1,0,0,0,0,0,0,0,500,0,0,''),(5,'Kim',153,1,0,0,0,0,5000000,0,0,0,0,0,''),(6,'Moc',154,1,0,10000000,0,0,0,0,0,0,0,0,''),(7,'Tho',155,1,0,0,0,10000000,0,0,0,0,0,0,''),(8,'Thuy',156,1,0,0,0,0,0,0,0,10000000,0,0,''),(9,'Hoa',157,1,0,0,0,0,0,0,0,0,0,100,'');
+INSERT INTO `set_config` VALUES (1,'Thanh Long',149,1,0,0,0,500,0,200,0,0,0,0,''),(2,'Chu Tuoc',150,1,0,500,0,0,0,200,0,0,0,0,''),(3,'Bach Ho',151,1,0,0,0,0,0,1000,0,0,5,0,''),(4,'Huyen Vu',152,1,0,0,0,0,0,200,0,500,0,0,''),(5,'Kim',153,1,0,0,0,0,0,400,0,0,0,0,''),(6,'Moc',154,1,0,400,0,0,0,100,0,0,0,0,''),(7,'Tho',155,1,0,0,0,400,0,100,0,0,0,0,''),(8,'Thuy',156,1,0,0,0,0,0,100,0,400,0,0,''),(9,'Hoa',157,1,0,0,0,0,0,150,0,0,10,200,'');
 /*!40000 ALTER TABLE `set_config` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-10 19:29:27
+-- Dump completed on 2026-10-13 21:08:41

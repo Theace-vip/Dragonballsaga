@@ -33,7 +33,7 @@ CREATE TABLE `napthe` (
   `request_id` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,6 @@ CREATE TABLE `napthe` (
 
 LOCK TABLES `napthe` WRITE;
 /*!40000 ALTER TABLE `napthe` DISABLE KEYS */;
-INSERT INTO `napthe` VALUES (1,'2','111','11','',10000000,1,'','2025-04-06 20:07:13'),(2,'taidz\r\n','12','11','',929292,1,'','2025-06-13 18:24:07');
 /*!40000 ALTER TABLE `napthe` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-10 19:29:23
+-- Dump completed on 2026-10-13 21:08:35
