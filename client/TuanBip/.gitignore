@@ -1,0 +1,35 @@
+# Unity-generated state
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+[M]emoryCaptures/
+[C]rashReports/
+[Aa]rtifacts/
+[Ss]haderCache/
+[Ii]L2CPPBuildCache/
+
+# Generated IDE projects and player output
+.vs/
+.idea/
+.gradle/
+Assets/**/bin/
+Assets/**/obj/
+Assets/OPS/Obfuscator/Log/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.pidb
+*.pdb
+*.mdb
+*.cache
+
+# Signing material (never commit)
+*.keystore
+*.jks
+*.p12
+*.pfx
